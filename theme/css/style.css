@@ -6,7 +6,7 @@ body {
   background-color: #ffffff;
   color: #4d4d4d;
   font-family: 'Libre Baskerville', Garamond, serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 a {
   color: #000000;
@@ -64,8 +64,13 @@ main article {
   max-width: 640px;
   padding: 40px;
 }
+main article div.article_title {
+  font-size: 24px;
+  text-transform: uppercase;
+}
 main article div.article_text {
-  line-height: 1.375em;
+  font-size: 18px;
+  line-height: 1.6em;
 }
 main article div.article_text a {
   text-decoration: underline;
