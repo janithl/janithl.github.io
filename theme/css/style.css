@@ -1,9 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic,700italic,300,300italic&subset=latin,latin-ext);
+
 body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   color: #4d4d4d;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Libre Baskerville', Garamond, serif;
   font-size: 18px;
 }
 a {
