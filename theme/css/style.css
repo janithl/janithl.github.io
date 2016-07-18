@@ -22,6 +22,7 @@ blockquote {
 }
 img {
   max-width: 100%;
+  margin: 10px auto;
 }
 header {
   padding: 40px;
