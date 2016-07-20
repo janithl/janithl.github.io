@@ -18,7 +18,82 @@ freq           1904           285            39                  8
 
 &lt;p&gt;I want to do an analysis of how I discovered and fell in love with new bands 
 over the course of these three years. I don't listen to music as much these 
-days, but this is a good dataset and I promise not to let it go to waste.&lt;/p&gt;</summary><category term="data"></category><category term="music"></category></entry><entry><title>On Unrequited Love</title><link href="https://janithl.github.io/2016/07/on-unrequited-love/" rel="alternate"></link><published>2016-07-20T07:45:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/on-unrequited-love/</id><summary type="html">&lt;p&gt;Boy oh boy, &lt;a href="https://janithl.github.io/2016/07/shes-wot-m8/"&gt;this&lt;/a&gt; is something 
+days, but this is a good dataset and I promise not to let it go to waste.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Added the frequencies and histograms for artists and song titles.&lt;/p&gt;
+&lt;h2&gt;Artists&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; df.Artist.value_counts()
+The Beatles                        1904
+Coldplay                            842
+John Mayer                          604
+Oasis                               499
+Arctic Monkeys                      447
+The Who                             345
+The Rolling Stones                  318
+Snow Patrol                         315
+The Velvet Underground              297
+Bob Marley &amp;amp; The Wailers            287
+Noah and the Whale                  280
+The Kooks                           246
+Norah Jones                         211
+The Kinks                           201
+Badfinger                           189
+Paul Simon                          179
+The Jimi Hendrix Experience         160
+Pink Floyd                          159
+John Lennon                         146
+Queen                               141
+The Wailers                         140
+Radiohead                           127
+U2                                  121
+Cream                               114
+George Harrison                     111
+Lorde                               100
+Bee Gees                             97
+Simon &amp;amp; Garfunkel                    92
+Roy Orbison                          92
+Billy Joel                           92
+                                   ... 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Artist Histogram" src="https://janithl.github.io/images/artist-histogram.png" /&gt;&lt;/p&gt;
+&lt;h2&gt;Song Titles&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; df.Title.value_counts()
+Sleeping Sun                         39
+Could You Be Loved                   38
+Parachutes                           35
+Stuck on the Puzzle                  34
+You&amp;#39;ve Got to Hide Your Love Away    34
+Word                                 34
+Brothers &amp;amp; Sisters                   34
+My Girl                              32
+One Day                              32
+Wild Thing                           32
+Bigger Than My Body                  32
+Junk of the Heart (Happy)            31
+Stir It Up                           31
+Blue Skies                           31
+Day Tripper                          31
+Don&amp;#39;t Look Back in Anger             30
+No Woman No Cry                      30
+For You (Shiver single Version)      30
+All Around the World                 29
+Strawberry Swing                     29
+Lifeboats                            28
+Let Me Go (acoustic)                 28
+Ruby                                 28
+Baby You&amp;#39;re a Rich Man               28
+Bitter Sweet Symphony                28
+In Repair                            27
+Getting Better                       27
+Rainy Day                            27
+Love Is All Around                   27
+Here Comes the Sun                   27
+                                     ..
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Song Title Histogram" src="https://janithl.github.io/images/song-title-histogram.png" /&gt;&lt;/p&gt;</summary><category term="data"></category><category term="music"></category></entry><entry><title>On Unrequited Love</title><link href="https://janithl.github.io/2016/07/on-unrequited-love/" rel="alternate"></link><published>2016-07-20T07:45:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/on-unrequited-love/</id><summary type="html">&lt;p&gt;Boy oh boy, &lt;a href="https://janithl.github.io/2016/07/shes-wot-m8/"&gt;this&lt;/a&gt; is something 
 I deal with quite often. I rarely have problems with people in my life, because 
 I've learned to respect boundaries and not get involved in other people's shit.
 But I hopelessly fail sometimes at keeping myself detached from people, and it 
