@@ -56,7 +56,7 @@ Billy Joel                           92
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Artist Histogram" src="https://janithl.github.io/images/artist-histogram.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://janithl.github.io/images/artist-histogram.png"&gt;&lt;img alt="Artist Histogram" src="https://janithl.github.io/images/artist-histogram.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Song Titles&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; df.Title.value_counts()
 Sleeping Sun                         39
@@ -93,7 +93,7 @@ Here Comes the Sun                   27
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Song Title Histogram" src="https://janithl.github.io/images/song-title-histogram.png" /&gt;&lt;/p&gt;</summary><category term="data"></category><category term="music"></category></entry><entry><title>On Unrequited Love</title><link href="https://janithl.github.io/2016/07/on-unrequited-love/" rel="alternate"></link><published>2016-07-20T07:45:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/on-unrequited-love/</id><summary type="html">&lt;p&gt;Boy oh boy, &lt;a href="https://janithl.github.io/2016/07/shes-wot-m8/"&gt;this&lt;/a&gt; is something 
+&lt;p&gt;&lt;a href="https://janithl.github.io/images/song-title-histogram.png"&gt;&lt;img alt="Song Title Histogram" src="https://janithl.github.io/images/song-title-histogram.png" /&gt;&lt;/a&gt;&lt;/p&gt;</summary><category term="data"></category><category term="music"></category></entry><entry><title>On Unrequited Love</title><link href="https://janithl.github.io/2016/07/on-unrequited-love/" rel="alternate"></link><published>2016-07-20T07:45:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/on-unrequited-love/</id><summary type="html">&lt;p&gt;Boy oh boy, &lt;a href="https://janithl.github.io/2016/07/shes-wot-m8/"&gt;this&lt;/a&gt; is something 
 I deal with quite often. I rarely have problems with people in my life, because 
 I've learned to respect boundaries and not get involved in other people's shit.
 But I hopelessly fail sometimes at keeping myself detached from people, and it 
