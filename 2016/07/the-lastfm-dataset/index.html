@@ -13,10 +13,11 @@
 
   <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
 
+<meta name="keywords" content="data, music">
 
   <title>
     Janith's Blog
-&ndash; Tags  </title>
+&ndash; The Lastfm Dataset  </title>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -59,20 +60,50 @@
     </nav>
     <div class="container">
 <article>
-  <div class="article_text">
-    <ul>          <li><a href="https://janithl.github.io/tag/conflict/">conflict</a> (1)</li>
-          <li><a href="https://janithl.github.io/tag/conversations/">conversations</a> (1)</li>
-          <li><a href="https://janithl.github.io/tag/data/">data</a> (1)</li>
-          <li><a href="https://janithl.github.io/tag/geopolitics/">geopolitics</a> (1)</li>
-          <li><a href="https://janithl.github.io/tag/music/">music</a> (1)</li>
-          <li><a href="https://janithl.github.io/tag/oasis/">oasis</a> (1)</li>
-          <li><a href="https://janithl.github.io/tag/people/">people</a> (2)</li>
-          <li><a href="https://janithl.github.io/tag/prudishness/">prudishness</a> (1)</li>
-          <li><a href="https://janithl.github.io/tag/sexuality/">sexuality</a> (2)</li>
-          <li><a href="https://janithl.github.io/tag/uni/">uni</a> (3)</li>
-          <li><a href="https://janithl.github.io/tag/work/">work</a> (2)</li>
-    </ul>
+  <div class="article_title">
+    <h3><a href="https://janithl.github.io/2016/07/the-lastfm-dataset/">The Lastfm Dataset</a></h3>
   </div>
+  <div class="article_text">
+    <p><img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png" /></p>
+<p><em>Todoist reminding me that my Last.fm analysis is overdue</em></p>
+<p>I downloaded my <a href="http://www.last.fm/user/JanithL">Last.fm scrobble data</a> a week
+or so back using <a href="https://benjaminbenben.com/lastfm-to-csv/">this excellent online tool</a>. 
+It contains almost every song I listened to on my PC (and some from my phone 
+and iPod) between March 2011 and November 2014, 12784 scrobbles in total.</p>
+<p>I will do a proper analysis <em>soon</em> (sorry, Todoist), but here are some 
+descriptive stats that <a href="http://pandas.pydata.org/pandas-docs/stable/">Pandas</a> 
+throws out:</p>
+<div class="highlight"><pre><span></span>             Artist         Album         Title          Timestamp
+count         12784         12593         12784              12784
+unique          354           752          2048              12709
+top     The Beatles  Past Masters  Sleeping Sun  09 Feb 2013 13:24
+freq           1904           285            39                  8
+</pre></div>
+
+
+<p>I want to do an analysis of how I discovered and fell in love with new bands 
+over the course of these three years. I don't listen to music as much these 
+days, but this is a good dataset and I promise not to let it go to waste.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Wed 20 July 2016</p>
+    <p>Category: <a href="https://janithl.github.io/category/personal/">Personal</a>
+ &ndash; Tags:
+      <a href="https://janithl.github.io/tag/data/">data</a>,      <a href="https://janithl.github.io/tag/music/">music</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2016/07/the-lastfm-dataset/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//janithl.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
 </article>
 
     </div>
