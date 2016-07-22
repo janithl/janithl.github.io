@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/pygments.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Janith">
+  <meta name="description" content="Posts and writings by Janith">
+
+  <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
+
+<meta name="keywords" content="code">
+
+  <title>
+    Janith's Blog
+&ndash; July is the month of buses, and 2016 is the year of JS  </title>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7602960-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://janithl.github.io/">Janith's Blog</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><a href="https://janithl.github.io/pages/about.html">About</a></li>
+
+            <li><a href="https://github.com/janithl" target="_blank">Github</a></li>
+
+            <li><a href="https://janithl.github.io/archives.html">Archives</a></li>
+            <li><a href="https://janithl.github.io/feeds/all.atom.xml">Atom</a></li>
+          </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+<article>
+  <div class="article_title">
+    <h3><a href="https://janithl.github.io/2016/07/busroutejs/">July is the month of buses, and 2016 is the year of JS</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Yesterday, there I was, minding my own business, when Facebook 
+"memories" or whatever threw this curveball at me:</p>
+<p><img alt="Bus Route Anniversary" src="https://janithl.github.io/images/bus-route-anni.png" /></p>
+<p>Turns out it was exactly 5 years ago that I hacked together 
+<a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html">a small piece of PHP</a>, with a <em>liberal</em> amount of SQL logic 
+thrown in, and it became sort of popular. We're talking a 
+<a href="https://github.com/janithl/Bus-Route-Finder">codebase</a> like this:</p>
+<div class="highlight"><pre><span></span><span class="x">function find3Bus($from, $to)</span>
+<span class="x">{</span>
+<span class="x">    global $dbconn;</span>
+<span class="x">    $sql = &lt;&lt;&lt;SQL</span>
+<span class="x">SELECT s1.`bid` as busid1, s3.`bid` as busid2, s5.`bid` as busid3, </span>
+<span class="x">ch1.`changeid` as changeid1, ch2.`changeid` as changeid2, </span>
+<span class="x">(s2.`stopNo` - s1.`stopNo`) as dist1, </span>
+<span class="x">(s4.`stopNo` - s3.`stopNo`) as dist2, </span>
+<span class="x">(s6.`stopNo` - s5.`stopNo`) as dist3</span>
+<span class="x">FROM `changeover` AS ch1, `changeover` AS ch2, `stop` AS s1 INNER JOIN `stop` AS s2</span>
+<span class="x">ON s1.`bid` = s2.`bid`</span>
+<span class="x">INNER JOIN `stop` AS s3</span>
+<span class="x">ON s2.`pid` = s3.`pid`</span>
+<span class="x">INNER JOIN `stop` AS s4</span>
+<span class="x">ON s3.`bid` = s4.`bid`</span>
+<span class="x">INNER JOIN `stop` AS s5</span>
+<span class="x">ON s4.`pid` = s5.`pid`</span>
+<span class="x">INNER JOIN `stop` AS s6</span>
+<span class="x">ON s5.`bid` = s6.`bid`  </span>
+<span class="x">WHERE s1.`pid` = :from AND s2.`pid` = ch1.`changeid` AND s4.`pid` = ch2.`changeid` </span>
+<span class="x">AND s6.`pid` = :to AND s2.`stopNo` &gt; s1.`stopNo` AND s4.`stopNo` &gt; s3.`stopNo` </span>
+<span class="x">AND s6.`stopNo` &gt; s5.`stopNo` ORDER BY (dist1 + dist2 + dist3);</span>
+<span class="x">SQL;</span>
+<span class="x">    $res    = $dbconn-&gt;query($sql, array(&#39;:from&#39; =&gt; $from, &#39;:to&#39; =&gt; $to));</span>
+<span class="x">    $return = false;</span>
+<span class="x">    if($res &amp;&amp; ($row = $res-&gt;fetch()) != false)</span>
+<span class="x">    {</span>
+<span class="x">        $return = $row;</span>
+<span class="x">    }</span>
+<span class="x">    return $return;</span>
+<span class="x">}</span>
+</pre></div>
+
+
+<p>Yikes.</p>
+<p>Anyway, this was hosted on a shitty <a href="http://chavs.000a.biz">000a host</a> that somehow 
+still exists on the internet, and it looked like this:</p>
+<p><img alt="Bus Route Site Screenshot" src="https://janithl.github.io/images/bus-route-original.png" /></p>
+<p>And gave out results that looked like:</p>
+<p><img alt="Bus Route Site Results" src="https://janithl.github.io/images/bus-route-original-results.png" /></p>
+<p>Which somehow is better looking than anything I've managed since.</p>
+<h2>ANYWAY</h2>
+<p>I've been wanting to rewrite <a href="https://github.com/janithl/BusRouteJS/commit/eac72894410693c47426720e240a8d5719316b1b">this thing in JS since 2014</a>, 
+and I've been grappling with Dijkstra's algorithm for months 
+over this. The moment of clarity was realising that bus routes 
+<em>aren't graphs, they're linked lists</em>, and using complicated 
+graph algorithms is unnecessary.</p>
+<p>and this Facebook reminder yesterday and having a <em>bit</em> of free
+time on my hands led me on a 24-hour code sprint that led to
+<a href="https://janithl.github.io/BusRouteJS/">this little thingy</a>.</p>
+<p>It's not <em>better</em> than the original, for example the same query
+as the above Galle Face - Kottawa one gives a stupid result 
+like this:</p>
+<p><img alt="Bus Route JS Results" src="https://janithl.github.io/images/bus-route-js-results.png" /></p>
+<p>The data is ~ 5 years old and needs to be tweaked, and I think 
+the algorithms can do with a lot of tweaking, but here it is 
+and it runs 100% client-side. Yay 2016!</p>
+<h2>What is this CRAP?!</h2>
+<p>"Janith", I hear you say, "you go around the place talking about 
+the how great React is and how important readable code is, and 
+then you write crap UI code like this:"</p>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;col-xs-12&quot;&gt;&#39;</span> <span class="o">+</span> 
+        <span class="nx">renderRoute</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">from</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">to</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">distance</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">routes</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/div&gt;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;col-xs-6&quot;&gt;&#39;</span> <span class="o">+</span> 
+        <span class="nx">renderRoute</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">from</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">distance</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">routes</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="s1">&#39;&lt;/div&gt;&lt;div class=&quot;col-xs-6&quot;&gt;&#39;</span> <span class="o">+</span>
+        <span class="nx">renderRoute</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">route</span><span class="p">.</span><span class="nx">to</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">distance</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">routes</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="s1">&#39;&lt;/div&gt;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;col-xs-4&quot;&gt;&#39;</span> <span class="o">+</span> 
+        <span class="nx">renderRoute</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">from</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">distance</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">routes</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="s1">&#39;&lt;/div&gt;&lt;div class=&quot;col-xs-4&quot;&gt;&#39;</span> <span class="o">+</span>
+        <span class="nx">renderRoute</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">distance</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">routes</span><span class="p">)</span> <span class="o">+</span>
+    <span class="s1">&#39;&lt;/div&gt;&lt;div class=&quot;col-xs-4&quot;&gt;&#39;</span> <span class="o">+</span>
+        <span class="nx">renderRoute</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">route</span><span class="p">.</span><span class="nx">to</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">distance</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">routes</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="s1">&#39;&lt;/div&gt;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nx">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;panel panel-warning&quot;&gt;&lt;div class=&quot;panel-heading&quot;&gt;&lt;h3 class=&quot;panel-title&quot;&gt;&#39;</span> <span class="o">+</span> 
+    <span class="s1">&#39;&lt;span class=&quot;glyphicon glyphicon-star&quot;&gt;&lt;/span&gt; Recommended Route&lt;/h3&gt;&lt;/div&gt;&lt;div class=&quot;panel-body row&quot;&gt;&#39;</span> <span class="o">+</span> 
+    <span class="nx">output</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="nx">output</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-body row&quot;&gt;&#39;</span> <span class="o">+</span> <span class="nx">output</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Okay, I'm a hypocrite. I only had 24 hours to write this and I 
+cut some corners. REACT TAKES LIKE <strong>6 HOURS</strong> TO SET UP, OKAY?</p>
+<p>I'm sorry. :C</p>
+<h2>Why's half of router.js stolen code?</h2>
+<p>Let's face it, we all do this. Copy stuff <em>gedi pitin</em> from 
+StackOverflow. I just linked back to the sources, legal 
+ramifications be damned.</p>
+<h2>Is this bus thing the only good thing you've written? Are you flogging a dead horse?</h2>
+<p>I wouldn't call it good, but yes.</p>
+<h2>What now?</h2>
+<p>I've barely tested it, so I'll probably make some tweaks here 
+and there. The code, as usual, is on <a href="https://github.com/janithl/BusRouteJS">Github and MIT licensed</a>.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Fri 22 July 2016</p>
+    <p>Category: <a href="https://janithl.github.io/category/personal/">Personal</a>
+ &ndash; Tags:
+      <a href="https://janithl.github.io/tag/code/">code</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2016/07/busroutejs/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//janithl.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+    </div>
+
+    <div id="ending_message">
+      <p>&copy; Janith. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>
