@@ -53,8 +53,8 @@ and I've been grappling with Dijkstra's algorithm for months
 over this. The moment of clarity was realising that bus routes 
 &lt;em&gt;aren't graphs, they're linked lists&lt;/em&gt;, and using complicated 
 graph algorithms is unnecessary.&lt;/p&gt;
-&lt;p&gt;and this Facebook reminder yesterday and having a &lt;em&gt;bit&lt;/em&gt; of free
-time on my hands led me on a 24-hour code sprint that led to
+&lt;p&gt;This Facebook reminder yesterday and having a &lt;em&gt;bit&lt;/em&gt; of free
+time on my hands led to a 24-hour code sprint that produced
 &lt;a href="https://janithl.github.io/BusRouteJS/"&gt;this little thingy&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It's not &lt;em&gt;better&lt;/em&gt; than the original, for example the same query
 as the above Galle Face - Kottawa one gives a stupid result 
@@ -110,7 +110,9 @@ ramifications be damned.&lt;/p&gt;
 &lt;p&gt;I wouldn't call it good, but yes.&lt;/p&gt;
 &lt;h2&gt;What now?&lt;/h2&gt;
 &lt;p&gt;I've barely tested it, so I'll probably make some tweaks here 
-and there. The code, as usual, is on &lt;a href="https://github.com/janithl/BusRouteJS"&gt;Github and MIT licensed&lt;/a&gt;.&lt;/p&gt;</summary><category term="code"></category></entry><entry><title>The Lastfm Dataset</title><link href="https://janithl.github.io/2016/07/the-lastfm-dataset/" rel="alternate"></link><published>2016-07-20T09:09:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/the-lastfm-dataset/</id><summary type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png" /&gt;&lt;/p&gt;
+and there. The code, as usual, is on &lt;a href="https://github.com/janithl/BusRouteJS"&gt;Github and MIT licensed&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://janithl.github.io/BusRouteJS/"&gt;Go to this page, and it'll throw you not great bus route suggestions&lt;/a&gt;&lt;/p&gt;</summary><category term="code"></category></entry><entry><title>The Lastfm Dataset</title><link href="https://janithl.github.io/2016/07/the-lastfm-dataset/" rel="alternate"></link><published>2016-07-20T09:09:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/the-lastfm-dataset/</id><summary type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Todoist reminding me that my Last.fm analysis is overdue&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I downloaded my &lt;a href="http://www.last.fm/user/JanithL"&gt;Last.fm scrobble data&lt;/a&gt; a week
 or so back using &lt;a href="https://benjaminbenben.com/lastfm-to-csv/"&gt;this excellent online tool&lt;/a&gt;. 
