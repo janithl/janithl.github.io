@@ -106,6 +106,8 @@ then you write crap UI code like this:"&lt;/p&gt;
 &lt;p&gt;Okay, I'm a hypocrite. I only had 24 hours to write this and I 
 cut some corners. REACT TAKES LIKE &lt;strong&gt;6 HOURS&lt;/strong&gt; TO SET UP, OKAY?&lt;/p&gt;
 &lt;p&gt;I'm sorry. :C&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; They're &lt;a href="https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html"&gt;released a method to easily create React apps&lt;/a&gt;. 
+Yay!&lt;/p&gt;
 &lt;h2&gt;Why's half of router.js stolen code?&lt;/h2&gt;
 &lt;p&gt;Let's face it, we all do this. Copy stuff &lt;em&gt;gedi pitin&lt;/em&gt; from 
 StackOverflow. I just linked back to the sources, legal 
