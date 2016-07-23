@@ -97,37 +97,41 @@
 <a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html">a small piece of PHP</a>, with a <em>liberal</em> amount of SQL logic 
 thrown in, and it became sort of popular. We're talking a 
 <a href="https://github.com/janithl/Bus-Route-Finder">codebase</a> like this:</p>
-<div class="highlight"><pre><span></span><span class="x">function find3Bus($from, $to)</span>
-<span class="x">{</span>
-<span class="x">    global $dbconn;</span>
-<span class="x">    $sql = &lt;&lt;&lt;SQL</span>
-<span class="x">SELECT s1.`bid` as busid1, s3.`bid` as busid2, s5.`bid` as busid3, </span>
-<span class="x">ch1.`changeid` as changeid1, ch2.`changeid` as changeid2, </span>
-<span class="x">(s2.`stopNo` - s1.`stopNo`) as dist1, </span>
-<span class="x">(s4.`stopNo` - s3.`stopNo`) as dist2, </span>
-<span class="x">(s6.`stopNo` - s5.`stopNo`) as dist3</span>
-<span class="x">FROM `changeover` AS ch1, `changeover` AS ch2, `stop` AS s1 INNER JOIN `stop` AS s2</span>
-<span class="x">ON s1.`bid` = s2.`bid`</span>
-<span class="x">INNER JOIN `stop` AS s3</span>
-<span class="x">ON s2.`pid` = s3.`pid`</span>
-<span class="x">INNER JOIN `stop` AS s4</span>
-<span class="x">ON s3.`bid` = s4.`bid`</span>
-<span class="x">INNER JOIN `stop` AS s5</span>
-<span class="x">ON s4.`pid` = s5.`pid`</span>
-<span class="x">INNER JOIN `stop` AS s6</span>
-<span class="x">ON s5.`bid` = s6.`bid`  </span>
-<span class="x">WHERE s1.`pid` = :from AND s2.`pid` = ch1.`changeid` AND s4.`pid` = ch2.`changeid` </span>
-<span class="x">AND s6.`pid` = :to AND s2.`stopNo` &gt; s1.`stopNo` AND s4.`stopNo` &gt; s3.`stopNo` </span>
-<span class="x">AND s6.`stopNo` &gt; s5.`stopNo` ORDER BY (dist1 + dist2 + dist3);</span>
-<span class="x">SQL;</span>
-<span class="x">    $res    = $dbconn-&gt;query($sql, array(&#39;:from&#39; =&gt; $from, &#39;:to&#39; =&gt; $to));</span>
-<span class="x">    $return = false;</span>
-<span class="x">    if($res &amp;&amp; ($row = $res-&gt;fetch()) != false)</span>
-<span class="x">    {</span>
-<span class="x">        $return = $row;</span>
-<span class="x">    }</span>
-<span class="x">    return $return;</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span> 
+
+<span class="k">function</span> <span class="nf">find3Bus</span><span class="p">(</span><span class="nv">$from</span><span class="p">,</span> <span class="nv">$to</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">global</span> <span class="nv">$dbconn</span><span class="p">;</span>
+    <span class="nv">$sql</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;SQL</span>
+<span class="s">SELECT s1.`bid` as busid1, s3.`bid` as busid2, s5.`bid` as busid3, </span>
+<span class="s">ch1.`changeid` as changeid1, ch2.`changeid` as changeid2, </span>
+<span class="s">(s2.`stopNo` - s1.`stopNo`) as dist1, </span>
+<span class="s">(s4.`stopNo` - s3.`stopNo`) as dist2, </span>
+<span class="s">(s6.`stopNo` - s5.`stopNo`) as dist3</span>
+<span class="s">FROM `changeover` AS ch1, `changeover` AS ch2, `stop` AS s1 INNER JOIN `stop` AS s2</span>
+<span class="s">ON s1.`bid` = s2.`bid`</span>
+<span class="s">INNER JOIN `stop` AS s3</span>
+<span class="s">ON s2.`pid` = s3.`pid`</span>
+<span class="s">INNER JOIN `stop` AS s4</span>
+<span class="s">ON s3.`bid` = s4.`bid`</span>
+<span class="s">INNER JOIN `stop` AS s5</span>
+<span class="s">ON s4.`pid` = s5.`pid`</span>
+<span class="s">INNER JOIN `stop` AS s6</span>
+<span class="s">ON s5.`bid` = s6.`bid`  </span>
+<span class="s">WHERE s1.`pid` = :from AND s2.`pid` = ch1.`changeid` AND s4.`pid` = ch2.`changeid` </span>
+<span class="s">AND s6.`pid` = :to AND s2.`stopNo` &gt; s1.`stopNo` AND s4.`stopNo` &gt; s3.`stopNo` </span>
+<span class="s">AND s6.`stopNo` &gt; s5.`stopNo` ORDER BY (dist1 + dist2 + dist3);</span>
+<span class="s">SQL;</span>
+    <span class="nv">$res</span>    <span class="o">=</span> <span class="nv">$dbconn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;:from&#39;</span> <span class="o">=&gt;</span> <span class="nv">$from</span><span class="p">,</span> <span class="s1">&#39;:to&#39;</span> <span class="o">=&gt;</span> <span class="nv">$to</span><span class="p">));</span>
+    <span class="nv">$return</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="nv">$res</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nv">$res</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">())</span> <span class="o">!=</span> <span class="k">false</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$return</span> <span class="o">=</span> <span class="nv">$row</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nv">$return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
 
 
