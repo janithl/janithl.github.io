@@ -34,7 +34,7 @@ header p {
   text-transform: uppercase;
 }
 article {
-  max-width: 640px;
+  max-width: 720px;
   padding: 40px;
   margin: 0 auto;
 }
@@ -48,6 +48,9 @@ article div.article_text {
 }
 article div.article_text a {
   text-decoration: underline;
+}
+article div.article_text pre {
+    font-size: 12px;
 }
 article div.gist {
   line-height: .875em;
