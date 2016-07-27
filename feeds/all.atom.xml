@@ -68,6 +68,8 @@ like this:&lt;/p&gt;
 the algorithms can do with a lot of tweaking, but here it is 
 and it runs 100% client-side. Yay 2016!&lt;/p&gt;
 &lt;h2&gt;What is this CRAP?!&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; The UI code is now completely React-based! All clean and 
+beautiful. Yay!&lt;/p&gt;
 &lt;p&gt;"Janith", I hear you say, "you go around the place talking about 
 the how great React is and how important readable code is, and 
 then you write crap UI code like this:"&lt;/p&gt;
@@ -104,10 +106,11 @@ then you write crap UI code like this:"&lt;/p&gt;
 
 
 &lt;p&gt;Okay, I'm a hypocrite. I only had 24 hours to write this and I 
-cut some corners. REACT TAKES LIKE &lt;strong&gt;6 HOURS&lt;/strong&gt; TO SET UP, OKAY?&lt;/p&gt;
+cut some corners. REACT TAKES LIKE &lt;strong&gt;6 HOURS&lt;/strong&gt; TO SET UP, OKAY? &lt;/p&gt;
 &lt;p&gt;I'm sorry. :C&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; They're &lt;a href="https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html"&gt;released a method to easily create React apps&lt;/a&gt;. 
-Yay!&lt;/p&gt;
+&lt;p&gt;(It took a couple of days of hard toil to finally convert the UI 
+code to React. I would never have made my self-imposed 24 hour 
+deadline had I gone with React the first time.)&lt;/p&gt;
 &lt;h2&gt;Why's half of router.js stolen code?&lt;/h2&gt;
 &lt;p&gt;Let's face it, we all do this. Copy stuff &lt;em&gt;gedi pitin&lt;/em&gt; from 
 StackOverflow. I just linked back to the sources, legal 
