@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-07-22T08:32:00+05:30</updated><entry><title>July is the month of buses, and 2016 is the year of JS</title><link href="https://janithl.github.io/2016/07/busroutejs/" rel="alternate"></link><published>2016-07-22T08:32:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-22:2016/07/busroutejs/</id><summary type="html">&lt;p&gt;Yesterday, there I was, minding my own business, when Facebook 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-07-31T22:41:00+05:30</updated><entry><title>The month of Augustus</title><link href="https://janithl.github.io/2016/07/the-month-of-augustus/" rel="alternate"></link><published>2016-07-31T22:41:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-31:2016/07/the-month-of-augustus/</id><summary type="html">&lt;p&gt;It begins tomorrow, and I'm really excited because I've been FUP'd by SLT for
+the last few days. It's been painful going, as &lt;code&gt;vnstat&lt;/code&gt; attests:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;         day         rx      |     tx      |    total    |   avg. rate
+     ------------------------+-------------+-------------+---------------
+     07/22/2016   410.55 MiB |   54.48 MiB |  465.03 MiB |   44.09 kbit/s
+     07/23/2016   231.05 MiB |   36.32 MiB |  267.37 MiB |   25.35 kbit/s
+     07/24/2016   620.32 MiB |   84.95 MiB |  705.27 MiB |   66.87 kbit/s
+     07/25/2016   413.00 MiB |   59.05 MiB |  472.05 MiB |   44.76 kbit/s
+     07/26/2016   392.72 MiB |   60.14 MiB |  452.86 MiB |   42.94 kbit/s
+     07/27/2016   401.44 MiB |   64.09 MiB |  465.52 MiB |   44.14 kbit/s
+     07/28/2016   264.50 MiB |   25.76 MiB |  290.27 MiB |   27.52 kbit/s
+     07/29/2016   312.83 MiB |   53.04 MiB |  365.88 MiB |   34.69 kbit/s
+     07/30/2016   439.92 MiB |   45.89 MiB |  485.80 MiB |   46.06 kbit/s
+     07/31/2016   134.91 MiB |   36.42 MiB |  171.32 MiB |   17.74 kbit/s
+     ------------------------+-------------+-------------+---------------
+     estimated       146 MiB |      39 MiB |     185 MiB |
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I've been painfully made aware of how heavy Facebook is, when even scrolling
+down the timeline for a minute or two and replying to a few messages can cost a
+couple dozen MBs. Makes me wonder how I survived on those 1 GB limited SLT
+connections back in the day. But back in the day developers cared about  making
+their pages light, unlike now. Sigh.&lt;/p&gt;
+&lt;p&gt;I've been making progress on my thesis (or its lit review, rather). About 3
+more papers and I can forward it to my supervisor for a read-through, I feel.
+Very much relieved that I've been able to get this far on things.&lt;/p&gt;
+&lt;p&gt;Took a break from studies today (it &lt;em&gt;IS&lt;/em&gt; Sunday) to do some work on &lt;a href="https://github.com/janithl/Kottu2012"&gt;ol' 
+Kottu&lt;/a&gt;. Things have been broken a bit since &lt;a href="https://blog.twitter.com/2015/hard-decisions-for-a-sustainable-platform"&gt;Twitter, true to form, 
+deprecated useful functionality&lt;/a&gt;. So I got rid of the Twitter share counting,
+recalibrated the popularity calculation, and - since I was in there already - 
+moved the front-end to use Bootstrap. Because slapping Bootstrap on sites that
+have worked perfectly without it is my thing. I'm hoping to deprecate the JQuery 
+Mobile-based Kottu Mobile site in favour of the responsive Bootstrap main site 
+in the near future, if there aren't any protests and self-immolations.&lt;/p&gt;</summary><category term="code"></category><category term="uni"></category></entry><entry><title>July is the month of buses, and 2016 is the year of JS</title><link href="https://janithl.github.io/2016/07/busroutejs/" rel="alternate"></link><published>2016-07-22T08:32:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-22:2016/07/busroutejs/</id><summary type="html">&lt;p&gt;Yesterday, there I was, minding my own business, when Facebook 
 "memories" or whatever threw this curveball at me:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Bus Route Anniversary" src="https://janithl.github.io/images/bus-route-anni.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Turns out it was exactly 5 years ago that I hacked together 
