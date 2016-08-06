@@ -33,7 +33,16 @@ have worked perfectly without it is my thing. I'm hoping to deprecate the JQuery
 Mobile-based Kottu Mobile site in favour of the responsive Bootstrap main site 
 in the near future, if there aren't any protests and self-immolations.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Kottu Desktop" src="https://janithl.github.io/images/kottu-bootstrap-desktop.png" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kottu Mobile" src="https://janithl.github.io/images/kottu-bootstrap-mobile.png" /&gt;&lt;/p&gt;</summary><category term="code"></category><category term="uni"></category></entry><entry><title>The Lastfm Dataset</title><link href="https://janithl.github.io/2016/07/the-lastfm-dataset/" rel="alternate"></link><published>2016-07-20T09:09:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/the-lastfm-dataset/</id><summary type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kottu Mobile" src="https://janithl.github.io/images/kottu-bootstrap-mobile.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; &lt;code&gt;vnstat&lt;/code&gt; output since Aug 1 (this is why I can't have nice things):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;         day         rx      |     tx      |    total    |   avg. rate
+     ------------------------+-------------+-------------+---------------
+     08/01/2016     1.48 GiB |  133.97 MiB |    1.61 GiB |  156.10 kbit/s
+     08/03/2016   305.62 MiB |   44.76 MiB |  350.39 MiB |   33.22 kbit/s
+     08/04/2016     1.19 GiB |  115.37 MiB |    1.30 GiB |  126.38 kbit/s
+     08/05/2016     1.71 GiB |  174.64 MiB |    1.88 GiB |  182.12 kbit/s
+     08/06/2016   603.21 MiB |   53.36 MiB |  656.56 MiB |   62.51 kbit/s
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="code"></category><category term="uni"></category></entry><entry><title>The Lastfm Dataset</title><link href="https://janithl.github.io/2016/07/the-lastfm-dataset/" rel="alternate"></link><published>2016-07-20T09:09:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/the-lastfm-dataset/</id><summary type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Todoist reminding me that my Last.fm analysis is overdue&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I downloaded my &lt;a href="http://www.last.fm/user/JanithL"&gt;Last.fm scrobble data&lt;/a&gt; a week
 or so back using &lt;a href="https://benjaminbenben.com/lastfm-to-csv/"&gt;this excellent online tool&lt;/a&gt;. 
