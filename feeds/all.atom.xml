@@ -17,7 +17,6 @@ it to do.&lt;/p&gt;
 Progress has been slow and the availability of the internet hasn't been helping:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;         day         rx      |     tx      |    total    |   avg. rate
      ------------------------+-------------+-------------+---------------
-
      08/07/2016     2.33 GiB |  165.41 MiB |    2.49 GiB |  241.70 kbit/s
      08/08/2016     1.50 GiB |  155.75 MiB |    1.65 GiB |  159.95 kbit/s
      08/09/2016   691.81 MiB |   76.57 MiB |  768.38 MiB |   72.85 kbit/s
