@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/links.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-14T17:53:00+05:30</updated><entry><title>Links: August 14</title><link href="https://janithl.github.io/2016/08/links-august-14/" rel="alternate"></link><published>2016-08-14T17:53:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-14:2016/08/links-august-14/</id><summary type="html">&lt;p&gt;I &lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;promised previously&lt;/a&gt; to use this space for link sharing as well, so here
+goes the first instalment.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;On Software&lt;/h2&gt;
+&lt;p&gt;Gender disparity in computer science is an often discussed topic, and the 
+following is one of my favourite graphs on the topic:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;&lt;img alt="Women in CompSci" src="https://janithl.github.io/images/comp-sci-women.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This week, I read about another study that confirms that software development 
+is not the meritocracy it is often claimed to be. - &lt;a href="https://www.theguardian.com/technology/2016/feb/12/women-considered-better-coders-hide-gender-github"&gt;"Women considered better 
+coders – but only if they hide their gender"&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The researchers looked at approximately 3m pull requests submitted on GitHub, 
+and found that code written by women was approved at a higher rate (78.6%) than 
+code written by men (74.6%).&lt;/p&gt;
+&lt;p&gt;Looking for an explanation for this disparity, the researchers examined 
+several different factors, such as whether women were making smaller changes 
+to code (they were not) or whether women were outperforming men in only certain 
+kinds of code (they were not). &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;But...&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It was here that they made the disturbing discovery: women’s work was more 
+likely to be accepted than men’s, unless “their gender is identifiable”, in 
+which case the acceptance rate was worse than men’s. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And the golden&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Jenny Bryan, a professor of statistics at the University of British Columbia, 
+uses GitHub as a teacher and developer in R, a programming language. Her profile 
+makes clear that she is a woman, and she doesn’t believe that she’s been 
+discriminated against due to her gender.&lt;/p&gt;
+&lt;p&gt;“At the very most, men who don’t know me sometimes explain things to me that 
+I likely understand better than they do,” she writes. “The men I interact with 
+in the R community on GitHub know me and, if my genderhas any effect at all, I 
+feel they go out of their way to support my efforts to learn and make more 
+contributions.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Trust Githubbers to attempt mansplaining R to a Stats Prof.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Machine Learning is a topic &lt;a href="https://janithl.github.io/2016/07/the-lastfm-dataset/"&gt;I am ostensibly interested in&lt;/a&gt;. This week, I
+discovered a really cool &lt;a href="https://github.com/josephmisiti/awesome-machine-learning"&gt;awesome-style list with a ton of ML resources&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Awesome Machine Learning Awesome: A curated list of awesome machine learning 
+frameworks, libraries and software (by language).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;p&gt;A beautiful, beautiful tool and write-up by &lt;a href="http://www.martinoleary.com/"&gt;Dr. Martin O'Leary of Swansea 
+University&lt;/a&gt; on a tool to &lt;a href="http://mewo2.com/notes/terrain/"&gt;generate imaginary maps&lt;/a&gt; and a companion piece 
+on &lt;a href="http://mewo2.com/notes/naming-language/"&gt;generating an imginary language to produce place names&lt;/a&gt;. Mind-blown 
+twice: as a cartography nerd AND as someone who studied NLP.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.martinoleary.com/"&gt;&lt;img alt="Imaginary Maps" src="https://janithl.github.io/images/imaginary-maps.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I wanted to make maps that look like something you'd find at the back of one 
+of the cheap paperback fantasy novels of my youth. I always had a fascination 
+with these imagined worlds, which were often much more interesting than 
+whatever luke-warm sub-Tolkien tale they were attached to.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Took me back to my childhood spent looking for, devouring and creating 
+imaginary maps of my own. &lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;On Sports&lt;/h2&gt;
+&lt;p&gt;A &lt;a href="http://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html?_r=0"&gt;beautifully visual and data-rich NYT piece&lt;/a&gt; on how different countries
+dominated different arenas of the Olympics over the years, and how certain 
+blocks dominate certain sports. Part of their excellent Olympic coverage.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href="http://www.espncricinfo.com/sri-lanka-v-australia-2016/content/story/1045673.html"&gt;Andrew Fernando's excellent write-up&lt;/a&gt; on the first day of the third test
+between Australia and Sri Lanka at the SSC. He keeps churning out these 
+exceptional gems that make me proud to be Sri Lankan.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The SSC ground happens to be in the clotted heart of Colombo's administrative 
+district. Yet, although the Australia team may never set foot inside the 
+National Identity Card Centre, which is a few minutes away, or the Ministry of 
+Public Administration and Management, which is visible from the ground, they 
+were on day one of this Test, given a thorough government-office treatment. 
+They were made to wait for hours, run around, given brief hope, which was 
+promptly crushed; they were sneered at, and mistreated, and by the end of the 
+day, they were ready to tear their hair out.&lt;/p&gt;
+&lt;p&gt;Bureaucrat-in-chief for Sri Lanka was Dhananjaya de Silva, whose maiden Test 
+hundred was a thing of superlative casualness. So unfazed was he by a scoreline 
+of 26 for 5 at his arrival, he was like the civil servant who comes to work to 
+find a queue stretching around the building outside his office, yet before work 
+takes a long tea-and-biscuit break while chit-chatting to colleagues. He stood 
+slouched at the crease all day, unfurling somnolent drives, and languid flicks 
+to the leg side, appearing as if he was doing almost nothing. Meanwhile, 
+Australia chased leather all over; patrons shunted from room to room to room 
+in the building, all, in the end, for no tangible reward. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;swoons&lt;/em&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;On Conflict&lt;/h2&gt;
+&lt;p&gt;Col. Sylvester Perera's &lt;a href="https://globalecco.org/the-sri-lankan-civil-war-a-personal-reminiscence-col-sylvester-perera-sri-lankan-army"&gt;sobering account of the civil war in the 90s&lt;/a&gt;, and 
+how lasting peace is yet to be achieved.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Operation Riviresa was one of the major operations conducted by Sri Lanka's 
+armed forces against the LTTE, and it was both well-planned and 
+well-coordinated. The primary objective of the operation was the capture and 
+liberation of the town of Jaffna and the rest of the Jaffna peninsula. 
+By contrast, during Operation Sath Jaya to capture the LTTE stronghold of 
+Kilinochchi, the country's political leadership overrode the advice of military 
+commanders and drove the army to stretch its forces beyond the practical limits 
+of defense.&lt;/p&gt;
+&lt;p&gt;[...] the intelligence provided to the military lacked answers to the vital 
+questions of when, where, what, and how—the most fundamental aspects of a 
+useful intelligence picture. As a result, our operations either were ineffective 
+or became nightmares of shock and surprise for our troops.&lt;/p&gt;
+&lt;p&gt;I realized that defeating an insurgency does not bring the conflict to a 
+conclusive end. I had to put all my efforts into managing a post-conflict 
+society for peace building, within a framework called disarmament, 
+demobilization, and reintegration. Despite all our work, however, it seems 
+that Sri Lanka is still facing these challenges [...]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;p&gt;D. B. S. Jeyaraj's article &lt;a href="http://dbsjeyaraj.com/dbsj/archives/47692"&gt;"Shelton Ranaraja: Principled Politician was 
+Conscience-Keeper of the Nation"&lt;/a&gt; which contained some chilling excerpts 
+from William Mcgowan's “Only man is Vile”.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Kandyan jungle seemed so at peace just after dawn on that October morning 
+in 1989. In the twisted thicket of palms, bamboo and bougainvillea that 
+blanketed the hotel, a handful of iridescent parrots screeched cheery greetings 
+to the first rays of sun as they splintered into a forest of prisms through the 
+morning dew [...] But we turned left that morning, and we hadn’t driven even a 
+mile when we saw our first body–a headless corpse, hands bound behind its back, 
+blocking the road like a fallen tree. A few hundred yards farther, there were 
+three more, then two more, then four more, all with their heads neatly severed 
+at the shoulders.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Mr. Ranaraja expressed what I imagine a lot of people must've felt at that time:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;That night, in his modest home near the Temple of the Sacred Relic in downtown 
+Kandy, one of the island’s parliamentarians spoke with quiet frustration of the 
+trauma that this awful era has caused his island paradise and its 14 million 
+people–“We wake up in the morning, and we know tomorrow will be worse than 
+today”–and he tried to square the living death with the religion that had taught 
+them from birth the sacredness of all life.&lt;/p&gt;
+&lt;p&gt;“We’re not to kill even an animal or an ant,” Shelton Ranaraja said that 
+evening, his body shaken and broken from the horrors that abounded in the 
+peaceful jungle around him. “I don’t understand why this is happening. I cannot 
+explain it.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So very glad I got to skip the 80s.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;So, that was a long write (and read, sorry!). I should try to keep these shorter
+from next time on.&lt;/p&gt;</summary><category term="conflict"></category><category term="code"></category><category term="data"></category></entry></feed>
