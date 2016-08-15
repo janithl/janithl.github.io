@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-15T20:06:00+05:30</updated><entry><title>Pairplots FTW! Links: August 15</title><link href="https://janithl.github.io/2016/08/links-august-15/" rel="alternate"></link><published>2016-08-15T20:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-15:2016/08/links-august-15/</id><summary type="html">&lt;p&gt;Instalment 2 of the "sharing links" thingy. Shorter too.&lt;/p&gt;
 &lt;hr /&gt;
-&lt;h2&gt;On Software&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;On Software:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I recently subscribed to the Dataquest newsletter, and today got this post
 emailed to me:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.dataquest.io/blog/python-vs-r/"&gt;&lt;em&gt;Python vs R: head to head data analysis&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
@@ -12,7 +12,7 @@ different columns correlate to others.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Seaborn Pairplot" src="https://janithl.github.io/images/seaborn-pairplot.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The above example is from the excellent &lt;a href="https://stanford.edu/~mwaskom/software/seaborn/generated/seaborn.pairplot.html"&gt;Seaborn Documentation&lt;/a&gt;. Good stuff!&lt;/p&gt;
 &lt;hr /&gt;
-&lt;h2&gt;On Conflict&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;On Conflict:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I read several great D. B. S. Jeyaraj articles in my ongoing fascination with
 the Sri Lankan Civil War.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dbsjeyaraj.com/dbsj/archives/1073"&gt;&lt;em&gt;“Pottu Amman” and the Intelligence Division of the LTTE&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
@@ -37,7 +37,7 @@ remained incognito in Colombo till 1997.&lt;/p&gt;
 &lt;p&gt;How inept was military intel at that time for this guy to lurk around for almost
 7 years blowing shit up and not be noticed?&lt;/p&gt;
 &lt;hr /&gt;
-&lt;h2&gt;On Economics&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;On Economics:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The excellent piece on the Daily FT by IPS Chairman Prof. Razeen Sally, titled 
 &lt;a href="http://www.ft.lk/article/560914/ft"&gt;&lt;em&gt;"The Sri Lankan economy after regime change"&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -88,7 +88,7 @@ frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;Well, I guess not that much shorter. Oh well.&lt;/p&gt;</summary><category term="conflict"></category><category term="data"></category><category term="geopolitics"></category></entry><entry><title>Links: August 14</title><link href="https://janithl.github.io/2016/08/links-august-14/" rel="alternate"></link><published>2016-08-14T17:53:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-14:2016/08/links-august-14/</id><summary type="html">&lt;p&gt;I &lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;promised previously&lt;/a&gt; to use this space for link sharing as well, so here
 goes the first instalment.&lt;/p&gt;
 &lt;hr /&gt;
-&lt;h2&gt;On Software&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;On Software:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Gender disparity in computer science is an often discussed topic, and the 
 following is one of my favourite graphs on the topic:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;&lt;img alt="Women in CompSci" src="https://janithl.github.io/images/comp-sci-women.png" /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -145,7 +145,7 @@ whatever luke-warm sub-Tolkien tale they were attached to.&lt;/p&gt;
 &lt;p&gt;Took me back to my childhood spent looking for, devouring and creating 
 imaginary maps of my own. &lt;/p&gt;
 &lt;hr /&gt;
-&lt;h2&gt;On Sports&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;On Sports:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;A &lt;a href="http://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html?_r=0"&gt;beautifully visual and data-rich NYT piece&lt;/a&gt; on how different countries
 dominated different arenas of the Olympics over the years, and how certain 
 blocks dominate certain sports. Part of their excellent Olympic coverage.&lt;/p&gt;
@@ -174,7 +174,7 @@ in the building, all, in the end, for no tangible reward. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;swoons&lt;/em&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;h2&gt;On Conflict&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;On Conflict:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Col. Sylvester Perera's &lt;a href="https://globalecco.org/the-sri-lankan-civil-war-a-personal-reminiscence-col-sylvester-perera-sri-lankan-army"&gt;sobering account of the civil war in the 90s&lt;/a&gt;, and 
 how lasting peace is yet to be achieved.&lt;/p&gt;
 &lt;blockquote&gt;
