@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-14T17:53:00+05:30</updated><entry><title>Links: August 14</title><link href="https://janithl.github.io/2016/08/links-august-14/" rel="alternate"></link><published>2016-08-14T17:53:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-14:2016/08/links-august-14/</id><summary type="html">&lt;p&gt;I &lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;promised previously&lt;/a&gt; to use this space for link sharing as well, so here
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-15T20:06:00+05:30</updated><entry><title>Pairplots FTW! Links: August 15</title><link href="https://janithl.github.io/2016/08/links-august-15/" rel="alternate"></link><published>2016-08-15T20:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-15:2016/08/links-august-15/</id><summary type="html">&lt;p&gt;Installment 2 of the "sharing links" thingy. Shorter too.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;On Software&lt;/h2&gt;
+&lt;p&gt;I recently subscibed to the Dataquest newsletter, and today got this post
+emailed to me:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.dataquest.io/blog/python-vs-r/"&gt;&lt;em&gt;Python vs R: head to head data analysis&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make pairwise scatterplots: One common way to explore a dataset is to see how 
+different columns correlate to others.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="Seaborn Pairplot" src="https://janithl.github.io/images/seaborn-pairplot.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The above example is from the excellent &lt;a href="https://stanford.edu/~mwaskom/software/seaborn/generated/seaborn.pairplot.html"&gt;Seaborn Documentation&lt;/a&gt;. Good stuff!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;On Conflict&lt;/h2&gt;
+&lt;p&gt;I read several great D. B. S. Jeyaraj articles in my ongoing fascination with
+the Sri Lankan Civil War.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dbsjeyaraj.com/dbsj/archives/1073"&gt;&lt;em&gt;“Pottu Amman” and the Intelligence Division of the LTTE&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;He was amazed at Pottu’s growth in later life and observed “I just don’t know 
+how he is running the intelligence division so well nowadays”. But then academic 
+brilliance is not a pre-requisite to run an intelligence outfit.&lt;/p&gt;
+&lt;p&gt;What is required is lateral thinking, practical approaches, devious cunning, 
+organizational skills, shrewd judgement of men and matters and above all 
+perpetual paranoia about everything.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://dbsjeyaraj.com/dbsj/archives/14588"&gt;&lt;em&gt;“Col Charles”: The”tiger” Mastermind Behind LTTE Attacks Outside 
+North-East&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It was decided that Colombo should be taught a bitter lesson. Charles, then 
+only nineteen was entrusted with the task. He moved into Colombo in January 1991 
+and set two plans of attack in motion. Within a few weeks the LTTE struck in 
+Colombo. The JOC headquarters was blown up. Ranjan Wijeratne was killed by a car 
+bomb. This was only the beginning. Charles as an “unknown face” of the LTTE 
+remained incognito in Colombo till 1997.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;How inept was military intel at that time for this guy to lurk around for almost
+7 years blowing shit up and not be noticed?&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;On Economics&lt;/h2&gt;
+&lt;p&gt;The excellent piece on the Daily FT by IPS Chairman Prof. Razeen Sally, titled 
+&lt;a href="http://www.ft.lk/article/560914/ft"&gt;&lt;em&gt;"The Sri Lankan economy after regime change"&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;First the Government hammers consumers with high prices through inflation and 
+import taxes – which hits the poor particularly hard since they spend more of 
+their disposable income on essential items. Then it bludgeons producers with 
+price controls. This is market-busting, an echo of Mrs Bandaranaike’s command 
+economy in the 1970s.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On the same old wine in new bottles:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Old, established politicians have played musical chairs around the cabinet 
+table, and kept a new generation of younger, competent professionals away from 
+positions of power. This is not surprising: the old political elite – and their 
+business cronies – have vested interests to defend. And so entrenched, 
+unprofessional, bankrupt attitudes and methods persist.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On tax reform:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Objectives should be to get revenue up to 15-20% of GDP, while concurrently 
+increasing incentives to save, invest, create jobs and boost productivity. The 
+watchword should be “simplification”. There should be clean, simple rates for 
+VAT and direct (personal and corporate) income taxes, with as few exemptions as 
+possible. [...] Even relatively low tax rates will generate more revenue 
+providing the system is clean, simple and well-enforced.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On the possible repurcussions of this government failing:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The more malign scenario is that the present situation will spiral backwards. 
+A macroeconomic crisis might be the catalyst. Or it could result from popular 
+frustrations – no new investments, no new jobs, no change – boiling over. Then, 
+in the Sinhala-Buddhist heartland, people might yearn again for a Big Man, a 
+Rajapaksa or someone else, to ride in and clean house, sweeping away liberal 
+rights and democratic niceties with his authoritarian broom. They could vent 
+their frustrations at the minorities who got President Sirisena and a UNP-led 
+Government elected.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hat tip for &lt;a href="https://www.facebook.com/yudhanjaya"&gt;Yudhanjaya&lt;/a&gt; and &lt;a href="https://twitter.com/himalkk"&gt;Himal&lt;/a&gt; for pointing me at this.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;I've been watching a LOT of "Crash Course World History", and I loved their 
+&lt;a href="https://www.youtube.com/watch?v=alJaltUmrGo"&gt;&lt;em&gt;episode on Imperialism&lt;/em&gt;&lt;/a&gt;, especially the oft-overlooked economic side of 
+it. See also &lt;a href="https://www.youtube.com/watch?v=QfsfoFqsFk4"&gt;their episode on American Imperialism&lt;/a&gt;, mostly covering the 
+Spanish-American War.&lt;/p&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/alJaltUmrGo" 
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Well, I guess not that much shorter. Oh well.&lt;/p&gt;</summary><category term="conflict"></category><category term="data"></category><category term="geopolitics"></category></entry><entry><title>Links: August 14</title><link href="https://janithl.github.io/2016/08/links-august-14/" rel="alternate"></link><published>2016-08-14T17:53:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-14:2016/08/links-august-14/</id><summary type="html">&lt;p&gt;I &lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;promised previously&lt;/a&gt; to use this space for link sharing as well, so here
 goes the first instalment.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;On Software&lt;/h2&gt;
