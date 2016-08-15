@@ -9,6 +9,9 @@ a {
   color: #393939;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+}
 hr {
   color: #eeeeee;
   background-color: #eeeeee;
