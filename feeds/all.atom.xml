@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-15T20:06:00+05:30</updated><entry><title>Pairplots FTW! Links: August 15</title><link href="https://janithl.github.io/2016/08/links-august-15/" rel="alternate"></link><published>2016-08-15T20:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-15:2016/08/links-august-15/</id><summary type="html">&lt;p&gt;Instalment 2 of the "sharing links" thingy. Shorter too.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-16T05:19:00+05:30</updated><entry><title>Thoughts on the "Silent Vigil"</title><link href="https://janithl.github.io/2016/08/silent-vigil/" rel="alternate"></link><published>2016-08-16T05:19:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-16:2016/08/silent-vigil/</id><summary type="html">&lt;p&gt;There's been some &lt;a href="https://facebook.com/BBCSinhala/videos/677749315716153/"&gt;anti-racist vigil out of nowhere&lt;/a&gt; and there was, as usual,
+a confrontation with one of the ultra-nationalist orgs. Without writing any 
+further about any of this, I will defer to the wisdom of the crowds:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vigil Comments" src="https://janithl.github.io/images/vigil-comments.png" /&gt;&lt;/p&gt;</summary><category term="conflict"></category><category term="people"></category></entry><entry><title>Pairplots FTW! Links: August 15</title><link href="https://janithl.github.io/2016/08/links-august-15/" rel="alternate"></link><published>2016-08-15T20:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-15:2016/08/links-august-15/</id><summary type="html">&lt;p&gt;Instalment 2 of the "sharing links" thingy. Shorter too.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;On Software:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I recently subscribed to the Dataquest newsletter, and today got this post
@@ -369,7 +372,7 @@ moved the front-end to use Bootstrap. Because slapping Bootstrap on sites that
 have worked perfectly without it is my thing. I'm hoping to deprecate the JQuery 
 Mobile-based Kottu Mobile site in favour of the responsive Bootstrap main site 
 in the near future, if there aren't any protests and self-immolations.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kottu Desktop" src="https://janithl.github.io/images/kottu-bootstrap-desktop.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kottu Desktop" src="https://janithl.github.io/images/kottu-bootstrap-desktop.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Kottu Mobile" src="https://janithl.github.io/images/kottu-bootstrap-mobile.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; &lt;code&gt;vnstat&lt;/code&gt; output since Aug 1 (this is why I can't have nice things):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;         day         rx      |     tx      |    total    |   avg. rate
