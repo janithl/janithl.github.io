@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-19T18:38:00+05:30</updated><entry><title>Alan Moore on Conspiracy Theories</title><link href="https://janithl.github.io/2016/08/alan-moore/" rel="alternate"></link><published>2016-08-19T18:38:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-19:2016/08/alan-moore/</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-21T14:06:00+05:30</updated><entry><title>And So It Began</title><link href="https://janithl.github.io/2016/08/and-so-it-began/" rel="alternate"></link><published>2016-08-21T14:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-21:2016/08/and-so-it-began/</id><summary type="html">&lt;p&gt;&lt;img alt="Backprop" src="https://janithl.github.io/images/backprop.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Neural Networks exam in a week!&lt;/p&gt;
+&lt;p&gt;Today's AA exam went much better than expected, given how little I studied for 
+it. That kinda thing totally incentivises the wrong kind of behaviour.&lt;/p&gt;
+&lt;p&gt;What to do. I'll start with the (overdue) assignments and try to understand as
+much of the &lt;em&gt;mind-boggling&lt;/em&gt; math as I can.&lt;/p&gt;
+&lt;p&gt;And perhaps some day, I'd be able to do something cool like &lt;a href="http://science.sciencemag.org/content/353/6301/790"&gt;these guys&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reliable data on economic livelihoods remain scarce in the developing world, 
+hampering efforts to study these outcomes and to design policies that improve 
+them. Here we demonstrate an accurate, inexpensive, and scalable method for 
+estimating consumption expenditure and asset wealth from high-resolution 
+satellite imagery. Using survey and satellite data from five African 
+countries—Nigeria, Tanzania, Uganda, Malawi, and Rwanda—we show how a 
+convolutional neural network can be trained to identify image features that can 
+explain up to 75% of the variation in local-level economic outcomes. Our method, 
+which requires only publicly available data, could transform efforts to track 
+and target poverty in developing countries. It also demonstrates how powerful 
+machine learning techniques can be applied in a setting with limited training 
+data, suggesting broad potential application across many scientific domains.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="uni"></category></entry><entry><title>Alan Moore on Conspiracy Theories</title><link href="https://janithl.github.io/2016/08/alan-moore/" rel="alternate"></link><published>2016-08-19T18:38:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-19:2016/08/alan-moore/</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;The main thing that I learned about conspiracy theory is that conspiracy 
 theorists actually believe in a conspiracy because that is more comforting. The 
 truth of the world is that it is chaotic. The truth is, that it is not the 
@@ -130,27 +150,7 @@ in the near future, if there aren't any protests and self-immolations.&lt;/p&gt;
      08/04/2016     1.19 GiB |  115.37 MiB |    1.30 GiB |  126.38 kbit/s
      08/05/2016     1.71 GiB |  174.64 MiB |    1.88 GiB |  182.12 kbit/s
      08/06/2016   603.21 MiB |   53.36 MiB |  656.56 MiB |   62.51 kbit/s
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="code"></category><category term="uni"></category></entry><entry><title>And So It Began</title><link href="https://janithl.github.io/2016/07/and-so-it-began/" rel="alternate"></link><published>2016-07-21T14:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-21:2016/07/and-so-it-began/</id><summary type="html">&lt;p&gt;&lt;img alt="Backprop" src="https://janithl.github.io/images/backprop.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;Neural Networks exam in a week!&lt;/p&gt;
-&lt;p&gt;Today's AA exam went much better than expected, given how little I studied for 
-it. That kinda thing totally incentivises the wrong kind of behaviour.&lt;/p&gt;
-&lt;p&gt;What to do. I'll start with the (overdue) assignments and try to understand as
-much of the &lt;em&gt;mind-boggling&lt;/em&gt; math as I can.&lt;/p&gt;
-&lt;p&gt;And perhaps some day, I'd be able to do something cool like &lt;a href="http://science.sciencemag.org/content/353/6301/790"&gt;these guys&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Reliable data on economic livelihoods remain scarce in the developing world, 
-hampering efforts to study these outcomes and to design policies that improve 
-them. Here we demonstrate an accurate, inexpensive, and scalable method for 
-estimating consumption expenditure and asset wealth from high-resolution 
-satellite imagery. Using survey and satellite data from five African 
-countries—Nigeria, Tanzania, Uganda, Malawi, and Rwanda—we show how a 
-convolutional neural network can be trained to identify image features that can 
-explain up to 75% of the variation in local-level economic outcomes. Our method, 
-which requires only publicly available data, could transform efforts to track 
-and target poverty in developing countries. It also demonstrates how powerful 
-machine learning techniques can be applied in a setting with limited training 
-data, suggesting broad potential application across many scientific domains.&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="uni"></category></entry><entry><title>On Unrequited Love</title><link href="https://janithl.github.io/2016/07/on-unrequited-love/" rel="alternate"></link><published>2016-07-20T07:45:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/on-unrequited-love/</id><summary type="html">&lt;p&gt;Boy oh boy, &lt;a href="https://janithl.github.io/2016/07/shes-wot-m8/"&gt;this&lt;/a&gt; is something 
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="code"></category><category term="uni"></category></entry><entry><title>On Unrequited Love</title><link href="https://janithl.github.io/2016/07/on-unrequited-love/" rel="alternate"></link><published>2016-07-20T07:45:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/on-unrequited-love/</id><summary type="html">&lt;p&gt;Boy oh boy, &lt;a href="https://janithl.github.io/2016/07/shes-wot-m8/"&gt;this&lt;/a&gt; is something 
 I deal with quite often. I rarely have problems with people in my life, because 
 I've learned to respect boundaries and not get involved in other people's shit.
 But I hopelessly fail sometimes at keeping myself detached from people, and it 
