@@ -556,7 +556,27 @@ ramifications be damned.&lt;/p&gt;
 &lt;p&gt;I've barely tested it, so I'll probably make some tweaks here 
 and there. The code, as usual, is on &lt;a href="https://github.com/janithl/BusRouteJS"&gt;Github and MIT licensed&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;TL;DR&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://janithl.github.io/BusRouteJS/"&gt;Go to this page, and it'll throw you not great bus route suggestions&lt;/a&gt;&lt;/p&gt;</summary><category term="code"></category></entry><entry><title>The Lastfm Dataset</title><link href="https://janithl.github.io/2016/07/the-lastfm-dataset/" rel="alternate"></link><published>2016-07-20T09:09:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/the-lastfm-dataset/</id><summary type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://janithl.github.io/BusRouteJS/"&gt;Go to this page, and it'll throw you not great bus route suggestions&lt;/a&gt;&lt;/p&gt;</summary><category term="code"></category></entry><entry><title>And So It Began</title><link href="https://janithl.github.io/2016/07/and-so-it-began/" rel="alternate"></link><published>2016-07-21T14:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-21:2016/07/and-so-it-began/</id><summary type="html">&lt;p&gt;&lt;img alt="Backprop" src="https://janithl.github.io/images/backprop.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Neural Networks exam in a week!&lt;/p&gt;
+&lt;p&gt;Today's AA exam went much better than expected, given how little I studied for 
+it. That kinda thing totally incentivises the wrong kind of behaviour.&lt;/p&gt;
+&lt;p&gt;What to do. I'll start with the (overdue) assignments and try to understand as
+much of the &lt;em&gt;mind-boggling&lt;/em&gt; math as I can.&lt;/p&gt;
+&lt;p&gt;And perhaps some day, I'd be able to do something cool like &lt;a href="http://science.sciencemag.org/content/353/6301/790"&gt;these guys&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reliable data on economic livelihoods remain scarce in the developing world, 
+hampering efforts to study these outcomes and to design policies that improve 
+them. Here we demonstrate an accurate, inexpensive, and scalable method for 
+estimating consumption expenditure and asset wealth from high-resolution 
+satellite imagery. Using survey and satellite data from five African 
+countries—Nigeria, Tanzania, Uganda, Malawi, and Rwanda—we show how a 
+convolutional neural network can be trained to identify image features that can 
+explain up to 75% of the variation in local-level economic outcomes. Our method, 
+which requires only publicly available data, could transform efforts to track 
+and target poverty in developing countries. It also demonstrates how powerful 
+machine learning techniques can be applied in a setting with limited training 
+data, suggesting broad potential application across many scientific domains.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="uni"></category></entry><entry><title>The Lastfm Dataset</title><link href="https://janithl.github.io/2016/07/the-lastfm-dataset/" rel="alternate"></link><published>2016-07-20T09:09:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/the-lastfm-dataset/</id><summary type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Todoist reminding me that my Last.fm analysis is overdue&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I downloaded my &lt;a href="http://www.last.fm/user/JanithL"&gt;Last.fm scrobble data&lt;/a&gt; a week
 or so back using &lt;a href="https://benjaminbenben.com/lastfm-to-csv/"&gt;this excellent online tool&lt;/a&gt;. 
