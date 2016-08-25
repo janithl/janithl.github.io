@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/links.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-15T20:06:00+05:30</updated><entry><title>Pairplots FTW! Links: August 15</title><link href="https://janithl.github.io/2016/08/links-august-15/" rel="alternate"></link><published>2016-08-15T20:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-15:2016/08/links-august-15/</id><summary type="html">&lt;p&gt;Instalment 2 of the "sharing links" thingy. Shorter too.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/links.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-25T21:13:00+05:30</updated><entry><title>Links: Machine Learning</title><link href="https://janithl.github.io/2016/08/links-machine-learning/" rel="alternate"></link><published>2016-08-25T21:13:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-25:2016/08/links-machine-learning/</id><summary type="html">&lt;p&gt;I'm changing the format of the links posts to topic-based posts which I will 
+add to over time. Seems like a better way to organize than basing it on dates.&lt;/p&gt;
+&lt;h2&gt;August 2016&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://backchannel.com/an-exclusive-look-at-how-ai-and-machine-learning-work-at-apple-8dbfb131932b"&gt;&lt;em&gt;An exclusive inside look at how artificial intelligence and machine learning 
+work at Apple&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A fascinating look at how ML work is being done at Apple, and how it meshes 
+with privacy of user data and the "Apple way" of absolute secrecy.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apple’s penchant for secrecy puts it at a disadvantage against competitors 
+who encourage their star computer scientists to widely share research with the 
+world. “Our practices tend to reinforce a natural selection bias — those who are 
+interested in working as a team to deliver a great product versus those whose 
+primary motivation is publishing,” says Federighi. If while improving an Apple 
+product scientists happen to make breakthroughs in the field, that’s great. “But 
+we are driven by a vision of the end result,” says Cue.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html"&gt;&lt;em&gt;The 9 Deep Learning Papers You Need To Know About&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A great overview of some recent breakthrough research in CNNs.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[...] a lot of the new and important developments in the field of computer 
+vision and convolutional neural networks. [...] The first half of the list 
+(AlexNet to ResNet) deals with advancements in general network architecture, 
+while the second half is just a collection of interesting papers in other 
+subareas. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://medium.com/@ageitgey/machine-learning-is-fun-part-5-language-translation-with-deep-learning-and-the-magic-of-sequences-2ace0acca0aa"&gt;&lt;em&gt;Language Translation with Deep Learning and the Magic of Sequences&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The magic of sequence-to-sequence learning, taking a crack at the 'holy grail'
+of Computational Lingustics: Machine Translation&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What if we took two RNNs and hooked them up end-to-end? The first RNN could 
+generate the encoding that represents a sentence. Then the second RNN could take 
+that encoding and just do the same logic in reverse to decode the original 
+sentence again [...] what if (and here’s the big idea!) we could train the 
+second RNN to decode the sentence into Spanish instead of English?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;With promising results:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Machine learning researchers only invented this two years ago, but it’s 
+already performing as well as statistical machine translation systems that took 
+20 years to develop.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And wider applications:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;About a year ago, researchers at Google showed that you can use 
+sequence-to-sequence models to build AI bots.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[...] by replacing the first RNN with a Convolutional Neural Network [...] we 
+can turn pictures into words (as long as we have lots and lots of training 
+data)! &lt;/p&gt;
+&lt;p&gt;Andrej Karpathy expanded on these ideas to build a system capable of 
+describing images in great detail by processing multiple regions of an image 
+separately.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://research.googleblog.com/2016/08/text-summarization-with-tensorflow.html"&gt;&lt;em&gt;Text summarization with TensorFlow&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I wish Google will stop stealing all our research topics. :P&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We’ve observed that due to the nature of news headlines, the model can 
+generate good headlines from reading just a few sentences from the beginning of 
+the article. Although this task serves as a nice proof-of-concept, we started 
+looking at more difficult datasets where reading the entire document is 
+necessary to produce good summaries. In those tasks training from scratch with 
+this model architecture does not do as well as some other techniques we’re 
+researching, but it serves as a baseline.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It feels like TensorFlow (and SyntaxNet) is really taking the NLP world by 
+storm, especially looking at &lt;a href="https://research.googleblog.com/2016/08/acl-2016-research-at-google.html"&gt;Google's offerings at ACL 2016&lt;/a&gt;.&lt;/p&gt;</summary><category term="code"></category><category term="data"></category></entry><entry><title>Pairplots FTW! Links: August 15</title><link href="https://janithl.github.io/2016/08/links-august-15/" rel="alternate"></link><published>2016-08-15T20:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-15:2016/08/links-august-15/</id><summary type="html">&lt;p&gt;Instalment 2 of the "sharing links" thingy. Shorter too.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;On Software:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I recently subscribed to the Dataquest newsletter, and today got this post
