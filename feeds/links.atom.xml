@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/links.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-25T21:13:00+05:30</updated><entry><title>Links: Machine Learning</title><link href="https://janithl.github.io/2016/08/links-machine-learning/" rel="alternate"></link><published>2016-08-25T21:13:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-25:2016/08/links-machine-learning/</id><summary type="html">&lt;p&gt;I'm changing the format of the links posts to topic-based posts which I will 
-add to over time. Seems like a better way to organize than basing it on dates.&lt;/p&gt;
+add to over time. Seems like a better way to organize than basing them on dates.&lt;/p&gt;
 &lt;h2&gt;August 2016&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://backchannel.com/an-exclusive-look-at-how-ai-and-machine-learning-work-at-apple-8dbfb131932b"&gt;&lt;em&gt;An exclusive inside look at how artificial intelligence and machine learning 
 work at Apple&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
@@ -15,6 +15,7 @@ primary motivation is publishing,” says Federighi. If while improving an Apple
 product scientists happen to make breakthroughs in the field, that’s great. “But 
 we are driven by a vision of the end result,” says Cue.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;hr /&gt;
 &lt;p&gt;&lt;a href="https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html"&gt;&lt;em&gt;The 9 Deep Learning Papers You Need To Know About&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;A great overview of some recent breakthrough research in CNNs.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -24,6 +25,7 @@ vision and convolutional neural networks. [...] The first half of the list
 while the second half is just a collection of interesting papers in other 
 subareas. &lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;hr /&gt;
 &lt;p&gt;&lt;a href="https://medium.com/@ageitgey/machine-learning-is-fun-part-5-language-translation-with-deep-learning-and-the-magic-of-sequences-2ace0acca0aa"&gt;&lt;em&gt;Language Translation with Deep Learning and the Magic of Sequences&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The magic of sequence-to-sequence learning, taking a crack at the 'holy grail'
 of Computational Lingustics: Machine Translation&lt;/p&gt;
@@ -54,6 +56,7 @@ data)! &lt;/p&gt;
 describing images in great detail by processing multiple regions of an image 
 separately.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;hr /&gt;
 &lt;p&gt;&lt;a href="https://research.googleblog.com/2016/08/text-summarization-with-tensorflow.html"&gt;&lt;em&gt;Text summarization with TensorFlow&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I wish Google will stop stealing all our research topics. :P&lt;/p&gt;
 &lt;blockquote&gt;
