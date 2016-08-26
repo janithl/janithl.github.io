@@ -69,7 +69,42 @@ this model architecture does not do as well as some other techniques we’re
 researching, but it serves as a baseline.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;It feels like TensorFlow (and SyntaxNet) is really taking the NLP world by 
-storm, especially looking at &lt;a href="https://research.googleblog.com/2016/08/acl-2016-research-at-google.html"&gt;Google's offerings at ACL 2016&lt;/a&gt;.&lt;/p&gt;</summary><category term="code"></category><category term="data"></category></entry><entry><title>Quick poster I'd probably regret later</title><link href="https://janithl.github.io/2016/08/quick-poster-id-probably-regret-later/" rel="alternate"></link><published>2016-08-24T07:26:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-24:2016/08/quick-poster-id-probably-regret-later/</id><summary type="html">&lt;p&gt;&lt;img alt="Sapiosexual" src="https://janithl.github.io/images/sapio-poster.png" /&gt;&lt;/p&gt;
+storm, especially looking at &lt;a href="https://research.googleblog.com/2016/08/acl-2016-research-at-google.html"&gt;Google's offerings at ACL 2016&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href="https://code.facebook.com/posts/561187904071636/segmenting-and-refining-images-with-sharpmask/"&gt;&lt;em&gt;Segmenting and refining images with SharpMask&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Not wanting to be left out, Facebook has also released some incredible research
+in the past few weeks, earlier with &lt;a href="https://research.facebook.com/blog/fasttext/"&gt;fastText&lt;/a&gt; and now extending to DeepMask 
+and SharpMask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DeepMask employs a fairly traditional feedforward deep network design. In such 
+networks, with progressively deeper network stages information is more abstract 
+and semantically meaningful. For example, early layers in a deep net might 
+capture edges and blobs, while upper layers tend to capture more semantic 
+concepts such as the presence of an animal's face or limbs. By design, these 
+upper-layer features are computed at a fairly low spatial resolution (for both 
+computational reasons and in order to be invariant to small shifts in pixel 
+locations). This presents a problem for mask prediction: The upper layer 
+features can be used to predict masks that capture the general shape on an 
+object but fail to precisely capture object boundaries.&lt;/p&gt;
+&lt;p&gt;Which brings us to SharpMask. SharpMask refines the output of DeepMask, 
+generating higher-fidelity masks that more accurately delineate object 
+boundaries. While DeepMask predicts coarse masks in a feedforward pass through 
+the network, SharpMask reverses the flow of information in a deep network and 
+refines the predictions made by DeepMask by using features from progressively 
+earlier layers in the network. Think of it this way: To capture general object 
+shape, you have to have a high-level understanding of what you are looking at 
+(DeepMask), but to accurately place the boundaries you need to look back at 
+lower-level features all the way down to the pixels (SharpMask). In essence, we 
+aim to make use of information from all layers of a network, with minimal 
+additional overhead.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;They've also done some work on real time (video) classification:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In addition, our next challenge will be to apply these techniques to video, 
+where objects are moving, interacting, and changing over time. We've already 
+made some progress with computer vision techniques to watch videos and 
+understand and classify what's in them in real time.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="code"></category><category term="data"></category></entry><entry><title>Quick poster I'd probably regret later</title><link href="https://janithl.github.io/2016/08/quick-poster-id-probably-regret-later/" rel="alternate"></link><published>2016-08-24T07:26:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-24:2016/08/quick-poster-id-probably-regret-later/</id><summary type="html">&lt;p&gt;&lt;img alt="Sapiosexual" src="https://janithl.github.io/images/sapio-poster.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Quick, dirty, and thrown together in a couple of minutes. NOT aimed at anyone
 or any gender, okay? 😜&lt;/p&gt;
 &lt;p&gt;Brain vector by &lt;a href="https://thenounproject.com/term/brain/449421"&gt;Clockwise, via Noun Project&lt;/a&gt;.&lt;/p&gt;</summary><category term="people"></category><category term="sinhala"></category><category term="sexuality"></category></entry><entry><title>And So It Began</title><link href="https://janithl.github.io/2016/08/and-so-it-began/" rel="alternate"></link><published>2016-08-21T14:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-21:2016/08/and-so-it-began/</id><summary type="html">&lt;p&gt;&lt;img alt="Backprop" src="https://janithl.github.io/images/backprop.jpg" /&gt;&lt;/p&gt;

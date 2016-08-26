@@ -167,6 +167,41 @@ researching, but it serves as a baseline.</p>
 </blockquote>
 <p>It feels like TensorFlow (and SyntaxNet) is really taking the NLP world by 
 storm, especially looking at <a href="https://research.googleblog.com/2016/08/acl-2016-research-at-google.html">Google's offerings at ACL 2016</a>.</p>
+<hr />
+<p><a href="https://code.facebook.com/posts/561187904071636/segmenting-and-refining-images-with-sharpmask/"><em>Segmenting and refining images with SharpMask</em></a></p>
+<p>Not wanting to be left out, Facebook has also released some incredible research
+in the past few weeks, earlier with <a href="https://research.facebook.com/blog/fasttext/">fastText</a> and now extending to DeepMask 
+and SharpMask:</p>
+<blockquote>
+<p>DeepMask employs a fairly traditional feedforward deep network design. In such 
+networks, with progressively deeper network stages information is more abstract 
+and semantically meaningful. For example, early layers in a deep net might 
+capture edges and blobs, while upper layers tend to capture more semantic 
+concepts such as the presence of an animal's face or limbs. By design, these 
+upper-layer features are computed at a fairly low spatial resolution (for both 
+computational reasons and in order to be invariant to small shifts in pixel 
+locations). This presents a problem for mask prediction: The upper layer 
+features can be used to predict masks that capture the general shape on an 
+object but fail to precisely capture object boundaries.</p>
+<p>Which brings us to SharpMask. SharpMask refines the output of DeepMask, 
+generating higher-fidelity masks that more accurately delineate object 
+boundaries. While DeepMask predicts coarse masks in a feedforward pass through 
+the network, SharpMask reverses the flow of information in a deep network and 
+refines the predictions made by DeepMask by using features from progressively 
+earlier layers in the network. Think of it this way: To capture general object 
+shape, you have to have a high-level understanding of what you are looking at 
+(DeepMask), but to accurately place the boundaries you need to look back at 
+lower-level features all the way down to the pixels (SharpMask). In essence, we 
+aim to make use of information from all layers of a network, with minimal 
+additional overhead.</p>
+</blockquote>
+<p>They've also done some work on real time (video) classification:</p>
+<blockquote>
+<p>In addition, our next challenge will be to apply these techniques to video, 
+where objects are moving, interacting, and changing over time. We've already 
+made some progress with computer vision techniques to watch videos and 
+understand and classify what's in them in real time.</p>
+</blockquote>
   </div>
   <div class="article_meta">
     <p>Posted on: Thu 25 August 2016</p>
