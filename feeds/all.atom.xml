@@ -360,8 +360,13 @@ and 2010 was the year after the &lt;a href="https://en.wikipedia.org/wiki/Eelam_
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="Valid Vote Growth" src="https://janithl.github.io/images/valid-votes.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Making these graphs in &lt;a href="https://stanford.edu/~mwaskom/software/seaborn/"&gt;Seaborn&lt;/a&gt; took a helluva long time, mostly because I am incompetant. 
-Here's the code for the vote/seat difference graph:&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Making these graphs in &lt;a href="https://stanford.edu/~mwaskom/software/seaborn/"&gt;Seaborn&lt;/a&gt; took a helluva long time, mostly because I am incompetant. 
+See, I even managed to misspell &lt;em&gt;incompetent&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Here's the code for the vote/seat difference graph:&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;mpl&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
