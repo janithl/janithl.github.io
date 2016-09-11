@@ -188,6 +188,8 @@ blog and there is no accountability. &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;A &lt;em&gt;win&lt;/em&gt; is when the UNP went on to form a government. This was sometimes done by forming 
+coalitions (e.g. in 1965).&lt;/p&gt;
 &lt;h2&gt;Some Descriptive Statistics&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; df[&amp;#39;% Votes&amp;#39;].describe()
 count    15.000000
@@ -260,7 +262,12 @@ to become the Leader of the Opposition (over Ranil Wickremesinghe, the previous 
 Prime Minister).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;In the First Past The Post era, the UNP frequently won the plurality of the 
+&lt;p&gt;Ranil Wickremesinghe has led the UNP at 5 General Elections, winning twice. If he leads 
+the UNP at the next General Election, he'll surpass Dudley Senanayake (5 elections, 3 wins) 
+as the UNP leader who's led at the most number of General Elections.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the First Past The Post era, the UNP frequently won the &lt;em&gt;plurality&lt;/em&gt; of the 
 total vote, but lost the election thanks to the way electorates and the system was 
 structured. Note the discrepancies between percentage votes and percentage seats, and 
 the drastic reduction after Proportional Representation was introduced in the 80s:&lt;/p&gt;
@@ -495,15 +502,9 @@ increase. It edged out the 13.01% increase of 1977.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="Seat Swing" src="https://janithl.github.io/images/seat-swing.png" /&gt;&lt;/p&gt;
 &lt;h2&gt;Data Viz&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
 &lt;p&gt;Making these graphs in &lt;a href="https://stanford.edu/~mwaskom/software/seaborn/"&gt;Seaborn&lt;/a&gt; took a helluva long time, mostly because I am incompetant. 
 See, I even managed to misspell &lt;em&gt;incompetent&lt;/em&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;Here's the code for the vote/seat difference graph:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;mpl&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
@@ -519,9 +520,7 @@ See, I even managed to misspell &lt;em&gt;incompetent&lt;/em&gt;.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;ul&gt;
-&lt;li&gt;And for the Vote Percentage graph:&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;And for the Vote Percentage graph:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;mpl&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
@@ -550,9 +549,7 @@ See, I even managed to misspell &lt;em&gt;incompetent&lt;/em&gt;.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;ul&gt;
-&lt;li&gt;And the vote and seat swing graphs:&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;And the vote and seat swing graphs:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;mpl&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
@@ -570,9 +567,7 @@ See, I even managed to misspell &lt;em&gt;incompetent&lt;/em&gt;.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;ul&gt;
-&lt;li&gt;The data I used is in &lt;a href="https://gist.github.com/janithl/ea79a2bd330e71f7a6ce6644927e152f"&gt;a publicly shared csv file&lt;/a&gt;. Consider everything MIT Licensed.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The data I used is in &lt;a href="https://gist.github.com/janithl/ea79a2bd330e71f7a6ce6644927e152f"&gt;a publicly shared csv file&lt;/a&gt;. Consider everything MIT Licensed.&lt;/p&gt;
 &lt;script&gt;
 window.onload = function() {
    $('table').addClass('table table-bordered table-condensed'); 

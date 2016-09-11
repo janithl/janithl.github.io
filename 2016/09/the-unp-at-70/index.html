@@ -291,6 +291,8 @@ blog and there is no accountability. <code>¯\_(ツ)_/¯</code></p>
 </tr>
 </tbody>
 </table>
+<p>A <em>win</em> is when the UNP went on to form a government. This was sometimes done by forming 
+coalitions (e.g. in 1965).</p>
 <h2>Some Descriptive Statistics</h2>
 <div class="highlight"><pre><span></span>&gt;&gt;&gt; df[&#39;% Votes&#39;].describe()
 count    15.000000
@@ -363,7 +365,12 @@ to become the Leader of the Opposition (over Ranil Wickremesinghe, the previous 
 Prime Minister).</p>
 </li>
 <li>
-<p>In the First Past The Post era, the UNP frequently won the plurality of the 
+<p>Ranil Wickremesinghe has led the UNP at 5 General Elections, winning twice. If he leads 
+the UNP at the next General Election, he'll surpass Dudley Senanayake (5 elections, 3 wins) 
+as the UNP leader who's led at the most number of General Elections.</p>
+</li>
+<li>
+<p>In the First Past The Post era, the UNP frequently won the <em>plurality</em> of the 
 total vote, but lost the election thanks to the way electorates and the system was 
 structured. Note the discrepancies between percentage votes and percentage seats, and 
 the drastic reduction after Proportional Representation was introduced in the 80s:</p>
@@ -598,15 +605,9 @@ increase. It edged out the 13.01% increase of 1977.</p>
 </ul>
 <p><img alt="Seat Swing" src="https://janithl.github.io/images/seat-swing.png" /></p>
 <h2>Data Viz</h2>
-<ul>
-<li>
 <p>Making these graphs in <a href="https://stanford.edu/~mwaskom/software/seaborn/">Seaborn</a> took a helluva long time, mostly because I am incompetant. 
 See, I even managed to misspell <em>incompetent</em>.</p>
-</li>
-<li>
 <p>Here's the code for the vote/seat difference graph:</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="kn">as</span> <span class="nn">mpl</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
@@ -622,9 +623,7 @@ See, I even managed to misspell <em>incompetent</em>.</p>
 </pre></div>
 
 
-<ul>
-<li>And for the Vote Percentage graph:</li>
-</ul>
+<p>And for the Vote Percentage graph:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="kn">as</span> <span class="nn">mpl</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
@@ -653,9 +652,7 @@ See, I even managed to misspell <em>incompetent</em>.</p>
 </pre></div>
 
 
-<ul>
-<li>And the vote and seat swing graphs:</li>
-</ul>
+<p>And the vote and seat swing graphs:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="kn">as</span> <span class="nn">mpl</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
@@ -673,9 +670,7 @@ See, I even managed to misspell <em>incompetent</em>.</p>
 </pre></div>
 
 
-<ul>
-<li>The data I used is in <a href="https://gist.github.com/janithl/ea79a2bd330e71f7a6ce6644927e152f">a publicly shared csv file</a>. Consider everything MIT Licensed.</li>
-</ul>
+<p>The data I used is in <a href="https://gist.github.com/janithl/ea79a2bd330e71f7a6ce6644927e152f">a publicly shared csv file</a>. Consider everything MIT Licensed.</p>
 <script>
 window.onload = function() {
    $('table').addClass('table table-bordered table-condensed'); 
