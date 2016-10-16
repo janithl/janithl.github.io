@@ -8,7 +8,36 @@
 මුහුණතක් විදිහට &lt;a href="https://fonts.google.com/specimen/Abhaya+Libre"&gt;Google Web Fonts නාමාවලියට එක් කරල තියෙනව&lt;/a&gt;. ඔබේ වෙබ් 
 පිටුව සඳහාත් මෙය ලබාගන්න පුළුවන්. &lt;/p&gt;
 &lt;p&gt;Google Web Fonts පිටුවෙ කියන විදිහටනම් දැනටමත් අඩවි 1,131ක විතර 'අභය ලිබ්රේ' 
-භාවිතා වෙනවලු.&lt;/p&gt;</summary><category term="sinhala"></category><category term="design"></category></entry><entry><title>Octupdate</title><link href="https://janithl.github.io/2016/10/octupdate/" rel="alternate"></link><published>2016-10-15T11:51:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-10-15:2016/10/octupdate/</id><summary type="html">&lt;p&gt;Well, I expected this deluge of werk werk werk to sweep me off my feet, 
+භාවිතා වෙනවලු.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;යාවත්කාලීන කිරීම:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;මේක මම ඊයෙ මහ රෑ නිදාගන්න කලින් ලියපු පෝස්ටුවක් නිසා වැදගත් කරුණු ටිකක් කියන්න බැරි
+උනා.&lt;/p&gt;
+&lt;p&gt;* &lt;strong&gt;සිංහල වෙබ් අකුරු මුහුණතක් මෙතරම් වැදගත් වෙන්නෙ ඇයි?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sinhala Not Rendering" src="https://janithl.github.io/images/sinhala-not-rendering.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;සිංහල යුනිකේත වෙබ් අඩවි කියවන අයෙක් නම් ඔයගොල්ලන්ට අනේක වාරයක් මේ වගේ තිර දැකල
+පුරුදු ඇති. තමන් පාවිච්චි කරන පරිගණකෙ හරි මෘදුකාංගෙ හරි සිංහල ස්ථාපිත කරල නැතිකොට 
+තමයි මේක වෙන්නෙ. සාමන්‍යයෙන් පරිගණකයක (වින්ඩෝස්, ඇපල් හෝ ලිනක්ස්) සිංහල 
+අටෝගන්න එතරම් අමාරු නෑ, හැබැයි &lt;a href="http://blog.malinthe.com/2014/04/how-to-get-perfect-sinhala-text-on-android-4-4-kitkat/"&gt;ඇන්ඩ්‍රොයිඩ් වගේ පද්ධතියක "රූට්" කිරිලි වගේ ලොකු
+ලොකු සෙල්ලං දාන්න වෙනව&lt;/a&gt; සිංහල දාගන්න. &lt;/p&gt;
+&lt;p&gt;වෙබ් අකුරු මුහුණතක තියෙන අපූරුම දේ තමයි තමන්ගෙ යන්තරේට කිසිම දෙයක් අලුතෙන් 
+අටවන්නෙ නැතුවම සිංහල පාවිච්චි කරන්න පුලුවන් වෙන එක. ඒ වගේම ඒ ඒ පද්ධතියට ආවේනික
+මුහුණතින් පෙන්නන්නෙ නැතුව හැමතැනම (iOS වේවා, වින්ඩෝස් වේවා, ඇන්ඩ්‍රොයිඩ් වේවා) 
+එකම් සම්මත අකුරු මුහුණතකින්  තමන්ගෙ වචන ටික දිස් වෙන එක.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Cross Platform" src="https://janithl.github.io/images/abhaya-libre-ios-android.jpg" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;මීට කලිනුත් ෆොන්ට් තිබ්බනෙ?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ඔව්. &lt;strong&gt;"මලිති වෙබ්"&lt;/strong&gt;, &lt;strong&gt;"ඉස්කෝල පොත"&lt;/strong&gt; වගේ ගොඩක් අකුරු මුහුණත් තිබ්බා. ඒත් 
+ඒව එකක්වත්  "සම්පූර්ණ නිදහස්, හිමිකමින් තොර, යුනිකෝඩ් අනුකූලතා පහසුකම සහිත" 
+කියන කාණ්ඩ තුනටම අයත් වුනේ නෑ. ඒ නිසා නිදහසේ පාවිච්චි කරන්න පුළුවන් web font 
+එකක් සිංහල සඳහා තිබ්බෙ නෑ. මේක සිංහල අන්තර්ජාල භාවිතය කෙරෙහි බරපතල ප්‍රශ්නයක්&lt;br /&gt;
+බවට පත්වුනා.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;තව තොරතුරු තියෙනවද?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;මූනියක් සමූහයේ &lt;a href="http://blog.mooniak.com/"&gt;බ්ලොග් අඩවිය&lt;/a&gt; සහ &lt;a href="https://github.com/mooniak/"&gt;ගිට්හබ් පිටුව&lt;/a&gt; කියවල බලන්නකො. ලංකාවෙ
+දැනට අකුරු මුහුණත් ක්‍ෂේත්‍රයේ අළුත් දෙයක් කරන නිර්මාණශීලී යොවුන් පිරිසක් විදිහට මොවුන්ව 
+හඳුන්වන්න පුළුවන්.&lt;/p&gt;</summary><category term="sinhala"></category><category term="design"></category></entry><entry><title>Octupdate</title><link href="https://janithl.github.io/2016/10/octupdate/" rel="alternate"></link><published>2016-10-15T11:51:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-10-15:2016/10/octupdate/</id><summary type="html">&lt;p&gt;Well, I expected this deluge of werk werk werk to sweep me off my feet, 
 but it has been pretty thoroughly overwhelming to get back in the 
 saddle. In the last two weeks I have encountered highs and lows that 
 staying at home comfortably cushioned me from for weeks, got food 
