@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-11-07T07:35:00+05:30</updated><entry><title>November</title><link href="https://janithl.github.io/2016/11/november/" rel="alternate"></link><published>2016-11-07T07:35:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-11-07:2016/11/november/</id><summary type="html">&lt;p&gt;With any sufficiently complex system, a major overhaul always creates 
 more problems than it solves; there's enough and more "case studies" of
-the type you read about in Software Engieering to back it up. Things 
+the type you read about in &lt;em&gt;Software Engineering&lt;/em&gt; to back it up. Things 
 that were fixed over years and countless late night hacking sessions and 
 painstaking iterations break and you have to fix them again.&lt;/p&gt;
 &lt;p&gt;The wisest programmer I've ever met once said that software development 
