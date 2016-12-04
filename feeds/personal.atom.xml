@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-11-07T07:35:00+05:30</updated><entry><title>November</title><link href="https://janithl.github.io/2016/11/november/" rel="alternate"></link><published>2016-11-07T07:35:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-11-07:2016/11/november/</id><summary type="html">&lt;p&gt;With any sufficiently complex system, a major overhaul always creates 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-12-04T21:46:00+05:30</updated><entry><title>දෙසැම්බර්</title><link href="https://janithl.github.io/2016/12/december/" rel="alternate"></link><published>2016-12-04T21:46:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-04:2016/12/december/</id><summary type="html">&lt;p&gt;ලියන්නද දේවල් නැත්තෙ, ලියන්න වචනනම් ගලන්නෙ හැබැයි ඉඩෝරෙට වතුර කැපුවාම 
+කරාමෙන් එන වතුර බින්දු වගේ.&lt;/p&gt;
+&lt;p&gt;ගියමාසෙ මම ලිව්වෙ design හුට පටයක් ගැන. එව්වනම් මොනාහරි කොරල ගොඩදාගන්න 
+බැරියැ. 'ඒ සිඟිති ප්‍රශ්න ආයෙ දීපන්' කියල හිතෙනව මේ දවස් වල සීන් දැක්කහම.&lt;/p&gt;
+&lt;p&gt;තමන් බොහොම අමාරුවෙන්, අවුරුදු ගානක් කැප කරල හදාගත්ත වටිනා බෙහෙත් ගහක් අවිදිමත් 
+ඉදිකිරීමක් කරද්දි උගුල්ලලා දැම්මොත් දැනෙන්නෙ කොහොම වේදනාවක්ද? දුකක්ද? &lt;/p&gt;
+&lt;p&gt;අර ගියපාර කිව්ව වගේ කිසිදෙයක් 'මමය මාගේය' කියල අල්ලගත්තොත් හැමදාටම ලෝකෙත් 
+එක්ක ඕව ගැන කෙලගැනිලි.&lt;/p&gt;
+&lt;p&gt;ඉතිං අතෑරපං. &lt;/p&gt;
+&lt;p&gt;නැත්තං &lt;em&gt;'දුක යනු...'&lt;/em&gt; කියල මීම් හද හද ඉන්න තමයි වෙන්නෙ. :P&lt;/p&gt;
+&lt;p&gt;&lt;img alt="මහනුවර වැල් බෝධිය" src="https://janithl.github.io/images/vel-bodhiya.jpg" /&gt;&lt;/p&gt;</summary><category term="work"></category></entry><entry><title>November</title><link href="https://janithl.github.io/2016/11/november/" rel="alternate"></link><published>2016-11-07T07:35:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-11-07:2016/11/november/</id><summary type="html">&lt;p&gt;With any sufficiently complex system, a major overhaul always creates 
 more problems than it solves; there's enough and more "case studies" of
 the type you read about in &lt;em&gt;Software Engineering&lt;/em&gt; to back it up. Things 
 that were fixed over years and countless late night hacking sessions and 
