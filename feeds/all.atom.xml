@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-12-15T05:06:00+05:30</updated><entry><title>...</title><link href="https://janithl.github.io/2016/12/ellipsis/" rel="alternate"></link><published>2016-12-15T05:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-15:2016/12/ellipsis/</id><summary type="html">&lt;p&gt;&lt;em&gt;විපතෙහි සැපතෙහි&lt;/em&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-12-31T21:24:00+05:30</updated><entry><title>One Last 2016 Post</title><link href="https://janithl.github.io/2016/12/one-last-2016-post/" rel="alternate"></link><published>2016-12-31T21:24:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-31:2016/12/one-last-2016-post/</id><summary type="html">&lt;p&gt;2016 has been... an &lt;em&gt;interesting&lt;/em&gt; year. I've made friends, and I've lost some.
+I got a lot of time to sit down and reflect, and I grow thankful every day for
+the people who choose to stand by me despite all my shortcomings.&lt;/p&gt;
+&lt;p&gt;In the spirit of 2016, let me turn the things that made me happy this year into
+a Top 5 list:&lt;/p&gt;
+&lt;h1&gt;1. I got to travel&lt;/h1&gt;
+&lt;p&gt;Since "the incident" of Feb 2014, I've not really travelled as much as I
+would've normally liked to. This year though began with some travel: to
+Pasikuda with the family. Places I got to travel to this year includes that
+and our usual annual trips to Kandy, Anuradhapura, &lt;a href="https://janithl.github.io/2016/09/somawathiya-september-2016/"&gt;Somawathiya&lt;/a&gt;, the &lt;em&gt;Deep
+South&lt;/em&gt; (Katharagama, Mulkirigala etc.) and some really cool day trips Down South
+with the coworkers.&lt;/p&gt;
+&lt;h1&gt;2. I got to learn&lt;/h1&gt;
+&lt;p&gt;... both in and out of the classroom. In the classroom I tried to wrap my head
+around ML techniques, &lt;a href="https://janithl.github.io/2016/08/and-so-it-began/"&gt;neural nets&lt;/a&gt;, advanced DBs and their ilk. Outside
+of it, I got to play with React quite a bit, learn &lt;a href="https://laravel.com/"&gt;Laravel&lt;/a&gt; in a (cramped)
+couple of months and push out live systems almost immediately (what a beautiful
+framework, has changed the way I write PHP for the better). I got to dabble in
+more Python than I ever got to. &lt;/p&gt;
+&lt;p&gt;I got into &lt;a href="https://www.youtube.com/channel/UCzZCiVjRPPDCpP5l7HIGRtA"&gt;some&lt;/a&gt; &lt;a href="https://www.youtube.com/channel/UC3Wj9aO8VS5ZuXrtWfJf81w"&gt;crazy&lt;/a&gt; &lt;a href="https://www.youtube.com/channel/UCCOIcdii1bQmfSPHeNNw4Qw"&gt;YouTube channels&lt;/a&gt; that inspired me to pick 
+up my guitar after years, adjust the truss rod and play some barre chords. I
+followed Casey Neistat as he built and sold a company, and let John Green
+teach me history like I was taking my AP exams.&lt;/p&gt;
+&lt;h1&gt;3. I got time off&lt;/h1&gt;
+&lt;p&gt;I got three months off to write my thesis' lit review, write this blog, and
+write code to buff up my Github profile. I started working the week after I was
+done with my final exam at uni, and I never got a proper break since. Those 3
+months let me put everything in prespective and helped me decide what I really
+wanted to do with my life.&lt;/p&gt;
+&lt;h1&gt;4. I got bald&lt;/h1&gt;
+&lt;p&gt;Well, started balding. Not really fussed about it. (I feel that) I am well aware 
+of my mortality, and that I'm no longer the youngest guy in the room.&lt;/p&gt;
+&lt;h1&gt;5. I got to let go&lt;/h1&gt;
+&lt;p&gt;... of some important things which I once thought would stay with me for (most
+of my) life. It was much easier than I thought and I feel much better for it.&lt;/p&gt;
+&lt;p&gt;Life is a stream and hanging on to a bank is not going to help when eventually
+we all need to float away. Or so I feel.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="Facebook Year in Review" src="https://janithl.github.io/images/fb-2016.png" /&gt;&lt;/p&gt;
+&lt;p&gt;So, that's been my year. It wasn't terrible personally by a long stretch, but
+it was certainly challenging and 2017 promises to be even more so. I hope you've
+all had a good year, and wish you all the best for the next one. Cheers!&lt;/p&gt;</summary></entry><entry><title>...</title><link href="https://janithl.github.io/2016/12/ellipsis/" rel="alternate"></link><published>2016-12-15T05:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-15:2016/12/ellipsis/</id><summary type="html">&lt;p&gt;&lt;em&gt;විපතෙහි සැපතෙහි&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;නොසැළෙයි නොතැවෙයි&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;අටලෝ දම හුරු හෙළයා&lt;/em&gt;&lt;/p&gt;</summary><category term="people"></category><category term="sinhala"></category></entry><entry><title>දෙසැම්බර්</title><link href="https://janithl.github.io/2016/12/december/" rel="alternate"></link><published>2016-12-04T21:46:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-04:2016/12/december/</id><summary type="html">&lt;p&gt;ලියන්නද දේවල් නැත්තෙ, ලියන්න වචනනම් ගලන්නෙ හැබැයි ඉඩෝරෙට වතුර කැපුවාම 
 කරාමෙන් එන වතුර බින්දු වගේ.&lt;/p&gt;
