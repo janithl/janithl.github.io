@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/links.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-25T21:13:00+05:30</updated><entry><title>Links: Machine Learning</title><link href="https://janithl.github.io/2016/08/links-machine-learning/" rel="alternate"></link><published>2016-08-25T21:13:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-25:2016/08/links-machine-learning/</id><summary type="html">&lt;p&gt;I'm changing the format of the links posts to topic-based posts which I will 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - Links</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/links.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-08-25T21:13:00+05:30</updated><entry><title>Links: Machine Learning</title><link href="https://janithl.github.io/2016/08/links-machine-learning/" rel="alternate"></link><published>2016-08-25T21:13:00+05:30</published><updated>2016-08-25T21:13:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-25:/2016/08/links-machine-learning/</id><summary type="html">&lt;p&gt;I'm changing the format of the links posts to topic-based posts which I will 
+add to over time. Seems like a better way to organize than basing them on dates.&lt;/p&gt;
+&lt;h2&gt;August 2016&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://backchannel.com/an-exclusive-look-at-how-ai-and-machine-learning-work-at-apple-8dbfb131932b"&gt;&lt;em&gt;An exclusive inside look at how artificial intelligence and machine learning 
+work at Apple&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A fascinating look at …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'm changing the format of the links posts to topic-based posts which I will 
 add to over time. Seems like a better way to organize than basing them on dates.&lt;/p&gt;
 &lt;h2&gt;August 2016&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://backchannel.com/an-exclusive-look-at-how-ai-and-machine-learning-work-at-apple-8dbfb131932b"&gt;&lt;em&gt;An exclusive inside look at how artificial intelligence and machine learning 
@@ -15,7 +20,7 @@ primary motivation is publishing,” says Federighi. If while improving an Apple
 product scientists happen to make breakthroughs in the field, that’s great. “But 
 we are driven by a vision of the end result,” says Cue.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;a href="https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html"&gt;&lt;em&gt;The 9 Deep Learning Papers You Need To Know About&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;A great overview of some recent breakthrough research in CNNs.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -25,7 +30,7 @@ vision and convolutional neural networks. [...] The first half of the list
 while the second half is just a collection of interesting papers in other 
 subareas. &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;a href="https://medium.com/@ageitgey/machine-learning-is-fun-part-5-language-translation-with-deep-learning-and-the-magic-of-sequences-2ace0acca0aa"&gt;&lt;em&gt;Language Translation with Deep Learning and the Magic of Sequences&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The magic of sequence-to-sequence learning, taking a crack at the 'holy grail'
 of Computational Lingustics: Machine Translation&lt;/p&gt;
@@ -56,7 +61,7 @@ data)! &lt;/p&gt;
 describing images in great detail by processing multiple regions of an image 
 separately.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;a href="https://research.googleblog.com/2016/08/text-summarization-with-tensorflow.html"&gt;&lt;em&gt;Text summarization with TensorFlow&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I wish Google will stop stealing all our research topics. :P&lt;/p&gt;
 &lt;blockquote&gt;
@@ -70,7 +75,7 @@ researching, but it serves as a baseline.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;It feels like TensorFlow (and SyntaxNet) is really taking the NLP world by 
 storm, especially looking at &lt;a href="https://research.googleblog.com/2016/08/acl-2016-research-at-google.html"&gt;Google's offerings at ACL 2016&lt;/a&gt;.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;a href="https://code.facebook.com/posts/561187904071636/segmenting-and-refining-images-with-sharpmask/"&gt;&lt;em&gt;Segmenting and refining images with SharpMask&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Not wanting to be left out, Facebook has also released some incredible research
 in the past few weeks, earlier with &lt;a href="https://research.facebook.com/blog/fasttext/"&gt;fastText&lt;/a&gt; and now extending to DeepMask 
@@ -104,8 +109,16 @@ additional overhead.&lt;/p&gt;
 where objects are moving, interacting, and changing over time. We've already 
 made some progress with computer vision techniques to watch videos and 
 understand and classify what's in them in real time.&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="code"></category><category term="data"></category><category term="machine learning"></category></entry><entry><title>Pairplots FTW! Links: August 15</title><link href="https://janithl.github.io/2016/08/links-august-15/" rel="alternate"></link><published>2016-08-15T20:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-15:2016/08/links-august-15/</id><summary type="html">&lt;p&gt;Instalment 2 of the "sharing links" thingy. Shorter too.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;/blockquote&gt;</content><category term="code"></category><category term="data"></category><category term="machine learning"></category></entry><entry><title>Pairplots FTW! Links: August 15</title><link href="https://janithl.github.io/2016/08/links-august-15/" rel="alternate"></link><published>2016-08-15T20:06:00+05:30</published><updated>2016-08-15T20:06:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-15:/2016/08/links-august-15/</id><summary type="html">&lt;p&gt;Instalment 2 of the "sharing links" thingy. Shorter too.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;On Software:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I recently subscribed to the Dataquest newsletter, and today got this post
+emailed to me:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.dataquest.io/blog/python-vs-r/"&gt;&lt;em&gt;Python vs R: head to head data analysis&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make pairwise scatterplots: One common way to explore a dataset is to see how 
+different columns …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Instalment 2 of the "sharing links" thingy. Shorter too.&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;On Software:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I recently subscribed to the Dataquest newsletter, and today got this post
 emailed to me:&lt;/p&gt;
@@ -114,9 +127,9 @@ emailed to me:&lt;/p&gt;
 &lt;p&gt;Make pairwise scatterplots: One common way to explore a dataset is to see how 
 different columns correlate to others.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img alt="Seaborn Pairplot" src="https://janithl.github.io/images/seaborn-pairplot.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Seaborn Pairplot" src="https://janithl.github.io/images/seaborn-pairplot.png"&gt;&lt;/p&gt;
 &lt;p&gt;The above example is from the excellent &lt;a href="https://stanford.edu/~mwaskom/software/seaborn/generated/seaborn.pairplot.html"&gt;Seaborn Documentation&lt;/a&gt;. Good stuff!&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;On Conflict:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I read several great D. B. S. Jeyaraj articles in my ongoing fascination with
 the Sri Lankan Civil War.&lt;/p&gt;
@@ -141,7 +154,7 @@ remained incognito in Colombo till 1997.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;How inept was military intel at that time for this guy to lurk around for almost
 7 years blowing shit up and not be noticed?&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;On Economics:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The excellent piece on the Daily FT by IPS Chairman Prof. Razeen Sally, titled 
 &lt;a href="http://www.ft.lk/article/560914/ft"&gt;&lt;em&gt;"The Sri Lankan economy after regime change"&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
@@ -181,7 +194,7 @@ their frustrations at the minorities who got President Sirisena and a UNP-led
 Government elected.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Hat tip for &lt;a href="https://www.facebook.com/yudhanjaya"&gt;Yudhanjaya&lt;/a&gt; and &lt;a href="https://twitter.com/himalkk"&gt;Himal&lt;/a&gt; for pointing me at this.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;I've been watching a LOT of "Crash Course World History", and I loved their 
 &lt;a href="https://www.youtube.com/watch?v=alJaltUmrGo"&gt;&lt;em&gt;episode on Imperialism&lt;/em&gt;&lt;/a&gt;, especially the oft-overlooked economic side of 
 it. See also &lt;a href="https://www.youtube.com/watch?v=QfsfoFqsFk4"&gt;their episode on American Imperialism&lt;/a&gt;, mostly covering the 
@@ -189,14 +202,21 @@ Spanish-American War.&lt;/p&gt;
 &lt;iframe width="640" height="360" src="https://www.youtube.com/embed/alJaltUmrGo" 
 frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;hr /&gt;
-&lt;p&gt;Well, I guess not that much shorter. Oh well.&lt;/p&gt;</summary><category term="conflict"></category><category term="data"></category><category term="geopolitics"></category></entry><entry><title>Links: August 14</title><link href="https://janithl.github.io/2016/08/links-august-14/" rel="alternate"></link><published>2016-08-14T17:53:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-14:2016/08/links-august-14/</id><summary type="html">&lt;p&gt;I &lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;promised previously&lt;/a&gt; to use this space for link sharing as well, so here
+&lt;hr&gt;
+&lt;p&gt;Well, I guess not that much shorter. Oh well.&lt;/p&gt;</content><category term="conflict"></category><category term="data"></category><category term="geopolitics"></category></entry><entry><title>Links: August 14</title><link href="https://janithl.github.io/2016/08/links-august-14/" rel="alternate"></link><published>2016-08-14T17:53:00+05:30</published><updated>2016-08-14T17:53:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-14:/2016/08/links-august-14/</id><summary type="html">&lt;p&gt;I &lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;promised previously&lt;/a&gt; to use this space for link sharing as well, so here
 goes the first instalment.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;On Software:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Gender disparity in computer science is an often discussed topic, and the 
 following is one of my favourite graphs on the topic:&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;&lt;img alt="Women in CompSci" src="https://janithl.github.io/images/comp-sci-women.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;&lt;img alt="Women in CompSci" src="https://janithl.github.io/images/comp-sci-women.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This week, I read about another study that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I &lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;promised previously&lt;/a&gt; to use this space for link sharing as well, so here
+goes the first instalment.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;On Software:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Gender disparity in computer science is an often discussed topic, and the 
+following is one of my favourite graphs on the topic:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding"&gt;&lt;img alt="Women in CompSci" src="https://janithl.github.io/images/comp-sci-women.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This week, I read about another study that confirms that software development 
 is not the meritocracy it is often claimed to be. - &lt;a href="https://www.theguardian.com/technology/2016/feb/12/women-considered-better-coders-hide-gender-github"&gt;"Women considered better 
 coders – but only if they hide their gender"&lt;/a&gt;&lt;/p&gt;
@@ -228,19 +248,19 @@ feel they go out of their way to support my efforts to learn and make more
 contributions.”&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Trust Githubbers to attempt mansplaining R to a Stats Prof.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;Machine Learning is a topic &lt;a href="https://janithl.github.io/2016/07/the-lastfm-dataset/"&gt;I am ostensibly interested in&lt;/a&gt;. This week, I
 discovered a really cool &lt;a href="https://github.com/josephmisiti/awesome-machine-learning"&gt;awesome-style list with a ton of ML resources&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Awesome Machine Learning Awesome: A curated list of awesome machine learning 
 frameworks, libraries and software (by language).&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;A beautiful, beautiful tool and write-up by &lt;a href="http://www.martinoleary.com/"&gt;Dr. Martin O'Leary of Swansea 
 University&lt;/a&gt; on &lt;a href="http://mewo2.com/notes/terrain/"&gt;how to generate imaginary maps&lt;/a&gt; and a companion piece on 
 &lt;a href="http://mewo2.com/notes/naming-language/"&gt;generating an imginary language to produce place names&lt;/a&gt;. Mind-blown twice: 
 as a cartography nerd AND as someone who studied NLP.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Imaginary Maps" src="https://janithl.github.io/images/imaginary-maps.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Imaginary Maps" src="https://janithl.github.io/images/imaginary-maps.png"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I wanted to make maps that look like something you'd find at the back of one 
 of the cheap paperback fantasy novels of my youth. I always had a fascination 
@@ -249,12 +269,12 @@ whatever luke-warm sub-Tolkien tale they were attached to.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Took me back to my childhood spent looking for, devouring and creating 
 imaginary maps of my own. &lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;On Sports:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;A &lt;a href="http://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html?_r=0"&gt;beautifully visual and data-rich NYT piece&lt;/a&gt; on how different countries
 dominated different arenas of the Olympics over the years, and how certain 
 blocks dominate certain sports. Part of their excellent Olympic coverage.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;a href="http://www.espncricinfo.com/sri-lanka-v-australia-2016/content/story/1045673.html"&gt;Andrew Fernando's excellent write-up&lt;/a&gt; on the first day of the third test
 between Australia and Sri Lanka at the SSC. He keeps churning out these 
 exceptional gems that make me proud to be Sri Lankan.&lt;/p&gt;
@@ -278,7 +298,7 @@ Australia chased leather all over; patrons shunted from room to room to room
 in the building, all, in the end, for no tangible reward. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;swoons&lt;/em&gt;&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;On Conflict:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Col. Sylvester Perera's &lt;a href="https://globalecco.org/the-sri-lankan-civil-war-a-personal-reminiscence-col-sylvester-perera-sri-lankan-army"&gt;sobering account of the civil war in the 90s&lt;/a&gt;, and 
 how lasting peace is yet to be achieved.&lt;/p&gt;
@@ -301,7 +321,7 @@ society for peace building, within a framework called disarmament,
 demobilization, and reintegration. Despite all our work, however, it seems 
 that Sri Lanka is still facing these challenges [...]&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;D. B. S. Jeyaraj's article &lt;a href="http://dbsjeyaraj.com/dbsj/archives/47692"&gt;"Shelton Ranaraja: Principled Politician was 
 Conscience-Keeper of the Nation"&lt;/a&gt; which contained some chilling excerpts 
 from William Mcgowan's “Only man is Vile”.&lt;/p&gt;
@@ -330,6 +350,6 @@ peaceful jungle around him. “I don’t understand why this is happening. I can
 explain it.”&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;So very glad I got to skip the 80s.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;So, that was a long write (and read, sorry!). I should try to keep these shorter
-from next time on.&lt;/p&gt;</summary><category term="conflict"></category><category term="code"></category><category term="data"></category></entry></feed>
+from next time on.&lt;/p&gt;</content><category term="conflict"></category><category term="code"></category><category term="data"></category></entry></feed>

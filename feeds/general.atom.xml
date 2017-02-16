@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-09-11T09:05:00+05:30</updated><entry><title>The UNP at 70</title><link href="https://janithl.github.io/2016/09/the-unp-at-70/" rel="alternate"></link><published>2016-09-11T09:05:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-11:2016/09/the-unp-at-70/</id><summary type="html">&lt;p&gt;&lt;img alt="The Elephant" src="https://janithl.github.io/images/unp-elephant.png" /&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-09-11T09:05:00+05:30</updated><entry><title>The UNP at 70</title><link href="https://janithl.github.io/2016/09/the-unp-at-70/" rel="alternate"></link><published>2016-09-11T09:05:00+05:30</published><updated>2016-09-11T09:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-11:/2016/09/the-unp-at-70/</id><summary type="html">&lt;p&gt;&lt;img alt="The Elephant" src="https://janithl.github.io/images/unp-elephant.png"&gt;&lt;/p&gt;
+&lt;p&gt;The United National Party turned 70 this week. I thought I'd take a look at their electoral 
+record, for funsies.&lt;/p&gt;
+&lt;p&gt;The data for this (short) analysis was sourced from Wikipedia. That data was in turn sourced 
+from Department of Elections PDF files. I didn't cross-check the numbers because this is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="The Elephant" src="https://janithl.github.io/images/unp-elephant.png"&gt;&lt;/p&gt;
 &lt;p&gt;The United National Party turned 70 this week. I thought I'd take a look at their electoral 
 record, for funsies.&lt;/p&gt;
 &lt;p&gt;The data for this (short) analysis was sourced from Wikipedia. That data was in turn sourced 
@@ -227,7 +231,7 @@ extraordinary circumstances. In 1977, the country was emerging from an unpopular
 experiment with a strictly-controlled, statist economy. The 1989 election was held 
 during an extremely violent period of the country's history (more on that below).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="UNP Percentage of Valid Votes" src="https://janithl.github.io/images/percentage-valid-votes.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="UNP Percentage of Valid Votes" src="https://janithl.github.io/images/percentage-valid-votes.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The percentage of the popular vote mattered little in the &lt;a href="https://en.wikipedia.org/wiki/First-past-the-post_voting"&gt;First Past The Post&lt;/a&gt;
 system. The election was essentially a series of isolated local contests to win a 
@@ -235,7 +239,7 @@ particular electorate. It is even more surprising, then, to see that the UNP has
 managed to win absolute majorities in only 3 of the 15 elections we looked at, and 
 only twice under the FPTP system. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="UNP Percentage of Seats" src="https://janithl.github.io/images/percentage-seats.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="UNP Percentage of Seats" src="https://janithl.github.io/images/percentage-seats.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;In the &lt;a href="https://en.wikipedia.org/wiki/Ceylonese_parliamentary_election,_1947"&gt;1947 election&lt;/a&gt;, 29.11% of the popular vote and 21 (of 95) seats were won 
@@ -389,15 +393,15 @@ the drastic reduction after Proportional Representation was introduced in the 80
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img alt="Vote/Seat Diff" src="https://janithl.github.io/images/vote-seat-diff.png" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vote Percentage vs Seat Percentage under different systems" src="https://janithl.github.io/images/votes-vs-seats-vs-system.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vote/Seat Diff" src="https://janithl.github.io/images/vote-seat-diff.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vote Percentage vs Seat Percentage under different systems" src="https://janithl.github.io/images/votes-vs-seats-vs-system.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The number of valid votes increased from just under 2 million in 1947 to 11 million in 2015. 
 The troughs of 1989 and 2010 are also interesting, because these elections took place under
 extraordinary circumstances. In 1989, there was a &lt;a href="https://en.wikipedia.org/wiki/1987%E2%80%9389_JVP_insurrection"&gt;full-blown insurgency ravaging the south&lt;/a&gt;,
 and 2010 was the year after the &lt;a href="https://en.wikipedia.org/wiki/Eelam_War_IV"&gt;Sri Lankan Civil War&lt;/a&gt; was finally concluded. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Valid Vote Growth" src="https://janithl.github.io/images/valid-votes.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Valid Vote Growth" src="https://janithl.github.io/images/valid-votes.png"&gt;&lt;/p&gt;
 &lt;h2&gt;Swings&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -490,7 +494,7 @@ the &lt;em&gt;'revolution'&lt;/em&gt; of 1956 was the UNP's biggest defeat, losi
 increase. It edged out the 13.01% increase of 1977.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Vote Swing" src="https://janithl.github.io/images/vote-swing.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vote Swing" src="https://janithl.github.io/images/vote-swing.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;In terms of seat swing (the different in percentage seats won between the current and last election), 
@@ -501,7 +505,7 @@ increase. It edged out the 13.01% increase of 1977.&lt;/p&gt;
 (of 168) seats - J. R.'s infamous 5/6th majority.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Seat Swing" src="https://janithl.github.io/images/seat-swing.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Seat Swing" src="https://janithl.github.io/images/seat-swing.png"&gt;&lt;/p&gt;
 &lt;h2&gt;Data Viz&lt;/h2&gt;
 &lt;p&gt;Making these graphs in &lt;a href="https://stanford.edu/~mwaskom/software/seaborn/"&gt;Seaborn&lt;/a&gt; took a helluva long time, mostly because I am incompetant. 
 See, I even managed to misspell &lt;em&gt;incompetent&lt;/em&gt;.&lt;/p&gt;
@@ -573,7 +577,15 @@ See, I even managed to misspell &lt;em&gt;incompetent&lt;/em&gt;.&lt;/p&gt;
 window.onload = function() {
    $('table').addClass('table table-bordered table-condensed'); 
 }
-&lt;/script&gt;</summary><category term="data"></category><category term="politics"></category></entry><entry><title>Thoughts On Free Education</title><link href="https://janithl.github.io/2016/09/thoughts-on-free-education/" rel="alternate"></link><published>2016-09-03T20:10:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-03:2016/09/thoughts-on-free-education/</id><summary type="html">&lt;p&gt;&lt;img alt="6 Percenters" src="https://janithl.github.io/images/6-percent.png" /&gt;&lt;/p&gt;
+&lt;/script&gt;</content><category term="data"></category><category term="politics"></category></entry><entry><title>Thoughts On Free Education</title><link href="https://janithl.github.io/2016/09/thoughts-on-free-education/" rel="alternate"></link><published>2016-09-03T20:10:00+05:30</published><updated>2016-09-03T20:10:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-03:/2016/09/thoughts-on-free-education/</id><summary type="html">&lt;p&gt;&lt;img alt="6 Percenters" src="https://janithl.github.io/images/6-percent.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I did my undergraduate studies at a private fee-levying 
+university in Sri Lanka.&lt;/p&gt;
+&lt;p&gt;The above disclaimer reflects my natural sympathies in this fight. It 
+was easy to support the private university cause, simply because:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Not everyone can get into state universities (in the academic year 
+2013, only 16.5 …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="6 Percenters" src="https://janithl.github.io/images/6-percent.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I did my undergraduate studies at a private fee-levying 
 university in Sri Lanka.&lt;/p&gt;
 &lt;p&gt;The above disclaimer reflects my natural sympathies in this fight. It 
@@ -664,7 +676,15 @@ disgust. &lt;/p&gt;
 &lt;p&gt;But the people of this country should, for once, look at the core issues 
 surrounding our tertiary education system and try to fix them at the 
 root, instead of palming it off to the private sector and forgetting 
-about it.&lt;/p&gt;</summary><category term="uni"></category><category term="education"></category><category term="politics"></category></entry><entry><title>The Continuing Story of Bungalow Bill</title><link href="https://janithl.github.io/2016/08/the-continuing-story-of-bungalow-bill/" rel="alternate"></link><published>2016-08-20T15:58:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-20:2016/08/the-continuing-story-of-bungalow-bill/</id><summary type="html">&lt;p&gt;&lt;em&gt;Deep in the jungle where the mighty tiger lies&lt;/em&gt;&lt;/p&gt;
+about it.&lt;/p&gt;</content><category term="uni"></category><category term="education"></category><category term="politics"></category></entry><entry><title>The Continuing Story of Bungalow Bill</title><link href="https://janithl.github.io/2016/08/the-continuing-story-of-bungalow-bill/" rel="alternate"></link><published>2016-08-20T15:58:00+05:30</published><updated>2016-08-20T15:58:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-20:/2016/08/the-continuing-story-of-bungalow-bill/</id><summary type="html">&lt;p&gt;&lt;em&gt;Deep in the jungle where the mighty tiger lies&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Bill and his elephants were taken by surprise&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;So Captain Marvel zapped in right between the eyes, zap!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;All the children sing&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hey, Bungalow Bill&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;What did you kill, Bungalow Bill?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hey, Bungalow Bill&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;What did you kill, Bungalow Bill?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Deep in the jungle where the mighty tiger lies&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Bill and his elephants were taken by surprise&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;So Captain Marvel zapped in right between the eyes, zap!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;All the children sing&lt;/em&gt;&lt;/p&gt;
@@ -674,7 +694,7 @@ about it.&lt;/p&gt;</summary><category term="uni"></category><category term="edu
 &lt;p&gt;&lt;em&gt;What did you kill, Bungalow Bill?&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Of all the messes that colonisers left their former colonies in, the mess 
 created with the birth (and partitioning) of India is particularly sad.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pakistan" src="https://janithl.github.io/images/pakistan-ethnic.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pakistan" src="https://janithl.github.io/images/pakistan-ethnic.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;See:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -683,12 +703,15 @@ created with the birth (and partitioning) of India is particularly sad.&lt;/p&gt
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Radcliffe_Line"&gt;Radcliffe Line&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="conflict"></category><category term="geopolitics"></category></entry><entry><title>Allegory</title><link href="https://janithl.github.io/2016/08/allegory/" rel="alternate"></link><published>2016-08-09T21:43:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-09:2016/08/allegory/</id><summary type="html">&lt;p&gt;&lt;em&gt;I have good friends who are drinkers. I have good friends who are social 
+&lt;/ul&gt;</content><category term="conflict"></category><category term="geopolitics"></category></entry><entry><title>Allegory</title><link href="https://janithl.github.io/2016/08/allegory/" rel="alternate"></link><published>2016-08-09T21:43:00+05:30</published><updated>2016-08-09T21:43:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-09:/2016/08/allegory/</id><summary type="html">&lt;p&gt;&lt;em&gt;I have good friends who are drinkers. I have good friends who are social 
+drinkers, but aren't really drinkers. I have good friends who aren't drinkers.
+I have good friends who are drinkers, and also want all the non-drinkers to 
+drink too. I have good friends who aren't drinkers and …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;I have good friends who are drinkers. I have good friends who are social 
 drinkers, but aren't really drinkers. I have good friends who aren't drinkers.
 I have good friends who are drinkers, and also want all the non-drinkers to 
 drink too. I have good friends who aren't drinkers and want to eradicate 
 drinking, and maybe the drinkers too.&lt;/em&gt;&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;For the longest time, there was no drinking. Then, in the cold climes up North,
 alcohol was discovered. It became quickly popular in those wintry wastelands, 
 and made human habitation bearable. It spread, as human ingenuity often does,
@@ -733,16 +756,21 @@ about". "Those coconuts are just bitter about how happy drinkers are!"&lt;/p&gt;
 &lt;p&gt;You'd think the world would grow closer, that the North and the South would 
 finally just be directions on a map. But from here, it seems to me, the North
 looks on gleefully as the South tears itself apart.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;em&gt;I have good friends who are drinkers. I have good friends who are social 
 drinkers, but aren't really drinkers. I have good friends who aren't drinkers.
 I have good friends who are drinkers, and also want all the non-drinkers to 
 drink too. I have good friends who aren't drinkers and want to eradicate 
 drinking, and maybe the drinkers too.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;And if you are a good friend of mine, you'd know that this post isn't about 
-drinking at all.&lt;/p&gt;</summary><category term="conflict"></category><category term="people"></category></entry><entry><title>July is the month of buses, and 2016 is the year of JS</title><link href="https://janithl.github.io/2016/07/busroutejs/" rel="alternate"></link><published>2016-07-22T08:32:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-22:2016/07/busroutejs/</id><summary type="html">&lt;p&gt;Yesterday, there I was, minding my own business, when Facebook 
+drinking at all.&lt;/p&gt;</content><category term="conflict"></category><category term="people"></category></entry><entry><title>July is the month of buses, and 2016 is the year of JS</title><link href="https://janithl.github.io/2016/07/busroutejs/" rel="alternate"></link><published>2016-07-22T08:32:00+05:30</published><updated>2016-07-22T08:32:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-22:/2016/07/busroutejs/</id><summary type="html">&lt;p&gt;Yesterday, there I was, minding my own business, when Facebook 
 "memories" or whatever threw this curveball at me:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Bus Route Anniversary" src="https://janithl.github.io/images/bus-route-anni.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bus Route Anniversary" src="https://janithl.github.io/images/bus-route-anni.png"&gt;&lt;/p&gt;
+&lt;p&gt;Turns out it was exactly 5 years ago that I hacked together 
+&lt;a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html"&gt;a small piece of PHP&lt;/a&gt;, with a &lt;em&gt;liberal&lt;/em&gt; amount of SQL logic 
+thrown in, and it became sort of popular …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Yesterday, there I was, minding my own business, when Facebook 
+"memories" or whatever threw this curveball at me:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bus Route Anniversary" src="https://janithl.github.io/images/bus-route-anni.png"&gt;&lt;/p&gt;
 &lt;p&gt;Turns out it was exactly 5 years ago that I hacked together 
 &lt;a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html"&gt;a small piece of PHP&lt;/a&gt;, with a &lt;em&gt;liberal&lt;/em&gt; amount of SQL logic 
 thrown in, and it became sort of popular. We're talking a 
@@ -752,7 +780,7 @@ thrown in, and it became sort of popular. We're talking a
 &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;find3Bus&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$to&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="nv"&gt;$dbconn&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nv"&gt;$sql&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;lt;&amp;lt;&amp;lt;SQL&lt;/span&gt;
+    &lt;span class="nv"&gt;$sql&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="dl"&gt;SQL&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
 &lt;span class="s"&gt;SELECT s1.`bid` as busid1, s3.`bid` as busid2, s5.`bid` as busid3, &lt;/span&gt;
 &lt;span class="s"&gt;ch1.`changeid` as changeid1, ch2.`changeid` as changeid2, &lt;/span&gt;
 &lt;span class="s"&gt;(s2.`stopNo` - s1.`stopNo`) as dist1, &lt;/span&gt;
@@ -771,7 +799,7 @@ thrown in, and it became sort of popular. We're talking a
 &lt;span class="s"&gt;WHERE s1.`pid` = :from AND s2.`pid` = ch1.`changeid` AND s4.`pid` = ch2.`changeid` &lt;/span&gt;
 &lt;span class="s"&gt;AND s6.`pid` = :to AND s2.`stopNo` &amp;gt; s1.`stopNo` AND s4.`stopNo` &amp;gt; s3.`stopNo` &lt;/span&gt;
 &lt;span class="s"&gt;AND s6.`stopNo` &amp;gt; s5.`stopNo` ORDER BY (dist1 + dist2 + dist3);&lt;/span&gt;
-&lt;span class="s"&gt;SQL;&lt;/span&gt;
+&lt;span class="dl"&gt;SQL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="nv"&gt;$res&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$dbconn&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;query&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$sql&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;:from&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;$from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;:to&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;$to&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
     &lt;span class="nv"&gt;$return&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$res&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$row&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$res&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -788,9 +816,9 @@ thrown in, and it became sort of popular. We're talking a
 &lt;p&gt;Yikes.&lt;/p&gt;
 &lt;p&gt;Anyway, this was hosted on a shitty &lt;a href="http://chavs.000a.biz"&gt;000a host&lt;/a&gt; that somehow 
 still exists on the internet, and it looked like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Bus Route Site Screenshot" src="https://janithl.github.io/images/bus-route-original.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bus Route Site Screenshot" src="https://janithl.github.io/images/bus-route-original.png"&gt;&lt;/p&gt;
 &lt;p&gt;And gave out results that looked like:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Bus Route Site Results" src="https://janithl.github.io/images/bus-route-original-results.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bus Route Site Results" src="https://janithl.github.io/images/bus-route-original-results.png"&gt;&lt;/p&gt;
 &lt;p&gt;Which somehow is better looking than anything I've managed since.&lt;/p&gt;
 &lt;h2&gt;ANYWAY&lt;/h2&gt;
 &lt;p&gt;I've been wanting to rewrite &lt;a href="https://github.com/janithl/BusRouteJS/commit/eac72894410693c47426720e240a8d5719316b1b"&gt;this thing in JS since 2014&lt;/a&gt;, 
@@ -804,7 +832,7 @@ time on my hands led to a 24-hour code sprint that produced
 &lt;p&gt;It's not &lt;em&gt;better&lt;/em&gt; than the original, for example the same query
 as the above Galle Face - Kottawa one gives a stupid result 
 like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Bus Route JS Results" src="https://janithl.github.io/images/bus-route-js-results.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bus Route JS Results" src="https://janithl.github.io/images/bus-route-js-results.png"&gt;&lt;/p&gt;
 &lt;p&gt;The data is ~ 5 years old and needs to be tweaked, and I think 
 the algorithms can do with a lot of tweaking, but here it is 
 and it runs 100% client-side. Yay 2016!&lt;/p&gt;
@@ -862,7 +890,12 @@ ramifications be damned.&lt;/p&gt;
 &lt;p&gt;I've barely tested it, so I'll probably make some tweaks here 
 and there. The code, as usual, is on &lt;a href="https://github.com/janithl/BusRouteJS"&gt;Github and MIT licensed&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;TL;DR&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://janithl.github.io/BusRouteJS/"&gt;Go to this page, and it'll throw you not great bus route suggestions&lt;/a&gt;&lt;/p&gt;</summary><category term="code"></category></entry><entry><title>The Lastfm Dataset</title><link href="https://janithl.github.io/2016/07/the-lastfm-dataset/" rel="alternate"></link><published>2016-07-20T09:09:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:2016/07/the-lastfm-dataset/</id><summary type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://janithl.github.io/BusRouteJS/"&gt;Go to this page, and it'll throw you not great bus route suggestions&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category></entry><entry><title>The Lastfm Dataset</title><link href="https://janithl.github.io/2016/07/the-lastfm-dataset/" rel="alternate"></link><published>2016-07-20T09:09:00+05:30</published><updated>2016-07-20T09:09:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:/2016/07/the-lastfm-dataset/</id><summary type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Todoist reminding me that my Last.fm analysis is overdue&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I downloaded my &lt;a href="http://www.last.fm/user/JanithL"&gt;Last.fm scrobble data&lt;/a&gt; a week
+or so back using &lt;a href="https://benjaminbenben.com/lastfm-to-csv/"&gt;this excellent online tool&lt;/a&gt;. 
+It contains almost every song I listened to on my PC (and some from my phone 
+and iPod) between March 2011 and November …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Todoist reminding me that my Last.fm analysis is overdue&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I downloaded my &lt;a href="http://www.last.fm/user/JanithL"&gt;Last.fm scrobble data&lt;/a&gt; a week
 or so back using &lt;a href="https://benjaminbenben.com/lastfm-to-csv/"&gt;this excellent online tool&lt;/a&gt;. 
@@ -919,7 +952,7 @@ Billy Joel                           92
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="https://janithl.github.io/images/artist-histogram.png"&gt;&lt;img alt="Artist Histogram" src="https://janithl.github.io/images/artist-histogram.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://janithl.github.io/images/artist-histogram.png"&gt;&lt;img alt="Artist Histogram" src="https://janithl.github.io/images/artist-histogram.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Song Titles&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; df.Title.value_counts()
 Sleeping Sun                         39
@@ -956,7 +989,12 @@ Here Comes the Sun                   27
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="https://janithl.github.io/images/song-title-histogram.png"&gt;&lt;img alt="Song Title Histogram" src="https://janithl.github.io/images/song-title-histogram.png" /&gt;&lt;/a&gt;&lt;/p&gt;</summary><category term="data"></category><category term="music"></category></entry><entry><title>Thoughts on Turkey</title><link href="https://janithl.github.io/2016/07/thoughts-on-turkey/" rel="alternate"></link><published>2016-07-19T19:06:00+05:30</published><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-19:2016/07/thoughts-on-turkey/</id><summary type="html">&lt;p&gt;I've been meaning to write something cohesive about my thoughts 
+&lt;p&gt;&lt;a href="https://janithl.github.io/images/song-title-histogram.png"&gt;&lt;img alt="Song Title Histogram" src="https://janithl.github.io/images/song-title-histogram.png"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="data"></category><category term="music"></category></entry><entry><title>Thoughts on Turkey</title><link href="https://janithl.github.io/2016/07/thoughts-on-turkey/" rel="alternate"></link><published>2016-07-19T19:06:00+05:30</published><updated>2016-07-19T19:06:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-19:/2016/07/thoughts-on-turkey/</id><summary type="html">&lt;p&gt;I've been meaning to write something cohesive about my thoughts 
+post-attempted coup in Turkey, instead of having a half-dozen 
+status updates with cryptic captions that, when analysed together,
+gives someone an idea of where I stand on the issue.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://foreignpolicy.com/2016/07/18/turkey-and-nato-what-comes-next-is-messy-coup-erdogan-incirlik-air-base-nuclear-weapons/"&gt;Writing for Foreign Policy&lt;/a&gt;, 
+retired American 4-star admiral and supreme NATO …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've been meaning to write something cohesive about my thoughts 
 post-attempted coup in Turkey, instead of having a half-dozen 
 status updates with cryptic captions that, when analysed together,
 gives someone an idea of where I stand on the issue.&lt;/p&gt;
@@ -1052,4 +1090,4 @@ family members of American troops at Incirlik.&lt;/p&gt;
 wanted to talk about - Erdogan and his politics. I'll hopefully have time 
 &lt;em&gt;(lol)&lt;/em&gt; to write in more depth about what the last 13 years have looked like 
 for Turkey under Erdogan, and what his potential endgame might be - for both 
-Turkey and the Middle East.&lt;/p&gt;</summary><category term="conflict"></category><category term="geopolitics"></category></entry></feed>
+Turkey and the Middle East.&lt;/p&gt;</content><category term="conflict"></category><category term="geopolitics"></category></entry></feed>

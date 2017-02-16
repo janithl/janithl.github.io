@@ -108,7 +108,7 @@
   <div class="article_text">
     <p>Yesterday, there I was, minding my own business, when Facebook 
 "memories" or whatever threw this curveball at me:</p>
-<p><img alt="Bus Route Anniversary" src="https://janithl.github.io/images/bus-route-anni.png" /></p>
+<p><img alt="Bus Route Anniversary" src="https://janithl.github.io/images/bus-route-anni.png"></p>
 <p>Turns out it was exactly 5 years ago that I hacked together 
 <a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html">a small piece of PHP</a>, with a <em>liberal</em> amount of SQL logic 
 thrown in, and it became sort of popular. We're talking a 
@@ -118,7 +118,7 @@ thrown in, and it became sort of popular. We're talking a
 <span class="k">function</span> <span class="nf">find3Bus</span><span class="p">(</span><span class="nv">$from</span><span class="p">,</span> <span class="nv">$to</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">global</span> <span class="nv">$dbconn</span><span class="p">;</span>
-    <span class="nv">$sql</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;SQL</span>
+    <span class="nv">$sql</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;</span><span class="dl">SQL</span><span class="s"></span>
 <span class="s">SELECT s1.`bid` as busid1, s3.`bid` as busid2, s5.`bid` as busid3, </span>
 <span class="s">ch1.`changeid` as changeid1, ch2.`changeid` as changeid2, </span>
 <span class="s">(s2.`stopNo` - s1.`stopNo`) as dist1, </span>
@@ -137,7 +137,7 @@ thrown in, and it became sort of popular. We're talking a
 <span class="s">WHERE s1.`pid` = :from AND s2.`pid` = ch1.`changeid` AND s4.`pid` = ch2.`changeid` </span>
 <span class="s">AND s6.`pid` = :to AND s2.`stopNo` &gt; s1.`stopNo` AND s4.`stopNo` &gt; s3.`stopNo` </span>
 <span class="s">AND s6.`stopNo` &gt; s5.`stopNo` ORDER BY (dist1 + dist2 + dist3);</span>
-<span class="s">SQL;</span>
+<span class="dl">SQL</span><span class="p">;</span>
     <span class="nv">$res</span>    <span class="o">=</span> <span class="nv">$dbconn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;:from&#39;</span> <span class="o">=&gt;</span> <span class="nv">$from</span><span class="p">,</span> <span class="s1">&#39;:to&#39;</span> <span class="o">=&gt;</span> <span class="nv">$to</span><span class="p">));</span>
     <span class="nv">$return</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
     <span class="k">if</span><span class="p">(</span><span class="nv">$res</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nv">$res</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">())</span> <span class="o">!=</span> <span class="k">false</span><span class="p">)</span>
@@ -154,9 +154,9 @@ thrown in, and it became sort of popular. We're talking a
 <p>Yikes.</p>
 <p>Anyway, this was hosted on a shitty <a href="http://chavs.000a.biz">000a host</a> that somehow 
 still exists on the internet, and it looked like this:</p>
-<p><img alt="Bus Route Site Screenshot" src="https://janithl.github.io/images/bus-route-original.png" /></p>
+<p><img alt="Bus Route Site Screenshot" src="https://janithl.github.io/images/bus-route-original.png"></p>
 <p>And gave out results that looked like:</p>
-<p><img alt="Bus Route Site Results" src="https://janithl.github.io/images/bus-route-original-results.png" /></p>
+<p><img alt="Bus Route Site Results" src="https://janithl.github.io/images/bus-route-original-results.png"></p>
 <p>Which somehow is better looking than anything I've managed since.</p>
 <h2>ANYWAY</h2>
 <p>I've been wanting to rewrite <a href="https://github.com/janithl/BusRouteJS/commit/eac72894410693c47426720e240a8d5719316b1b">this thing in JS since 2014</a>, 
@@ -170,7 +170,7 @@ time on my hands led to a 24-hour code sprint that produced
 <p>It's not <em>better</em> than the original, for example the same query
 as the above Galle Face - Kottawa one gives a stupid result 
 like this:</p>
-<p><img alt="Bus Route JS Results" src="https://janithl.github.io/images/bus-route-js-results.png" /></p>
+<p><img alt="Bus Route JS Results" src="https://janithl.github.io/images/bus-route-js-results.png"></p>
 <p>The data is ~ 5 years old and needs to be tweaked, and I think 
 the algorithms can do with a lot of tweaking, but here it is 
 and it runs 100% client-side. Yay 2016!</p>
