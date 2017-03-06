@@ -1,5 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2017-02-23T21:20:00+05:30</updated><entry><title>Wanda</title><link href="https://janithl.github.io/2017/02/wanda/" rel="alternate"></link><published>2017-02-23T21:20:00+05:30</published><updated>2017-02-23T21:20:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-02-23:/2017/02/wanda/</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2017-03-06T21:06:00+05:30</updated><entry><title>Links: March 06</title><link href="https://janithl.github.io/2017/03/links-march-06/" rel="alternate"></link><published>2017-03-06T21:06:00+05:30</published><updated>2017-03-06T21:06:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-06:/2017/03/links-march-06/</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;s&gt;Patrio&lt;/s&gt; Posts about links are the last refuge of a scoundrel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Before we get underway, a status update:&lt;/p&gt;
+&lt;p&gt;The number of lines of code I've written in the last 26 days (since I stopped going to
+work) is 0, not counting some late night shenanigans where I thought typing some …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;s&gt;Patrio&lt;/s&gt; Posts about links are the last refuge of a scoundrel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Before we get underway, a status update:&lt;/p&gt;
+&lt;p&gt;The number of lines of code I've written in the last 26 days (since I stopped going to
+work) is 0, not counting some late night shenanigans where I thought typing some Pandas
+code into a terminal was going to solve my issues (it didn't).&lt;/p&gt;
+&lt;p&gt;On the plus side, I've devoured BoJack, and started on &lt;a href="https://en.wikipedia.org/wiki/Letterkenny_(TV_series)"&gt;Letterkenny&lt;/a&gt;. So, there's 
+&lt;em&gt;some&lt;/em&gt; progress. Also I finally managed to finish off the first draft of my PGDip report,
+typeset it in beautiful LaTeX (&amp;lt;3 &amp;lt;3 &amp;lt;3), and send it in. So hopefully I can get around to 
+some real work from now on... &lt;em&gt;*proceeds to write blog post instead*&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://www.theguardian.com/cities/2017/feb/27/sand-mining-global-environmental-crisis-never-heard"&gt;&lt;strong&gt;Sand mining: the global environmental crisis you've probably never heard of&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;tl;dr:&lt;/em&gt; Sand mining sucks, and will destroy ecosystems and infrastructure.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Cities are expanding at a pace and on a scale far greater than at any time in human 
+history. The number of people living in urban areas has more than quadrupled since 1950, 
+to about 4 billion today.&lt;/p&gt;
+&lt;p&gt;In the past few years, China has used more cement than the US used in the entire 20th 
+century. Last year alone, the nation used enough construction sand to cover the entire 
+state of New York an inch deep.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;*looks wearily over Galle Face at the new port city coming up*&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Worldwide, thousands of ships vacuum up millions of tonnes from the seabed each year, 
+tearing up habitats and muddying waters with sand plumes that can affect aquatic life far 
+from the original site.&lt;/p&gt;
+&lt;p&gt;The most dramatic impact of ocean sand mining is surely felt in Indonesia, where sand 
+miners have completely erased at least two dozen islands since 2005.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lots to learn and think about, especially with our recent issues with both sand mining 
+(leading to salinisation of rivers), and the recent controversy (especially in 
+&lt;a href="http://www.colombopage.com/archive_17A/Feb12_1486916112CH.php"&gt;Divulapitiya in the Gampaha district&lt;/a&gt;) regarding soil being illegally mined.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://www.wired.com/2017/03/ann-arbor-fighting-traffic-software-winning/"&gt;&lt;strong&gt;Ann Arbor Is Fighting Traffic With Software - and Winning&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ann Arbor's adaptive traffic signal control system has been playing god for more than a 
+decade, but fiddling engineers continue to tweak its inputs and algorithms. Now it reduces 
+weekday travel times on affected corridors by 12 percent, and weekend travel time by 21 
+percent. A trip along one busy corridor that took under three minutes just 15 percent of 
+the time in 2005 now comes in under that mark 70 percent of the time. That’s enough to 
+convince Ann Arbor’s traffic engineers, who just announced they'll extend this system to 
+all its downtown traffic lights and its most trafficked corridors.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Music to the ears of Colombo commuters stuck in traffic.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Of course, all this may prove little more than a band-aid. Geometry says there are only 
+so many ways to fit a bunch of vehicles on to streets. The best way to beat traffic is to 
+not be part of traffic at all. It's by moving people onto transit (a regional commuter 
+rail plan is hogtied by funding woes and general intransigence), or carpools, or making 
+it easier to walk and bicycle. In the meantime, though, computers are pretty cool.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.vox.com/a/fenn-treasure-hunt-map"&gt;&lt;strong&gt;In search of Forrest Fenn's treasure&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vox has this wonderful long form piece with video, maps and gorgeous photography. Loved 
+it.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We came here to find a chest filled with $2 million worth of treasure, hidden by an 
+eccentric, wealthy 80-year-old man.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There's poetry with clues, lots of maps and riddles. It's like a Wes Anderson movie.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I am reminded of a telephone conversation we’d had earlier with Scott King, a treasure 
+hunter who failed in his own search. He’d warned us to be wary of &lt;strong&gt;confirmation bias&lt;/strong&gt; - 
+interpreting new evidence as validation of one's preexisting beliefs.&lt;/p&gt;
+&lt;p&gt;The next day, we turn to science. [...] Using geographic data from the clues (e.g., 
+between 5,000 and 10,200 feet; near a water source; near pine trees), they'd narrowed down 
+the original search area from 27,801,289 acres to 591,636 acres — a 98 percent reduction 
+in size. From there, they’d homed in specifically on the Yellowstone National Park area, 
+shrinking the search area to a mere 0.084% of the original.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Using modern GIS tools for treasure hunting... how abou dah?&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;From this Sunday's Sunday Times (yes, I read the paper whenever I can), two interesting
+stories:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.sundaytimes.lk/170305/plus/a-tale-of-the-kandyan-royal-architect-and-court-intrigue-231157.html"&gt;&lt;strong&gt;A tale of the Kandyan royal architect and court intrigue&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The title 'Mulachari' was given to an artificer who was an expert in at least five arts 
+and crafts. As John D'Oyly had observed, there were seven artificers under one Mulachari 
+and it was a coveted position&lt;/p&gt;
+&lt;p&gt;Devendra Mulachari is also credited for some of the iconic historic monuments of the 
+Kandyan Kingdom including the Pattirippuwa or Octagon of the Dalada Maligawa, Cloud Wall 
+(walakulubemma) and the Kandy lake.&lt;/p&gt;
+&lt;p&gt;According to Lawrie's Gazetteer, Devendra Mulachari's first architectural work was the 
+construction of the Bana Maduwa in Middeniya. The place which was used as a meeting place 
+for official and unofficial purposes and also as a preaching hall had been demolished 
+around 2004 as Mr. Waidyasekera notes and was replaced by a Samurdhi meeting place today.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;*sigh*&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.sundaytimes.lk/170305/plus/who-are-we-231172.html"&gt;&lt;strong&gt;'Who are we?'&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Who are Sri Lankans? From where have we come? Are the major ethnic groups and also the 
+Veddahs closely-linked or disparately different? The indisputable findings based on the 
+'Eve Gene' or Mitochondrial DNA (mtDNA) should lead to stronger bonds among the major 
+ethnic groups, making the call 'We are Sri Lankans' louder and clearer.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The evidence that all Sri Lankan ethnic groups are closely interrelated genetically has 
+been piling up for some time, and this is even stronger evidence of that being the case.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is a considerable genetic admixture in contemporary ethnic groups in Sri Lanka - 
+the Sinhalese are closely related to the Sri Lankan Tamils. [...] The Muslims and the 
+Malays are also closely related to each other. &lt;/p&gt;
+&lt;p&gt;West Eurasian haplogroups among the Sinhalese, the Sri Lankan Tamils and the Veddahs 
+suggest early migration of women carrying these haplogroups into the country. [...] 
+Predominance of Indian mtDNA haplogroups among Muslims and Malays support the notion of 
+largely male migration and marriage to local women.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The study size is not huge (about 200 DNA samples in total), and more sequencing of the 
+mtDNA molecule is to be done for even better understanding, but this is pretty sweet. 
+Hopefully the findings make a splash among the general public and we can move over the 
+bickering and start to move forward as a unified nation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Two pretty great tools for dataviz, and stats respectively.&lt;/p&gt;
+&lt;p&gt;Firstly, the &lt;a href="http://pixelmap.amcharts.com/"&gt;&lt;strong&gt;Pixel Map Generator&lt;/strong&gt;&lt;/a&gt;, which lets you paint map segments and draw all 
+sorts of symbols on it. Great tool for generating maps, and they have a district map of
+Sri Lanka as well. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sri Lanka on Pixel Map Generator" src="https://janithl.github.io/images/pixel-map-sri-lanka.png"&gt;&lt;/p&gt;
+&lt;p&gt;Secondly, &lt;a href="http://students.brown.edu/seeing-theory/"&gt;&lt;strong&gt;Seeing Theory&lt;/strong&gt;&lt;/a&gt;, a site that uses D3js 
+visualisations to explain statistics in an easier to understand way to a wider range of 
+students. As someone who's always had trouble with the subject, I'm grateful.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;That's it for now. More, soon. Hopefully more substantive. Or rant-ive. IDK.&lt;/p&gt;</content><category term="biology"></category><category term="conflict"></category><category term="data"></category><category term="people"></category></entry><entry><title>Wanda</title><link href="https://janithl.github.io/2017/02/wanda/" rel="alternate"></link><published>2017-02-23T21:20:00+05:30</published><updated>2017-02-23T21:20:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-02-23:/2017/02/wanda/</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;"What happened, BoJack?"&lt;/p&gt;
 &lt;p&gt;"Same thing that always happens.  You didn't know me, then you fell in love with me, 
 and now you know me."&lt;/p&gt;
