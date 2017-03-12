@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2017-03-06T21:06:00+05:30</updated><entry><title>Links: March 06</title><link href="https://janithl.github.io/2017/03/links-march-06/" rel="alternate"></link><published>2017-03-06T21:06:00+05:30</published><updated>2017-03-06T21:06:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-06:/2017/03/links-march-06/</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2017-03-12T06:22:00+05:30</updated><entry><title>It's Alllive!</title><link href="https://janithl.github.io/2017/03/its-alllive/" rel="alternate"></link><published>2017-03-12T06:22:00+05:30</published><updated>2017-03-12T06:22:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-12:/2017/03/its-alllive/</id><summary type="html">&lt;p&gt;It takes ages to run, isn't optimized at all (bad by even my standards - it queries 
+sqlite for the same value over and over again in a single loop), runs off basic TF-IDF
+and nothing fancier, and fails to make obvious connections (as the screenshot below 
+illustrates).&lt;/p&gt;
+&lt;p&gt;I feel nervous …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It takes ages to run, isn't optimized at all (bad by even my standards - it queries 
+sqlite for the same value over and over again in a single loop), runs off basic TF-IDF
+and nothing fancier, and fails to make obvious connections (as the screenshot below 
+illustrates).&lt;/p&gt;
+&lt;p&gt;I feel nervous even posting about it because who knows how it'll turn out? Or if it'll
+ever &lt;em&gt;really&lt;/em&gt; work out there in the real world?&lt;/p&gt;
+&lt;p&gt;But it's a start, and I'm a wee bit proud (and apprehensive).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Indexer Demo" src="https://janithl.github.io/images/terminal-indexer.png"&gt;&lt;/p&gt;</content><category term="uni"></category></entry><entry><title>Links: March 06</title><link href="https://janithl.github.io/2017/03/links-march-06/" rel="alternate"></link><published>2017-03-06T21:06:00+05:30</published><updated>2017-03-06T21:06:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-06:/2017/03/links-march-06/</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;s&gt;Patrio&lt;/s&gt; Posts about links are the last refuge of a scoundrel.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Before we get underway, a status update:&lt;/p&gt;
