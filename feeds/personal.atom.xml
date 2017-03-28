@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - Personal</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2017-03-28T22:48:00+05:30</updated><entry><title>Retaining</title><link href="https://janithl.github.io/2017/03/retaining/" rel="alternate"></link><published>2017-03-28T22:48:00+05:30</published><updated>2017-03-28T22:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-28:/2017/03/retaining/</id><summary type="html">&lt;p&gt;There was a really &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can Managers
-Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which I believe has some really important
-takeaways not just for managers of technical teams, but managers of all teams and applying
-to employees of all genders.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;There was a really &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can Managers
-Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which I believe has some really important
-takeaways not just for managers of technical teams, but managers of all teams and applying
-to employees of all genders.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - Personal</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2017-03-28T22:48:00+05:30</updated><entry><title>Retaining</title><link href="https://janithl.github.io/2017/03/retaining/" rel="alternate"></link><published>2017-03-28T22:48:00+05:30</published><updated>2017-03-28T22:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-28:/2017/03/retaining/</id><summary type="html">&lt;p&gt;There was a really interesting &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can 
+Managers Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which asks a panel of female 
+technical employees on reasons they left jobs or in some cases even change their career 
+paths.&lt;/p&gt;
+&lt;p&gt;I believe it has some …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There was a really interesting &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can 
+Managers Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which asks a panel of female 
+technical employees on reasons they left jobs or in some cases even change their career 
+paths.&lt;/p&gt;
+&lt;p&gt;I believe it has some really important takeaways not just for managers of technical teams,
+but all managers and all employees of whetever gender.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I’ve left companies after years of chaotically fighting fires while simultaneously
 needing to build new features, or after repeatedly getting disorganized braindumps or
@@ -32,6 +33,7 @@ hysterical). If a company’s leadership feels too tightly knit – where all th
 and founders are friends that aren’t open to critical feedback from employees – I won’t
 even try to work out the issue before leaving.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;See: the Uber thing above.&lt;/p&gt;
 &lt;p&gt;And finally, this gem:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;That employee shouldn’t have to train their boss in order to make the relationship
