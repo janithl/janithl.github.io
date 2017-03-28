@@ -1,5 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2016-09-11T09:05:00+05:30</updated><entry><title>The UNP at 70</title><link href="https://janithl.github.io/2016/09/the-unp-at-70/" rel="alternate"></link><published>2016-09-11T09:05:00+05:30</published><updated>2016-09-11T09:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-11:/2016/09/the-unp-at-70/</id><summary type="html">&lt;p&gt;&lt;img alt="The Elephant" src="https://janithl.github.io/images/unp-elephant.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2017-03-28T22:48:00+05:30</updated><entry><title>Retaining</title><link href="https://janithl.github.io/2017/03/retaining/" rel="alternate"></link><published>2017-03-28T22:48:00+05:30</published><updated>2017-03-28T22:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-28:/2017/03/retaining/</id><summary type="html">&lt;p&gt;There was a really interesting &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can 
+Managers Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which asks a panel of female 
+technical employees on reasons they left jobs or in some cases even change their career 
+paths.&lt;/p&gt;
+&lt;p&gt;I believe it has some …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There was a really interesting &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can 
+Managers Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which asks a panel of female 
+technical employees on reasons they left jobs or in some cases even change their career 
+paths.&lt;/p&gt;
+&lt;p&gt;I believe it has some really important takeaways not just for managers of technical teams,
+but all managers and all employees of whetever gender.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I’ve left companies after years of chaotically fighting fires while simultaneously
+needing to build new features, or after repeatedly getting disorganized braindumps or
+single line descriptions from stakeholders rather than the thoughtful, detailed specs
+they’ve promised.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is something I've had to deal with personally as well: underspecification, or the
+people in charge not really knowing what they want. Rewriting code to fit their latest
+whim or fancy is wasteful and makes you feel like your project is going nowhere. Also,
+&lt;a href="https://en.wikipedia.org/wiki/Scope_creep"&gt;scope creep&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Making sure your team members have a comfortable relationship with someone in leadership
+outside their reporting chain is important; having someone who they feel they can go to
+with manager-related problems is key.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As the recent &lt;a href="https://www.susanjfowler.com/blog/2017/2/19/reflecting-on-one-very-strange-year-at-uber"&gt;Susan Fowler/Uber debacle&lt;/a&gt; showed, though, upper leadership tends to
+favour the manager's side over the employee's.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Especially as a woman, I worry about being labeled hyper-sensitive, or that my gender
+will influence a person’s reaction to my feedback (e.g. the perception that women are
+hysterical). If a company’s leadership feels too tightly knit – where all the managers
+and founders are friends that aren’t open to critical feedback from employees – I won’t
+even try to work out the issue before leaving.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;See: the Uber thing above.&lt;/p&gt;
+&lt;p&gt;And finally, this gem:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;That employee shouldn’t have to train their boss in order to make the relationship
+productive.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On finding a new job:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I might see an email from a recruiter about a job that sounds exciting and that pays
+well. I’ll start to consider leaving, and then someone I work with – usually my boss or
+manager – does something that makes me angry. Angry enough to rewrite my resume, email a
+recruiter back, brush up on interview questions and whiteboarding, and get off my butt
+and go interview.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Or deciding to stay:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It’s important that my boss checks in with me even if I seem happy or like I’m doing
+really well. I don’t want to be asked for feedback only when things aren’t going well.
+When my boss respectfully listens to feedback and strives to incorporate at least some of
+it, I’m much more likely to stay at a company.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On working at a startup:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;At a startup it can be hard to decipher whether your company is doing well, especially
+since progress isn’t always in a continuous, upward direction. As an employee, you’re not
+always privy to important information that would help you figure it out, especially if the
+company is struggling. I’ve often felt that trying to determine how well my company is
+doing is a guessing game. So then I turn to assessing my personal growth because that’s in
+theory more straight-forward. I ask myself questions like: How much have I learned? Do I
+get feedback? Am I challenged? What else can I accomplish here? If I can get excited about
+what’s next for me at a company, I will stay. If I can mix things up enough and learn new
+things where I am without actually finding a new job, I will do that.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Anyway, the &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;&lt;strong&gt;full blog post&lt;/strong&gt;&lt;/a&gt; is really interesting and a must-read for both 
+managers and employees. So do yourself a favour and go read!&lt;/p&gt;</content><category term="people"></category><category term="politics"></category><category term="work"></category></entry><entry><title>අභය ලිබ්රේ වලට මාරු වීම</title><link href="https://janithl.github.io/2016/10/abhaya-libre/" rel="alternate"></link><published>2016-10-15T23:30:00+05:30</published><updated>2016-10-15T23:30:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-10-15:/2016/10/abhaya-libre/</id><summary type="html">&lt;p&gt;&lt;img alt="Abhaya Libre" src="https://janithl.github.io/images/abhaya-libre.png"&gt;&lt;/p&gt;
+&lt;p&gt;දැං මේ බ්ලොග් එකේ අන්තර්ගතයට (සිංහල හා ලතින් අකුරු සඳහා) සම්පූර්ණයෙන්ම යොදාගන්නෙ 
+අභය ලිබ්රේ අකුරු මුහුණතයි. ප්‍රවීන අකුරු මෝස්තර නිර්මාණ ශිල …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Abhaya Libre" src="https://janithl.github.io/images/abhaya-libre.png"&gt;&lt;/p&gt;
+&lt;p&gt;දැං මේ බ්ලොග් එකේ අන්තර්ගතයට (සිංහල හා ලතින් අකුරු සඳහා) සම්පූර්ණයෙන්ම යොදාගන්නෙ 
+අභය ලිබ්රේ අකුරු මුහුණතයි. ප්‍රවීන අකුරු මෝස්තර නිර්මාණ ශිල්පී පුෂ්පානන්ද ඒකනායක 
+මහතාගේ  &lt;strong&gt;'එෆ් එම් අභය'&lt;/strong&gt; මුහුණතෙන් පරිණාමය වූ මෙය, ඒ මහතාගේ පූර්ණ සහය ඇතිව 
+පැතුම් එගොඩවත්ත ප්‍රමුඛ මූනියක් සමූහයෙන් 
+&lt;a href="https://github.com/mooniak/abhaya-libre-font"&gt;"සම්පූර්ණ නිදහස්, හිමිකමින් තොර, යුනිකෝඩ් අනුකූලතා පහසුකම සහිත"&lt;/a&gt; අකුරු 
+මුහුණතක් විදිහට &lt;a href="https://fonts.google.com/specimen/Abhaya+Libre"&gt;Google Web Fonts නාමාවලියට එක් කරල තියෙනව&lt;/a&gt;. ඔබේ වෙබ් 
+පිටුව සඳහාත් මෙය ලබාගන්න පුළුවන්. &lt;/p&gt;
+&lt;p&gt;Google Web Fonts පිටුවෙ කියන විදිහටනම් දැනටමත් අඩවි 1,131ක විතර 'අභය ලිබ්රේ' 
+භාවිතා වෙනවලු.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;යාවත්කාලීන කිරීම:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;මේක මම ඊයෙ මහ රෑ නිදාගන්න කලින් ලියපු පෝස්ටුවක් නිසා වැදගත් කරුණු ටිකක් කියන්න බැරි
+උනා.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;සිංහල වෙබ් අකුරු මුහුණතක් මෙතරම් වැදගත් වෙන්නෙ ඇයි?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sinhala Not Rendering" src="https://janithl.github.io/images/sinhala-not-rendering.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;සිංහල යුනිකේත වෙබ් අඩවි කියවන අයෙක් නම් ඔයගොල්ලන්ට අනේක වාරයක් මේ වගේ තිර දැකල
+පුරුදු ඇති. තමන් පාවිච්චි කරන පරිගණකෙ හරි මෘදුකාංගෙ හරි සිංහල ස්ථාපිත කරල නැතිකොට 
+තමයි මේක වෙන්නෙ. සාමන්‍යයෙන් පරිගණකයක (වින්ඩෝස්, ඇපල් හෝ ලිනක්ස්) සිංහල 
+අටෝගන්න එතරම් අමාරු නෑ, හැබැයි &lt;a href="http://blog.malinthe.com/2014/04/how-to-get-perfect-sinhala-text-on-android-4-4-kitkat/"&gt;ඇන්ඩ්‍රොයිඩ් වගේ පද්ධතියක "රූට්" කිරිලි වගේ ලොකු
+ලොකු සෙල්ලං දාන්න වෙනව&lt;/a&gt; සිංහල දාගන්න. &lt;/p&gt;
+&lt;p&gt;වෙබ් අකුරු මුහුණතක තියෙන අපූරුම දේ තමයි තමන්ගෙ යන්තරේට කිසිම දෙයක් අලුතෙන් 
+අටවන්නෙ නැතුවම සිංහල පාවිච්චි කරන්න පුලුවන් වෙන එක. ඒ වගේම ඒ ඒ පද්ධතියට ආවේනික
+මුහුණතින් පෙන්නන්නෙ නැතුව හැමතැනම (iOS වේවා, වින්ඩෝස් වේවා, ඇන්ඩ්‍රොයිඩ් වේවා) 
+එකම් සම්මත අකුරු මුහුණතකින්  තමන්ගෙ වචන ටික දිස් වෙන එක.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Cross Platform" src="https://janithl.github.io/images/abhaya-libre-ios-android.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;මීට කලිනුත් ෆොන්ට් තිබ්බනෙ?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ඔව්. &lt;strong&gt;"මලිති වෙබ්"&lt;/strong&gt;, &lt;strong&gt;"ඉස්කෝල පොත"&lt;/strong&gt; වගේ ගොඩක් අකුරු මුහුණත් තිබ්බා. ඒත් 
+ඒව එකක්වත්  "සම්පූර්ණ නිදහස්, හිමිකමින් තොර, යුනිකෝඩ් අනුකූලතා පහසුකම සහිත" කියන 
+කාණ්ඩ තුනටම අයත් වුනේ නෑ. ඒ නිසා නිදහසේ පාවිච්චි කරන්න පුළුවන් web font එකක් සිංහල 
+සඳහා තිබ්බෙ නෑ. මේක සිංහල අන්තර්ජාල භාවිතය කෙරෙහි බරපතල ප්‍රශ්නයක් බවට පත්වුනා.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;තව තොරතුරු තියෙනවද?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;මූනියක් සමූහයේ &lt;a href="http://blog.mooniak.com/"&gt;බ්ලොග් අඩවිය&lt;/a&gt; සහ &lt;a href="https://github.com/mooniak/"&gt;ගිට්හබ් පිටුව&lt;/a&gt; කියවල බලන්නකො. ලංකාවෙ
+දැනට අකුරු මුහුණත් ක්‍ෂේත්‍රයේ අළුත් දෙයක් කරන නිර්මාණශීලී යොවුන් පිරිසක් විදිහට මොවුන්ව 
+හඳුන්වන්න පුළුවන්.&lt;/p&gt;</content><category term="sinhala"></category><category term="design"></category></entry><entry><title>Somawathiya, September 2016</title><link href="https://janithl.github.io/2016/09/somawathiya-september-2016/" rel="alternate"></link><published>2016-09-19T12:16:00+05:30</published><updated>2016-09-19T12:16:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-19:/2016/09/somawathiya-september-2016/</id><summary type="html">&lt;p&gt;&lt;img alt="Somawathiya" src="https://janithl.github.io/images/somawathiya.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Shot in the early morning light.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Somawathiya" src="https://janithl.github.io/images/somawathiya.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Shot in the early morning light.&lt;/p&gt;</content><category term="travel"></category></entry><entry><title>The UNP at 70</title><link href="https://janithl.github.io/2016/09/the-unp-at-70/" rel="alternate"></link><published>2016-09-11T09:05:00+05:30</published><updated>2016-09-11T09:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-11:/2016/09/the-unp-at-70/</id><summary type="html">&lt;p&gt;&lt;img alt="The Elephant" src="https://janithl.github.io/images/unp-elephant.png"&gt;&lt;/p&gt;
 &lt;p&gt;The United National Party turned 70 this week. I thought I'd take a look at their electoral 
 record, for funsies.&lt;/p&gt;
 &lt;p&gt;The data for this (short) analysis was sourced from Wikipedia. That data was in turn sourced 
@@ -703,7 +808,34 @@ created with the birth (and partitioning) of India is particularly sad.&lt;/p&gt
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Radcliffe_Line"&gt;Radcliffe Line&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="conflict"></category><category term="geopolitics"></category></entry><entry><title>Allegory</title><link href="https://janithl.github.io/2016/08/allegory/" rel="alternate"></link><published>2016-08-09T21:43:00+05:30</published><updated>2016-08-09T21:43:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-09:/2016/08/allegory/</id><summary type="html">&lt;p&gt;&lt;em&gt;I have good friends who are drinkers. I have good friends who are social 
+&lt;/ul&gt;</content><category term="conflict"></category><category term="geopolitics"></category></entry><entry><title>කාලෙකින් හෙළ බසින්: චීන නිල මුද්‍රා</title><link href="https://janithl.github.io/2016/08/chinese-wax-seals/" rel="alternate"></link><published>2016-08-17T19:23:00+05:30</published><updated>2016-08-17T19:23:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-17:/2016/08/chinese-wax-seals/</id><summary type="html">&lt;p&gt;අන්තිමට සිංහලෙන් පෝස්ටුවක් ලිව්ව කාලයක් මතක නෑ. ඇත්තටම කිව්වොත් 
+&lt;a href="http://askubuntu.com/questions/459349/sinhala-unicode-wijesekara-keyboard-in-ibus-on-ubuntu-14-04-not-working"&gt;උබුන්ටු 16.04 දැම්මට පස්සෙ iBus එක හදාගත්තෙ&lt;/a&gt; අද.&lt;/p&gt;
+&lt;p&gt;වෙනදටනං මොනාහරි බෙදාගන්න ලින …&lt;/p&gt;</summary><content type="html">&lt;p&gt;අන්තිමට සිංහලෙන් පෝස්ටුවක් ලිව්ව කාලයක් මතක නෑ. ඇත්තටම කිව්වොත් 
+&lt;a href="http://askubuntu.com/questions/459349/sinhala-unicode-wijesekara-keyboard-in-ibus-on-ubuntu-14-04-not-working"&gt;උබුන්ටු 16.04 දැම්මට පස්සෙ iBus එක හදාගත්තෙ&lt;/a&gt; අද.&lt;/p&gt;
+&lt;p&gt;වෙනදටනං මොනාහරි බෙදාගන්න ලින්ක් එකක් හරි තියෙනවනෙ. අද එහෙම 
+එකක් නෑ, හැබැයි පහුගිය දවසක reddit එකේ AskHistorians (ඉතිහාසඥයන්ගෙන් 
+අසමු) සමූහයේ දැකපු අපූරු පෝස්ටුවක් ගැන කියන්නයි මම යන්නෙ.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/AskHistorians/comments/4xqfs0/how_were_wax_seals_and_such_not_counterfeited/"&gt;&lt;em&gt;How were wax seals and such not counterfeited?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;චීනය, ජපානය ඇතුළු පෙරදිග රටවල් වල අධිරාජ්‍යවරු භාවිත කරපු මේ නිල 
+මුද්‍රා ව්‍යාජ ලෙස පිටපත් කරන්න තිබුනු ප්‍රධානම බාදකය මේවගෙ තියෙන 
+තියුණු අඩුපාඩුකම්ලු. මීට හේතුව මේව අතින් නිර්මාණය වීමයි.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Han Imperial Seal" src="https://janithl.github.io/images/han-seal.png"&gt;&lt;/p&gt;
+&lt;p&gt;හැබැයි පුදුමසහගතම දේ තමයි අද වෙන තුරුත් පෙරදිග ලෝකෙ එදිනෙදා කටයුතු 
+වලට මේ මුද්‍රා භාවිත වෙනවලු. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Even today, you can't sign a lease or buy a car/motorcycle or open a bank 
+account without one (at least in Taiwan, Japan, Korea, with some exceptions). 
+People mostly consider them more secure than a signature.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;තව:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When selling a car or setting up a bank account, you need to not only stamp 
+the papers, but also bring a paper from city hall certifying your stamp being 
+legit (when you get a new stamp you bring it to city hall, so they have a kind 
+of master copy).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;කවදාවත් වුවමනාවකට හරියට අත්සනක් ගහගන්න බැරි අපි වගේ අයටනම් මේක 
+කියාපු විසඳුමක්.&lt;/p&gt;</content><category term="sinhala"></category></entry><entry><title>Allegory</title><link href="https://janithl.github.io/2016/08/allegory/" rel="alternate"></link><published>2016-08-09T21:43:00+05:30</published><updated>2016-08-09T21:43:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-09:/2016/08/allegory/</id><summary type="html">&lt;p&gt;&lt;em&gt;I have good friends who are drinkers. I have good friends who are social 
 drinkers, but aren't really drinkers. I have good friends who aren't drinkers.
 I have good friends who are drinkers, and also want all the non-drinkers to 
 drink too. I have good friends who aren't drinkers and …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;I have good friends who are drinkers. I have good friends who are social 
