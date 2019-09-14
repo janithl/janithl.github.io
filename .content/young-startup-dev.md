@@ -23,7 +23,7 @@ before you even start on the implementation.
 
 ![Paper Prototype]({filename}/images/paper-prototype.jpg)
 
-<p class="text-center">Image by [Samuel Mann][8]</p>
+<p class="text-center">Image by <a href="https://www.flickr.com/photos/21218849@N03">Samuel Mann</a></p>
 
 ### Write a spec, and check it twice
 
@@ -106,7 +106,7 @@ willing to help if only you’d ask.
 
 So yeah. Those are a few things I learned the hard way, and I wouldn’t trade it for the world. I hope you find it useful.
 
-[_Originally Posted on Medium_][9]
+[_Originally Posted on Medium_][8]
 
 [1]: http://docs.behat.org/en/v2.5/guides/1.gherkin.html
 [2]: https://medium.com/softwaredevtools/agile-retrospectives-why-your-team-should-be-having-them-even-if-youre-not-in-the-tech-industry-b98c3df6501d
@@ -115,5 +115,4 @@ So yeah. Those are a few things I learned the hard way, and I wouldn’t trade i
 [5]: https://twitter.com/dan_abramov
 [6]: https://twitter.com/dhh
 [7]: https://twitter.com/John_Papa
-[8]: https://www.flickr.com/photos/21218849@N03
-[9]: https://medium.com/@janithl/some-things-i-wish-i-knew-as-a-young-startup-dev-d6475d3f8151
+[8]: https://medium.com/@janithl/some-things-i-wish-i-knew-as-a-young-startup-dev-d6475d3f8151

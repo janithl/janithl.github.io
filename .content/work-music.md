@@ -3,8 +3,7 @@ Date: 2019-01-09 10:44
 Category: Personal
 Tags: music, uni, work
 
-Or rather, a history of what I’ve worked on over the years through
-the music I was listening to at the time.
+_Or rather: a history of what I’ve worked on over the years through the music I was listening to at the time._
 
 ---
 
@@ -16,7 +15,8 @@ with code, y’know? — and the internet was new, exciting, and as yet
 relatively uncommercialised. I was going through a major Britpop phase
 and this anthem seemed to best capture the spirit of the age.
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/i_2mWhfOhGU" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/i_2mWhfOhGU"
+frameborder="0" allowfullscreen></iframe>
 <p class="text-center">My favourite member of the band was obviously Guigsy, the bassist.</p>
 
 > Maybe you’re the same as me  
@@ -46,7 +46,8 @@ Clapton, and the Monkeys from Sheffield. I still consider their debut album
 — chronicling a night out clubbing— one of the finest ever crafted. Alex Turner
 was barely 20 at the time.
 
-<iframe width="700" height="393" src="https://www.youtube.com/embed/RyEiRKJJr6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="700" height="393" src="https://www.youtube.com/embed/RyEiRKJJr6A"
+frameborder="0" allowfullscreen></iframe>
 <p class="text-center">Alex ❤</p>
 
 > Well over there, there’s friends of mine  
@@ -78,7 +79,8 @@ As 2017 ended, and I spent Christmas ‘holidays’ in an empty office working, 
 mind was set on quitting as soon as possible. The only thing keeping me going
 were the breakup songs playing through my tinny headset.
 
-<iframe width="700" height="393" src="https://www.youtube.com/embed/QV9JJmSCiI8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="700" height="393" src="https://www.youtube.com/embed/QV9JJmSCiI8"
+frameborder="0" allowfullscreen></iframe>
 <p class="text-center">Everyone needs some of that coke in their lives.</p>
 
 > If you wake up and don’t want to smile  

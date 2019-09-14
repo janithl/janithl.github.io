@@ -20,7 +20,7 @@ to work and rework. Always prototype, at least on paper. It’ll help
 everyone visualise what they’re building, and see issues and limitations
 before you even start on the implementation.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Paper Prototype" src="https://janithl.github.io/images/paper-prototype.jpg"&gt;&lt;/p&gt;
-&lt;p class="text-center"&gt;Image by [Samuel Mann][8]&lt;/p&gt;
+&lt;p class="text-center"&gt;Image by &lt;a href="https://www.flickr.com/photos/21218849@N03"&gt;Samuel Mann&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3&gt;Write a spec, and check it twice&lt;/h3&gt;
 &lt;p&gt;Software is all about the spec. It defines the scope and the tests that
