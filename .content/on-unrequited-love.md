@@ -1,7 +1,7 @@
 Title: On Unrequited Love
 Date: 2016-07-20 07:45
 Category: Personal
-Tags: people, sexuality
+Tags: people, religion, sexuality
 
 Boy oh boy, [this](https://janithl.github.io/2016/07/shes-wot-m8/) is something 
 I deal with quite often. I rarely have problems with people in my life, because 

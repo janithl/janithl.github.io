@@ -1,6 +1,6 @@
 Title: අභය ලිබ්රේ වලට මාරු වීම
 Date: 2016-10-15 23:30
-Category: Personal
+Category: General
 Tags: sinhala, design
 Slug: abhaya-libre
 

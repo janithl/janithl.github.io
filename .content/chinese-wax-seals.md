@@ -1,6 +1,6 @@
 Title: කාලෙකින් හෙළ බසින්: චීන නිල මුද්‍රා
 Date: 2016-08-17 19:23
-Category: Personal
+Category: General
 Tags: sinhala
 Slug: chinese-wax-seals
 

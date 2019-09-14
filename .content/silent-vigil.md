@@ -1,7 +1,7 @@
 Title: Thoughts on the "Silent Vigil"
 Date: 2016-08-16 05:19
 Category: Personal
-Tags: conflict, people, politics
+Tags: conflict, people, politics, religion
 Slug: silent-vigil
 
 There's been some ["anti-racist" vigil out of nowhere][1] and there was, as 

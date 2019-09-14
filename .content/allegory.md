@@ -1,7 +1,7 @@
 Title: Allegory
 Date: 2016-08-09 21:43
 Category: General
-Tags: conflict, people
+Tags: conflict, people, religion
 
 *I have good friends who are drinkers. I have good friends who are social 
 drinkers, but aren't really drinkers. I have good friends who aren't drinkers.
