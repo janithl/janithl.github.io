@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2017-05-25T20:58:00+05:30</updated><entry><title>සමාජ ජාල ඇත්තටම අවුල්ද?</title><link href="https://janithl.github.io/2017/05/is-social-media-bad-si/" rel="alternate"></link><published>2017-05-25T20:58:00+05:30</published><updated>2017-05-25T20:58:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-05-25:/2017/05/is-social-media-bad-si/</id><summary type="html">&lt;p&gt;අද ෆේස්බුක් ගිනුමක් නැතිකෙනෙක් බෙහෙතකටවත් හොයාගන්න අමාරුයි. මේ බ්ලොග් එක කියවන ඔය ඇත්තොනම් ඊටත් එහා
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2018-06-08T19:17:00+05:30</updated><entry><title>Some things I wish I knew as a young startup dev</title><link href="https://janithl.github.io/2018/06/some-things-i-wish-i-knew-as-a-young-startup-dev/" rel="alternate"></link><published>2018-06-08T19:17:00+05:30</published><updated>2018-06-08T19:17:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2018-06-08:/2018/06/some-things-i-wish-i-knew-as-a-young-startup-dev/</id><summary type="html">&lt;p&gt;As some of you might know, I started my career as the first
+developer at a startup, way back in 2012. It was a challenging
+but rewarding experience, and I got to learn a lot and explore
+the full breadth of the software stack. The following are some
+learnings that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As some of you might know, I started my career as the first
+developer at a startup, way back in 2012. It was a challenging
+but rewarding experience, and I got to learn a lot and explore
+the full breadth of the software stack. The following are some
+learnings that I wish I could tell my younger self.&lt;/p&gt;
+&lt;h3&gt;Prototype like your life depends on it&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I know you guys are restless to get started, but before you
+write a single line of code — Make a prototype and run it by your client”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I heard this line from one of the co-founders of a very successful
+software services company. In a startup, the client might be your
+founder who’s sitting in the desk in front of you, but code is costly
+to work and rework. Always prototype, at least on paper. It’ll help
+everyone visualise what they’re building, and see issues and limitations
+before you even start on the implementation.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Paper Prototype" src="https://janithl.github.io/images/paper-prototype.jpg"&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;Image by [Samuel Mann][8]&lt;/p&gt;
+
+&lt;h3&gt;Write a spec, and check it twice&lt;/h3&gt;
+&lt;p&gt;Software is all about the spec. It defines the scope and the tests that
+need to pass to mark the work as done. A spec might be as simple as a user
+story followed by some acceptance criteria in the &lt;a href="http://docs.behat.org/en/v2.5/guides/1.gherkin.html"&gt;Gherkin format&lt;/a&gt;, but it’s
+very important for estimations, avoiding the dreaded scope creep, and writing
+high quality code.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A sample spec:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As a &lt;strong&gt;logged in user&lt;/strong&gt;,&lt;/p&gt;
+&lt;p&gt;I want to &lt;strong&gt;access the Account page&lt;/strong&gt;,&lt;/p&gt;
+&lt;p&gt;so that I can &lt;strong&gt;see my Account Settings&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Acceptance criteria:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Given&lt;/strong&gt; I am logged in as janith@startup.lk,&lt;/p&gt;
+&lt;p&gt;and I am in the home page&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;When&lt;/strong&gt; I click on “Account” on the top menu,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Then&lt;/strong&gt; I am navigated to the “Account” page,&lt;/p&gt;
+&lt;p&gt;and I can see my Account Settings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Remember, you will most probably be your own QA, so write a solid automated
+test suite that covers these conditions.&lt;/p&gt;
+&lt;h3&gt;Timebox, timebox, timebox&lt;/h3&gt;
+&lt;p&gt;You probably won’t have a Project Manager, nor will anyone really care about
+Agile or sprints. The constant mantra will be &lt;em&gt;“just get it shipped”&lt;/em&gt;. This is
+damaging in two aspects: a team without a welldefined end goal and a timeframe
+to achieve it in will drift and probably get demotivated, and you will not be
+able to set up a good measure of how much work your team is able to tackle in a
+given period of time--which will make it really difficult to draw up a project
+timeline.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sprint Plan" src="https://janithl.github.io/images/sprint-plan.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Avoid this trap. Set up 1 or 2 week sprints, take up only stories that the team is
+confident they can achieve in that timebox, and &lt;a href="https://medium.com/softwaredevtools/agile-retrospectives-why-your-team-should-be-having-them-even-if-youre-not-in-the-tech-industry-b98c3df6501d"&gt;&lt;strong&gt;have a retro&lt;/strong&gt; at the end of each sprint
+to discuss what went well, what failed, and how the team can improve&lt;/a&gt;. Try your best to
+ship production code at the end of every sprint. It will give the team a sense of
+achievement, and &lt;a href="https://ma.tt/2010/11/one-point-oh/"&gt;that which is most valuable: customer feedback&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Know when to use Frameworks and Libraries&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;There are some terrible frameworks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Often, code you write from the ground-up for a specific purpose will be faster and more performant.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both of the points above a valid, and I avoided using PHP and frontend Javascript
+frameworks for the longest time. This cost us a lot in terms of delivery speed and
+maintainability, and especially made onboarding new developers hell. I still wonder
+how things would’ve turned out had I used — say, Laravel or Python with Flask, or
+KnockoutJS from the earliest days. We probably would’ve shipped a lot more features,
+and at much higher quality.&lt;/p&gt;
+&lt;h3&gt;Read up, seek support&lt;/h3&gt;
+&lt;p&gt;Look, when it’s a tiny startup and it’s just two junior devs fighting fires every
+day, you will miss out on a lot. You won’t have leads who will guide you on best
+practices and design patterns, or architects who explain why TDD is awesome, and
+why you should read &lt;a href="https://www.goodreads.com/book/show/3735293-clean-code"&gt;Clean Code by Robert C. Martin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It will be up to you to reach out: follow your &lt;a href="https://twitter.com/dan_abramov"&gt;favourite&lt;/a&gt; &lt;a href="https://twitter.com/dhh"&gt;library&lt;/a&gt; &lt;a href="https://twitter.com/John_Papa"&gt;authors&lt;/a&gt; on Twitter,
+subscribe to a few good tech blogs on Medium and turn on the “Daily Digest” email.
+Participate in the community and tech meet ups, and try to reach out to batch mates
+or seniors working in bigger companies for advice and tips. There are so many people
+willing to help if only you’d ask.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Workshop" src="https://janithl.github.io/images/workshop.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;So yeah. Those are a few things I learned the hard way, and I wouldn’t trade it for the world. I hope you find it useful.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://medium.com/@janithl/some-things-i-wish-i-knew-as-a-young-startup-dev-d6475d3f8151"&gt;&lt;em&gt;Originally Posted on Medium&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category><category term="people"></category><category term="work"></category></entry><entry><title>සමාජ ජාල ඇත්තටම අවුල්ද?</title><link href="https://janithl.github.io/2017/05/is-social-media-bad-si/" rel="alternate"></link><published>2017-05-25T20:58:00+05:30</published><updated>2017-05-25T20:58:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-05-25:/2017/05/is-social-media-bad-si/</id><summary type="html">&lt;p&gt;අද ෆේස්බුක් ගිනුමක් නැතිකෙනෙක් බෙහෙතකටවත් හොයාගන්න අමාරුයි. මේ බ්ලොග් එක කියවන ඔය ඇත්තොනම් ඊටත් එහා
 ගිය නානාප්‍රකාර සමාජ ජාල ගොඩක ඉන …&lt;/p&gt;</summary><content type="html">&lt;p&gt;අද ෆේස්බුක් ගිනුමක් නැතිකෙනෙක් බෙහෙතකටවත් හොයාගන්න අමාරුයි. මේ බ්ලොග් එක කියවන ඔය ඇත්තොනම් ඊටත් එහා
 ගිය නානාප්‍රකාර සමාජ ජාල ගොඩක ඉන්නව ඇති.&lt;/p&gt;
 &lt;p&gt;දෙයක් ප්‍රචලිත වෙන්න පටන්ගත්තහම ඒක ඇද හොයන සෙට් එකකුත් අනිවා ඉන්නවනෙ. &lt;a href="http://www.npr.org/sections/health-shots/2016/09/07/492871024/facebook-and-mortality-why-your-incessant-joy-gives-me-the-blues"&gt;ඔය කට්ටිය ආටිකල් දෙක තුනක්
