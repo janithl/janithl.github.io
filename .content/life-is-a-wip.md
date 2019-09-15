@@ -2,10 +2,7 @@ Title: Life is a [WIP]
 Date: 2019-01-27 16:31
 Category: Personal
 Tags: biology, work
-
-_Attā hi attanō nāthō_
-
----
+Subtitle: Attā hi attanō nāthō
 
 ![Earthrise]({filename}/images/earthrise.jpg)
 

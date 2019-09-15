@@ -2,10 +2,7 @@ Title: A brief history of my ‘work music’
 Date: 2019-01-09 10:44
 Category: Personal
 Tags: music, uni, work
-
-_Or rather: a history of what I’ve worked on over the years through the music I was listening to at the time._
-
----
+Subtitle: Or rather: a history of what I’ve worked on over the years through the music I was listening to at the time.
 
 ### 2011: Live Forever — Oasis
 
