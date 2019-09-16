@@ -43,15 +43,19 @@ high quality code.
 
 **Acceptance criteria:**
 
-> **Given** I am logged in as janith@startup.lk,
+```Gherkin
+Feature: Access account settings page
 
-> and I am in the home page
+Scenario: Janith accesses the account settings page
 
-> **When** I click on “Account” on the top menu,
+Given I am logged in as "janith@startup.lk",
+and I am in the home page
 
-> **Then** I am navigated to the “Account” page,
+When I click on "Account" on the top menu,
 
-> and I can see my Account Settings.
+Then I am navigated to the "Account" page,
+and I can see my Account Settings.
+```
 
 Remember, you will most probably be your own QA, so write a solid automated
 test suite that covers these conditions.

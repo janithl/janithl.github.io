@@ -90,13 +90,20 @@ high quality code.&lt;/p&gt;
 &lt;p&gt;so that I can &lt;strong&gt;see my Account Settings&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Acceptance criteria:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Given&lt;/strong&gt; I am logged in as janith@startup.lk,&lt;/p&gt;
-&lt;p&gt;and I am in the home page&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;When&lt;/strong&gt; I click on “Account” on the top menu,&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Then&lt;/strong&gt; I am navigated to the “Account” page,&lt;/p&gt;
-&lt;p&gt;and I can see my Account Settings.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Feature:&lt;/span&gt;&lt;span class="nf"&gt; Access account settings page&lt;/span&gt;
+
+&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; Janith accesses the account settings page&lt;/span&gt;
+
+&lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;I am logged in as &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;janith@startup.lk&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot;,&lt;/span&gt;
+&lt;span class="nf"&gt;and I am in the home page&lt;/span&gt;
+
+&lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;I click on &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;Account&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot; on the top menu,&lt;/span&gt;
+
+&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;I am navigated to the &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;Account&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot; page,&lt;/span&gt;
+&lt;span class="nf"&gt;and I can see my Account Settings.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Remember, you will most probably be your own QA, so write a solid automated
 test suite that covers these conditions.&lt;/p&gt;
 &lt;h3&gt;Timebox, timebox, timebox&lt;/h3&gt;
