@@ -95,12 +95,12 @@ high quality code.&lt;/p&gt;
 &lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; Janith accesses the account settings page&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;I am logged in as &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;janith@startup.lk&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot;,&lt;/span&gt;
-&lt;span class="nf"&gt;and I am in the home page&lt;/span&gt;
+&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;I am in the home page&lt;/span&gt;
 
 &lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;I click on &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;Account&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot; on the top menu,&lt;/span&gt;
 
 &lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;I am navigated to the &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;Account&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot; page,&lt;/span&gt;
-&lt;span class="nf"&gt;and I can see my Account Settings.&lt;/span&gt;
+&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;I can see my Account Settings.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

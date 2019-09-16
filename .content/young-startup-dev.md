@@ -49,12 +49,12 @@ Feature: Access account settings page
 Scenario: Janith accesses the account settings page
 
 Given I am logged in as "janith@startup.lk",
-and I am in the home page
+And I am in the home page
 
 When I click on "Account" on the top menu,
 
 Then I am navigated to the "Account" page,
-and I can see my Account Settings.
+And I can see my Account Settings.
 ```
 
 Remember, you will most probably be your own QA, so write a solid automated
