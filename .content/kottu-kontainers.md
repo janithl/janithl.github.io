@@ -342,7 +342,7 @@ a miracle that kottu.org still continues to run[^7].
     I remember once solving, but I forgot how. This bash/mysql method described
     here works without issue.
 
-[^5]: Disclaimer: I am yet to learn (or even install) Kubernetes
+[^5]: This is a joke. I don't know Kubernetes. Who does, really? `¯\_(ツ)_/¯`
 
 [^6]: I updated the repo and its README with how to do a Docker setup!
 
