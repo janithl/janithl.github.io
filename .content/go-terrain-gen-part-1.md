@@ -120,6 +120,6 @@ of the terrain map.
 [^2]: My biggest gripe about my otherwise perfect workplace is that I don't
     get to write Go for a living.
 
-[^3]: Which I haven't watched yet!
+[^3]: Which I haven't watched yet! 🙈
 
 [1]: https://www.reddit.com/r/CitiesSkylines/
