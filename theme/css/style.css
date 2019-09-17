@@ -88,6 +88,9 @@ article div.article_meta {
 article dt {
   margin-top: 20px;
 }
+article code {
+  font-size: 75%;
+}
 footer {
   padding: 40px;
 }
