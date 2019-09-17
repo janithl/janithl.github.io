@@ -1,7 +1,8 @@
 Title: A basic terrain generator in Go (Part 1)
 Date: 2019-09-17 21:12
 Category: General
-Tags: code
+Tags: code, golang
+Slug: go-terrain-gen-part-1
 Subtitle: Ain't no mountain high enough
 
 I haven't gushed about Go much on this blog[^1], but I thought of writing a

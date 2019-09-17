@@ -2,6 +2,7 @@ Title: A meditation on ‘Kimi no Na wa’
 Date: 2019-07-23 16:31
 Category: General
 Tags: biology, films, people
+Slug: kimi-no-na-wa
 Subtitle: What do I do with all these feels?
 
 ![Twilight]({filename}/images/twilight.jpg)

@@ -1,7 +1,7 @@
 Title: Kottu Kontainers
 Date: 2019-02-02 15:57
 Category: General
-Tags: code
+Tags: code, docker
 Subtitle: Using Docker Compose for fun and profit
 
 Remember [Kottu][1]? Those were the days. Anyway,

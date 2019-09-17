@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="author" content="Janith">
+    <meta name="description" content="Janith's blog">
+    <link rel="icon" href="https://janithl.github.io/favicon.ico">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,700&amp;subset=sinhala">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/pygments.css">
+
+    <title>Janith's Blog &ndash; A basic terrain generator in Go (Part 1)</title>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7602960-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+    <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
+
+<meta name="keywords" content="code, golang">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://janithl.github.io/">Janith's Blog</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="https://janithl.github.io/pages/about.html">About</a></li>
+
+                    <li class="active"><a href="https://janithl.github.io/category/general/">General</a></li>
+                    <li><a href="https://janithl.github.io/category/links/">Links</a></li>
+                    <li><a href="https://janithl.github.io/category/personal/">Personal</a></li>
+
+                    <li><a href="https://github.com/janithl" target="_blank">Github</a></li>
+
+                    <li><a href="https://janithl.github.io/archives.html">Archives</a></li>
+
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tags <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="https://janithl.github.io/tag/biology/">biology</a></li>
+                          <li><a href="https://janithl.github.io/tag/casey-neistat/">casey neistat</a></li>
+                          <li><a href="https://janithl.github.io/tag/code/">code</a></li>
+                          <li><a href="https://janithl.github.io/tag/comics/">comics</a></li>
+                          <li><a href="https://janithl.github.io/tag/conflict/">conflict</a></li>
+                          <li><a href="https://janithl.github.io/tag/conversations/">conversations</a></li>
+                          <li><a href="https://janithl.github.io/tag/data/">data</a></li>
+                          <li><a href="https://janithl.github.io/tag/design/">design</a></li>
+                          <li><a href="https://janithl.github.io/tag/docker/">docker</a></li>
+                          <li><a href="https://janithl.github.io/tag/education/">education</a></li>
+                          <li><a href="https://janithl.github.io/tag/films/">films</a></li>
+                          <li><a href="https://janithl.github.io/tag/geopolitics/">geopolitics</a></li>
+                          <li><a href="https://janithl.github.io/tag/golang/">golang</a></li>
+                          <li><a href="https://janithl.github.io/tag/machine-learning/">machine learning</a></li>
+                          <li><a href="https://janithl.github.io/tag/music/">music</a></li>
+                          <li><a href="https://janithl.github.io/tag/oasis/">oasis</a></li>
+                          <li><a href="https://janithl.github.io/tag/people/">people</a></li>
+                          <li><a href="https://janithl.github.io/tag/politics/">politics</a></li>
+                          <li><a href="https://janithl.github.io/tag/prudishness/">prudishness</a></li>
+                          <li><a href="https://janithl.github.io/tag/religion/">religion</a></li>
+                          <li><a href="https://janithl.github.io/tag/sexuality/">sexuality</a></li>
+                          <li><a href="https://janithl.github.io/tag/sinhala/">sinhala</a></li>
+                          <li><a href="https://janithl.github.io/tag/travel/">travel</a></li>
+                          <li><a href="https://janithl.github.io/tag/uni/">uni</a></li>
+                          <li><a href="https://janithl.github.io/tag/wes-anderson/">wes anderson</a></li>
+                          <li><a href="https://janithl.github.io/tag/work/">work</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a href="https://janithl.github.io/feeds/all.atom.xml">Atom</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+<article>
+  <div class="article_title">
+    <h3><a href="https://janithl.github.io/2019/09/go-terrain-gen-part-1/">A basic terrain generator in Go (Part 1)</a></h3>
+    <p class="lead">Ain't no mountain high enough</p><hr>
+  </div>
+  <div class="article_text">
+    <p>I haven't gushed about Go much on this blog<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, but I thought of writing a
+small series of posts on a little piece of code I cooked up while I was
+supposed to be doing other, more important things<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<h3>Concept</h3>
+<p>So I was sitting there, zoning out and browsing <a href="https://www.reddit.com/r/CitiesSkylines/">one of my favourite subreddits</a>,
+when I thought about how terrain can be generated. And I thought if we were to
+take a flat plane that sliced through the mountains at progressively decreasing
+heights, you'd first get a few isolated spots (the peaks of the mountains), and on
+the next iteration you'd always have the areas adjacent to these peaks showing up
+(because mountain tops don't float in thin air).</p>
+<p>Computationally, if the map was a 2D array, we could randomly set a few elements
+as peaks, and then generate the rest of the mountain around those "peak" elements.
+Of course, with each iteration you would also have the possibility of running into
+peaks that weren't high enough to be captured at the earlier iteration, so we
+should keep randomly sprinkling peaks among the (not already assigned) elements
+in the map.</p>
+<h3>Pseudocode</h3>
+<p>The pseudocode for the most basic version would look something like this:</p>
+<div class="highlight"><pre><span></span># map initialised to 0s
+map[height][width]
+
+for elevation &lt;- 5 to 0
+    for h &lt;- 0 to height
+        for w &lt;- 0 to width
+            # if element is already assigned value, skip
+            if map[h][w] &gt; 0
+                continue
+
+            # if array element next to higher elevation
+            # or picked as a peak randomly
+            if map[h][w] next to elevation + 1 or random()
+                map[h][w] &lt;- elevation
+</pre></div>
+
+
+<p>Seems simple enough, right?</p>
+<h3>Go Implementation</h3>
+<p>The initialisations, loops and randomly picking an element to be a peak (and
+printing the result out) seem straightforward enough, so let's get those out
+of the way first:</p>
+<h5>main.go, 1st iteration:</h5>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;math/rand&quot;</span>
+    <span class="s">&quot;time&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">const</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">elevation</span> <span class="p">=</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">9</span>
+
+<span class="c1">// we set the random chance of a peak occuring to 5%</span>
+<span class="kd">const</span> <span class="nx">peakProbability</span> <span class="p">=</span> <span class="mi">5</span>
+
+<span class="kd">var</span> <span class="nx">fullMap</span> <span class="p">[</span><span class="nx">height</span><span class="p">][</span><span class="nx">width</span><span class="p">]</span><span class="kt">int</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// rand needs to be seeded, so we set the current</span>
+    <span class="c1">// nanosecond timestamp as the seed</span>
+    <span class="nx">rand</span><span class="p">.</span><span class="nx">Seed</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">UnixNano</span><span class="p">())</span>
+
+    <span class="c1">// iterate down from max elevation, assigning vals</span>
+    <span class="k">for</span> <span class="nx">e</span> <span class="o">:=</span> <span class="nx">elevation</span><span class="p">;</span> <span class="nx">e</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="o">--</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">h</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="p">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="nx">w</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">w</span> <span class="p">&lt;</span> <span class="nx">width</span><span class="p">;</span> <span class="nx">w</span><span class="o">++</span> <span class="p">{</span>
+                <span class="c1">// if the element has already been</span>
+                <span class="c1">// assigned, skip it</span>
+                <span class="k">if</span> <span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+                    <span class="k">continue</span>
+                <span class="p">}</span>
+
+                <span class="c1">// if the random value meets our criteria,</span>
+                <span class="c1">// it&#39;s a peak</span>
+                <span class="k">if</span> <span class="nx">rand</span><span class="p">.</span><span class="nx">Intn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="p">&lt;</span> <span class="nx">peakProbability</span> <span class="p">{</span>
+                    <span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">=</span> <span class="nx">e</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// print out map</span>
+    <span class="k">for</span> <span class="nx">h</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="p">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">])</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>We run the code with <code>go run main.go</code>, and get the following output:</p>
+<p><img alt="First Iteration" src="https://janithl.github.io/images/iteration-1.png"></p>
+<p>To quote Chernobyl<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, it's "Not great, not <em>terrible</em>".</p>
+<p>In the next part we'll look at a quick and dirty way to implement a way to
+look at elements adjacent to our current element (the part of our pseudocode
+that we didn't implement), and assign values to it—and better visualisation
+of the terrain map.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Mostly because this blog has been <em>inactive</em> for the last 2 years, but
+more on that in a later post.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>My biggest gripe about my otherwise perfect workplace is that I don't
+get to write Go for a living.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Which I haven't watched yet!&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Tue 17 September 2019</p>
+    <p>Category: <a href="https://janithl.github.io/category/general/">General</a>
+ &ndash; Tags:
+      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/golang/">golang</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2019/09/go-terrain-gen-part-1/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//janithl.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+    </div>
+
+    <div id="ending_message">
+        <hr>
+        <p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
