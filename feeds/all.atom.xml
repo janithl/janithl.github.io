@@ -1,5 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-07-23T16:31:00+05:30</updated><entry><title>A meditation on ‘Kimi no Na wa’</title><link href="https://janithl.github.io/2019/07/a-meditation-on-kimi-no-na-wa/" rel="alternate"></link><published>2019-07-23T16:31:00+05:30</published><updated>2019-07-23T16:31:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-07-23:/2019/07/a-meditation-on-kimi-no-na-wa/</id><summary type="html">&lt;p&gt;&lt;img alt="Twilight" src="https://janithl.github.io/images/twilight.jpg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-09-17T21:12:00+05:30</updated><entry><title>A basic terrain generator in Go (Part 1)</title><link href="https://janithl.github.io/2019/09/a-basic-terrain-generator-in-go-part-1/" rel="alternate"></link><published>2019-09-17T21:12:00+05:30</published><updated>2019-09-17T21:12:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-09-17:/2019/09/a-basic-terrain-generator-in-go-part-1/</id><summary type="html">&lt;p&gt;I haven't gushed about Go much on this blog&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;, but I thought of writing a
+small series of posts on a little piece of code I cooked up while I was
+supposed to be doing other, more important things&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h3&gt;Concept&lt;/h3&gt;
+&lt;p&gt;So I was sitting there, zoning out and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I haven't gushed about Go much on this blog&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;, but I thought of writing a
+small series of posts on a little piece of code I cooked up while I was
+supposed to be doing other, more important things&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h3&gt;Concept&lt;/h3&gt;
+&lt;p&gt;So I was sitting there, zoning out and browsing &lt;a href="https://www.reddit.com/r/CitiesSkylines/"&gt;one of my favourite subreddits&lt;/a&gt;,
+when I thought about how terrain can be generated. And I thought if we were to
+take a flat plane that sliced through the mountains at progressively decreasing
+heights, you'd first get a few isolated spots (the peaks of the mountains), and on
+the next iteration you'd always have the areas adjacent to these peaks showing up
+(because mountain tops don't float in thin air).&lt;/p&gt;
+&lt;p&gt;Computationally, if the map was a 2D array, we could randomly set a few elements
+as peaks, and then generate the rest of the mountain around those "peak" elements.
+Of course, with each iteration you would also have the possibility of running into
+peaks that weren't high enough to be captured at the earlier iteration, so we
+should keep randomly sprinkling peaks among the (not already assigned) elements
+in the map.&lt;/p&gt;
+&lt;h3&gt;Pseudocode&lt;/h3&gt;
+&lt;p&gt;The pseudocode for the most basic version would look something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# map initialised to 0s
+map[height][width]
+
+for elevation &amp;lt;- 5 to 0
+    for h &amp;lt;- 0 to height
+        for w &amp;lt;- 0 to width
+            # if element is already assigned value, skip
+            if map[h][w] &amp;gt; 0
+                continue
+
+            # if array element next to higher elevation
+            # or picked as a peak randomly
+            if map[h][w] next to elevation + 1 or random()
+                map[h][w] &amp;lt;- elevation
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Seems simple enough, right?&lt;/p&gt;
+&lt;h3&gt;Go Implementation&lt;/h3&gt;
+&lt;p&gt;The initialisations, loops and randomly picking an element to be a peak (and
+printing the result out) seem straightforward enough, so let's get those out
+of the way first:&lt;/p&gt;
+&lt;h5&gt;main.go, 1st iteration:&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;fmt&amp;quot;&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;math/rand&amp;quot;&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;time&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;elevation&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;
+
+&lt;span class="c1"&gt;// we set the random chance of a peak occuring to 5%&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;peakProbability&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;fullMap&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;
+
+&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;// rand needs to be seeded, so we set the current&lt;/span&gt;
+    &lt;span class="c1"&gt;// nanosecond timestamp as the seed&lt;/span&gt;
+    &lt;span class="nx"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Now&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;UnixNano&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// iterate down from max elevation, assigning vals&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;e&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;elevation&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;e&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;h&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;h&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;h&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;w&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;w&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="c1"&gt;// if the element has already been&lt;/span&gt;
+                &lt;span class="c1"&gt;// assigned, skip it&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;fullMap&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;h&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="k"&gt;continue&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+
+                &lt;span class="c1"&gt;// if the random value meets our criteria,&lt;/span&gt;
+                &lt;span class="c1"&gt;// it&amp;#39;s a peak&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Intn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;peakProbability&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="nx"&gt;fullMap&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;h&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;e&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// print out map&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;h&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;h&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;h&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;fmt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;fullMap&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;h&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We run the code with &lt;code&gt;go run main.go&lt;/code&gt;, and get the following output:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="First Iteration" src="https://janithl.github.io/images/iteration-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;To quote Chernobyl&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt;, it's "Not great, not &lt;em&gt;terrible&lt;/em&gt;".&lt;/p&gt;
+&lt;p&gt;In the next part we'll look at a quick and dirty way to implement a way to
+look at elements adjacent to our current element (the part of our pseudocode
+that we didn't implement), and assign values to it—and better visualisation
+of the terrain map.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Mostly because this blog has been &lt;em&gt;inactive&lt;/em&gt; for the last 2 years, but
+more on that in a later post.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;My biggest gripe about my otherwise perfect workplace is that I don't
+get to write Go for a living.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Which I haven't watched yet!&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="code"></category></entry><entry><title>A meditation on ‘Kimi no Na wa’</title><link href="https://janithl.github.io/2019/07/a-meditation-on-kimi-no-na-wa/" rel="alternate"></link><published>2019-07-23T16:31:00+05:30</published><updated>2019-07-23T16:31:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-07-23:/2019/07/a-meditation-on-kimi-no-na-wa/</id><summary type="html">&lt;p&gt;&lt;img alt="Twilight" src="https://janithl.github.io/images/twilight.jpg"&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;Twilight&lt;/p&gt;
 
 &lt;p&gt;I have been on a Makoto Shinkai binge this week. Even though I am usually
