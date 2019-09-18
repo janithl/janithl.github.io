@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="author" content="Janith">
+    <meta name="description" content="Janith's blog">
+    <link rel="icon" href="https://janithl.github.io/favicon.ico">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,700&amp;subset=sinhala">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/pygments.css">
+
+    <title>Janith's Blog &ndash; A basic terrain generator in Go (Part 2)</title>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7602960-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+    <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
+
+<meta name="keywords" content="code, golang">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://janithl.github.io/">Janith's Blog</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="https://janithl.github.io/pages/about.html">About</a></li>
+
+                    <li class="active"><a href="https://janithl.github.io/category/general/">General</a></li>
+                    <li><a href="https://janithl.github.io/category/links/">Links</a></li>
+                    <li><a href="https://janithl.github.io/category/personal/">Personal</a></li>
+
+                    <li><a href="https://github.com/janithl" target="_blank">Github</a></li>
+
+                    <li><a href="https://janithl.github.io/archives.html">Archives</a></li>
+
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tags <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="https://janithl.github.io/tag/biology/">biology</a></li>
+                          <li><a href="https://janithl.github.io/tag/casey-neistat/">casey neistat</a></li>
+                          <li><a href="https://janithl.github.io/tag/code/">code</a></li>
+                          <li><a href="https://janithl.github.io/tag/comics/">comics</a></li>
+                          <li><a href="https://janithl.github.io/tag/conflict/">conflict</a></li>
+                          <li><a href="https://janithl.github.io/tag/conversations/">conversations</a></li>
+                          <li><a href="https://janithl.github.io/tag/data/">data</a></li>
+                          <li><a href="https://janithl.github.io/tag/design/">design</a></li>
+                          <li><a href="https://janithl.github.io/tag/docker/">docker</a></li>
+                          <li><a href="https://janithl.github.io/tag/education/">education</a></li>
+                          <li><a href="https://janithl.github.io/tag/films/">films</a></li>
+                          <li><a href="https://janithl.github.io/tag/geopolitics/">geopolitics</a></li>
+                          <li><a href="https://janithl.github.io/tag/golang/">golang</a></li>
+                          <li><a href="https://janithl.github.io/tag/machine-learning/">machine learning</a></li>
+                          <li><a href="https://janithl.github.io/tag/music/">music</a></li>
+                          <li><a href="https://janithl.github.io/tag/oasis/">oasis</a></li>
+                          <li><a href="https://janithl.github.io/tag/people/">people</a></li>
+                          <li><a href="https://janithl.github.io/tag/politics/">politics</a></li>
+                          <li><a href="https://janithl.github.io/tag/prudishness/">prudishness</a></li>
+                          <li><a href="https://janithl.github.io/tag/religion/">religion</a></li>
+                          <li><a href="https://janithl.github.io/tag/sexuality/">sexuality</a></li>
+                          <li><a href="https://janithl.github.io/tag/sinhala/">sinhala</a></li>
+                          <li><a href="https://janithl.github.io/tag/travel/">travel</a></li>
+                          <li><a href="https://janithl.github.io/tag/uni/">uni</a></li>
+                          <li><a href="https://janithl.github.io/tag/wes-anderson/">wes anderson</a></li>
+                          <li><a href="https://janithl.github.io/tag/work/">work</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a href="https://janithl.github.io/feeds/all.atom.xml">Atom</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+<article>
+  <div class="article_title">
+    <h3><a href="https://janithl.github.io/2019/09/go-terrain-gen-part-2/">A basic terrain generator in Go (Part 2)</a></h3>
+    <p class="lead">But first, we gotta clean up this mess</p><hr>
+  </div>
+  <div class="article_text">
+    <p><a href="https://janithl.github.io/2019/09/go-terrain-gen-part-1/">In the last part</a>, we explored how to set up what was basically a matrix and
+randomly assign elevation values to it. In this part, I wanted to explore how to deal
+with assigning values to the elements adjacent to the peaks, and how to display
+the map to users in a more intuitive way than a bunch of numbers.</p>
+<p>But...</p>
+<p>The code that we wrote on a single file in the previous part has global variables and
+is all written in a single method, and this would get unmaintainable fast. Let's
+explore some of the nice features Go has to offer us to refactor this code first.</p>
+<h3>Go modules</h3>
+<p>We have all our code in a <code>main.go</code> file in our home directory. There used to be
+a special folder to keep all the Go files called <code>$GOPATH</code>, but as of <a href="https://golang.org/doc/go1.13">Go 1.13</a> this
+is deprecated, and we can now initialise Go modules anywhere to maintain our
+code. I've found <a href="https://www.kablamo.com.au/blog/2018/12/10/just-tell-me-how-to-use-go-modules">this super simple guide to Go modules</a> handy whenever I want
+to use them.</p>
+<p>So, first, we move our <code>main.go</code> file to a folder of our choosing. I want to put all
+of the code in this part and the others as separate modules on Github, so I'm going
+to name this module <code>github.com/janithl/go-terrain-gen/part2</code>, to keep
+things short and unambiguous. 😜</p>
+<p><img alt="Go Mod Init" src="https://janithl.github.io/images/go-terrain-gen/p2-go-mod-init.png"></p>
+<p>If we open up our <code>go.mod</code> file, we can find that it's very sparse right now since
+we don't have any dependencies:</p>
+<div class="highlight"><pre><span></span>module github.com/janithl/go-terrain-gen/part2
+
+go 1.12
+</pre></div>
+
+
+<h3>Multiple files</h3>
+<p>I don't want to keep all the terrain generator logic inside <code>main.go</code>, so let's first
+try to separate them out into two files.</p>
+<p><img alt="File Layout" src="https://janithl.github.io/images/go-terrain-gen/p2-file-layout-1.png"></p>
+<p>We move most of our app code into a different file, and a different package
+called <code>terrain</code>. Since in Go, you have to keep packages in their different folders,
+we move the code into the <code>terrain</code> folder, and name the file <code>terrain.go</code>.</p>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">terrain</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;math/rand&quot;</span>
+    <span class="s">&quot;time&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">const</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">elevation</span> <span class="p">=</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">9</span>
+
+<span class="c1">// we set the random chance of a peak occuring to 5%</span>
+<span class="kd">const</span> <span class="nx">peakProbability</span> <span class="p">=</span> <span class="mi">5</span>
+
+<span class="kd">var</span> <span class="nx">fullMap</span> <span class="p">[</span><span class="nx">height</span><span class="p">][</span><span class="nx">width</span><span class="p">]</span><span class="kt">int</span>
+
+<span class="c1">// Generate generates the terrain map</span>
+<span class="kd">func</span> <span class="nx">Generate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// rand needs to be seeded, so we set the current</span>
+    <span class="c1">// nanosecond timestamp as the seed</span>
+    <span class="nx">rand</span><span class="p">.</span><span class="nx">Seed</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">UnixNano</span><span class="p">())</span>
+
+    <span class="c1">// iterate down from max elevation, assigning vals</span>
+    <span class="k">for</span> <span class="nx">e</span> <span class="o">:=</span> <span class="nx">elevation</span><span class="p">;</span> <span class="nx">e</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="o">--</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">h</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="p">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="nx">w</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">w</span> <span class="p">&lt;</span> <span class="nx">width</span><span class="p">;</span> <span class="nx">w</span><span class="o">++</span> <span class="p">{</span>
+                <span class="c1">// if the element has already been</span>
+                <span class="c1">// assigned, skip it</span>
+                <span class="k">if</span> <span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+                    <span class="k">continue</span>
+                <span class="p">}</span>
+
+                <span class="c1">// if the random value meets our criteria,</span>
+                <span class="c1">// it&#39;s a peak</span>
+                <span class="k">if</span> <span class="nx">rand</span><span class="p">.</span><span class="nx">Intn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="p">&lt;</span> <span class="nx">peakProbability</span> <span class="p">{</span>
+                    <span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">=</span> <span class="nx">e</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Print prints the terrain map out</span>
+<span class="kd">func</span> <span class="nx">Print</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// print out map</span>
+    <span class="k">for</span> <span class="nx">h</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="p">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">])</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>This leaves our <code>main.go</code> file wonderfully sparse, and it looks like this:</p>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;github.com/janithl/go-terrain-gen/part2/terrain&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">terrain</span><span class="p">.</span><span class="nx">Generate</span><span class="p">()</span>
+    <span class="nx">terrain</span><span class="p">.</span><span class="nx">Print</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Pretty neat, right? Let's execute it!</p>
+<p><img alt="Output" src="https://janithl.github.io/images/go-terrain-gen/p2-output-1.png"></p>
+<p>Boom. Cooliosis!</p>
+<h3>Encapsulate</h3>
+<p>I don't like the structure of <code>terrain.go</code> right now, it's got stuff hanging around
+and it's not very flexible (you can't even set the height and width of the map) and
+extensible. Let's explore Go's <a href="https://gobyexample.com/structs">structs</a> and <a href="https://gobyexample.com/methods">methods</a> to make things cleaner.
+We'll also use Go's <a href="https://gobyexample.com/slices">slices</a> to make the map resizeable at runtime.</p>
+<p>The fullMap struct will look like this:</p>
+<div class="highlight"><pre><span></span><span class="kd">type</span> <span class="nx">fullMap</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">elevation</span><span class="p">,</span> <span class="nx">peakProbability</span> <span class="kt">int</span>
+    <span class="nx">elements</span>                                  <span class="p">[][]</span><span class="kt">int</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>We can also add a function to construct a new fullMap<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:</p>
+<div class="highlight"><pre><span></span><span class="c1">// NewFullMap returns a new terrain map</span>
+<span class="kd">func</span> <span class="nx">NewFullMap</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">elevation</span><span class="p">,</span> <span class="nx">peakProbability</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">fullMap</span> <span class="p">{</span>
+    <span class="nx">elements</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">height</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">width</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">fullMap</span><span class="p">{</span>
+        <span class="nx">width</span><span class="p">:</span>           <span class="nx">width</span><span class="p">,</span>
+        <span class="nx">height</span><span class="p">:</span>          <span class="nx">height</span><span class="p">,</span>
+        <span class="nx">elevation</span><span class="p">:</span>       <span class="nx">elevation</span><span class="p">,</span>
+        <span class="nx">peakProbability</span><span class="p">:</span> <span class="nx">peakProbability</span><span class="p">,</span>
+        <span class="nx">elements</span><span class="p">:</span>        <span class="nx">elements</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Note how the height and the width of the map can be set dynamically now, in
+addition to the levels of elevation and the peak probability.</p>
+<p>We can now rewrite the <code>Generate()</code> and <code>Print()</code> functions to work with the
+new fullMap struct, which is pretty straightforward:</p>
+<div class="highlight"><pre><span></span><span class="c1">// Generate generates the terrain map</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Generate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// rand needs to be seeded, so we set the current</span>
+    <span class="c1">// nanosecond timestamp as the seed</span>
+    <span class="nx">rand</span><span class="p">.</span><span class="nx">Seed</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">UnixNano</span><span class="p">())</span>
+
+    <span class="c1">// iterate down from max elevation, assigning vals</span>
+    <span class="k">for</span> <span class="nx">e</span> <span class="o">:=</span> <span class="nx">f</span><span class="p">.</span><span class="nx">elevation</span><span class="p">;</span> <span class="nx">e</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="o">--</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">h</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="p">&lt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="nx">w</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">w</span> <span class="p">&lt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span> <span class="nx">w</span><span class="o">++</span> <span class="p">{</span>
+                <span class="c1">// if the element has already been</span>
+                <span class="c1">// assigned, skip it</span>
+                <span class="k">if</span> <span class="nx">f</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+                    <span class="k">continue</span>
+                <span class="p">}</span>
+
+                <span class="c1">// if the random value meets our criteria,</span>
+                <span class="c1">// it&#39;s a peak</span>
+                <span class="k">if</span> <span class="nx">rand</span><span class="p">.</span><span class="nx">Intn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="p">&lt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">peakProbability</span> <span class="p">{</span>
+                    <span class="nx">f</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">=</span> <span class="nx">e</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Print prints the terrain map out</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Print</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// print out map</span>
+    <span class="k">for</span> <span class="nx">h</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="p">&lt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">h</span><span class="p">])</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>The <a href="https://github.com/janithl/go-terrain-gen/blob/master/part2/terrain/terrain.go">full code can be seen here</a>.</p>
+<p>Now, the main.go file will look a bit different, but this allows us greater
+control over how the map is generated:</p>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;github.com/janithl/go-terrain-gen/part2/terrain&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">terrainMap</span> <span class="o">:=</span> <span class="nx">terrain</span><span class="p">.</span><span class="nx">NewFullMap</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Generate</span><span class="p">()</span>
+    <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Print</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Let's run it:</p>
+<p><img alt="Output After Refactor" src="https://janithl.github.io/images/go-terrain-gen/p2-output-2.png"></p>
+<p>Yass! 🙌🏾</p>
+<h3>Add Some Flags</h3>
+<p>We can add some <a href="https://gobyexample.com/command-line-flags">CLI flags</a> to expose these newly added features to users.</p>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;flag&quot;</span>
+
+    <span class="s">&quot;github.com/janithl/go-terrain-gen/part2/terrain&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">height</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;height&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s">&quot;height of the map&quot;</span><span class="p">)</span>
+    <span class="nx">width</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;width&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s">&quot;width of the map&quot;</span><span class="p">)</span>
+    <span class="nx">elevation</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;elev&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s">&quot;levels of elevation on the map&quot;</span><span class="p">)</span>
+    <span class="nx">peakProbability</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;peaks&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;percentage probability a peak will randomly appear&quot;</span><span class="p">)</span>
+    <span class="nx">flag</span><span class="p">.</span><span class="nx">Parse</span><span class="p">()</span>
+
+    <span class="nx">terrainMap</span> <span class="o">:=</span> <span class="nx">terrain</span><span class="p">.</span><span class="nx">NewFullMap</span><span class="p">(</span><span class="o">*</span><span class="nx">height</span><span class="p">,</span> <span class="o">*</span><span class="nx">width</span><span class="p">,</span> <span class="o">*</span><span class="nx">elevation</span><span class="p">,</span> <span class="o">*</span><span class="nx">peakProbability</span><span class="p">)</span>
+    <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Generate</span><span class="p">()</span>
+    <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Print</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>To run it, let's first build it with <code>go build</code>, and point the output to the
+<code>bin</code> directory, and then execute with the CLI flags:</p>
+<p><img alt="Compile and Output After Flags" src="https://janithl.github.io/images/go-terrain-gen/p2-output-3.png"></p>
+<hr>
+<p>I know this was supposed to be an exciting installment where we were going to
+implement new features, but sometimes<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, cleaning up the code you already have
+is just as rewarding. It also makes adding new features easier and less prone to
+bugs.</p>
+<p><a href="https://github.com/janithl/go-terrain-gen/tree/master/part2"><strong>The full code for this part can be found on Github.</strong></a></p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Note how I am returning the struct itself instead of my usual practice of
+returning a pointer to the struct. This was due to <a href="https://philpearl.github.io/post/bad_go_pointer_returns/">this post by Phil Pearl</a>,
+which taught me that it's more efficient to just return the struct itself.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Especially with a <em>beautiful</em> language like Go. 😍&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Wed 18 September 2019</p>
+    <p>Category: <a href="https://janithl.github.io/category/general/">General</a>
+ &ndash; Tags:
+      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/golang/">golang</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2019/09/go-terrain-gen-part-2/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//janithl.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+    </div>
+
+    <div id="ending_message">
+        <hr>
+        <p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

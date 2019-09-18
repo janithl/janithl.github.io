@@ -109,10 +109,14 @@ We run the code with `go run main.go`, and get the following output:
 
 To quote Chernobyl[^3], it's "Not great, not _terrible_".
 
-In the next part we'll look at a quick and dirty way to implement a way to
-look at elements adjacent to our current element (the part of our pseudocode
-that we didn't implement), and assign values to it—and better visualisation
-of the terrain map.
+---
+
+[In the next part][2] we'll look at a quick and dirty way to implement a
+way to look at elements adjacent to our current element (the part of our
+pseudocode that we didn't implement), and assign values to it—and better
+visualisation of the terrain map.
+
+[**The full code for this part can be found on Github.**][2]
 
 [^1]: Mostly because this blog has been _inactive_ for the last 2 years, but
     more on that in a later post.
@@ -123,3 +127,5 @@ of the terrain map.
 [^3]: Which I haven't watched yet! 🙈
 
 [1]: https://www.reddit.com/r/CitiesSkylines/
+[2]: https://janithl.github.io/2019/09/go-terrain-gen-part-2/
+[3]: https://github.com/janithl/go-terrain-gen/tree/master/part1
