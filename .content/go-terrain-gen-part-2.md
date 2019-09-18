@@ -119,7 +119,7 @@ Pretty neat, right? Let's execute it!
 
 ![Output]({filename}/images/go-terrain-gen/p2-output-1.png)
 
-Boom. Cooliosis!
+Boom! 🎆
 
 ### Encapsulate
 
@@ -201,8 +201,8 @@ func (f *fullMap) Print() {
 
 The [full code can be seen here][7].
 
-Now, the main.go file will look a bit different, but this allows us greater
-control over how the map is generated:
+Now, the `main.go` file will look a bit different, but this allows us
+greater control over how the map is generated:
 
 ```go
 package main

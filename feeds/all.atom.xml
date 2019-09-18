@@ -101,7 +101,7 @@ we move the code into the &lt;code&gt;terrain&lt;/code&gt; folder, and name the 
 
 &lt;p&gt;Pretty neat, right? Let's execute it!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Output" src="https://janithl.github.io/images/go-terrain-gen/p2-output-1.png"&gt;&lt;/p&gt;
-&lt;p&gt;Boom. Cooliosis!&lt;/p&gt;
+&lt;p&gt;Boom! 🎆&lt;/p&gt;
 &lt;h3&gt;Encapsulate&lt;/h3&gt;
 &lt;p&gt;I don't like the structure of &lt;code&gt;terrain.go&lt;/code&gt; right now, it's got stuff hanging around
 and it's not very flexible (you can't even set the height and width of the map) and
@@ -175,8 +175,8 @@ new fullMap struct, which is pretty straightforward:&lt;/p&gt;
 
 
 &lt;p&gt;The &lt;a href="https://github.com/janithl/go-terrain-gen/blob/master/part2/terrain/terrain.go"&gt;full code can be seen here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Now, the main.go file will look a bit different, but this allows us greater
-control over how the map is generated:&lt;/p&gt;
+&lt;p&gt;Now, the &lt;code&gt;main.go&lt;/code&gt; file will look a bit different, but this allows us
+greater control over how the map is generated:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;
 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;github.com/janithl/go-terrain-gen/part2/terrain&amp;quot;&lt;/span&gt;
