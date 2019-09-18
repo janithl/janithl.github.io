@@ -9,7 +9,7 @@ the map to users in a more intuitive way than a bunch of numbers.&lt;/p&gt;
 &lt;p&gt;But...&lt;/p&gt;
 &lt;p&gt;The code that we wrote on a single file in the previous part has global variables and
 is all written in a single method, and this would get unmaintainable fast. Let's
-explore some of the nice features Go has to offer us to refactor this code first.&lt;/p&gt;
+first explore some of the nice features Go offers to help refactor this code.&lt;/p&gt;
 &lt;h3&gt;Go modules&lt;/h3&gt;
 &lt;p&gt;We have all our code in a &lt;code&gt;main.go&lt;/code&gt; file in our home directory. There used to be
 a special folder to keep all the Go files called &lt;code&gt;$GOPATH&lt;/code&gt;, but as of &lt;a href="https://golang.org/doc/go1.13"&gt;Go 1.13&lt;/a&gt; this

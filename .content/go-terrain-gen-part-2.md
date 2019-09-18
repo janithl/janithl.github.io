@@ -14,7 +14,7 @@ But...
 
 The code that we wrote on a single file in the previous part has global variables and
 is all written in a single method, and this would get unmaintainable fast. Let's
-explore some of the nice features Go has to offer us to refactor this code first.
+first explore some of the nice features Go offers to help refactor this code.
 
 ### Go modules
 
