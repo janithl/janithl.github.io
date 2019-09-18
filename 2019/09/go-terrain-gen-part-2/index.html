@@ -327,6 +327,20 @@ control over how the map is generated:</p>
 <p>To run it, let's first build it with <code>go build</code>, and point the output to the
 <code>bin</code> directory, and then execute with the CLI flags:</p>
 <p><img alt="Compile and Output After Flags" src="https://janithl.github.io/images/go-terrain-gen/p2-output-3.png"></p>
+<p>Running <code>bin/terrain --help</code> returns the usage details:</p>
+<div class="highlight"><pre><span></span>Usage of bin/terrain:
+  -elev int
+        levels of elevation on the map (default 9)
+  -height int
+        height of the map (default 16)
+  -peaks int
+        percentage probability a peak will randomly appear (default 5)
+  -width int
+        width of the map (default 16)
+</pre></div>
+
+
+<p>Pretty neat, Golang! 👏🏽👏🏽👏🏽</p>
 <hr>
 <p>I know this was supposed to be an exciting installment where we were going to
 implement new features, but sometimes<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, cleaning up the code you already have

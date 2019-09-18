@@ -253,6 +253,22 @@ To run it, let's first build it with `go build`, and point the output to the
 
 ![Compile and Output After Flags]({filename}/images/go-terrain-gen/p2-output-3.png)
 
+Running `bin/terrain --help` returns the usage details:
+
+```
+Usage of bin/terrain:
+  -elev int
+        levels of elevation on the map (default 9)
+  -height int
+        height of the map (default 16)
+  -peaks int
+        percentage probability a peak will randomly appear (default 5)
+  -width int
+        width of the map (default 16)
+```
+
+Pretty neat, Golang! 👏🏽👏🏽👏🏽
+
 ---
 
 I know this was supposed to be an exciting installment where we were going to
