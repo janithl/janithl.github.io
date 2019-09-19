@@ -197,6 +197,8 @@ We'll modify <code>Print()</code> to add these and output the codes:</p>
             <span class="c1">// print out the corresponding ANSI code and unicode char</span>
             <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;\033[%dm%s\033[0m&quot;</span><span class="p">,</span> <span class="nx">mapColours</span><span class="p">[</span><span class="nx">colourIndex</span><span class="p">],</span> <span class="nx">mapShades</span><span class="p">[</span><span class="nx">shadeIndex</span><span class="p">])</span>
         <span class="p">}</span>
+
+        <span class="c1">// print a newline</span>
         <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>

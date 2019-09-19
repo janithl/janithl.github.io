@@ -92,6 +92,8 @@ We'll modify &lt;code&gt;Print()&lt;/code&gt; to add these and output the codes:
             &lt;span class="c1"&gt;// print out the corresponding ANSI code and unicode char&lt;/span&gt;
             &lt;span class="nx"&gt;fmt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;\033[%dm%s\033[0m&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;mapColours&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;colourIndex&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;mapShades&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;shadeIndex&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// print a newline&lt;/span&gt;
         &lt;span class="nx"&gt;fmt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Println&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
