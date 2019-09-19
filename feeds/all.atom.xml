@@ -417,8 +417,7 @@ for elevation &amp;lt;- 5 to 0
 &lt;h3&gt;Go Implementation&lt;/h3&gt;
 &lt;p&gt;The initialisations, loops and randomly picking an element to be a peak (and
 printing the result out) seem straightforward enough, so let's get those out
-of the way first:&lt;/p&gt;
-&lt;h5&gt;main.go, 1st iteration:&lt;/h5&gt;
+of the way first and create our &lt;code&gt;main.go&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;
 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
