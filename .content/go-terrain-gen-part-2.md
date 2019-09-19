@@ -284,7 +284,7 @@ bugs.
 
 [^2]: Especially with a _beautiful_ language like Go. 😍
 
-[1]: https://janithl.github.io/2019/09/go-terrain-gen-part-1/
+[1]: {filename}/go-terrain-gen-part-1.md
 [2]: https://golang.org/doc/go1.13
 [3]: https://www.kablamo.com.au/blog/2018/12/10/just-tell-me-how-to-use-go-modules
 [4]: https://gobyexample.com/structs

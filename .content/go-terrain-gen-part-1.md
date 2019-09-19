@@ -127,5 +127,5 @@ visualisation of the terrain map.
 [^3]: Which I haven't watched yet! 🙈
 
 [1]: https://www.reddit.com/r/CitiesSkylines/
-[2]: https://janithl.github.io/2019/09/go-terrain-gen-part-2/
+[2]: {filename}/go-terrain-gen-part-2.md
 [3]: https://github.com/janithl/go-terrain-gen/tree/master/part1
