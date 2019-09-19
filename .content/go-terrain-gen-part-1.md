@@ -52,7 +52,7 @@ Seems simple enough, right?
 
 The initialisations, loops and randomly picking an element to be a peak (and
 printing the result out) seem straightforward enough, so let's get those out
-of the way first and create our `main.go`:
+of the way first and create our `main.go` file:
 
 ```go
 package main
