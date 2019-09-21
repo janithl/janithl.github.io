@@ -262,8 +262,8 @@ following along as much as I enjoyed coding and writing about it!
 
 [**The full code, as always, can be found on Github.**][3]
 
-[^1]: Just like our old friend **peak probability**, this is the random percentage
-    of the probability of an element being a cliff.
+[^1]: Just like our old friend **peak probability**, this is the random
+    percentage of the probability of an element being a cliff.
 
 [1]: {filename}/go-terrain-gen-part-3.md
 [2]: https://golang.org/pkg/math/

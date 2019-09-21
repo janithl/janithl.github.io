@@ -232,8 +232,8 @@ following along as much as I enjoyed coding and writing about it!&lt;/p&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn:1"&gt;
-&lt;p&gt;Just like our old friend &lt;strong&gt;peak probability&lt;/strong&gt;, this is the random percentage
-of the probability of an element being a cliff.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Just like our old friend &lt;strong&gt;peak probability&lt;/strong&gt;, this is the random
+percentage of the probability of an element being a cliff.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</content><category term="code"></category><category term="golang"></category></entry><entry><title>A basic terrain generator in Go (Part 3)</title><link href="https://janithl.github.io/2019/09/go-terrain-gen-part-3/" rel="alternate"></link><published>2019-09-19T20:49:00+05:30</published><updated>2019-09-19T20:49:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-09-19:/2019/09/go-terrain-gen-part-3/</id><summary type="html">&lt;p&gt;&lt;a href="https://janithl.github.io/2019/09/go-terrain-gen-part-2/"&gt;In the last part&lt;/a&gt;, we refactored the code and added CLI flags. The output
