@@ -270,12 +270,12 @@ Pretty neat, Golang! 👏🏽👏🏽👏🏽
 I know this was supposed to be an exciting installment where we were going to
 implement new features, but sometimes[^2], cleaning up the code you already have
 is just as rewarding. It also makes adding new features easier and less prone to
-bugs.
+bugs. [In the next part][9], we'll explore adding better visualisation for our map.
 
-[**The full code for this part can be found on Github.**][9]
+[**The full code for this part can be found on Github.**][10]
 
 [^1]: Note how I am returning the struct itself instead of my usual practice of
-    returning a pointer to the struct. This was due to [this post by Phil Pearl][10],
+    returning a pointer to the struct. This was due to [this post by Phil Pearl][11],
     which taught me that it's more efficient to just return the struct itself.
 
 [^2]: Especially with a _beautiful_ language like Go. 😍
@@ -288,5 +288,6 @@ bugs.
 [6]: https://gobyexample.com/slices
 [7]: https://github.com/janithl/go-terrain-gen/blob/master/part2/terrain/terrain.go
 [8]: https://gobyexample.com/command-line-flags
-[9]: https://github.com/janithl/go-terrain-gen/tree/master/part2
-[10]: https://philpearl.github.io/post/bad_go_pointer_returns/
+[9]: {filename}/go-terrain-gen-part-3.md
+[10]: https://github.com/janithl/go-terrain-gen/tree/master/part2
+[11]: https://philpearl.github.io/post/bad_go_pointer_returns/

@@ -123,19 +123,20 @@ Fabulous! ❤️💚💙
 
 Being able to visualise your output is an important part of building any
 program (which is a reason wireframes exist, I guess). With the graphics sorted,
-our next improvements to the system[^2] will be more apparent when we implement
-them.
+[our next improvements][4] to the system[^2] will be more apparent when we
+implement them.
 
 [**The full code for this part can be found on Github.**][5]
 
-[^1]: I learned this only _yesterday_! [Rosetta Code][4] has code on how it's done
-    in all the languages.
+[^1]: I learned this only _yesterday_! [Rosetta Code][6] has code on how it's
+    done in all the languages.
 
-[^2]: I'm planning to cover assigning values to elements near the peaks, and how
-    introducing a bit of randomness will help make things more realistic.
+[^2]: I'm planning to cover assigning values to elements near the peaks, and
+    how introducing a bit of randomness will help make things more realistic.
 
 [1]: {filename}/go-terrain-gen-part-2.md
 [2]: https://en.wikipedia.org/wiki/Block_Elements
 [3]: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
-[4]: https://rosettacode.org/wiki/Terminal_control/Coloured_text#Go
+[4]: {filename}/go-terrain-gen-part-4.md
 [5]: https://github.com/janithl/go-terrain-gen/tree/master/part3
+[6]: https://rosettacode.org/wiki/Terminal_control/Coloured_text#Go

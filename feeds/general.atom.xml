@@ -344,19 +344,19 @@ colour. Let's compile and run it with the same flags as before:&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Being able to visualise your output is an important part of building any
 program (which is a reason wireframes exist, I guess). With the graphics sorted,
-our next improvements to the system&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; will be more apparent when we implement
-them.&lt;/p&gt;
+&lt;a href="https://janithl.github.io/2019/09/go-terrain-gen-part-4/"&gt;our next improvements&lt;/a&gt; to the system&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; will be more apparent when we
+implement them.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/janithl/go-terrain-gen/tree/master/part3"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn:1"&gt;
-&lt;p&gt;I learned this only &lt;em&gt;yesterday&lt;/em&gt;! &lt;a href="https://rosettacode.org/wiki/Terminal_control/Coloured_text#Go"&gt;Rosetta Code&lt;/a&gt; has code on how it's done
-in all the languages.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I learned this only &lt;em&gt;yesterday&lt;/em&gt;! &lt;a href="https://rosettacode.org/wiki/Terminal_control/Coloured_text#Go"&gt;Rosetta Code&lt;/a&gt; has code on how it's
+done in all the languages.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:2"&gt;
-&lt;p&gt;I'm planning to cover assigning values to elements near the peaks, and how
-introducing a bit of randomness will help make things more realistic.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I'm planning to cover assigning values to elements near the peaks, and
+how introducing a bit of randomness will help make things more realistic.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</content><category term="code"></category><category term="golang"></category></entry><entry><title>A basic terrain generator in Go (Part 2)</title><link href="https://janithl.github.io/2019/09/go-terrain-gen-part-2/" rel="alternate"></link><published>2019-09-18T07:28:00+05:30</published><updated>2019-09-18T07:28:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-09-18:/2019/09/go-terrain-gen-part-2/</id><summary type="html">&lt;p&gt;&lt;a href="https://janithl.github.io/2019/09/go-terrain-gen-part-1/"&gt;In the last part&lt;/a&gt;, we explored how to set up what was basically a matrix and
@@ -593,7 +593,7 @@ greater control over how the map is generated:&lt;/p&gt;
 &lt;p&gt;I know this was supposed to be an exciting installment where we were going to
 implement new features, but sometimes&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;, cleaning up the code you already have
 is just as rewarding. It also makes adding new features easier and less prone to
-bugs.&lt;/p&gt;
+bugs. &lt;a href="https://janithl.github.io/2019/09/go-terrain-gen-part-3/"&gt;In the next part&lt;/a&gt;, we'll explore adding better visualisation for our map.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/janithl/go-terrain-gen/tree/master/part2"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
