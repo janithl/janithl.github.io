@@ -169,14 +169,12 @@ we move the code into the <code>terrain</code> folder, and name the file <code>t
     <span class="k">for</span> <span class="nx">e</span> <span class="o">:=</span> <span class="nx">elevation</span><span class="p">;</span> <span class="nx">e</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="o">--</span> <span class="p">{</span>
         <span class="k">for</span> <span class="nx">h</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="p">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span> <span class="p">{</span>
             <span class="k">for</span> <span class="nx">w</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">w</span> <span class="p">&lt;</span> <span class="nx">width</span><span class="p">;</span> <span class="nx">w</span><span class="o">++</span> <span class="p">{</span>
-                <span class="c1">// if the element has already been</span>
-                <span class="c1">// assigned, skip it</span>
+                <span class="c1">// if the element has already been assigned, skip it</span>
                 <span class="k">if</span> <span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
                     <span class="k">continue</span>
                 <span class="p">}</span>
 
-                <span class="c1">// if the random value meets our criteria,</span>
-                <span class="c1">// it&#39;s a peak</span>
+                <span class="c1">// if the random value meets our criteria, it&#39;s a peak</span>
                 <span class="k">if</span> <span class="nx">rand</span><span class="p">.</span><span class="nx">Intn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="p">&lt;</span> <span class="nx">peakProbability</span> <span class="p">{</span>
                     <span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">=</span> <span class="nx">e</span>
                 <span class="p">}</span>
@@ -256,14 +254,12 @@ new fullMap struct, which is pretty straightforward:</p>
     <span class="k">for</span> <span class="nx">e</span> <span class="o">:=</span> <span class="nx">f</span><span class="p">.</span><span class="nx">elevation</span><span class="p">;</span> <span class="nx">e</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="o">--</span> <span class="p">{</span>
         <span class="k">for</span> <span class="nx">h</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">h</span> <span class="p">&lt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span> <span class="nx">h</span><span class="o">++</span> <span class="p">{</span>
             <span class="k">for</span> <span class="nx">w</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">w</span> <span class="p">&lt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span> <span class="nx">w</span><span class="o">++</span> <span class="p">{</span>
-                <span class="c1">// if the element has already been</span>
-                <span class="c1">// assigned, skip it</span>
+                <span class="c1">// if the element has already been assigned, skip it</span>
                 <span class="k">if</span> <span class="nx">f</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
                     <span class="k">continue</span>
                 <span class="p">}</span>
 
-                <span class="c1">// if the random value meets our criteria,</span>
-                <span class="c1">// it&#39;s a peak</span>
+                <span class="c1">// if the random value meets our criteria, it&#39;s a peak</span>
                 <span class="k">if</span> <span class="nx">rand</span><span class="p">.</span><span class="nx">Intn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="p">&lt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">peakProbability</span> <span class="p">{</span>
                     <span class="nx">f</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">h</span><span class="p">][</span><span class="nx">w</span><span class="p">]</span> <span class="p">=</span> <span class="nx">e</span>
                 <span class="p">}</span>

@@ -77,14 +77,12 @@ func Generate() {
 	for e := elevation; e > 0; e-- {
 		for h := 0; h < height; h++ {
 			for w := 0; w < width; w++ {
-				// if the element has already been
-				// assigned, skip it
+				// if the element has already been assigned, skip it
 				if fullMap[h][w] > 0 {
 					continue
 				}
 
-				// if the random value meets our criteria,
-				// it's a peak
+				// if the random value meets our criteria, it's a peak
 				if rand.Intn(100) < peakProbability {
 					fullMap[h][w] = e
 				}
@@ -174,14 +172,12 @@ func (f *fullMap) Generate() {
 	for e := f.elevation; e > 0; e-- {
 		for h := 0; h < f.height; h++ {
 			for w := 0; w < f.width; w++ {
-				// if the element has already been
-				// assigned, skip it
+				// if the element has already been assigned, skip it
 				if f.elements[h][w] > 0 {
 					continue
 				}
 
-				// if the random value meets our criteria,
-				// it's a peak
+				// if the random value meets our criteria, it's a peak
 				if rand.Intn(100) < f.peakProbability {
 					f.elements[h][w] = e
 				}
