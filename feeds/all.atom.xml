@@ -1326,4 +1326,562 @@ Saxophonists in naval suits.&lt;/p&gt;
 &lt;p class="text-center"&gt;Greatest Sri Lankan album cover design ever?&lt;/p&gt;
 
 &lt;hr&gt;
-&lt;p&gt;&lt;a href="https://medium.com/@janithl/a-brief-history-of-my-work-music-2efd190619e8"&gt;&lt;em&gt;Originally Posted on Medium&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="music"></category><category term="uni"></category><category term="work"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://medium.com/@janithl/a-brief-history-of-my-work-music-2efd190619e8"&gt;&lt;em&gt;Originally Posted on Medium&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="music"></category><category term="uni"></category><category term="work"></category></entry><entry><title>Some things I wish I knew as a young startup dev</title><link href="https://janithl.github.io/2018/06/some-things-i-wish-i-knew-as-a-young-startup-dev/" rel="alternate"></link><published>2018-06-08T19:17:00+05:30</published><updated>2018-06-08T19:17:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2018-06-08:/2018/06/some-things-i-wish-i-knew-as-a-young-startup-dev/</id><summary type="html">&lt;p&gt;As some of you might know, I started my career as the first
+developer at a startup, way back in 2012. It was a challenging
+but rewarding experience, and I got to learn a lot and explore
+the full breadth of the software stack. The following are some
+learnings that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As some of you might know, I started my career as the first
+developer at a startup, way back in 2012. It was a challenging
+but rewarding experience, and I got to learn a lot and explore
+the full breadth of the software stack. The following are some
+learnings that I wish I could tell my younger self.&lt;/p&gt;
+&lt;h3&gt;Prototype like your life depends on it&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I know you guys are restless to get started, but before you
+write a single line of code — Make a prototype and run it by your client”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I heard this line from one of the co-founders of a very successful
+software services company. In a startup, the client might be your
+founder who’s sitting in the desk in front of you, but code is costly
+to work and rework. Always prototype, at least on paper. It’ll help
+everyone visualise what they’re building, and see issues and limitations
+before you even start on the implementation.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Paper Prototype" src="https://janithl.github.io/images/paper-prototype.jpg"&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;Image by &lt;a href="https://www.flickr.com/photos/21218849@N03"&gt;Samuel Mann&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Write a spec, and check it twice&lt;/h3&gt;
+&lt;p&gt;Software is all about the spec. It defines the scope and the tests that
+need to pass to mark the work as done. A spec might be as simple as a user
+story followed by some acceptance criteria in the &lt;a href="http://docs.behat.org/en/v2.5/guides/1.gherkin.html"&gt;Gherkin format&lt;/a&gt;, but it’s
+very important for estimations, avoiding the dreaded scope creep, and writing
+high quality code.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A sample spec:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As a &lt;strong&gt;logged in user&lt;/strong&gt;,&lt;/p&gt;
+&lt;p&gt;I want to &lt;strong&gt;access the Account page&lt;/strong&gt;,&lt;/p&gt;
+&lt;p&gt;so that I can &lt;strong&gt;see my Account Settings&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Acceptance criteria:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Feature:&lt;/span&gt;&lt;span class="nf"&gt; Access account settings page&lt;/span&gt;
+
+&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; Janith accesses the account settings page&lt;/span&gt;
+
+&lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;I am logged in as &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;janith@startup.lk&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot;,&lt;/span&gt;
+&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;I am in the home page&lt;/span&gt;
+
+&lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;I click on &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;Account&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot; on the top menu,&lt;/span&gt;
+
+&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;I am navigated to the &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;Account&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot; page,&lt;/span&gt;
+&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;I can see my Account Settings.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Remember, you will most probably be your own QA, so write a solid automated
+test suite that covers these conditions.&lt;/p&gt;
+&lt;h3&gt;Timebox, timebox, timebox&lt;/h3&gt;
+&lt;p&gt;You probably won’t have a Project Manager, nor will anyone really care about
+Agile or sprints. The constant mantra will be &lt;em&gt;“just get it shipped”&lt;/em&gt;. This is
+damaging in two aspects: a team without a welldefined end goal and a timeframe
+to achieve it in will drift and probably get demotivated, and you will not be
+able to set up a good measure of how much work your team is able to tackle in a
+given period of time--which will make it really difficult to draw up a project
+timeline.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sprint Plan" src="https://janithl.github.io/images/sprint-plan.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Avoid this trap. Set up 1 or 2 week sprints, take up only stories that the team is
+confident they can achieve in that timebox, and &lt;a href="https://medium.com/softwaredevtools/agile-retrospectives-why-your-team-should-be-having-them-even-if-youre-not-in-the-tech-industry-b98c3df6501d"&gt;&lt;strong&gt;have a retro&lt;/strong&gt; at the end of each sprint
+to discuss what went well, what failed, and how the team can improve&lt;/a&gt;. Try your best to
+ship production code at the end of every sprint. It will give the team a sense of
+achievement, and &lt;a href="https://ma.tt/2010/11/one-point-oh/"&gt;that which is most valuable: customer feedback&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Know when to use Frameworks and Libraries&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;There are some terrible frameworks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Often, code you write from the ground-up for a specific purpose will be faster and more performant.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both of the points above a valid, and I avoided using PHP and frontend Javascript
+frameworks for the longest time. This cost us a lot in terms of delivery speed and
+maintainability, and especially made onboarding new developers hell. I still wonder
+how things would’ve turned out had I used — say, Laravel or Python with Flask, or
+KnockoutJS from the earliest days. We probably would’ve shipped a lot more features,
+and at much higher quality.&lt;/p&gt;
+&lt;h3&gt;Read up, seek support&lt;/h3&gt;
+&lt;p&gt;Look, when it’s a tiny startup and it’s just two junior devs fighting fires every
+day, you will miss out on a lot. You won’t have leads who will guide you on best
+practices and design patterns, or architects who explain why TDD is awesome, and
+why you should read &lt;a href="https://www.goodreads.com/book/show/3735293-clean-code"&gt;Clean Code by Robert C. Martin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It will be up to you to reach out: follow your &lt;a href="https://twitter.com/dan_abramov"&gt;favourite&lt;/a&gt; &lt;a href="https://twitter.com/dhh"&gt;library&lt;/a&gt; &lt;a href="https://twitter.com/John_Papa"&gt;authors&lt;/a&gt; on Twitter,
+subscribe to a few good tech blogs on Medium and turn on the “Daily Digest” email.
+Participate in the community and tech meet ups, and try to reach out to batch mates
+or seniors working in bigger companies for advice and tips. There are so many people
+willing to help if only you’d ask.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Workshop" src="https://janithl.github.io/images/workshop.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;So yeah. Those are a few things I learned the hard way, and I wouldn’t trade it for the world. I hope you find it useful.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://medium.com/@janithl/some-things-i-wish-i-knew-as-a-young-startup-dev-d6475d3f8151"&gt;&lt;em&gt;Originally Posted on Medium&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category><category term="people"></category><category term="work"></category></entry><entry><title>සමාජ ජාල ඇත්තටම අවුල්ද?</title><link href="https://janithl.github.io/2017/05/is-social-media-bad-si/" rel="alternate"></link><published>2017-05-25T20:58:00+05:30</published><updated>2017-05-25T20:58:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-05-25:/2017/05/is-social-media-bad-si/</id><summary type="html">&lt;p&gt;අද ෆේස්බුක් ගිනුමක් නැතිකෙනෙක් බෙහෙතකටවත් හොයාගන්න අමාරුයි. මේ බ්ලොග් එක කියවන ඔය ඇත්තොනම් ඊටත් එහා
+ගිය නානාප්‍රකාර සමාජ ජාල ගොඩක ඉන …&lt;/p&gt;</summary><content type="html">&lt;p&gt;අද ෆේස්බුක් ගිනුමක් නැතිකෙනෙක් බෙහෙතකටවත් හොයාගන්න අමාරුයි. මේ බ්ලොග් එක කියවන ඔය ඇත්තොනම් ඊටත් එහා
+ගිය නානාප්‍රකාර සමාජ ජාල ගොඩක ඉන්නව ඇති.&lt;/p&gt;
+&lt;p&gt;දෙයක් ප්‍රචලිත වෙන්න පටන්ගත්තහම ඒක ඇද හොයන සෙට් එකකුත් අනිවා ඉන්නවනෙ. &lt;a href="http://www.npr.org/sections/health-shots/2016/09/07/492871024/facebook-and-mortality-why-your-incessant-joy-gives-me-the-blues"&gt;ඔය කට්ටිය ආටිකල් දෙක තුනක්
+හොයාගෙන&lt;/a&gt;, ඒව උඩ දාගෙන "ෆේස්බුක් මාරයා" ගැන කතා කරන්න පටන් ගන්නව. "දේකට ගෙවන්නෙ නැත්තම්  ඔයා
+තමයි වෙළඳ භාණ්ඩෙ", "ඕකට දාන දත්ත වල අයිතිය ඒගොල්ලන්ගෙ" වගේ බය හිතෙන කතා ගොඩක් ඔය සෙට් එකෙන් අහගන්න
+පුළුවන්.&lt;/p&gt;
+&lt;p&gt;මේ හැමදේම වැරදියි කියල මම කියන්නෙ නෑ. විශේෂයෙන්ම බුකී සමාගමත්, ඒගොල්ලන්ගෙ බිස්නස් කෙරීගෙන යන විදිහත්, 
+ඒගොල්ලො වෙළඳ දැන්වීම වලට ඔබව නතුකරගන්න යොදන උපාය මාර්ගත් දැක්කහම අපිට ඔකෙ නරක පැත්ත ගැන යම් වැටහීමක්
+ලැබෙනව. ඒත් එක්කම එකේකාගෙ ඕපාදූප හොයන්නයි, රට ගිනි තියන පට්ට පල් බොරු ගහන්නයි, අල්ලපු ගෙදර මිනිහට
+පේන්න නයි අරින්නයි බුකී යන ඕනෙතරම් මිනිස්සු ඉන්නව.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;හැබැයි ඔය ඔක්කොටම වඩා සමාජ ජාලත්, විවෘත අන්තර්ජාලයත් හරහා  අපිට ඉතාමත්ම වැදගත් දෙයක් ලැබෙනව.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://si.wikipedia.org/wiki/1971_%E0%B6%A2%E0%B7%80%E0%B7%92%E0%B6%B4%E0%B7%99_%E0%B6%9A%E0%B7%90%E0%B6%BB%E0%B7%90%E0%B6%BD%E0%B7%8A%E0%B6%BD"&gt;1971 ජවිපෙ කැරැල්ලෙදි&lt;/a&gt; කැරලිකරුවො අත්පත් කරගන්න හදපු ඉතාමත්ම වැදගත් මරමස්ථානයක් විදිහට අපිට ශ්‍රී ලංකා ගුවන්
+විදුලි සංස්ථාව හඳුනගන්න පුළුවන්. ඒ දවස් වල ටී. වී. ඇවිත් තිබුනෙ නෑ. රටෙ ලෝකෙ වෙන දේ දැනගන්න සාමාන්‍ය මිනිහෙකුට
+තිබිච්ච එකම විදිහ රේඩියෝවයි. ඒ වගේම ආණ්ඩුවත් තම පාලනය ගෙනියන්න, විරුද්ධ මත යටපත් කරන්න ගුවන් විදුලිය
+උපයෝගී කරගත්ත. එහෙම වැදගත් දෙයක් අල්ලගන්න කැරලිකරුවො ප්‍රමුඛතාව දෙන එක ඉතිං පුදුමයක් නෙමෙයි.&lt;/p&gt;
+&lt;p&gt;අද කැරැල්ලක් ඇතිවුනොත් වෙබ් සයිට්, බුකි පිටු, ට්විටර් අකවුන්ට් කී දාහක් කියල අල්ලගන්න ද?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Traditional vs Social Media" src="https://janithl.github.io/images/social-media.png"&gt;&lt;/p&gt;
+&lt;p&gt;අද එහෙම කරන්න බෑ. තොරතුරු පිළිබඳව ආණ්ඩුවටත්, මාධ්‍ය ආයතන වලටත් තිබිච්ච ඒකාධිකාරිය අද බිඳ වැටිල. ඉහත කියපු
+කැරලි කාලෙදි වගේම, 80/90 දශකවල යුද්ධ පුවත් වාරණයත් ඒ දවස් වල රෑට ප්‍රවෘත්ති බලපු ඕනම කෙනෙක්ට මතක ඇති. අද
+මේ දේ කරන්න බොහොම අමාරුයි. මොකද මේ සියල්ල සමාජ ජාල තුළින්, ඡායාරූප/වීඩියෝද ඇතුළුව  විදුලි වේගෙන් පැතිරෙන
+නිසා. ආණ්ඩු පෙරලීමේ බලය බුකියට තියෙනව කියන්න අමාරුයි, ඒත් ආණ්ඩුව වගේම විවිධ ව්‍යාපාරද සමාජ ජාල නිසා සීරුවෙන්
+ඉන්නව කියල කියන්න පුළුවන්. පාරිභෝගිකයන්ට සලකන ආකාරයේ ඉඳල විවිධ අක්‍රමිකතා වගේ දේවල් සමාජ ජාල වලින් පැතිරිලා,
+එම සමාගම් අසරණ වෙච්ච වාර අනන්තයි.&lt;/p&gt;
+&lt;p&gt;පාලක පැලැන්තිය සමාජ ජාල වලට බයයි කියල අපිට උපකල්පණය කරන්න පුළුවන්. තමන්ගෙ බලය හීණ වෙන ඕනැම දෙයක් ගැන
+සැකෙන් ඉන්න මේ උදවිය පාලනය කරන්න කොහෙත්ම බැරි සමාජ ජාල නිසා තමන්ගෙ පට්ටම නැතිවෙයි කියල බයවෙලයි ඉන්නෙ.&lt;/p&gt;
+&lt;p&gt;සමාජ ජාලත්, ඉන් පිටත විවෘත අන්තර්ජාලයත්  100% හොඳ දෙයක් නෙමෙයි. ඒත් ඒකෙ තියන නරක දේට වඩා අපිට ලැබෙන
+බලය වැදගත් කියන එකයි මම හිතන්නෙ. ගතානුගතිකව අපිට කියවෙන, ඇහෙන, බැලෙන, ආකල්පමය වශයෙන අපිට සමාන
+අදහස් තියෙන අපේම මිත්‍ර කණ්ඩායමට (&lt;a href="https://www.wired.com/2016/11/facebook-echo-chamber/"&gt;"echo chamber"&lt;/a&gt;) එහා ගිහින්, එහා පැත්තෙ මිනිහ කියන්නෙ මොනාද කියල
+බලන්න අපිට අවස්ථාවක් ලැබෙනව. සමාජයේ එක් සීමිත පිරිසක් අරක්ගත්ත &lt;em&gt;"ජන සන්නිවේදනය"&lt;/em&gt; කියන එක හැබෑවෙන්ම 
+&lt;em&gt;"ජනතාවට"&lt;/em&gt; උරුම කරන්න සමාජ ජාල වලට හැකි වෙලා තියෙනව. එච්චර වදගත් දෙයක් මුළුමුනින්ම "අවුල්" කියල ඉවත දාන
+එක අන්ත මෝඩකමක්.&lt;/p&gt;
+&lt;p&gt;අර &lt;a href="http://www.npr.org/sections/health-shots/2016/09/07/492871024/facebook-and-mortality-why-your-incessant-joy-gives-me-the-blues"&gt;උඩ ලින්ක් කරපු NPR ආටිකල් එකේ&lt;/a&gt; තියෙනව වගේ:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Kraut's advice: "Don't treat it as simple entertainment and consume everything that is 
+put in front of you," he said. "Use it more proactively to communicate with people that 
+you care about."&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="sinhala"></category><category term="people"></category><category term="politics"></category></entry><entry><title>Links: May 25</title><link href="https://janithl.github.io/2017/05/links-may-25/" rel="alternate"></link><published>2017-05-25T07:33:00+05:30</published><updated>2017-05-25T07:33:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-05-25:/2017/05/links-may-25/</id><summary type="html">&lt;p&gt;Media coverage of ISIS tends to veer from the utilitarian (covering attacks and the daily
+body-counts of ongoing operations against them) to the absurd, like the story of &lt;a href="https://www.usatoday.com/story/news/nation-now/2017/05/02/fbi-translator-secretly-married-islamic-state-leader/309137001/"&gt;how a
+"smart but naive" FBI translator fell in love with a German rapper turned ISIS leader&lt;/a&gt;
+she was supposed to be …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Media coverage of ISIS tends to veer from the utilitarian (covering attacks and the daily
+body-counts of ongoing operations against them) to the absurd, like the story of &lt;a href="https://www.usatoday.com/story/news/nation-now/2017/05/02/fbi-translator-secretly-married-islamic-state-leader/309137001/"&gt;how a
+"smart but naive" FBI translator fell in love with a German rapper turned ISIS leader&lt;/a&gt;
+she was supposed to be investigating, and flew over to Syria to marry him &lt;em&gt;(wtaf?!)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Lately, with Mosul being liberated, sobering reports have come to light of life under 
+ISIS, and the violent campaign that freed Mosul.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Earlier this month, &lt;a href="https://scroll.in/article/836791/why-use-rockets-a-blow-by-blow-account-of-how-airstrikes-wrecked-homes-in-mosul-iraq"&gt;Scroll.in&lt;/a&gt; carried the story of two families and their
+experiences in the carnage.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Khalil then heard a loud whoosh - the sound of incoming rockets. "I recognised it," he
+said, having enlisted in the army for the mandatory one-year service after he completed 
+college in 2000.&lt;/p&gt;
+&lt;p&gt;The first two rockets hit his uncle's house. The impact pushed Khalil into the 
+basement. A third rocket landed on his friend's garage. A fourth hit a corner of his own 
+house.&lt;/p&gt;
+&lt;p&gt;"Everything went dark," he said. "All this happened in 15 minutes."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The "Uncle" in the story is the world-renowned Civil Engineer &lt;a href="http://www.workers.org/2017/01/26/the-battle-for-mosul/#.WQyTvlOGPVo"&gt;Dr Mohamad Tyeb Al-Layla&lt;/a&gt;, who died in the conflict. Generally, education seems to have taken the 
+biggest hit during the period of ISIS control. &lt;a href="http://www.bbc.com/news/world-middle-east-39525749"&gt;A BBC report from two days ago&lt;/a&gt; says:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Our lives under IS were empty and boring as we were locked in our homes. They shut down
+our universities and wrote on the front door: "A woman's kingdom is her home". &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On universities:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Most of those institutions were shut down, and education under IS was focused on
+teaching jihad and combat techniques. Women and men were separated and women were told to
+completely cover up.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This obsession with female dress was referred to in the earlier story as well:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[Hafidh's daughter, 21-year-old Nawal] brought out the dress she had to wear under
+ISIS: the abaya, or loose-fitting gown, gloves, socks, niqab, or face veil with slits for
+the eyes, and an eye-shield on top of it. "We could hardly see when we went out," she
+said. Any deviation was punished with fines, whiplashes and street executions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="Women in Mosul" src="https://janithl.github.io/images/mosul.png"&gt;&lt;/p&gt;
+&lt;p&gt;The BBC article carries a more gruesome depiction of what the Hisba (religious police) was
+capable of:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I will never forget that awful day and what happened to a little seven-year-old on our
+street. The girl had come down to the small neighbourhood shop to buy some sweets when IS
+militants approached her. The girl, chatting innocently to the old shop owner, was asked
+by the militants where her home was. She pointed it out before running and hiding. Her
+parents come to see what was going on and the IS fighters lectured them about how their
+daughter was violating Sharia law by being alone with the seller.&lt;/p&gt;
+&lt;p&gt;After a long debate, the fighters decided the girl's punishment was to be bitten or 
+pinched in her face or on her hands by the women of the Hisba [the religious police], or 
+the more adequately described "monsters of Hisba".&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The terrified mother begged them to punish her instead of her young daughter but there
+is no room for discussion with IS. The child was punished in front of her screaming
+mother. The monsters aggressively and repeatedly beat her and pinched her. The child was
+screaming until she passed out and her heart stopped. The wailing mother completely lost
+her mind when she saw her child die in front of her.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A conflict that has lasted more than half a decade (and has involved everything from
+alleged chemical attacks, to drowning toddlers seeking refuge, to young Yazidi girls
+forced into sexual slavery) still manages to produce stories of the most senseless crimes
+imaginable.&lt;/p&gt;</content><category term="conflict"></category><category term="geopolitics"></category><category term="religion"></category></entry><entry><title>අල්පේච්ඡතාව</title><link href="https://janithl.github.io/2017/05/alpechchathawa-si/" rel="alternate"></link><published>2017-05-04T21:18:00+05:30</published><updated>2017-05-04T21:18:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-05-04:/2017/05/alpechchathawa-si/</id><summary type="html">&lt;p&gt;&lt;a href="http://www.divaina.com/2010/06/06/feature07.html"&gt;&lt;strong&gt;හිස්‌ අහසේ සරණ  විහඟෙක්‌ සේ&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;භික්‍ෂුව බහු භාණ්‌ඩික නොවිය යුතුයි. යම් දිසාවකට යන කල්හි පාසිවුරු, ඇතිරිලි, තෙල්, සකුරු ආදී බොහෝ උපකරණ පොදි 
+බැද ම …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://www.divaina.com/2010/06/06/feature07.html"&gt;&lt;strong&gt;හිස්‌ අහසේ සරණ  විහඟෙක්‌ සේ&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;භික්‍ෂුව බහු භාණ්‌ඩික නොවිය යුතුයි. යම් දිසාවකට යන කල්හි පාසිවුරු, ඇතිරිලි, තෙල්, සකුරු ආදී බොහෝ උපකරණ පොදි 
+බැද මිනිසුන් ලවා උරෙන් හෝ හිසින් උසුලවාගෙන ගිsය භික්‍ෂූන් බුදුන් කල සිට තිබේ. සැහැල්ලු චාම් පැවතුම් ඇති භික්‍ෂුවට 
+අවශ්‍ය වන්නේ අට පිරිකරම පමණි.&lt;/p&gt;
+&lt;p&gt;තනිපට සිවුර, දෙපට සිවුර, අඳනය, පටිය, පාත්‍රය, කඩකැත්ත (දැලිපිහිය), ඉඳිකටුව සහ පෙරහන්කඩ අටපිරිකරයි.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;අටපිරිකර පමණක්‌&lt;/em&gt; ඇතිව යම් දිසාවක ගමන් කරන භික්‍ෂුව පියාපත් සහිතව &lt;em&gt;සිව්දිගට ඉගිල්ලී යන පක්‍ෂියකු මෙන් නිදහස්&lt;/em&gt;‌ යෑයි 
+බුදුහිමි කරණීය මෙත්ත සූත්‍රයේදී සඳහන් කරයි.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="Wandering Monk" src="https://janithl.github.io/images/wandering-monk.png"&gt;&lt;/p&gt;</content><category term="sinhala"></category><category term="religion"></category></entry><entry><title>ජීවනෝපාය ජීවනාලිය කරගැනීම</title><link href="https://janithl.github.io/2017/04/thoughts-on-being-busy-si/" rel="alternate"></link><published>2017-04-25T23:41:00+05:30</published><updated>2017-04-25T23:41:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-04-25:/2017/04/thoughts-on-being-busy-si/</id><summary type="html">&lt;p&gt;ගොඩදෙනෙක් "රාජකාරිය දේවකාරිය" කරගෙන තියෙනවනෙ. මාත් ඒ වගේ කෙනෙක්. ජීවිතේ මොන මොන කරදර තිබුනත්
+මාසෙ අන්තිමට පඩිය හරි හම්බවෙනවනෙ කියාගෙන …&lt;/p&gt;</summary><content type="html">&lt;p&gt;ගොඩදෙනෙක් "රාජකාරිය දේවකාරිය" කරගෙන තියෙනවනෙ. මාත් ඒ වගේ කෙනෙක්. ජීවිතේ මොන මොන කරදර තිබුනත්
+මාසෙ අන්තිමට පඩිය හරි හම්බවෙනවනෙ කියාගෙන බොක්කෙන් බැහැල වැඩ කරපු ඩයල් එකක්. එහෙම කියල අර ස්ට්‍රෙස් හදාගෙන
+දුක් වින්දෙත් නෑ. (එහෙම පීඩාකාරී දවස් නොතිබුනාමත් නෙමෙයි. ඒත් මම ඉන්න IT ෆීල්ඩ් එකේ ඕව සුලභ දසුන්.) කොහොම
+උනත්, ජීවිතේ ඒ වගේ යම් ඉලක්කයක් තියාගෙන, කාර්ය බහුල වෙලා ඉන්නකොට දුක අඩුයි. ඕනෙ ඕනෙ නැති දේවල් ගැන
+වැඩිය එරීගෙන හිතන්න වෙලා නැතිවෙනව. කෙලි ප්‍රශ්න, රටේ ප්‍රශ්න, බොන්න ඕනෙ ප්‍රශ්න ඔක්කොම අමතක වෙනව හොඳ
+කෝඩ් කෑල්ලක් ගහන්න සෙට් වුනාම. &lt;/p&gt;
+&lt;p&gt;දැන් ඉතින් ඔහොම කොහෙන් කොහෙන් හරි ගේම ගැටගහන් හිටපු අපේ උන්දට රස්සාව දාල යන්න උනා මාස තුනකට කලින් විතර.
+මොරටුව කැම්පස් එකේ කරන් යන MSc එකේ වැඩ කෝටියක් ගොඩ ගැහිල තිබුනෙ. මතක කාලෙක ඉඳන් ඇණයක් වෙලා
+තිබ්බ  &lt;em&gt;ස්ටැටිස්ටික්ස්&lt;/em&gt; සබ්ජෙක්ට් එක මේකෙත් තිබ්බ. ඒක දැන් අවුරුදු දෙකක් තිස්සෙ ෆේල්. මේ පාර ගෙදර ඉඳන් හරි ගොඩ දානව 
+කියල තමයි ගේමට බැස්සෙ. හොඳ වෙලාවට &lt;a href="https://www.udacity.com/course/intro-to-descriptive-statistics--ud827"&gt;උඩෑසිටී&lt;/a&gt; එකේ හොඳ ස්ටැට් කෝස් එකක් සෙට් වුනා. නැත්තම් ඒක ආයෙත් 
+කපෝති.&lt;/p&gt;
+&lt;p&gt;හරි හරි, මම කියන්න පටන් ගත්ත කතාව නෙමෙයිනෙ.&lt;/p&gt;
+&lt;p&gt;මට කියන්න ඕනෙ වුනේ කරන්න රස්සාවක් නැති වුනාම ඔය හිත ඇතුලෙ තියෙන කුණුගොඩවල් ඔක්කොම එලියට එනව. ඕනෙ 
+නැති හැම මගුල ගැනම කියෝ කියෝ විග්‍රහ දෙන්න ෆුල් ට්‍ර්යි එක දෙනව. &lt;/p&gt;
+&lt;p&gt;ඉස්සර තිබ්බ වගේ තනියෙම හිතල &lt;a href="https://janithl.github.io/2016/07/busroutejs/"&gt;ඇප් එකක්&lt;/a&gt;, ඩිසයින් එකක්, &lt;a href="https://janithl.github.io/2016/09/the-unp-at-70/"&gt;දත්ත ටිකක් අරන් ඒ ගැන ඇනෑලිසිස් එකක්&lt;/a&gt; වගේ 
+දේවල් කරන්න  කිසිම උනන්‍දුවක් නෑ. යසට හිටපු සතාට මොනා වුනාද කියල හිතාගන්න මටවත් බෑ. 😢&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Motivation - Owlturd Comix" src="https://janithl.github.io/images/motivation.png"&gt;
+&lt;p class="text-center"&gt;&lt;em&gt;උපුටාගැනීම:&lt;/em&gt; &lt;a href="https://www.facebook.com/owlturdcomix/photos/a.248552535284688.1073741825.218730561600219/864263317046937/?type=3&amp;amp;theater"&gt;Owlturd Comix&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;අලුතෙන් දෙයක් කරන්න හිතෙනවනම් ඒ ගිටාර් ගැහිල්ල විතරයි. ඒකත් පොඩ්ඩක් හිමින් සීරුවේ කරන්නෙ, මොකෝ "පාඩම් 
+කරන්නැයි" කියල නැවතිච්ච එකා කලාවට නැඹුරු වෙන්න ගත්තහම ගෙදර කට්ටිය පොඩ්ඩක් ටෙනා ගහනව.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The Strat" src="https://janithl.github.io/images/the-strat.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;ඉතින් ඔයවගේ මනෝවිකාර සීන් ටිකක් එක්ක තමයි පහුගිය මාස තුන ගත කරේ. ස්ටැට් විභාගෙ මේ සෙනසුරාද. පාස් වුනොත්
+හොඳයි, මොකෝ නැත්තම් "කොච්චර කළත් මෙච්චර තමයි" කියල අතෑරල දාන්න තමයි වෙන්නෙ. &lt;/p&gt;</content><category term="sinhala"></category><category term="work"></category><category term="uni"></category></entry><entry><title>Retaining</title><link href="https://janithl.github.io/2017/03/retaining/" rel="alternate"></link><published>2017-03-28T22:48:00+05:30</published><updated>2017-03-28T22:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-28:/2017/03/retaining/</id><summary type="html">&lt;p&gt;There was a really interesting &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can 
+Managers Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which asks a panel of female 
+technical employees on reasons they left jobs or in some cases even change their career 
+paths.&lt;/p&gt;
+&lt;p&gt;I believe it has some …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There was a really interesting &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can 
+Managers Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which asks a panel of female 
+technical employees on reasons they left jobs or in some cases even change their career 
+paths.&lt;/p&gt;
+&lt;p&gt;I believe it has some really important takeaways not just for managers of technical teams,
+but all managers and all employees of whetever gender.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I’ve left companies after years of chaotically fighting fires while simultaneously
+needing to build new features, or after repeatedly getting disorganized braindumps or
+single line descriptions from stakeholders rather than the thoughtful, detailed specs
+they’ve promised.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is something I've had to deal with personally as well: underspecification, or the
+people in charge not really knowing what they want. Rewriting code to fit their latest
+whim or fancy is wasteful and makes you feel like your project is going nowhere. Also,
+&lt;a href="https://en.wikipedia.org/wiki/Scope_creep"&gt;scope creep&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Making sure your team members have a comfortable relationship with someone in leadership
+outside their reporting chain is important; having someone who they feel they can go to
+with manager-related problems is key.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As the recent &lt;a href="https://www.susanjfowler.com/blog/2017/2/19/reflecting-on-one-very-strange-year-at-uber"&gt;Susan Fowler/Uber debacle&lt;/a&gt; showed, though, upper leadership tends to
+favour the manager's side over the employee's.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Especially as a woman, I worry about being labeled hyper-sensitive, or that my gender
+will influence a person’s reaction to my feedback (e.g. the perception that women are
+hysterical). If a company’s leadership feels too tightly knit – where all the managers
+and founders are friends that aren’t open to critical feedback from employees – I won’t
+even try to work out the issue before leaving.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;See: the Uber thing above.&lt;/p&gt;
+&lt;p&gt;And finally, this gem:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;That employee shouldn’t have to train their boss in order to make the relationship
+productive.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On finding a new job:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I might see an email from a recruiter about a job that sounds exciting and that pays
+well. I’ll start to consider leaving, and then someone I work with – usually my boss or
+manager – does something that makes me angry. Angry enough to rewrite my resume, email a
+recruiter back, brush up on interview questions and whiteboarding, and get off my butt
+and go interview.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Or deciding to stay:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It’s important that my boss checks in with me even if I seem happy or like I’m doing
+really well. I don’t want to be asked for feedback only when things aren’t going well.
+When my boss respectfully listens to feedback and strives to incorporate at least some of
+it, I’m much more likely to stay at a company.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On working at a startup:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;At a startup it can be hard to decipher whether your company is doing well, especially
+since progress isn’t always in a continuous, upward direction. As an employee, you’re not
+always privy to important information that would help you figure it out, especially if the
+company is struggling. I’ve often felt that trying to determine how well my company is
+doing is a guessing game. So then I turn to assessing my personal growth because that’s in
+theory more straight-forward. I ask myself questions like: How much have I learned? Do I
+get feedback? Am I challenged? What else can I accomplish here? If I can get excited about
+what’s next for me at a company, I will stay. If I can mix things up enough and learn new
+things where I am without actually finding a new job, I will do that.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Anyway, the &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;&lt;strong&gt;full blog post&lt;/strong&gt;&lt;/a&gt; is really interesting and a must-read for both 
+managers and employees. So do yourself a favour and go read!&lt;/p&gt;</content><category term="people"></category><category term="politics"></category><category term="work"></category></entry><entry><title>Animal Crackers</title><link href="https://janithl.github.io/2017/03/animal-crackers/" rel="alternate"></link><published>2017-03-19T21:52:00+05:30</published><updated>2017-03-19T21:52:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-19:/2017/03/animal-crackers/</id><summary type="html">&lt;p&gt;&lt;img alt="Animal Crackers by Richard de Zoysa" src="https://janithl.github.io/images/animal-crackers.png"&gt;&lt;/p&gt;
+&lt;p&gt;Thimal is making me read &lt;a href="https://en.wikipedia.org/wiki/Richard_de_Zoysa"&gt;Richard de Zoysa&lt;/a&gt;'s work.&lt;/p&gt;
+&lt;p&gt;Back when the dictator in chief cared about what was written in English about the
+government, and dissent was treated with abduction, torture and a gunshot to the back of
+the head (if you were lucky), de Zoysa stood for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Animal Crackers by Richard de Zoysa" src="https://janithl.github.io/images/animal-crackers.png"&gt;&lt;/p&gt;
+&lt;p&gt;Thimal is making me read &lt;a href="https://en.wikipedia.org/wiki/Richard_de_Zoysa"&gt;Richard de Zoysa&lt;/a&gt;'s work.&lt;/p&gt;
+&lt;p&gt;Back when the dictator in chief cared about what was written in English about the
+government, and dissent was treated with abduction, torture and a gunshot to the back of
+the head (if you were lucky), de Zoysa stood for, and died for, his convictions.&lt;/p&gt;
+&lt;p&gt;Typeset in LaTeX. I wanted to do something fancy with illustrations, but it would've been
+overkill as the words stand by themselves.&lt;/p&gt;</content><category term="conflict"></category><category term="politics"></category></entry><entry><title>It's Alllive!</title><link href="https://janithl.github.io/2017/03/its-alllive/" rel="alternate"></link><published>2017-03-12T06:22:00+05:30</published><updated>2017-03-12T06:22:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-12:/2017/03/its-alllive/</id><summary type="html">&lt;p&gt;It takes ages to run, isn't optimized at all (bad by even my standards - it queries 
+sqlite for the same value over and over again in a single loop), runs off basic TF-IDF
+and nothing fancier, and fails to make obvious connections (as the screenshot below 
+illustrates).&lt;/p&gt;
+&lt;p&gt;I feel nervous …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It takes ages to run, isn't optimized at all (bad by even my standards - it queries 
+sqlite for the same value over and over again in a single loop), runs off basic TF-IDF
+and nothing fancier, and fails to make obvious connections (as the screenshot below 
+illustrates).&lt;/p&gt;
+&lt;p&gt;I feel nervous even posting about it because who knows how it'll turn out? Or if it'll
+ever &lt;em&gt;really&lt;/em&gt; work out there in the real world?&lt;/p&gt;
+&lt;p&gt;But it's a start, and I'm a wee bit proud (and apprehensive).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Indexer Demo" src="https://janithl.github.io/images/terminal-indexer.png"&gt;&lt;/p&gt;</content><category term="uni"></category></entry><entry><title>Links: March 06</title><link href="https://janithl.github.io/2017/03/links-march-06/" rel="alternate"></link><published>2017-03-06T21:06:00+05:30</published><updated>2017-03-06T21:06:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-06:/2017/03/links-march-06/</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;s&gt;Patrio&lt;/s&gt; Posts about links are the last refuge of a scoundrel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Before we get underway, a status update:&lt;/p&gt;
+&lt;p&gt;The number of lines of code I've written in the last 26 days (since I stopped going to
+work) is 0, not counting some late night shenanigans where I thought typing some …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;s&gt;Patrio&lt;/s&gt; Posts about links are the last refuge of a scoundrel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Before we get underway, a status update:&lt;/p&gt;
+&lt;p&gt;The number of lines of code I've written in the last 26 days (since I stopped going to
+work) is 0, not counting some late night shenanigans where I thought typing some Pandas
+code into a terminal was going to solve my issues (it didn't).&lt;/p&gt;
+&lt;p&gt;On the plus side, I've devoured BoJack, and started on &lt;a href="https://en.wikipedia.org/wiki/Letterkenny_(TV_series)"&gt;Letterkenny&lt;/a&gt;. So, there's 
+&lt;em&gt;some&lt;/em&gt; progress. Also I finally managed to finish off the first draft of my PGDip report,
+typeset it in beautiful LaTeX (&amp;lt;3 &amp;lt;3 &amp;lt;3), and send it in. So hopefully I can get around to 
+some real work from now on... &lt;em&gt;*proceeds to write blog post instead*&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://www.theguardian.com/cities/2017/feb/27/sand-mining-global-environmental-crisis-never-heard"&gt;&lt;strong&gt;Sand mining: the global environmental crisis you've probably never heard of&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;tl;dr:&lt;/em&gt; Sand mining sucks, and will destroy ecosystems and infrastructure.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Cities are expanding at a pace and on a scale far greater than at any time in human 
+history. The number of people living in urban areas has more than quadrupled since 1950, 
+to about 4 billion today.&lt;/p&gt;
+&lt;p&gt;In the past few years, China has used more cement than the US used in the entire 20th 
+century. Last year alone, the nation used enough construction sand to cover the entire 
+state of New York an inch deep.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;*looks wearily over Galle Face at the new port city coming up*&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Worldwide, thousands of ships vacuum up millions of tonnes from the seabed each year, 
+tearing up habitats and muddying waters with sand plumes that can affect aquatic life far 
+from the original site.&lt;/p&gt;
+&lt;p&gt;The most dramatic impact of ocean sand mining is surely felt in Indonesia, where sand 
+miners have completely erased at least two dozen islands since 2005.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lots to learn and think about, especially with our recent issues with both sand mining 
+(leading to salinisation of rivers), and the recent controversy (especially in 
+&lt;a href="http://www.colombopage.com/archive_17A/Feb12_1486916112CH.php"&gt;Divulapitiya in the Gampaha district&lt;/a&gt;) regarding soil being illegally mined.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://www.wired.com/2017/03/ann-arbor-fighting-traffic-software-winning/"&gt;&lt;strong&gt;Ann Arbor Is Fighting Traffic With Software - and Winning&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ann Arbor's adaptive traffic signal control system has been playing god for more than a 
+decade, but fiddling engineers continue to tweak its inputs and algorithms. Now it reduces 
+weekday travel times on affected corridors by 12 percent, and weekend travel time by 21 
+percent. A trip along one busy corridor that took under three minutes just 15 percent of 
+the time in 2005 now comes in under that mark 70 percent of the time. That’s enough to 
+convince Ann Arbor’s traffic engineers, who just announced they'll extend this system to 
+all its downtown traffic lights and its most trafficked corridors.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Music to the ears of Colombo commuters stuck in traffic.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Of course, all this may prove little more than a band-aid. Geometry says there are only 
+so many ways to fit a bunch of vehicles on to streets. The best way to beat traffic is to 
+not be part of traffic at all. It's by moving people onto transit (a regional commuter 
+rail plan is hogtied by funding woes and general intransigence), or carpools, or making 
+it easier to walk and bicycle. In the meantime, though, computers are pretty cool.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="http://www.vox.com/a/fenn-treasure-hunt-map"&gt;&lt;strong&gt;In search of Forrest Fenn's treasure&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vox has this wonderful long form piece with video, maps and gorgeous photography. Loved 
+it.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We came here to find a chest filled with $2 million worth of treasure, hidden by an 
+eccentric, wealthy 80-year-old man.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There's poetry with clues, lots of maps and riddles. It's like a Wes Anderson movie.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I am reminded of a telephone conversation we’d had earlier with Scott King, a treasure 
+hunter who failed in his own search. He’d warned us to be wary of &lt;strong&gt;confirmation bias&lt;/strong&gt; - 
+interpreting new evidence as validation of one's preexisting beliefs.&lt;/p&gt;
+&lt;p&gt;The next day, we turn to science. [...] Using geographic data from the clues (e.g., 
+between 5,000 and 10,200 feet; near a water source; near pine trees), they'd narrowed down 
+the original search area from 27,801,289 acres to 591,636 acres — a 98 percent reduction 
+in size. From there, they’d homed in specifically on the Yellowstone National Park area, 
+shrinking the search area to a mere 0.084% of the original.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Using modern GIS tools for treasure hunting... how abou dah?&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;From this Sunday's Sunday Times (yes, I read the paper whenever I can), two interesting
+stories:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.sundaytimes.lk/170305/plus/a-tale-of-the-kandyan-royal-architect-and-court-intrigue-231157.html"&gt;&lt;strong&gt;A tale of the Kandyan royal architect and court intrigue&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The title 'Mulachari' was given to an artificer who was an expert in at least five arts 
+and crafts. As John D'Oyly had observed, there were seven artificers under one Mulachari 
+and it was a coveted position&lt;/p&gt;
+&lt;p&gt;Devendra Mulachari is also credited for some of the iconic historic monuments of the 
+Kandyan Kingdom including the Pattirippuwa or Octagon of the Dalada Maligawa, Cloud Wall 
+(walakulubemma) and the Kandy lake.&lt;/p&gt;
+&lt;p&gt;According to Lawrie's Gazetteer, Devendra Mulachari's first architectural work was the 
+construction of the Bana Maduwa in Middeniya. The place which was used as a meeting place 
+for official and unofficial purposes and also as a preaching hall had been demolished 
+around 2004 as Mr. Waidyasekera notes and was replaced by a Samurdhi meeting place today.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;*sigh*&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.sundaytimes.lk/170305/plus/who-are-we-231172.html"&gt;&lt;strong&gt;'Who are we?'&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Who are Sri Lankans? From where have we come? Are the major ethnic groups and also the 
+Veddahs closely-linked or disparately different? The indisputable findings based on the 
+'Eve Gene' or Mitochondrial DNA (mtDNA) should lead to stronger bonds among the major 
+ethnic groups, making the call 'We are Sri Lankans' louder and clearer.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The evidence that all Sri Lankan ethnic groups are closely interrelated genetically has 
+been piling up for some time, and this is even stronger evidence of that being the case.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is a considerable genetic admixture in contemporary ethnic groups in Sri Lanka - 
+the Sinhalese are closely related to the Sri Lankan Tamils. [...] The Muslims and the 
+Malays are also closely related to each other. &lt;/p&gt;
+&lt;p&gt;West Eurasian haplogroups among the Sinhalese, the Sri Lankan Tamils and the Veddahs 
+suggest early migration of women carrying these haplogroups into the country. [...] 
+Predominance of Indian mtDNA haplogroups among Muslims and Malays support the notion of 
+largely male migration and marriage to local women.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The study size is not huge (about 200 DNA samples in total), and more sequencing of the 
+mtDNA molecule is to be done for even better understanding, but this is pretty sweet. 
+Hopefully the findings make a splash among the general public and we can move over the 
+bickering and start to move forward as a unified nation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Two pretty great tools for dataviz, and stats respectively.&lt;/p&gt;
+&lt;p&gt;Firstly, the &lt;a href="http://pixelmap.amcharts.com/"&gt;&lt;strong&gt;Pixel Map Generator&lt;/strong&gt;&lt;/a&gt;, which lets you paint map segments and draw all 
+sorts of symbols on it. Great tool for generating maps, and they have a district map of
+Sri Lanka as well. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sri Lanka on Pixel Map Generator" src="https://janithl.github.io/images/pixel-map-sri-lanka.png"&gt;&lt;/p&gt;
+&lt;p&gt;Secondly, &lt;a href="http://students.brown.edu/seeing-theory/"&gt;&lt;strong&gt;Seeing Theory&lt;/strong&gt;&lt;/a&gt;, a site that uses D3js 
+visualisations to explain statistics in an easier to understand way to a wider range of 
+students. As someone who's always had trouble with the subject, I'm grateful.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;That's it for now. More, soon. Hopefully more substantive. Or rant-ive. IDK.&lt;/p&gt;</content><category term="biology"></category><category term="conflict"></category><category term="data"></category><category term="people"></category></entry><entry><title>Wanda</title><link href="https://janithl.github.io/2017/02/wanda/" rel="alternate"></link><published>2017-02-23T21:20:00+05:30</published><updated>2017-02-23T21:20:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-02-23:/2017/02/wanda/</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;"What happened, BoJack?"&lt;/p&gt;
+&lt;p&gt;"Same thing that always happens.  You didn't know me, then you fell in love with me, 
+and now you know me."&lt;/p&gt;
+&lt;/blockquote&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;"What happened, BoJack?"&lt;/p&gt;
+&lt;p&gt;"Same thing that always happens.  You didn't know me, then you fell in love with me, 
+and now you know me."&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="biology"></category><category term="people"></category></entry><entry><title>February</title><link href="https://janithl.github.io/2017/02/february/" rel="alternate"></link><published>2017-02-19T21:35:00+05:30</published><updated>2017-02-19T21:35:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-02-19:/2017/02/february/</id><summary type="html">&lt;p&gt;&lt;em&gt;So this is February&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;And what have you done?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Another year's started&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;No strategic planning was begun&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Is that how the song goes?&lt;/p&gt;
+&lt;p&gt;I finally left my job of a few months over four years and am currently in the twilight
+zone (?) or whatever they call it.&lt;/p&gt;
+&lt;p&gt;I also did …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;So this is February&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;And what have you done?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Another year's started&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;No strategic planning was begun&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Is that how the song goes?&lt;/p&gt;
+&lt;p&gt;I finally left my job of a few months over four years and am currently in the twilight
+zone (?) or whatever they call it.&lt;/p&gt;
+&lt;p&gt;I also did something very uncharacteristic and went out and bought myself something, a
+budget Stratocaster. I don't really play the guitar enough to justify this, and fully 
+blame Rob Chapman and Lee Anderton for making me do it.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The Strat" src="https://janithl.github.io/images/the-strat.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;I think I &lt;em&gt;might&lt;/em&gt; going through a full-on midlife crisis.&lt;/p&gt;
+&lt;p&gt;I've also started binging BoJack Horseman, which has gems like these:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You know, sometimes I feel like I was born with a leak, and any goodness I started with
+just slowly spilled out of me, and now it's all gone. And I'll never get it back in me.
+It's too late. Life is a series of closing doors, isn't it?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Not the greatest show to be watching if you're ever in that place where you're not really
+sure if you're a good person, and nothing new is happening and you feel like you're
+coasting on &lt;em&gt;that one time&lt;/em&gt; you did well (a long long time ago...)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="BoJack Horseman" src="https://janithl.github.io/images/bojack.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Anywayyy, this wasn't supposed to be &lt;em&gt;that&lt;/em&gt; negative (you should've seen the first draft)
+so we'll wind up here. This means more regular updates on the blog again, hopefully!&lt;/p&gt;</content><category term="work"></category><category term="uni"></category><category term="people"></category></entry><entry><title>One Last 2016 Post</title><link href="https://janithl.github.io/2016/12/one-last-2016-post/" rel="alternate"></link><published>2016-12-31T21:24:00+05:30</published><updated>2016-12-31T21:24:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-31:/2016/12/one-last-2016-post/</id><summary type="html">&lt;p&gt;2016 has been... an &lt;em&gt;interesting&lt;/em&gt; year. I've made friends, and I've lost some.
+I got a lot of time to sit down and reflect, and I grow thankful every day for
+the people who choose to stand by me despite all my shortcomings.&lt;/p&gt;
+&lt;p&gt;In the spirit of 2016, let me …&lt;/p&gt;</summary><content type="html">&lt;p&gt;2016 has been... an &lt;em&gt;interesting&lt;/em&gt; year. I've made friends, and I've lost some.
+I got a lot of time to sit down and reflect, and I grow thankful every day for
+the people who choose to stand by me despite all my shortcomings.&lt;/p&gt;
+&lt;p&gt;In the spirit of 2016, let me turn the things that made me happy this year into
+a Top 5 list:&lt;/p&gt;
+&lt;h1&gt;1. I got to travel&lt;/h1&gt;
+&lt;p&gt;Since "the incident" of Feb 2014, I've not really travelled as much as I
+would've normally liked to. This year though began with some travel: to
+Pasikuda with the family. Places I got to travel to this year includes that
+and our usual annual trips to Kandy, Anuradhapura (and Yapahuwa, a first for 
+me), &lt;a href="https://janithl.github.io/2016/09/somawathiya-september-2016/"&gt;Somawathiya&lt;/a&gt;, the &lt;em&gt;Deep South&lt;/em&gt; (Katharagama, Mulkirigala etc.) and 
+some really fun day trips Down South with the co-workers.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Deep South Instagrams" src="https://janithl.github.io/images/deep-south.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;I was particularly happy with the pics I got to take on the Deep South trip.&lt;/p&gt;
+&lt;h1&gt;2. I got to learn&lt;/h1&gt;
+&lt;p&gt;... both in and out of the classroom. In the classroom I tried to wrap my head
+around ML techniques, &lt;a href="https://janithl.github.io/2016/08/and-so-it-began/"&gt;neural nets&lt;/a&gt;, advanced DBs and their ilk. Outside
+of it, I got to play with React quite a bit, learn &lt;a href="https://laravel.com/"&gt;Laravel&lt;/a&gt; in a (cramped)
+couple of months and push out live systems almost immediately (what a beautiful
+framework, has changed the way I write PHP for the better). I got to dabble in
+more Python than I ever got to. &lt;/p&gt;
+&lt;p&gt;I got into &lt;a href="https://www.youtube.com/channel/UCzZCiVjRPPDCpP5l7HIGRtA"&gt;some&lt;/a&gt; &lt;a href="https://www.youtube.com/channel/UC3Wj9aO8VS5ZuXrtWfJf81w"&gt;crazy&lt;/a&gt; &lt;a href="https://www.youtube.com/channel/UCCOIcdii1bQmfSPHeNNw4Qw"&gt;YouTube channels&lt;/a&gt; that inspired me to pick 
+up my guitar after years, adjust the truss rod and play some barre chords. I
+followed Casey Neistat as he built and sold a company, and let John Green
+teach me history like I was taking my AP exams.&lt;/p&gt;
+&lt;h1&gt;3. I got time off&lt;/h1&gt;
+&lt;p&gt;I got three months off to write my thesis' lit review, write this blog, &lt;a href="https://janithl.github.io/2016/09/the-unp-at-70/"&gt;write 
+about the UNP&lt;/a&gt; and write code to buff up my Github profile. I started working
+at YAMU the week after I was done with my final exam at uni, and I never got a 
+proper break since. Those 3 months let me put everything in perspective and 
+helped me decide what I really wanted to do with my life.&lt;/p&gt;
+&lt;h1&gt;4. I got bald&lt;/h1&gt;
+&lt;p&gt;Well, started balding. Not really fussed about it. (I feel that) I am well aware 
+of my mortality, and that I'm no longer the youngest guy in the room.&lt;/p&gt;
+&lt;h1&gt;5. I got to let go&lt;/h1&gt;
+&lt;p&gt;... of some important things which I once thought would stay with me for (most
+of my) life. It was much easier than I thought and I feel much better for it.&lt;/p&gt;
+&lt;p&gt;Life is a stream and hanging on to a bank is not going to help when eventually
+we all need to float away. Or so I feel.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Facebook Year in Review" src="https://janithl.github.io/images/fb-2016.png"&gt;&lt;/p&gt;
+&lt;p&gt;So, that's been my year. It wasn't terrible personally by a long stretch, but
+it was certainly challenging and 2017 promises to be even more so. I hope you've
+all had a good year, and wish you all the best for the next one. Cheers!&lt;/p&gt;</content></entry><entry><title>...</title><link href="https://janithl.github.io/2016/12/ellipsis/" rel="alternate"></link><published>2016-12-15T05:06:00+05:30</published><updated>2016-12-15T05:06:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-15:/2016/12/ellipsis/</id><summary type="html">&lt;p&gt;&lt;em&gt;විපතෙහි සැපතෙහි&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;නොසැළෙයි නොතැවෙයි&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;අටලෝ දම හුරු හෙළයා&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;විපතෙහි සැපතෙහි&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;නොසැළෙයි නොතැවෙයි&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;අටලෝ දම හුරු හෙළයා&lt;/em&gt;&lt;/p&gt;</content><category term="people"></category><category term="sinhala"></category></entry><entry><title>දෙසැම්බර්</title><link href="https://janithl.github.io/2016/12/december/" rel="alternate"></link><published>2016-12-04T21:46:00+05:30</published><updated>2016-12-04T21:46:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-04:/2016/12/december/</id><summary type="html">&lt;p&gt;ලියන්නද දේවල් නැත්තෙ, ලියන්න වචනනම් ගලන්නෙ හැබැයි ඉඩෝරෙට වතුර කැපුවාම 
+කරාමෙන් එන වතුර බින්දු වගේ.&lt;/p&gt;
+&lt;p&gt;ගියමාසෙ මම ලිව්වෙ design හුට පටයක් ගැන. එව …&lt;/p&gt;</summary><content type="html">&lt;p&gt;ලියන්නද දේවල් නැත්තෙ, ලියන්න වචනනම් ගලන්නෙ හැබැයි ඉඩෝරෙට වතුර කැපුවාම 
+කරාමෙන් එන වතුර බින්දු වගේ.&lt;/p&gt;
+&lt;p&gt;ගියමාසෙ මම ලිව්වෙ design හුට පටයක් ගැන. එව්වනම් මොනාහරි කොරල ගොඩදාගන්න 
+බැරියැ. 'ඒ සිඟිති ප්‍රශ්න ආයෙ දීපන්' කියල හිතෙනව මේ දවස් වල සීන් දැක්කහම.&lt;/p&gt;
+&lt;p&gt;තමන් බොහොම අමාරුවෙන්, අවුරුදු ගානක් කැප කරල හදාගත්ත වටිනා බෙහෙත් ගහක් අවිදිමත් 
+ඉදිකිරීමක් කරද්දි උගුල්ලලා දැම්මොත් දැනෙන්නෙ කොහොම වේදනාවක්ද? දුකක්ද? &lt;/p&gt;
+&lt;p&gt;අර ගියපාර කිව්ව වගේ කිසිදෙයක් 'මමය මාගේය' කියල අල්ලගත්තොත් හැමදාටම ලෝකෙත් 
+එක්ක ඕව ගැන කෙලගැනිලි.&lt;/p&gt;
+&lt;p&gt;ඉතිං අතෑරපං. &lt;/p&gt;
+&lt;p&gt;නැත්තං &lt;em&gt;'දුක යනු...'&lt;/em&gt; කියල මීම් හද හද ඉන්න තමයි වෙන්නෙ. :P&lt;/p&gt;
+&lt;p&gt;&lt;img alt="මහනුවර වැල් බෝධිය" src="https://janithl.github.io/images/vel-bodhiya.jpg"&gt;&lt;/p&gt;</content><category term="work"></category><category term="sinhala"></category></entry><entry><title>November</title><link href="https://janithl.github.io/2016/11/november/" rel="alternate"></link><published>2016-11-07T07:35:00+05:30</published><updated>2016-11-07T07:35:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-11-07:/2016/11/november/</id><summary type="html">&lt;p&gt;With any sufficiently complex system, a major overhaul always creates 
+more problems than it solves; there's enough and more "case studies" of
+the type you read about in &lt;em&gt;Software Engineering&lt;/em&gt; to back it up. Things 
+that were fixed over years and countless late night hacking sessions and 
+painstaking iterations break …&lt;/p&gt;</summary><content type="html">&lt;p&gt;With any sufficiently complex system, a major overhaul always creates 
+more problems than it solves; there's enough and more "case studies" of
+the type you read about in &lt;em&gt;Software Engineering&lt;/em&gt; to back it up. Things 
+that were fixed over years and countless late night hacking sessions and 
+painstaking iterations break and you have to fix them again.&lt;/p&gt;
+&lt;p&gt;The wisest programmer I've ever met once said that software development 
+at scale is all about &lt;em&gt;"letting go"&lt;/em&gt;. I won't say I'm anywhere near 
+that level of Zen, but I'm certainly much less OCD about the giant fire 
+in the room. It's a pointless to make reversing entropy your life's work.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="This Is Fine" src="https://janithl.github.io/images/this-is-fine.jpg"&gt;&lt;/p&gt;</content><category term="work"></category></entry></feed>
