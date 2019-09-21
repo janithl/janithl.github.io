@@ -252,7 +252,9 @@ Okay, now to compile and run:
 
 ![Output with cliffs]({filename}/images/go-terrain-gen/p4-output-cliffs.png)
 
-Woo! 🥂
+Woo! 🥂 That looks much more realistic, and by tweaking around the
+peak and cliff probabilities, and the number of elevation levels, we
+can get maps that looks really nice.
 
 ---
 
