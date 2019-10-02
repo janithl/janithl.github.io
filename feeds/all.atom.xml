@@ -28,7 +28,8 @@ created a shell script that looked like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class="nv"&gt;freeSpace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;df -m &lt;span class="p"&gt;|&lt;/span&gt; awk &lt;span class="s1"&gt;&amp;#39;NR==2{print $4}&amp;#39;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
-/usr/local/bin/aws cloudwatch put-metric-data --metric-name my-server-FreeDisk --value &lt;span class="nv"&gt;$freeSpace&lt;/span&gt; --unit Megabytes --namespace my-server --profile AmazonCloudWatchAgent
+/usr/local/bin/aws cloudwatch put-metric-data --metric-name my-server-FreeDisk &lt;span class="se"&gt;\&lt;/span&gt;
+--value &lt;span class="nv"&gt;$freeSpace&lt;/span&gt; --unit Megabytes --namespace my-server --profile AmazonCloudWatchAgent
 &lt;/pre&gt;&lt;/div&gt;
 
 

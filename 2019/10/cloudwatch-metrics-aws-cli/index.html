@@ -134,7 +134,8 @@ created a shell script that looked like this:</p>
 <div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="nv">freeSpace</span><span class="o">=</span><span class="sb">`</span>df -m <span class="p">|</span> awk <span class="s1">&#39;NR==2{print $4}&#39;</span><span class="sb">`</span>
-/usr/local/bin/aws cloudwatch put-metric-data --metric-name my-server-FreeDisk --value <span class="nv">$freeSpace</span> --unit Megabytes --namespace my-server --profile AmazonCloudWatchAgent
+/usr/local/bin/aws cloudwatch put-metric-data --metric-name my-server-FreeDisk <span class="se">\</span>
+--value <span class="nv">$freeSpace</span> --unit Megabytes --namespace my-server --profile AmazonCloudWatchAgent
 </pre></div>
 
 

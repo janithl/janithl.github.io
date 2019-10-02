@@ -38,7 +38,8 @@ created a shell script that looked like this:
 #!/bin/bash
 
 freeSpace=`df -m | awk 'NR==2{print $4}'`
-/usr/local/bin/aws cloudwatch put-metric-data --metric-name my-server-FreeDisk --value $freeSpace --unit Megabytes --namespace my-server --profile AmazonCloudWatchAgent
+/usr/local/bin/aws cloudwatch put-metric-data --metric-name my-server-FreeDisk \
+--value $freeSpace --unit Megabytes --namespace my-server --profile AmazonCloudWatchAgent
 ```
 
 Here, I am using the `--profile` flag to select the correct IAM user, which has
