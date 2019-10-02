@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/pygments.css">
 
-    <title>Janith's Blog &ndash; Posts by: Janith</title>
+    <title>Janith's Blog &ndash; On-Premise CloudWatch Metrics with AWS CLI</title>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -30,6 +30,7 @@
 
     <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
 
+<meta name="keywords" content="code, work">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -56,7 +57,7 @@
 
                     <li><a href="https://janithl.github.io/pages/about.html">About</a></li>
 
-                    <li><a href="https://janithl.github.io/category/general/">General</a></li>
+                    <li class="active"><a href="https://janithl.github.io/category/general/">General</a></li>
                     <li><a href="https://janithl.github.io/category/links/">Links</a></li>
                     <li><a href="https://janithl.github.io/category/personal/">Personal</a></li>
 
@@ -104,14 +105,9 @@
     </nav>
     <div class="container">
 <article>
-  <div class="timestamps text-muted">02 Oct 2019</div>
   <div class="article_title">
-    <a href="https://janithl.github.io/2019/10/cloud watch-metrics-aws-cli/">
-        <h3>
-            On-Premise CloudWatch Metrics with AWS CLI <br>
-            <small>Who will watch the watchmen?</small><br>
-        </h3>
-    </a>
+    <h3><a href="https://janithl.github.io/2019/10/cloud watch-metrics-aws-cli/">On-Premise CloudWatch Metrics with AWS CLI</a></h3>
+    <p class="lead">Who will watch the watchmen?</p><hr>
   </div>
   <div class="article_text">
     <p><img alt="Have you tried AWS CLI?" src="https://janithl.github.io/images/aws-cli.jpg"></p>
@@ -119,91 +115,64 @@
 alarms is pretty badass—especially when you're not a full-time DevOps and
 don't have the time to worry about your <em>monitoring solution</em> in addition to
 the thing it's <em>supposed</em> to look after.</p>
-<p>If you're running some of …</p>
+<p>If you're running some of your stuff outside AWS (cue gasps), <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-premise.html">CloudWatch agent</a>
+is supposed to have you covered, but after following the instructions to a
+tee, I found that it wasn't doing what it said on the tin, and the agent was
+refusing to start up<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>Anyhoo, I was running out of time and I absolutely had to get this very simple
+metric into CloudWatch, and after 2 days of losing sleep and trying to make
+the agent work, I gave up. Thankfully, the ever reliable <a href="https://aws.amazon.com/cli/">AWS CLI</a> was
+there to pick me up.</p>
+<p>It turns out a simple <code>aws cloudwatch put-metric-data</code> is all you need to push
+metrics to CloudWatch. There's actually <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">an entire doc on it</a>, which I only
+found while writing this post.</p>
+<h3>The Setup</h3>
+<p>You need to make sure you have a IAM role set up with the ability to push
+metrics to CloudWatch, which is <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent.html">covered in the CloudWatch agent docs</a>.</p>
+<p>For my setup, I just wanted to send the disk utilisation to CloudWatch, so I
+created a shell script that looked like this:</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nv">freeSpace</span><span class="o">=</span><span class="sb">`</span>df -m <span class="p">|</span> awk <span class="s1">&#39;NR==2{print $4}&#39;</span><span class="sb">`</span>
+/usr/local/bin/aws cloudwatch put-metric-data --metric-name my-server-FreeDisk --value <span class="nv">$freeSpace</span> --unit Megabytes --namespace my-server --profile AmazonCloudWatchAgent
+</pre></div>
+
+
+<p>Here, I am using the <code>--profile</code> flag to select the correct IAM user, which has
+been added to my AWS <code>credentials</code> and <code>config</code> files.</p>
+<p>The shell script was simply called every 5 minutes from a cron job, and I had the
+whole setup up and running in no time. You can do fancy stuff like sending in
+entire JSON files, which will come in handy if you want to work with Docker stats etc.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Some issue about the instance not having an EC2 identifier, which—<em>duh</em>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
   </div>
-</article>
-<article>
-  <div class="timestamps text-muted">21 Sep 2019</div>
-  <div class="article_title">
-    <a href="https://janithl.github.io/2019/09/go-terrain-gen-part-4/">
-        <h3>
-            A basic terrain generator in Go (Part 4) <br>
-            <small>Cliffs of Dover</small><br>
-        </h3>
-    </a>
+  <div class="article_meta">
+    <p>Posted on: Wed 02 October 2019</p>
+    <p>Category: <a href="https://janithl.github.io/category/general/">General</a>
+ &ndash; Tags:
+      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/work/">work</a>    </p>
   </div>
-  <div class="article_text">
-    <p><a href="https://janithl.github.io/2019/09/go-terrain-gen-part-3/">In the last part</a>, we added fancy output code, and our output looks like
-this now:</p>
-<p><img alt="Output with colours" src="https://janithl.github.io/images/go-terrain-gen/p4-output-initial.png"></p>
-<p>...which, if you've ever seen a map, isn't what terrain actually looks like.
-The terrain around peaks tend to be at a similar height, and there is rarely
-the random patchwork of heights we …</p>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2019/10/cloud watch-metrics-aws-cli/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//janithl.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
   </div>
-</article>
-<article>
-  <div class="timestamps text-muted">19 Sep 2019</div>
-  <div class="article_title">
-    <a href="https://janithl.github.io/2019/09/go-terrain-gen-part-3/">
-        <h3>
-            A basic terrain generator in Go (Part 3) <br>
-            <small>Take a look at me now</small><br>
-        </h3>
-    </a>
-  </div>
-  <div class="article_text">
-    <p><a href="https://janithl.github.io/2019/09/go-terrain-gen-part-2/">In the last part</a>, we refactored the code and added CLI flags. The output
-right now looks like this:</p>
-<p><img alt="Compile and Output After Flags" src="https://janithl.github.io/images/go-terrain-gen/p2-output-3.png"></p>
-<p>It doesn't really give us a sense of what the terrain looks like, though. Let's
-change that.</p>
-<h3>Unicode</h3>
-<p>Unicode has some <a href="https://en.wikipedia.org/wiki/Block_Elements">nice characters</a> that can help us here. The ones we're …</p>
-  </div>
-</article>
-<article>
-  <div class="timestamps text-muted">18 Sep 2019</div>
-  <div class="article_title">
-    <a href="https://janithl.github.io/2019/09/go-terrain-gen-part-2/">
-        <h3>
-            A basic terrain generator in Go (Part 2) <br>
-            <small>But first, we gotta clean up this mess</small><br>
-        </h3>
-    </a>
-  </div>
-  <div class="article_text">
-    <p><a href="https://janithl.github.io/2019/09/go-terrain-gen-part-1/">In the last part</a>, we explored how to set up what was basically a matrix and
-randomly assign elevation values to it. In this part, I wanted to explore how to deal
-with assigning values to the elements adjacent to the peaks, and how to display
-the map to users …</p>
-  </div>
-</article>
-<article>
-  <div class="timestamps text-muted">17 Sep 2019</div>
-  <div class="article_title">
-    <a href="https://janithl.github.io/2019/09/go-terrain-gen-part-1/">
-        <h3>
-            A basic terrain generator in Go (Part 1) <br>
-            <small>Ain't no mountain high enough</small><br>
-        </h3>
-    </a>
-  </div>
-  <div class="article_text">
-    <p>I haven't gushed about Go much on this blog<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, but I thought of writing a
-small series of posts on a little piece of code I cooked up while I was
-supposed to be doing other, more important things<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
-<h3>Concept</h3>
-<p>So I was sitting there, zoning out and …</p>
-  </div>
+
 </article>
 
-<footer>
-<nav id="paginator">
-    <ul class="pager">
-        <li class="previous"><a href="https://janithl.github.io/author/janith/page/2/"><span aria-hidden="true">&larr;</span> Older</a></li>
-    
-</nav>
-</footer>
     </div>
 
     <div id="ending_message">
