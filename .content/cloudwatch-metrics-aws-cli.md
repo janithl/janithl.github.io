@@ -2,7 +2,7 @@ Title: On-Premise CloudWatch Metrics with AWS CLI
 Date: 2019-10-02 21:16
 Category: General
 Tags: code, work
-Slug: cloud watch-metrics-aws-cli
+Slug: cloudwatch-metrics-aws-cli
 Subtitle: Who will watch the watchmen?
 
 ![Have you tried AWS CLI?]({filename}/images/aws-cli.jpg)
@@ -15,7 +15,7 @@ the thing it's _supposed_ to look after.
 If you're running some of your stuff outside AWS (cue gasps), [CloudWatch agent][1]
 is supposed to have you covered, but after following the instructions to a
 tee, I found that it wasn't doing what it said on the tin, and the agent was
-refusing to start up[^1].
+refusing to start[^1].
 
 Anyhoo, I was running out of time and I absolutely had to get this very simple
 metric into CloudWatch, and after 2 days of losing sleep and trying to make
@@ -45,8 +45,9 @@ Here, I am using the `--profile` flag to select the correct IAM user, which has
 been added to my AWS `credentials` and `config` files.
 
 The shell script was simply called every 5 minutes from a cron job, and I had the
-whole setup up and running in no time. You can do fancy stuff like sending in
-entire JSON files, which will come in handy if you want to work with Docker stats etc.
+whole setup up and running in no time. You can also do fancy stuff like sending in
+entire JSON files, which will surely come in handy if you want to work with Docker
+stats etc.
 
 [^1]: Some issue about the instance not having an EC2 identifier, which—_duh_
 

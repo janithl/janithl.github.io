@@ -106,7 +106,7 @@
     <div class="container">
 <article>
   <div class="article_title">
-    <h3><a href="https://janithl.github.io/2019/10/cloud watch-metrics-aws-cli/">On-Premise CloudWatch Metrics with AWS CLI</a></h3>
+    <h3><a href="https://janithl.github.io/2019/10/cloudwatch-metrics-aws-cli/">On-Premise CloudWatch Metrics with AWS CLI</a></h3>
     <p class="lead">Who will watch the watchmen?</p><hr>
   </div>
   <div class="article_text">
@@ -118,7 +118,7 @@ the thing it's <em>supposed</em> to look after.</p>
 <p>If you're running some of your stuff outside AWS (cue gasps), <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-premise.html">CloudWatch agent</a>
 is supposed to have you covered, but after following the instructions to a
 tee, I found that it wasn't doing what it said on the tin, and the agent was
-refusing to start up<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+refusing to start<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
 <p>Anyhoo, I was running out of time and I absolutely had to get this very simple
 metric into CloudWatch, and after 2 days of losing sleep and trying to make
 the agent work, I gave up. Thankfully, the ever reliable <a href="https://aws.amazon.com/cli/">AWS CLI</a> was
@@ -141,8 +141,9 @@ created a shell script that looked like this:</p>
 <p>Here, I am using the <code>--profile</code> flag to select the correct IAM user, which has
 been added to my AWS <code>credentials</code> and <code>config</code> files.</p>
 <p>The shell script was simply called every 5 minutes from a cron job, and I had the
-whole setup up and running in no time. You can do fancy stuff like sending in
-entire JSON files, which will come in handy if you want to work with Docker stats etc.</p>
+whole setup up and running in no time. You can also do fancy stuff like sending in
+entire JSON files, which will surely come in handy if you want to work with Docker
+stats etc.</p>
 <div class="footnote">
 <hr>
 <ol>
@@ -162,7 +163,7 @@ entire JSON files, which will come in handy if you want to work with Docker stat
   <div id="article_comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        var disqus_identifier = "2019/10/cloud watch-metrics-aws-cli/";
+        var disqus_identifier = "2019/10/cloudwatch-metrics-aws-cli/";
         (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
              dsq.src = '//janithl.disqus.com/embed.js';
