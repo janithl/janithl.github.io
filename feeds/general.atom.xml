@@ -1,5 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-10-02T21:16:00+05:30</updated><entry><title>On-Premise CloudWatch Metrics with AWS CLI</title><link href="https://janithl.github.io/2019/10/cloudwatch-metrics-aws-cli/" rel="alternate"></link><published>2019-10-02T21:16:00+05:30</published><updated>2019-10-02T21:16:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-02:/2019/10/cloudwatch-metrics-aws-cli/</id><summary type="html">&lt;p&gt;&lt;img alt="Have you tried AWS CLI?" src="https://janithl.github.io/images/aws-cli.jpg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-10-06T19:10:00+05:30</updated><entry><title>My take on doing 'Clean Architecture' in React (Part 1)</title><link href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/" rel="alternate"></link><published>2019-10-06T19:10:00+05:30</published><updated>2019-10-06T19:10:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-06:/2019/10/react-clean-architecture-part-1/</id><summary type="html">&lt;p&gt;&lt;img alt="Clean Architecture" src="https://janithl.github.io/images/clean-arch-diagram.png"&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;Clean Architecture, simplified.&lt;/p&gt;
+
+&lt;p&gt;I'm a huge fan of Robert C. Martin's work in general, and &lt;a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean Architecture&lt;/a&gt; in
+particular. I'm frequently on the lookout for how to apply it to the different system
+architectures and frameworks we work with.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Which modules should be decoupled? I think the rule is similar …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Clean Architecture" src="https://janithl.github.io/images/clean-arch-diagram.png"&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;Clean Architecture, simplified.&lt;/p&gt;
+
+&lt;p&gt;I'm a huge fan of Robert C. Martin's work in general, and &lt;a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean Architecture&lt;/a&gt; in
+particular. I'm frequently on the lookout for how to apply it to the different system
+architectures and frameworks we work with.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Which modules should be decoupled? I think the rule is similar to the previous
+rule: &lt;em&gt;Any module that changes frequently should be decoupled from the rest of the
+system.&lt;/em&gt; — Uncle Bob&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It's a damn shame that most of the code we are told to write in guides and documentation
+(often written by people who are heavily invested in the framework that the docs are
+about) are very tightly coupled to the framework, libraries, and persistence implementation
+(as well as the REST APIs that are called—how many of us have had to do system-wide
+changes because the response object from the API changed?)&lt;/p&gt;
+&lt;p&gt;Today, in part 1 of a 2 part series, I'll write a bit about what I think is a good way
+to implement Clean Architecture in React JS and React Native apps&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h3&gt;Why?&lt;/h3&gt;
+&lt;p&gt;The advantages of switching to Clean Architecture are &lt;a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;listed out in detail on Uncle Bob's
+blog&lt;/a&gt;, but I am going for three main objectives with regards to having this architecture
+on our React app:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Make the Core 100% testable:&lt;/strong&gt; All external dependencies (the UI, local storage,
+   REST APIs etc) can be mocked out.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Portability:&lt;/strong&gt; If we need to port the app to Vue JS tomorrow, the core can still
+   be put there wholesale. We can also explore sharing the core between the frontend and
+   backend (if your backend is written in Node or something).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Prevent 'Change Propagation':&lt;/strong&gt; If the REST API's response object changes, or we
+   change the caching mechanism, or any such change happens upstream of the final consumer
+   (the UI), those changes should not cause changes downstream.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Keep in mind that one of the most important fundamentals of Clean Architecture is to
+recognise where your architectural boundaries are, and to ensure that calls across those
+boundaries are done using well defined interfaces and contracts. The response object
+changing does not change the contract, since the core sets the contract and the code that
+calls the API and parses its responses merely implements it. Your DTO is changing? It's
+up to the API component to massage that into the existing domain entity, sorry.&lt;/p&gt;
+&lt;h3&gt;Standard React async call architecture&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Standard React architecture" src="https://janithl.github.io/images/basic-react-arch.png"&gt;&lt;/p&gt;
+&lt;p&gt;Okay, so this a very standard and common pattern when writing the most common kind of
+interface, i.e. call an API, display some data in a component. You could be using Redux
+for state, or React hooks, or component state, but this diagram barely changes because
+in essence the user performs an action, which results in an API call, which updates the
+state and hence the UI.&lt;/p&gt;
+&lt;p&gt;Your component code would look something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;const ItemList = ({ items, refreshList }) =&amp;gt; (
+  &amp;lt;div&amp;gt;
+    &amp;lt;button onClick={refreshList}&amp;gt;Refresh&amp;lt;/button&amp;gt;
+    &amp;lt;ul&amp;gt;
+      {items.map(item =&amp;gt; (
+        &amp;lt;li key={item.id}&amp;gt;{item.name}&amp;lt;/li&amp;gt;
+      ))}
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/div&amp;gt;
+);
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It'll be hooked up to Redux using something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;mapStateToProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;state&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
+  &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;items&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+
+&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;mapDispatchToProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;dispatch&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
+  &lt;span class="nx"&gt;refreshList&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;refreshList&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="nx"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+  &lt;span class="nx"&gt;mapStateToProps&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="nx"&gt;mapDispatchToProps&lt;/span&gt;
+&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="nx"&gt;ItemList&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And I'd guess your Thunk (or Saga) would look a bit like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;refreshList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;LIST_LOAD_REQUEST&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+
+  &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;https://your.api/listdata&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;jsonData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;LIST_LOAD_SUCCESS&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;payload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;jsonData&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;LIST_LOAD_FAILURE&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;error&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pretty simple and familiar, right?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Let's break it&lt;/em&gt; 😈&lt;/p&gt;
+&lt;h3&gt;Identifying boundaries&lt;/h3&gt;
+&lt;p&gt;Now, I would like to start off by saying it would be unwise to try to break React
+and whatever state management solution you use using Clean Architecture. Yes, it's
+good to keep them isolated but I'd suggest using React patterns such as presentational
+components and containers to do that—this is because Redux and the ilk are tightly
+tied to React's Context API, and it would be a massive hassle to handle all that
+complexity and coupling in our core. So let's keep it out.&lt;/p&gt;
+&lt;p&gt;I'm thinking of having 3 major components:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;UI:&lt;/strong&gt; This is in Infrastructure, and is basically React + Redux&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Network and Persistence:&lt;/strong&gt; Also in Infrastructure. I am thinking of hiding the
+   API complexity behind a repository interface, and to implement local storage for
+   caching if necessary inside this repo implementation itself.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Application Core:&lt;/strong&gt; This is in the Use Case and Entity layers, and is where the
+   magical business logic et al. happens.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The component diagram, in my head, looks a bit like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="React with Clean Architecture" src="https://janithl.github.io/images/clean-react-arch-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;But wait, where's are we calling the API and getting the data for items? We need to
+include an &lt;code&gt;ItemRepository&lt;/code&gt; interface, and an implementation for it.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="React with Clean Architecture, updated" src="https://janithl.github.io/images/clean-react-arch-2.png"&gt;&lt;/p&gt;
+&lt;p&gt;This is one of the coolest things about &lt;a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle"&gt;Dependency Inversion&lt;/a&gt;, in that all the
+arrows are flowing inwards. In this case, &lt;code&gt;ItemService&lt;/code&gt; depends on the interface
+&lt;code&gt;ItemRepository&lt;/code&gt;—which is in the Entity layer—and not on its concrete implementation
+which is on a lower layer and will only be injected during runtime. This has several
+benefits, which we'll explore in the next part.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;With or without Redux (or Redux-like) state management&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="code"></category><category term="design"></category><category term="work"></category></entry><entry><title>On-Premise CloudWatch Metrics with AWS CLI</title><link href="https://janithl.github.io/2019/10/cloudwatch-metrics-aws-cli/" rel="alternate"></link><published>2019-10-02T21:16:00+05:30</published><updated>2019-10-02T21:16:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-02:/2019/10/cloudwatch-metrics-aws-cli/</id><summary type="html">&lt;p&gt;&lt;img alt="Have you tried AWS CLI?" src="https://janithl.github.io/images/aws-cli.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;CloudWatch is pretty cool, and looking at a metrics dashboard and setting up
 alarms is pretty badass—especially when you're not a full-time DevOps and
 don't have the time to worry about your &lt;em&gt;monitoring solution&lt;/em&gt; in addition to

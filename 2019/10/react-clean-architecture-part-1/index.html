@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="author" content="Janith">
+    <meta name="description" content="Janith's blog">
+    <link rel="icon" href="https://janithl.github.io/favicon.ico">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,700&amp;subset=sinhala">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/pygments.css">
+
+    <title>Janith's Blog &ndash; My take on doing 'Clean Architecture' in React (Part 1)</title>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7602960-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+    <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
+
+<meta name="keywords" content="code, design, work">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://janithl.github.io/">Janith's Blog</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="https://janithl.github.io/pages/about.html">About</a></li>
+
+                    <li class="active"><a href="https://janithl.github.io/category/general/">General</a></li>
+                    <li><a href="https://janithl.github.io/category/links/">Links</a></li>
+                    <li><a href="https://janithl.github.io/category/personal/">Personal</a></li>
+
+                    <li><a href="https://github.com/janithl" target="_blank">Github</a></li>
+
+                    <li><a href="https://janithl.github.io/archives.html">Archives</a></li>
+
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tags <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="https://janithl.github.io/tag/biology/">biology</a></li>
+                          <li><a href="https://janithl.github.io/tag/casey-neistat/">casey neistat</a></li>
+                          <li><a href="https://janithl.github.io/tag/code/">code</a></li>
+                          <li><a href="https://janithl.github.io/tag/comics/">comics</a></li>
+                          <li><a href="https://janithl.github.io/tag/conflict/">conflict</a></li>
+                          <li><a href="https://janithl.github.io/tag/conversations/">conversations</a></li>
+                          <li><a href="https://janithl.github.io/tag/data/">data</a></li>
+                          <li><a href="https://janithl.github.io/tag/design/">design</a></li>
+                          <li><a href="https://janithl.github.io/tag/docker/">docker</a></li>
+                          <li><a href="https://janithl.github.io/tag/education/">education</a></li>
+                          <li><a href="https://janithl.github.io/tag/films/">films</a></li>
+                          <li><a href="https://janithl.github.io/tag/geopolitics/">geopolitics</a></li>
+                          <li><a href="https://janithl.github.io/tag/golang/">golang</a></li>
+                          <li><a href="https://janithl.github.io/tag/machine-learning/">machine learning</a></li>
+                          <li><a href="https://janithl.github.io/tag/music/">music</a></li>
+                          <li><a href="https://janithl.github.io/tag/oasis/">oasis</a></li>
+                          <li><a href="https://janithl.github.io/tag/people/">people</a></li>
+                          <li><a href="https://janithl.github.io/tag/politics/">politics</a></li>
+                          <li><a href="https://janithl.github.io/tag/prudishness/">prudishness</a></li>
+                          <li><a href="https://janithl.github.io/tag/religion/">religion</a></li>
+                          <li><a href="https://janithl.github.io/tag/sexuality/">sexuality</a></li>
+                          <li><a href="https://janithl.github.io/tag/sinhala/">sinhala</a></li>
+                          <li><a href="https://janithl.github.io/tag/travel/">travel</a></li>
+                          <li><a href="https://janithl.github.io/tag/uni/">uni</a></li>
+                          <li><a href="https://janithl.github.io/tag/wes-anderson/">wes anderson</a></li>
+                          <li><a href="https://janithl.github.io/tag/work/">work</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a href="https://janithl.github.io/feeds/all.atom.xml">Atom</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+<article>
+  <div class="article_title">
+    <h3><a href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/">My take on doing 'Clean Architecture' in React (Part 1)</a></h3>
+    <p class="lead">Friendship is magic? Wait till you see Dependency Inversion!</p><hr>
+  </div>
+  <div class="article_text">
+    <p><img alt="Clean Architecture" src="https://janithl.github.io/images/clean-arch-diagram.png"></p>
+<p class="text-center">Clean Architecture, simplified.</p>
+
+<p>I'm a huge fan of Robert C. Martin's work in general, and <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a> in
+particular. I'm frequently on the lookout for how to apply it to the different system
+architectures and frameworks we work with.</p>
+<blockquote>
+<p>Which modules should be decoupled? I think the rule is similar to the previous
+rule: <em>Any module that changes frequently should be decoupled from the rest of the
+system.</em> — Uncle Bob</p>
+</blockquote>
+<p>It's a damn shame that most of the code we are told to write in guides and documentation
+(often written by people who are heavily invested in the framework that the docs are
+about) are very tightly coupled to the framework, libraries, and persistence implementation
+(as well as the REST APIs that are called—how many of us have had to do system-wide
+changes because the response object from the API changed?)</p>
+<p>Today, in part 1 of a 2 part series, I'll write a bit about what I think is a good way
+to implement Clean Architecture in React JS and React Native apps<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<h3>Why?</h3>
+<p>The advantages of switching to Clean Architecture are <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">listed out in detail on Uncle Bob's
+blog</a>, but I am going for three main objectives with regards to having this architecture
+on our React app:</p>
+<ol>
+<li>
+<p><strong>Make the Core 100% testable:</strong> All external dependencies (the UI, local storage,
+   REST APIs etc) can be mocked out.</p>
+</li>
+<li>
+<p><strong>Portability:</strong> If we need to port the app to Vue JS tomorrow, the core can still
+   be put there wholesale. We can also explore sharing the core between the frontend and
+   backend (if your backend is written in Node or something).</p>
+</li>
+<li>
+<p><strong>Prevent 'Change Propagation':</strong> If the REST API's response object changes, or we
+   change the caching mechanism, or any such change happens upstream of the final consumer
+   (the UI), those changes should not cause changes downstream.</p>
+</li>
+</ol>
+<p>Keep in mind that one of the most important fundamentals of Clean Architecture is to
+recognise where your architectural boundaries are, and to ensure that calls across those
+boundaries are done using well defined interfaces and contracts. The response object
+changing does not change the contract, since the core sets the contract and the code that
+calls the API and parses its responses merely implements it. Your DTO is changing? It's
+up to the API component to massage that into the existing domain entity, sorry.</p>
+<h3>Standard React async call architecture</h3>
+<p><img alt="Standard React architecture" src="https://janithl.github.io/images/basic-react-arch.png"></p>
+<p>Okay, so this a very standard and common pattern when writing the most common kind of
+interface, i.e. call an API, display some data in a component. You could be using Redux
+for state, or React hooks, or component state, but this diagram barely changes because
+in essence the user performs an action, which results in an API call, which updates the
+state and hence the UI.</p>
+<p>Your component code would look something like this:</p>
+<div class="highlight"><pre><span></span>const ItemList = ({ items, refreshList }) =&gt; (
+  &lt;div&gt;
+    &lt;button onClick={refreshList}&gt;Refresh&lt;/button&gt;
+    &lt;ul&gt;
+      {items.map(item =&gt; (
+        &lt;li key={item.id}&gt;{item.name}&lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  &lt;/div&gt;
+);
+</pre></div>
+
+
+<p>It'll be hooked up to Redux using something like this:</p>
+<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">mapStateToProps</span> <span class="o">=</span> <span class="nx">state</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">items</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">items</span>
+<span class="p">});</span>
+
+<span class="kr">const</span> <span class="nx">mapDispatchToProps</span> <span class="o">=</span> <span class="nx">dispatch</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">refreshList</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">dispatch</span><span class="p">(</span><span class="nx">refreshList</span><span class="p">)</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span>
+  <span class="nx">mapStateToProps</span><span class="p">,</span>
+  <span class="nx">mapDispatchToProps</span>
+<span class="p">)(</span><span class="nx">ItemList</span><span class="p">);</span>
+</pre></div>
+
+
+<p>And I'd guess your Thunk (or Saga) would look a bit like this:</p>
+<div class="highlight"><pre><span></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">refreshList</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">dispatch</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;LIST_LOAD_REQUEST&quot;</span> <span class="p">});</span>
+
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://your.api/listdata&quot;</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">jsonData</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+    <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;LIST_LOAD_SUCCESS&quot;</span><span class="p">,</span> <span class="nx">payload</span><span class="o">:</span> <span class="nx">jsonData</span> <span class="p">});</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;LIST_LOAD_FAILURE&quot;</span><span class="p">,</span> <span class="nx">error</span> <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<p>Pretty simple and familiar, right?</p>
+<p><em>Let's break it</em> 😈</p>
+<h3>Identifying boundaries</h3>
+<p>Now, I would like to start off by saying it would be unwise to try to break React
+and whatever state management solution you use using Clean Architecture. Yes, it's
+good to keep them isolated but I'd suggest using React patterns such as presentational
+components and containers to do that—this is because Redux and the ilk are tightly
+tied to React's Context API, and it would be a massive hassle to handle all that
+complexity and coupling in our core. So let's keep it out.</p>
+<p>I'm thinking of having 3 major components:</p>
+<ol>
+<li><strong>UI:</strong> This is in Infrastructure, and is basically React + Redux</li>
+<li><strong>Network and Persistence:</strong> Also in Infrastructure. I am thinking of hiding the
+   API complexity behind a repository interface, and to implement local storage for
+   caching if necessary inside this repo implementation itself.</li>
+<li><strong>Application Core:</strong> This is in the Use Case and Entity layers, and is where the
+   magical business logic et al. happens.</li>
+</ol>
+<p>The component diagram, in my head, looks a bit like this:</p>
+<p><img alt="React with Clean Architecture" src="https://janithl.github.io/images/clean-react-arch-1.png"></p>
+<p>But wait, where's are we calling the API and getting the data for items? We need to
+include an <code>ItemRepository</code> interface, and an implementation for it.</p>
+<p><img alt="React with Clean Architecture, updated" src="https://janithl.github.io/images/clean-react-arch-2.png"></p>
+<p>This is one of the coolest things about <a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion</a>, in that all the
+arrows are flowing inwards. In this case, <code>ItemService</code> depends on the interface
+<code>ItemRepository</code>—which is in the Entity layer—and not on its concrete implementation
+which is on a lower layer and will only be injected during runtime. This has several
+benefits, which we'll explore in the next part.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>With or without Redux (or Redux-like) state management&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Sun 06 October 2019</p>
+    <p>Category: <a href="https://janithl.github.io/category/general/">General</a>
+ &ndash; Tags:
+      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/design/">design</a>,      <a href="https://janithl.github.io/tag/work/">work</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2019/10/react-clean-architecture-part-1/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//janithl.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+    </div>
+
+    <div id="ending_message">
+        <hr>
+        <p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
