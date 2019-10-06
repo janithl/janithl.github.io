@@ -893,7 +893,7 @@ of the way first and create our &lt;code&gt;main.go&lt;/code&gt; file:&lt;/p&gt;
 way to look at elements adjacent to our current element (the part of our
 pseudocode that we didn't implement), and assign values to it—and better
 visualisation of the terrain map.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://janithl.github.io/2019/09/go-terrain-gen-part-2/"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/janithl/go-terrain-gen/tree/master/part1"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;

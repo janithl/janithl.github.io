@@ -114,7 +114,7 @@ way to look at elements adjacent to our current element (the part of our
 pseudocode that we didn't implement), and assign values to it—and better
 visualisation of the terrain map.
 
-[**The full code for this part can be found on Github.**][2]
+[**The full code for this part can be found on Github.**][3]
 
 [^1]: Mostly because this blog has been _inactive_ for the last 2 years, but
     more on that in a later post.
