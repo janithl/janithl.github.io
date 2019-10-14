@@ -143,9 +143,23 @@ This is one of the coolest things about [Dependency Inversion][2], in that all t
 arrows are flowing inwards. In this case, `ItemService` depends on the interface
 `ItemRepository`—which is in the Entity layer—and not on its concrete implementation
 which is on a lower layer and will only be injected during runtime. This has several
-benefits, which we'll explore in the next part.
+benefits, [which we'll explore in the next part][3].
+
+> The overriding rule that makes this architecture work is The Dependency Rule. This
+> rule says that source code dependencies can only point inwards. Nothing in an inner
+> circle can know anything at all about something in an outer circle. In particular,
+> the name of something declared in an outer circle must not be mentioned by the code
+> in the an inner circle. That includes, functions, classes. variables, or any other
+> named software entity.
+
+> By the same token, data formats used in an outer circle should not be used by an inner
+> circle, especially if those formats are generate by a framework in an outer circle. We
+> don’t want anything in an outer circle to impact the inner circles.
+
+> — Uncle Bob
 
 [^1]: With or without Redux (or Redux-like) state management
 
 [1]: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 [2]: https://en.wikipedia.org/wiki/Dependency_inversion_principle
+[3]: {filename}/react-clean-architecture-part-2.md

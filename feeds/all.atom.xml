@@ -1,5 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-10-06T19:10:00+05:30</updated><entry><title>My take on doing 'Clean Architecture' in React (Part 1)</title><link href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/" rel="alternate"></link><published>2019-10-06T19:10:00+05:30</published><updated>2019-10-06T19:10:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-06:/2019/10/react-clean-architecture-part-1/</id><summary type="html">&lt;p&gt;&lt;img alt="Clean Architecture" src="https://janithl.github.io/images/clean-arch-diagram.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-10-14T08:28:00+05:30</updated><entry><title>My take on doing 'Clean Architecture' in React (Part 2)</title><link href="https://janithl.github.io/2019/10/react-clean-architecture-part-2/" rel="alternate"></link><published>2019-10-14T08:28:00+05:30</published><updated>2019-10-14T08:28:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-14:/2019/10/react-clean-architecture-part-2/</id><summary type="html">&lt;p&gt;&lt;img alt="Core Folder Structure" src="https://janithl.github.io/images/clean-arch-folders.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/"&gt;In the last part&lt;/a&gt;, we broke the application core out, with layers for
+entities, usecases, and infrastructure. The &lt;a href="https://github.com/janithl/react-clean-arch/tree/6224ee5f77b1398c41163ffedc78faf786962cc1"&gt;example code we used in the last
+part (without breaking the core out) can be found on Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now let's look at how we can implement the core. I will be using …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Core Folder Structure" src="https://janithl.github.io/images/clean-arch-folders.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/"&gt;In the last part&lt;/a&gt;, we broke the application core out, with layers for
+entities, usecases, and infrastructure. The &lt;a href="https://github.com/janithl/react-clean-arch/tree/6224ee5f77b1398c41163ffedc78faf786962cc1"&gt;example code we used in the last
+part (without breaking the core out) can be found on Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now let's look at how we can implement the core. I will be using TypeScript
+here because it has two things that we will make implementing Clean Architecture
+much easier: types, and interfaces. &lt;a href="https://github.com/microsoft/TypeScript-React-Conversion-Guide"&gt;To add TypeScript to an existing React
+project&lt;/a&gt;, we can simply run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yarn add -D typescript awesome-typescript-loader source-map-loader
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Entities&lt;/h3&gt;
+&lt;p&gt;To separate out the core code from the rest of the app, so we'll first create a
+subfolder called &lt;code&gt;core&lt;/code&gt;, with three subfolders for the Entity, Use Case, and
+Infra layers:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;src/core
+├── entities
+├── infrastructure
+└── usecases
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Inside the &lt;code&gt;entities&lt;/code&gt; subfolder, we'll first create the &lt;code&gt;Item&lt;/code&gt; class which holds
+Item entities. This is a domain entity that will be used throughout the app.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;Item&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;id&lt;/span&gt;: &lt;span class="kt"&gt;number&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nx"&gt;name&lt;/span&gt;: &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="kr"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;: &lt;span class="kt"&gt;number&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;name&lt;/span&gt;: &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We will also create an &lt;code&gt;ItemRepository&lt;/code&gt; interface that will enable us to abstract
+out the API calls (and maybe local storage caching later on) which actually get
+us the items.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;Item&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;./Item&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;ItemRepository&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;GetItems&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Promise&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Note how it is returning a Promise (with a list of Items), as it will be an async
+operation.&lt;/p&gt;
+&lt;h3&gt;Use Cases&lt;/h3&gt;
+&lt;p&gt;Then, we implement the &lt;code&gt;UserService&lt;/code&gt;. We are implementing the service after defining
+an interface because this will make writing tests etc. easier. There are arguments
+against single implementation interfaces, but that is a debate for another time. The
+service simply gets the items from the repository and returns them.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;Item&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;../entities/Item&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;ItemRepository&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;../entities/ItemRepository&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;ItemService&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;GetItems&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Promise&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;ItemServiceImpl&lt;/span&gt; &lt;span class="kr"&gt;implements&lt;/span&gt; &lt;span class="nx"&gt;ItemService&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;itemRepo&lt;/span&gt;: &lt;span class="kt"&gt;ItemRepository&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="kr"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;ir&lt;/span&gt;: &lt;span class="kt"&gt;ItemRepository&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;itemRepo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ir&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="nx"&gt;GetItems&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Promise&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;itemRepo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;GetItems&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Notice how the constructor of the service takes an item repository. This is the runtime
+injection of dependencies that makes this &lt;strong&gt;super exciting&lt;/strong&gt;. We can swap implementations
+at runtime and the service has no hard dependencies on &lt;code&gt;infrastructure&lt;/code&gt; code, instead
+relying on an interface defined at the &lt;code&gt;entity&lt;/code&gt; layer.&lt;/p&gt;
+&lt;h3&gt;Infrastructure&lt;/h3&gt;
+&lt;p&gt;Finally, we implement the &lt;code&gt;UserRepository&lt;/code&gt; we defined in the &lt;code&gt;entity&lt;/code&gt; layer. It will
+just be a simple API call using &lt;code&gt;fetch()&lt;/code&gt;. We should add error handling here, but I've
+left it out for now for the sake of simplicity.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;Item&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;../entities/Item&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;ItemRepository&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;../entities/ItemRepository&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;ItemDTO&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;id&lt;/span&gt;: &lt;span class="kt"&gt;number&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nx"&gt;name&lt;/span&gt;: &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;ItemRepositoryImpl&lt;/span&gt; &lt;span class="kr"&gt;implements&lt;/span&gt; &lt;span class="nx"&gt;ItemRepository&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;jsonUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;...&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="nx"&gt;GetItems&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Promise&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;jsonUrl&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;jsonData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;jsonData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;: &lt;span class="kt"&gt;ItemDTO&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Note how we are defining an &lt;code&gt;ItemDTO&lt;/code&gt; here. This is your contract with the API, and will
+change with time. The following line:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;jsonData&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;: &lt;span class="kt"&gt;ItemDTO&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Item&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;is also very important. This is where the DTO is being mapped to a domain entity. We
+can move this transformation to another file as our implementation grows in complexity,
+as this code is on an architectural boundary and will change quite frequently.&lt;/p&gt;
+&lt;h3&gt;All Together Now&lt;/h3&gt;
+&lt;p&gt;We can now edit our Thunk to use the service instead of directly calling the API:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;LIST_LOAD_REQUEST&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="nx"&gt;LIST_LOAD_SUCCESS&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="nx"&gt;LIST_LOAD_FAILURE&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;./Item.types&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;ItemServiceImpl&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;../core/usecases/ItemService&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;ItemRepositoryImpl&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;../core/infrastructure/ItemRepositoryImpl&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;refreshList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="nx"&gt;dispatch&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;LIST_LOAD_REQUEST&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+
+  &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;itemRepo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;ItemRepositoryImpl&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;itemService&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;ItemServiceImpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;itemRepo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;items&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;itemService&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;GetItems&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;LIST_LOAD_SUCCESS&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;payload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;items&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;LIST_LOAD_FAILURE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;error&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The first three lines within the try hold the essence of any dependency injection setup:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;itemRepo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;ItemRepositoryImpl&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;First, we initalise the repository.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;itemService&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;ItemServiceImpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;itemRepo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then, we inject it into the service.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;items&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;itemService&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;GetItems&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And finally, we access the methods offered by the service.&lt;/p&gt;
+&lt;p&gt;It's good to keep these steps explicitly defined, so that the flow is clear and can
+be changed in the future.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;And that's it! We've taken our core out and implemented it in a completely isolated
+fashion that doesn't depend on infrastructure concerns. This makes things nice and
+testable (I'll try to add some tests to the repo soon!), and makes you think about
+the parts of your code that can (and definitely will) change—and how to make sure
+that change is contained.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is the reason we do not put SQL in JSPs. This is the reason we do not generate
+HTML in the modules that compute results. This is the reason that business rules
+should not know the database schema. This is the reason we separate concerns.&lt;/p&gt;
+&lt;p&gt;Another wording for the Single Responsibility Principle is: "Gather together the
+things that change for the same reasons. Separate those things that change for
+different reasons."&lt;/p&gt;
+&lt;p&gt;If you think about this you’ll realize that this is just another way to define
+cohesion and coupling. We want to increase the cohesion between things that change
+for the same reasons, and we want to decrease the coupling between those things
+that change for different reasons.&lt;/p&gt;
+&lt;p&gt;— Uncle Bob&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/janithl/react-clean-arch"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category><category term="design"></category><category term="work"></category></entry><entry><title>My take on doing 'Clean Architecture' in React (Part 1)</title><link href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/" rel="alternate"></link><published>2019-10-06T19:10:00+05:30</published><updated>2019-10-06T19:10:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-06:/2019/10/react-clean-architecture-part-1/</id><summary type="html">&lt;p&gt;&lt;img alt="Clean Architecture" src="https://janithl.github.io/images/clean-arch-diagram.png"&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;Clean Architecture, simplified.&lt;/p&gt;
 
 &lt;p&gt;I'm a huge fan of Robert C. Martin's work in general, and &lt;a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean Architecture&lt;/a&gt; in
@@ -129,7 +308,19 @@ include an &lt;code&gt;ItemRepository&lt;/code&gt; interface, and an implementat
 arrows are flowing inwards. In this case, &lt;code&gt;ItemService&lt;/code&gt; depends on the interface
 &lt;code&gt;ItemRepository&lt;/code&gt;—which is in the Entity layer—and not on its concrete implementation
 which is on a lower layer and will only be injected during runtime. This has several
-benefits, which we'll explore in the next part.&lt;/p&gt;
+benefits, &lt;a href="https://janithl.github.io/2019/10/react-clean-architecture-part-2/"&gt;which we'll explore in the next part&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The overriding rule that makes this architecture work is The Dependency Rule. This
+rule says that source code dependencies can only point inwards. Nothing in an inner
+circle can know anything at all about something in an outer circle. In particular,
+the name of something declared in an outer circle must not be mentioned by the code
+in the an inner circle. That includes, functions, classes. variables, or any other
+named software entity.&lt;/p&gt;
+&lt;p&gt;By the same token, data formats used in an outer circle should not be used by an inner
+circle, especially if those formats are generate by a framework in an outer circle. We
+don’t want anything in an outer circle to impact the inner circles.&lt;/p&gt;
+&lt;p&gt;— Uncle Bob&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -2040,8 +2231,4 @@ we all need to float away. Or so I feel.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Facebook Year in Review" src="https://janithl.github.io/images/fb-2016.png"&gt;&lt;/p&gt;
 &lt;p&gt;So, that's been my year. It wasn't terrible personally by a long stretch, but
 it was certainly challenging and 2017 promises to be even more so. I hope you've
-all had a good year, and wish you all the best for the next one. Cheers!&lt;/p&gt;</content></entry><entry><title>...</title><link href="https://janithl.github.io/2016/12/ellipsis/" rel="alternate"></link><published>2016-12-15T05:06:00+05:30</published><updated>2016-12-15T05:06:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-15:/2016/12/ellipsis/</id><summary type="html">&lt;p&gt;&lt;em&gt;විපතෙහි සැපතෙහි&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;නොසැළෙයි නොතැවෙයි&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;අටලෝ දම හුරු හෙළයා&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;විපතෙහි සැපතෙහි&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;නොසැළෙයි නොතැවෙයි&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;අටලෝ දම හුරු හෙළයා&lt;/em&gt;&lt;/p&gt;</content><category term="people"></category><category term="sinhala"></category></entry></feed>
+all had a good year, and wish you all the best for the next one. Cheers!&lt;/p&gt;</content></entry></feed>
