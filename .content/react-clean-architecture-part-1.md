@@ -158,8 +158,11 @@ benefits, [which we'll explore in the next part][3].
 
 > — Uncle Bob
 
+[**The full code for this part can be found on Github.**][4]
+
 [^1]: With or without Redux (or Redux-like) state management
 
 [1]: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 [2]: https://en.wikipedia.org/wiki/Dependency_inversion_principle
 [3]: {filename}/react-clean-architecture-part-2.md
+[4]: https://github.com/janithl/react-clean-arch/tree/6224ee5f77b1398c41163ffedc78faf786962cc1

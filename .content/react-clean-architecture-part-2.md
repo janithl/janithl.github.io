@@ -206,9 +206,16 @@ that change is contained.
 
 > — Uncle Bob
 
-[**The full code for this part can be found on Github.**][4]
+---
+
+This series of posts is dedicated to [Mr. Mahasen Bandara][4], architect extraordinaire,
+from whom I had the priviledge of learning about Robert C. Martin and architectural
+boundaries and a ton of other architectural and programming practicies.
+
+[**The full code for this part can be found on Github.**][5]
 
 [1]: {filename}/react-clean-architecture-part-1.md
 [2]: https://github.com/janithl/react-clean-arch/tree/6224ee5f77b1398c41163ffedc78faf786962cc1
 [3]: https://github.com/microsoft/TypeScript-React-Conversion-Guide
-[4]: https://github.com/janithl/react-clean-arch
+[4]: https://www.linkedin.com/in/mahasenbandara/
+[5]: https://github.com/janithl/react-clean-arch
