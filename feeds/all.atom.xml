@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-10-14T08:28:00+05:30</updated><entry><title>My take on doing 'Clean Architecture' in React (Part 2)</title><link href="https://janithl.github.io/2019/10/react-clean-architecture-part-2/" rel="alternate"></link><published>2019-10-14T08:28:00+05:30</published><updated>2019-10-14T08:28:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-14:/2019/10/react-clean-architecture-part-2/</id><summary type="html">&lt;p&gt;&lt;img alt="Core Folder Structure" src="https://janithl.github.io/images/clean-arch-folders.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-11-27T08:15:00+05:30</updated><entry><title>I've been sketching...</title><link href="https://janithl.github.io/2019/11/ive-been-sketching/" rel="alternate"></link><published>2019-11-27T08:15:00+05:30</published><updated>2019-11-27T08:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-11-27:/2019/11/ive-been-sketching/</id><summary type="html">&lt;h4&gt;I've been sketching at work...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-work.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;I've been sketching at home...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-home.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;I've sketched someone who looks like Jinora...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-jinora.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;And someone who looks like me...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-self.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;Most are terrible...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-wtf2.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-wtf1.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;But some, I'm quite proud of...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-g2.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-g3.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Especially this one 👇&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-g1.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;I got myself a set of cheap graphite sketching pencils from our lord and saviour …&lt;/p&gt;</summary><content type="html">&lt;h4&gt;I've been sketching at work...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-work.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;I've been sketching at home...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-home.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;I've sketched someone who looks like Jinora...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-jinora.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;And someone who looks like me...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-self.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;Most are terrible...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-wtf2.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-wtf1.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;But some, I'm quite proud of...&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-g2.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-g3.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Especially this one 👇&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-g1.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;I got myself a set of cheap graphite sketching pencils from our lord and saviour
+AliExpress. Since I don't Instagram anymore, this is just me showing off.&lt;/p&gt;</content><category term="design"></category><category term="people"></category></entry><entry><title>My take on doing 'Clean Architecture' in React (Part 2)</title><link href="https://janithl.github.io/2019/10/react-clean-architecture-part-2/" rel="alternate"></link><published>2019-10-14T08:28:00+05:30</published><updated>2019-10-14T08:28:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-14:/2019/10/react-clean-architecture-part-2/</id><summary type="html">&lt;p&gt;&lt;img alt="Core Folder Structure" src="https://janithl.github.io/images/clean-arch-folders.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/"&gt;In the last part&lt;/a&gt;, we broke the application core out, with layers for
 entities, usecases, and infrastructure. The &lt;a href="https://github.com/janithl/react-clean-arch/tree/6224ee5f77b1398c41163ffedc78faf786962cc1"&gt;example code we used in the last
 part (without breaking the core out) can be found on Github&lt;/a&gt;.&lt;/p&gt;
@@ -2191,49 +2224,4 @@ sure if you're a good person, and nothing new is happening and you feel like you
 coasting on &lt;em&gt;that one time&lt;/em&gt; you did well (a long long time ago...)&lt;/p&gt;
 &lt;p&gt;&lt;img alt="BoJack Horseman" src="https://janithl.github.io/images/bojack.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Anywayyy, this wasn't supposed to be &lt;em&gt;that&lt;/em&gt; negative (you should've seen the first draft)
-so we'll wind up here. This means more regular updates on the blog again, hopefully!&lt;/p&gt;</content><category term="work"></category><category term="uni"></category><category term="people"></category></entry><entry><title>One Last 2016 Post</title><link href="https://janithl.github.io/2016/12/one-last-2016-post/" rel="alternate"></link><published>2016-12-31T21:24:00+05:30</published><updated>2016-12-31T21:24:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-12-31:/2016/12/one-last-2016-post/</id><summary type="html">&lt;p&gt;2016 has been... an &lt;em&gt;interesting&lt;/em&gt; year. I've made friends, and I've lost some.
-I got a lot of time to sit down and reflect, and I grow thankful every day for
-the people who choose to stand by me despite all my shortcomings.&lt;/p&gt;
-&lt;p&gt;In the spirit of 2016, let me …&lt;/p&gt;</summary><content type="html">&lt;p&gt;2016 has been... an &lt;em&gt;interesting&lt;/em&gt; year. I've made friends, and I've lost some.
-I got a lot of time to sit down and reflect, and I grow thankful every day for
-the people who choose to stand by me despite all my shortcomings.&lt;/p&gt;
-&lt;p&gt;In the spirit of 2016, let me turn the things that made me happy this year into
-a Top 5 list:&lt;/p&gt;
-&lt;h1&gt;1. I got to travel&lt;/h1&gt;
-&lt;p&gt;Since "the incident" of Feb 2014, I've not really travelled as much as I
-would've normally liked to. This year though began with some travel: to
-Pasikuda with the family. Places I got to travel to this year includes that
-and our usual annual trips to Kandy, Anuradhapura (and Yapahuwa, a first for 
-me), &lt;a href="https://janithl.github.io/2016/09/somawathiya-september-2016/"&gt;Somawathiya&lt;/a&gt;, the &lt;em&gt;Deep South&lt;/em&gt; (Katharagama, Mulkirigala etc.) and 
-some really fun day trips Down South with the co-workers.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Deep South Instagrams" src="https://janithl.github.io/images/deep-south.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;I was particularly happy with the pics I got to take on the Deep South trip.&lt;/p&gt;
-&lt;h1&gt;2. I got to learn&lt;/h1&gt;
-&lt;p&gt;... both in and out of the classroom. In the classroom I tried to wrap my head
-around ML techniques, &lt;a href="https://janithl.github.io/2016/08/and-so-it-began/"&gt;neural nets&lt;/a&gt;, advanced DBs and their ilk. Outside
-of it, I got to play with React quite a bit, learn &lt;a href="https://laravel.com/"&gt;Laravel&lt;/a&gt; in a (cramped)
-couple of months and push out live systems almost immediately (what a beautiful
-framework, has changed the way I write PHP for the better). I got to dabble in
-more Python than I ever got to. &lt;/p&gt;
-&lt;p&gt;I got into &lt;a href="https://www.youtube.com/channel/UCzZCiVjRPPDCpP5l7HIGRtA"&gt;some&lt;/a&gt; &lt;a href="https://www.youtube.com/channel/UC3Wj9aO8VS5ZuXrtWfJf81w"&gt;crazy&lt;/a&gt; &lt;a href="https://www.youtube.com/channel/UCCOIcdii1bQmfSPHeNNw4Qw"&gt;YouTube channels&lt;/a&gt; that inspired me to pick 
-up my guitar after years, adjust the truss rod and play some barre chords. I
-followed Casey Neistat as he built and sold a company, and let John Green
-teach me history like I was taking my AP exams.&lt;/p&gt;
-&lt;h1&gt;3. I got time off&lt;/h1&gt;
-&lt;p&gt;I got three months off to write my thesis' lit review, write this blog, &lt;a href="https://janithl.github.io/2016/09/the-unp-at-70/"&gt;write 
-about the UNP&lt;/a&gt; and write code to buff up my Github profile. I started working
-at YAMU the week after I was done with my final exam at uni, and I never got a 
-proper break since. Those 3 months let me put everything in perspective and 
-helped me decide what I really wanted to do with my life.&lt;/p&gt;
-&lt;h1&gt;4. I got bald&lt;/h1&gt;
-&lt;p&gt;Well, started balding. Not really fussed about it. (I feel that) I am well aware 
-of my mortality, and that I'm no longer the youngest guy in the room.&lt;/p&gt;
-&lt;h1&gt;5. I got to let go&lt;/h1&gt;
-&lt;p&gt;... of some important things which I once thought would stay with me for (most
-of my) life. It was much easier than I thought and I feel much better for it.&lt;/p&gt;
-&lt;p&gt;Life is a stream and hanging on to a bank is not going to help when eventually
-we all need to float away. Or so I feel.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Facebook Year in Review" src="https://janithl.github.io/images/fb-2016.png"&gt;&lt;/p&gt;
-&lt;p&gt;So, that's been my year. It wasn't terrible personally by a long stretch, but
-it was certainly challenging and 2017 promises to be even more so. I hope you've
-all had a good year, and wish you all the best for the next one. Cheers!&lt;/p&gt;</content></entry></feed>
+so we'll wind up here. This means more regular updates on the blog again, hopefully!&lt;/p&gt;</content><category term="work"></category><category term="uni"></category><category term="people"></category></entry></feed>
