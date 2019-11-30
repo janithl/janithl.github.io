@@ -30,7 +30,7 @@ music but can't play an instrument[^2].
 
 ![Digital Drawing]({filename}/images/sketches/digital-5.jpg)
 
-[^1]: Shout-out to [FireAlpaca][3], the awesome free editor I've been using to draw these
+[^1]: Shout-out to [FireAlpaca][3], the awesome free editor I've been using to draw these.
 [^2]: AKA me when I was 14!
 
 [1]: https://www.youtube.com/watch?v=JKcSVBTD2a4
