@@ -24,16 +24,14 @@ mould the light and shadows to create shapes.
 ![Digital Drawing]({filename}/images/sketches/digital-4.jpg)
 
 It's been a lot of fun, and this next piece took only 45 minutes. Having an undo button,
-an eraser, and all the brushes in the world is definitely expanding the possibilities
+an eraser, and all the brushes in the world[^1] is definitely expanding the possibilities
 for my limited artistic ability. It's like giving FL Studio to a kid who wants to write
-music but can't play an instrument[^1].
+music but can't play an instrument[^2].
 
 ![Digital Drawing]({filename}/images/sketches/digital-5.jpg)
 
-Also, shout-out to [FireAlpaca][3], the awesome free editor I've been using to draw these.
-It's been very cool and I've barely even scratched its surface, feature-wise.
-
-[^1]: AKA me when I was 14!
+[^1]: Shout-out to [FireAlpaca][3], the awesome free editor I've been using to draw these
+[^2]: AKA me when I was 14!
 
 [1]: https://www.youtube.com/watch?v=JKcSVBTD2a4
 [2]: {filename}/ive-been-sketching.md
