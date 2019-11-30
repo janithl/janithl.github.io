@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - Personal</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-11-27T08:15:00+05:30</updated><entry><title>I've been sketching...</title><link href="https://janithl.github.io/2019/11/ive-been-sketching/" rel="alternate"></link><published>2019-11-27T08:15:00+05:30</published><updated>2019-11-27T08:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-11-27:/2019/11/ive-been-sketching/</id><summary type="html">&lt;h4&gt;I've been sketching at work...&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - Personal</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/personal.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-11-30T20:45:00+05:30</updated><entry><title>Going Digital</title><link href="https://janithl.github.io/2019/11/going-digital/" rel="alternate"></link><published>2019-11-30T20:45:00+05:30</published><updated>2019-11-30T20:45:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-11-30:/2019/11/going-digital/</id><summary type="html">&lt;p&gt;I've been eyeing a graphics tablet for a while now, and on 11.11 there was this gorgeous
+&lt;a href="https://www.youtube.com/watch?v=JKcSVBTD2a4"&gt;Gaomon S620&lt;/a&gt; for just $22 (!!!) on AliExpress, an offer I simply couldn't refuse.
+Well, the tab arrived in the mail today, and I want to share some of my experiments on
+my …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've been eyeing a graphics tablet for a while now, and on 11.11 there was this gorgeous
+&lt;a href="https://www.youtube.com/watch?v=JKcSVBTD2a4"&gt;Gaomon S620&lt;/a&gt; for just $22 (!!!) on AliExpress, an offer I simply couldn't refuse.
+Well, the tab arrived in the mail today, and I want to share some of my experiments on
+my first day of digital art!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="First Drawing" src="https://janithl.github.io/images/sketches/digital-1.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Second Drawing" src="https://janithl.github.io/images/sketches/digital-2.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;The first few attempts (above) were predictably terrible, but I began realising that my
+usual &lt;a href="https://janithl.github.io/2019/11/ive-been-sketching/"&gt;sketching&lt;/a&gt; and watercolouring techniques weren't the best match for the medium,
+because digital was something else entirely! As I told Dili, "it's like working with clay,
+I can mould this shit all day". And that was my lightbulb moment, the fact that I can
+mould the light and shadows to create shapes.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Digital Drawing" src="https://janithl.github.io/images/sketches/digital-3.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Digital Drawing" src="https://janithl.github.io/images/sketches/digital-4.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;It's been a lot of fun, and this next piece took only 45 minutes. Having an undo button,
+an eraser, and all the brushes in the world is definitely expanding the possibilities
+for my limited artistic ability. It's like giving FL Studio to a kid who wants to write
+music but can't play an instrument&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Digital Drawing" src="https://janithl.github.io/images/sketches/digital-5.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Also, shout-out to &lt;a href="https://firealpaca.com"&gt;FireAlpaca&lt;/a&gt;, the awesome free editor I've been using to draw these.
+It's been very cool and I've barely even scratched its surface, feature-wise.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;AKA me when I was 14!&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="design"></category><category term="people"></category></entry><entry><title>I've been sketching...</title><link href="https://janithl.github.io/2019/11/ive-been-sketching/" rel="alternate"></link><published>2019-11-27T08:15:00+05:30</published><updated>2019-11-27T08:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-11-27:/2019/11/ive-been-sketching/</id><summary type="html">&lt;h4&gt;I've been sketching at work...&lt;/h4&gt;
 &lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-work.jpg"&gt;&lt;/p&gt;
 &lt;h4&gt;I've been sketching at home...&lt;/h4&gt;
 &lt;p&gt;&lt;img alt="Sketch" src="https://janithl.github.io/images/sketches/sketches-home.jpg"&gt;&lt;/p&gt;
@@ -593,16 +623,4 @@ which requires only publicly available data, could transform efforts to track
 and target poverty in developing countries. It also demonstrates how powerful 
 machine learning techniques can be applied in a setting with limited training 
 data, suggesting broad potential application across many scientific domains.&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="uni"></category></entry><entry><title>Alan Moore on Conspiracy Theories</title><link href="https://janithl.github.io/2016/08/alan-moore/" rel="alternate"></link><published>2016-08-19T18:38:00+05:30</published><updated>2016-08-19T18:38:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-19:/2016/08/alan-moore/</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;The main thing that I learned about conspiracy theory is that conspiracy 
-theorists actually believe in a conspiracy because that is more comforting. The 
-truth of the world is that it is chaotic. The truth is, that it is not the 
-Jewish banking conspiracy or the grey aliens or the …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;blockquote&gt;
-&lt;p&gt;The main thing that I learned about conspiracy theory is that conspiracy 
-theorists actually believe in a conspiracy because that is more comforting. The 
-truth of the world is that it is chaotic. The truth is, that it is not the 
-Jewish banking conspiracy or the grey aliens or the 12 foot reptiloids from 
-another dimension that are in control. The truth is more frightening, nobody is 
-in control. The world is rudderless.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://en.wikiquote.org/wiki/Alan_Moore"&gt;&lt;em&gt;"The Mindscape of Alan Moore" (2003)&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="geopolitics"></category></entry></feed>
+&lt;/blockquote&gt;</content><category term="uni"></category></entry></feed>
