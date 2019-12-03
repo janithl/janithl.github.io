@@ -30,11 +30,9 @@ music but can't play an instrument[^2].
 
 ![Digital Drawing]({filename}/images/sketches/digital-5.jpg)
 
-### Update
-
-After a few more days (actually 3 days, because of travel) of playing with the tablet,
-I'm happy to share two more #sadppls as I used to call them. Say hello to Orange Guy and
-Fail Girl:
+**Update:** After a few more days (actually 3 days, because of travel) of playing with the
+tablet, I'm happy to share two more #sadppls (as I used to call them). Say hello to
+_Orange Guy_ and _Fail Girl_:
 
 ![Orange Guy]({filename}/images/sketches/orange-guy.jpg)
 
