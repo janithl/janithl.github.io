@@ -30,6 +30,16 @@ music but can't play an instrument[^2].
 
 ![Digital Drawing]({filename}/images/sketches/digital-5.jpg)
 
+### Update
+
+After a few more days (actually 3 days, because of travel) of playing with the tablet,
+I'm happy to share two more #sadppls as I used to call them. Say hello to Orange Guy and
+Fail Girl:
+
+![Orange Guy]({filename}/images/sketches/orange-guy.jpg)
+
+![Fail Girl]({filename}/images/sketches/fail-girl.jpg)
+
 [^1]: Shout-out to [FireAlpaca][3], the awesome free editor I've been using to draw these.
 [^2]: AKA me when I was 14!
 
