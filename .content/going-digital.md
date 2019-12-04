@@ -38,8 +38,13 @@ _Orange Guy_ and _Fail Girl_:
 
 ![Fail Girl]({filename}/images/sketches/fail-girl.jpg)
 
+**Update 2:** And my proudest moment yet[^3], our TimTams:
+
+![Thimal]({filename}/images/sketches/timtam.jpg)
+
 [^1]: Shout-out to [FireAlpaca][3], the awesome free editor I've been using to draw these.
 [^2]: AKA me when I was 14!
+[^3]: Because he's so damn difficult to draw correctly, I swear!
 
 [1]: https://www.youtube.com/watch?v=JKcSVBTD2a4
 [2]: {filename}/ive-been-sketching.md
