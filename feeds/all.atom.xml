@@ -83,7 +83,7 @@ reproduced below. For each scrape, we initialise a new parser.&lt;/p&gt;
 to try and match the generator tag regex and return the value of the tag.&lt;/p&gt;
 &lt;p&gt;Now, we get to the main function and the &lt;code&gt;getSiteVersion()&lt;/code&gt; goroutine:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nx"&gt;getSiteVersion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;done&lt;/span&gt; &lt;span class="kd"&gt;chan&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;start&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;// check time taken&lt;/span&gt;
+    &lt;span class="nx"&gt;start&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;// to check the time taken&lt;/span&gt;
 
     &lt;span class="nx"&gt;site&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;{}&lt;/span&gt;
     &lt;span class="nx"&gt;site&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setURL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -117,7 +117,8 @@ Goroutine, but if this was not the case a mutex would be essential here.&lt;/p&g
 Goroutines are done executing before we quit the application, and as a final step
 we output the &lt;code&gt;sites&lt;/code&gt; slice as JSON. As an alternative, a &lt;a href="https://gobyexample.com/waitgroups"&gt;WaitGroup&lt;/a&gt; can be used.&lt;/p&gt;
 &lt;p&gt;This is sadly the only piece of Go code I have written &lt;s&gt;at&lt;/s&gt; for work, but it does
-its job admirably, and I would highly recommend Go for tasks like these.&lt;/p&gt;
+its job admirably, and I would highly recommend Go for tasks like these. The full code
+&lt;a href="https://gist.github.com/janithl/a7c7369785c0b7b26c17f7a2673f8bea"&gt;is available on Github&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;

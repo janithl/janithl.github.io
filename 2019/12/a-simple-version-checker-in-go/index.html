@@ -190,7 +190,7 @@ reproduced below. For each scrape, we initialise a new parser.</p>
 to try and match the generator tag regex and return the value of the tag.</p>
 <p>Now, we get to the main function and the <code>getSiteVersion()</code> goroutine:</p>
 <div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">getSiteVersion</span><span class="p">(</span><span class="nx">key</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">done</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">start</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span> <span class="c1">// check time taken</span>
+    <span class="nx">start</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span> <span class="c1">// to check the time taken</span>
 
     <span class="nx">site</span> <span class="o">:=</span> <span class="nx">Parser</span><span class="p">{}</span>
     <span class="nx">site</span><span class="p">.</span><span class="nx">setURL</span><span class="p">(</span><span class="nx">sites</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">URL</span><span class="p">)</span>
@@ -224,7 +224,8 @@ Goroutine, but if this was not the case a mutex would be essential here.</p>
 Goroutines are done executing before we quit the application, and as a final step
 we output the <code>sites</code> slice as JSON. As an alternative, a <a href="https://gobyexample.com/waitgroups">WaitGroup</a> can be used.</p>
 <p>This is sadly the only piece of Go code I have written <s>at</s> for work, but it does
-its job admirably, and I would highly recommend Go for tasks like these.</p>
+its job admirably, and I would highly recommend Go for tasks like these. The full code
+<a href="https://gist.github.com/janithl/a7c7369785c0b7b26c17f7a2673f8bea">is available on Github</a>.</p>
 <div class="footnote">
 <hr>
 <ol>

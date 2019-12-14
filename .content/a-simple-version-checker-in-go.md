@@ -93,7 +93,7 @@ Now, we get to the main function and the `getSiteVersion()` goroutine:
 
 ```go
 func getSiteVersion(key int, done chan<- bool) {
-	start := time.Now() // check time taken
+	start := time.Now() // to check the time taken
 
 	site := Parser{}
 	site.setURL(sites[key].URL)
@@ -128,7 +128,8 @@ Goroutines are done executing before we quit the application, and as a final ste
 we output the `sites` slice as JSON. As an alternative, a [WaitGroup][2] can be used.
 
 This is sadly the only piece of Go code I have written <s>at</s> for work, but it does
-its job admirably, and I would highly recommend Go for tasks like these.
+its job admirably, and I would highly recommend Go for tasks like these. The full code
+[is available on Github][3].
 
 [^1]: Might not be a good idea for software with a known CVE list where letting an
 attacker know your specific version will open you up to attacks.
@@ -137,3 +138,4 @@ attacker know your specific version will open you up to attacks.
 
 [1]: https://gobyexample.com/mutexes
 [2]: https://gobyexample.com/waitgroups
+[3]: https://gist.github.com/janithl/a7c7369785c0b7b26c17f7a2673f8bea
