@@ -11,7 +11,7 @@ on the websites and thereby get the version number&lt;sup id="fnref:1"&gt;&lt;a 
 &lt;p&gt;The code is simple and uses Goroutines to let us concurrently connect to the sites.
 The code we use in prod is a bit more specialised, but I've reproduced a version
 that captures the essentials below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; &lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;
 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="s"&gt;&amp;quot;encoding/json&amp;quot;&lt;/span&gt;

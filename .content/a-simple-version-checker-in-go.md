@@ -16,7 +16,7 @@ The code we use in prod is a bit more specialised, but I've reproduced a version
 that captures the essentials below:
 
 ```go
- package main
+package main
 
 import (
 	"encoding/json"
