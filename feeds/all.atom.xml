@@ -116,8 +116,8 @@ Goroutine, but if this was not the case a mutex would be essential here.&lt;/p&g
 &lt;p&gt;In &lt;code&gt;main()&lt;/code&gt;, we're simply using a channel called &lt;code&gt;done&lt;/code&gt; to make sure all the
 Goroutines are done executing before we quit the application, and as a final step
 we output the &lt;code&gt;sites&lt;/code&gt; slice as JSON. As an alternative, a &lt;a href="https://gobyexample.com/waitgroups"&gt;WaitGroup&lt;/a&gt; can be used.&lt;/p&gt;
-&lt;p&gt;This is sadly the only piece of Go code I have written at work, but it does its job
-admirably, and I would highly recommend Go for tasks like these.&lt;/p&gt;
+&lt;p&gt;This is sadly the only piece of Go code I have written &lt;s&gt;at&lt;/s&gt; for work, but it does
+its job admirably, and I would highly recommend Go for tasks like these.&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
