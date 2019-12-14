@@ -117,8 +117,8 @@ Goroutine, but if this was not the case a mutex would be essential here.&lt;/p&g
 Goroutines are done executing before we quit the application, and as a final step
 we output the &lt;code&gt;sites&lt;/code&gt; slice as JSON. As an alternative, a &lt;a href="https://gobyexample.com/waitgroups"&gt;WaitGroup&lt;/a&gt; can be used.&lt;/p&gt;
 &lt;p&gt;This is sadly the only piece of Go code I have written &lt;s&gt;at&lt;/s&gt; for work, but it does
-its job admirably, and I would highly recommend Go for tasks like these. The full code
-&lt;a href="https://gist.github.com/janithl/a7c7369785c0b7b26c17f7a2673f8bea"&gt;is available on Github&lt;/a&gt;.&lt;/p&gt;
+its job admirably, and I would highly recommend Go for tasks like these.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gist.github.com/janithl/a7c7369785c0b7b26c17f7a2673f8bea"&gt;&lt;strong&gt;The full code can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;

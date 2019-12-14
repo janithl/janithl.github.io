@@ -128,8 +128,9 @@ Goroutines are done executing before we quit the application, and as a final ste
 we output the `sites` slice as JSON. As an alternative, a [WaitGroup][2] can be used.
 
 This is sadly the only piece of Go code I have written <s>at</s> for work, but it does
-its job admirably, and I would highly recommend Go for tasks like these. The full code
-[is available on Github][3].
+its job admirably, and I would highly recommend Go for tasks like these.
+
+[**The full code can be found on Github.**][3]
 
 [^1]: Might not be a good idea for software with a known CVE list where letting an
 attacker know your specific version will open you up to attacks.
