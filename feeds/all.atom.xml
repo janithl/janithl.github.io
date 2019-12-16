@@ -1,5 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-12-14T09:15:00+05:30</updated><entry><title>A Simple Version Checker In Go</title><link href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go/" rel="alternate"></link><published>2019-12-14T09:15:00+05:30</published><updated>2019-12-14T09:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-14:/2019/12/a-simple-version-checker-in-go/</id><summary type="html">&lt;p&gt;&lt;img alt="Version Check Output" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-12-16T21:08:00+05:30</updated><entry><title>Go යොදාගෙන සරළ version checker එක​ක්</title><link href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go-si/" rel="alternate"></link><published>2019-12-16T21:08:00+05:30</published><updated>2019-12-16T21:08:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-16:/2019/12/a-simple-version-checker-in-go-si/</id><summary type="html">&lt;p&gt;&lt;img alt="Version Check එ​ක" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
+&lt;p&gt;දැනට මම ඉන්න වැඩපොලේ සයිට් 15ක විතර version ට්‍රැක් කරගෙන යාවත්කාලීන
+කරන්න අවශ්‍යතාවයක් තියනව. අපි ඕක automate කරගන්න සරළ Go මෘදුකාංගයක්
+ලියාගත්ත. ඒකෙ කතාව තමය …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Version Check එ​ක" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
+&lt;p&gt;දැනට මම ඉන්න වැඩපොලේ සයිට් 15ක විතර version ට්‍රැක් කරගෙන යාවත්කාලීන
+කරන්න අවශ්‍යතාවයක් තියනව. අපි ඕක automate කරගන්න සරළ Go මෘදුකාංගයක්
+ලියාගත්ත. ඒකෙ කතාව තමයි මේ...&lt;/p&gt;
+&lt;p&gt;ලයිව් සයිට් එකේ පාවිච්චි කරන කෝඩ් එකට වඩා පොඩ්ඩක් මේක සරළ කරලයි
+තියෙන්නෙ, ඒත් මූලික ක්‍රියාවලිය එකමයි. සයිට් වල තියෙන generator මෙටා ටැග්
+කියවන එක තමයි මේකෙ​න් වෙන්නෙ&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;. Go වල තියෙන Goroutines කියන සමාන්තරව
+වැඩ ගොඩක් කරගන්න පුළුවන් විශේෂාංගය තමයි මේකට අපි පාවිච්චි කරේ.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;encoding/json&amp;quot;&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;io/ioutil&amp;quot;&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;net/http&amp;quot;&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;os&amp;quot;&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;regexp&amp;quot;&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;time&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Site type holds information about sites&lt;/span&gt;
+&lt;span class="kd"&gt;type&lt;/span&gt; &lt;span class="nx"&gt;Site&lt;/span&gt; &lt;span class="kd"&gt;struct&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;Name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;Version&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;TimeTaken&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;sites&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="nx"&gt;Site&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Site A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;https://a.web.site&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;N/A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Site B&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;https://b.web.site&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;N/A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Site C&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;https://c.web.site&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;N/A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Parser type holds information about the parsing&lt;/span&gt;
+&lt;span class="kd"&gt;type&lt;/span&gt; &lt;span class="nx"&gt;Parser&lt;/span&gt; &lt;span class="kd"&gt;struct&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;setURL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;url&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;url&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;url&lt;/span&gt;
+    &lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;Site&lt;/code&gt; කියන්නෙ සයිට් එක එක ගැන දත්ත ටික තියාගන්න struct එකක්. මේකෙම පස්සෙ
+පුරෝගන්න version එකයි දත්ත ටික් රික්වෙස්ට් කරල ලබාගන්න ගිය වෙලාවයි දාන්නත් ඉඩ
+තියාගෙන තියෙනව.&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;සයිට් ගොඩක් තිය​න slice එකක් අපි හදල ඒකෙ ත​තු ලබාගන්න ඕනෙ සයිට් ටිකේ URL ටික
+දාගන්නව.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Parser&lt;/code&gt; එක තියෙන්නෙ දත්ත ලබාගන්නයි ලබාගත්ත දත්ත ඇතුළෙන් අපිට ඕනෙ version
+නොම්බරේ ලබාගන්න එකයි කරන්න. හැම සයිට් එකකටම අලුත් parser එකක් අපි පාවිච්චි
+කරනව. Parser එකේ තව මෙත​ඩ් දෙකකුත් තියෙනව: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;getMatches&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;regexString&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;index&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;regex&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;_&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;regexp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;regexString&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="nx"&gt;matches&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;regex&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;FindStringSubmatch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;matches&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;matches&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;N/A&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;getVersion&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;err&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;err&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Fetch Error&amp;quot;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;err&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;ioutil&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ReadAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;err&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Parse Error&amp;quot;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;string&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getMatches&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;(&amp;lt;meta name=\&amp;quot;generator\&amp;quot; content=\&amp;quot;)([^\&amp;quot;]+)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;getVersion()&lt;/code&gt; එකෙන් වෙබ් පිටුවෙ අන්තර්ගතය ලබාගන්න එක තම​යි වෙන්නෙ. &lt;code&gt;getMatches()&lt;/code&gt;
+එකෙන් තමයි regular expression (regex) එකක් පාවිච්චි කරල generator tag එක අල්ලගෙන
+ඒකෙන් අපිට ඕනෙ version නොම්බරේ ලබාගන්නෙ.&lt;/p&gt;
+&lt;p&gt;අනිතිමටම තියෙන​ව main function එක​යි &lt;code&gt;getSiteVersion()&lt;/code&gt; goroutine එක​යි:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nx"&gt;getSiteVersion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;done&lt;/span&gt; &lt;span class="kd"&gt;chan&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;start&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;// to check the time taken&lt;/span&gt;
+
+    &lt;span class="nx"&gt;site&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;{}&lt;/span&gt;
+    &lt;span class="nx"&gt;site&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setURL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;Version&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;site&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getVersion&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;TimeTaken&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Since&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;String&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="nx"&gt;done&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;done&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;make&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;chan&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;index&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="k"&gt;range&lt;/span&gt; &lt;span class="nx"&gt;sites&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;go&lt;/span&gt; &lt;span class="nx"&gt;getSiteVersion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="nx"&gt;enc&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;NewEncoder&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;os&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Stdout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;enc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;getSiteVersion()&lt;/code&gt; එක ලූප් එකක් ඇතුළෙ කෝල් වෙනව. ඒකෙන් අලුත් Parser එකක් හැදිල,
+පේජ් එකේ අන්තර්ගතය අරන්, version නොම්බරේ හොයාගෙන, ඔක්කොටම ගතවෙච්ච කාලෙත්
+සටහන් කරගන්නව. මේකෙ &lt;a href="https://gobyexample.com/mutexes"&gt;mutex&lt;/a&gt; එකක් අපි පාවිච්චි කරන්නෙ නෑ මොකෝ &lt;code&gt;sites&lt;/code&gt; slice
+එක පාවිච්චි කරද්දි හැම slice element එකම කියවන්නෙයි ලියන්නෙයි ඒකට අදාල Goroutine
+එකෙන් විතරක් නිසා. එහෙම නොවුනනම් අනිවා mutex එකක් පාවිච්චි කරන්න වෙනව.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;main()&lt;/code&gt; එකේ &lt;code&gt;done&lt;/code&gt; කියල channel එකක් අපි පාවිච්චි කරනව. ඒ program එක ඉවර කරන්න
+කලිං ඔක්කොම Goroutines ටික වැඩ ඉවරයි නේද කියල චෙක් කරන්න. මේ වෙනුවට
+&lt;a href="https://gobyexample.com/waitgroups"&gt;WaitGroup&lt;/a&gt; එකක් පාවිච්චි කරන්නත් පුලුවන්. අන්තිමට අපි &lt;code&gt;sites&lt;/code&gt; slice එක JSON එකක්
+විදිහට එළියට දානව.&lt;/p&gt;
+&lt;p&gt;රස්සාව &lt;s&gt;වෙලා​වෙ&lt;/s&gt; වෙනුවෙන් ලියපු එකම Go කෝඩ් කෑල්ල මේක තමයි. තව ලියන්න
+තිබ්බ නං කියල හිතෙනව, එච්චරට language එක ලස්සනයි. මේ වගේ systems වැඩ කරන්න
+එහෙම කියාපු language එක.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gist.github.com/janithl/a7c7369785c0b7b26c17f7a2673f8bea"&gt;&lt;strong&gt;මුලු කෝඩ් එකම Github එකේ තියෙනව.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;ඕපන් සෝස් සොෆ්ට්වෙයාර් වල එහෙමනම් මෙහෙම එලිපිට වර්ශන් එක දාන එක
+අවුලක් වෙන්න පුළුවන්, මොකෝ known bugs පාවිච්චි කරල හැකර් අයියල සයිට් එකට
+බහින්න ඉඩ තියෙන නිසා.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;සයිට් එකේ response times එහෙම අවුල්ද කියල බලාගන්න මේක උදව් වෙනව.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="code"></category><category term="golang"></category><category term="sinhala"></category></entry><entry><title>A Simple Version Checker In Go</title><link href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go/" rel="alternate"></link><published>2019-12-14T09:15:00+05:30</published><updated>2019-12-14T09:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-14:/2019/12/a-simple-version-checker-in-go/</id><summary type="html">&lt;p&gt;&lt;img alt="Version Check Output" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
 &lt;p&gt;My current work requires keeping track of more than a dozen live websites and
 making sure that their versions are kept up to date. We have employed a small Go
 program to make this possible, which enable us to scrape the generator meta tags
@@ -46,7 +184,7 @@ that captures the essentials below:&lt;/p&gt;
 
 
 &lt;p&gt;&lt;code&gt;Site&lt;/code&gt; is simply a struct that holds info about the particular site, and fields
-to capture the version and the version and the time taken to do the scrape&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+to capture the version and the time taken to do the scrape&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;We've initialised a slice of sites with the URLs we need to scrape.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;Parser&lt;/code&gt; simply encapsulates parsing behaviour, and has two more methods,
 reproduced below. For each scrape, we initialise a new parser.&lt;/p&gt;
@@ -2251,15 +2389,4 @@ the head (if you were lucky), de Zoysa stood for …&lt;/p&gt;</summary><content
 government, and dissent was treated with abduction, torture and a gunshot to the back of
 the head (if you were lucky), de Zoysa stood for, and died for, his convictions.&lt;/p&gt;
 &lt;p&gt;Typeset in LaTeX. I wanted to do something fancy with illustrations, but it would've been
-overkill as the words stand by themselves.&lt;/p&gt;</content><category term="conflict"></category><category term="politics"></category></entry><entry><title>It's Alllive!</title><link href="https://janithl.github.io/2017/03/its-alllive/" rel="alternate"></link><published>2017-03-12T06:22:00+05:30</published><updated>2017-03-12T06:22:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-12:/2017/03/its-alllive/</id><summary type="html">&lt;p&gt;It takes ages to run, isn't optimized at all (bad by even my standards - it queries 
-sqlite for the same value over and over again in a single loop), runs off basic TF-IDF
-and nothing fancier, and fails to make obvious connections (as the screenshot below 
-illustrates).&lt;/p&gt;
-&lt;p&gt;I feel nervous …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It takes ages to run, isn't optimized at all (bad by even my standards - it queries 
-sqlite for the same value over and over again in a single loop), runs off basic TF-IDF
-and nothing fancier, and fails to make obvious connections (as the screenshot below 
-illustrates).&lt;/p&gt;
-&lt;p&gt;I feel nervous even posting about it because who knows how it'll turn out? Or if it'll
-ever &lt;em&gt;really&lt;/em&gt; work out there in the real world?&lt;/p&gt;
-&lt;p&gt;But it's a start, and I'm a wee bit proud (and apprehensive).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Indexer Demo" src="https://janithl.github.io/images/terminal-indexer.png"&gt;&lt;/p&gt;</content><category term="uni"></category></entry></feed>
+overkill as the words stand by themselves.&lt;/p&gt;</content><category term="conflict"></category><category term="politics"></category></entry></feed>

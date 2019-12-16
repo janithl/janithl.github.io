@@ -50,7 +50,7 @@ func (p *Parser) setURL(url string) {
 ```
 
 `Site` is simply a struct that holds info about the particular site, and fields
-to capture the version and the version and the time taken to do the scrape[^2].
+to capture the version and the time taken to do the scrape[^2].
 
 We've initialised a slice of sites with the URLs we need to scrape.
 

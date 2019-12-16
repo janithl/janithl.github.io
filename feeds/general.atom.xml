@@ -46,7 +46,7 @@ that captures the essentials below:&lt;/p&gt;
 
 
 &lt;p&gt;&lt;code&gt;Site&lt;/code&gt; is simply a struct that holds info about the particular site, and fields
-to capture the version and the version and the time taken to do the scrape&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+to capture the version and the time taken to do the scrape&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;We've initialised a slice of sites with the URLs we need to scrape.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;Parser&lt;/code&gt; simply encapsulates parsing behaviour, and has two more methods,
 reproduced below. For each scrape, we initialise a new parser.&lt;/p&gt;

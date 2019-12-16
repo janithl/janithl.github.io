@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/pygments.css">
 
-    <title>Janith's Blog &ndash; A Simple Version Checker In Go</title>
+    <title>Janith's Blog &ndash; Go යොදාගෙන සරළ version checker එක​ක්</title>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -30,7 +30,7 @@
 
     <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
 
-<meta name="keywords" content="code, golang">
+<meta name="keywords" content="code, golang, sinhala">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -106,22 +106,21 @@
     <div class="container">
 <article>
   <div class="article_title">
-    <h3><a href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go/">A Simple Version Checker In Go</a></h3>
-    <p class="lead">Go Local Sports Team!</p><hr>
+    <h3><a href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go-si/">Go යොදාගෙන සරළ version checker එක​ක්</a></h3>
   </div>
   <ul class="nav nav-pills">
     <li role="presentation" class="disabled"><a href="#">Translations:</a></li>
-    <li role="presentation"><a href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go-si/">si</a></li>
+    <li role="presentation"><a href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go/">en</a></li>
   </ul>
   <div class="article_text">
-    <p><img alt="Version Check Output" src="https://janithl.github.io/images/version-output.png"></p>
-<p>My current work requires keeping track of more than a dozen live websites and
-making sure that their versions are kept up to date. We have employed a small Go
-program to make this possible, which enable us to scrape the generator meta tags
-on the websites and thereby get the version number<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
-<p>The code is simple and uses Goroutines to let us concurrently connect to the sites.
-The code we use in prod is a bit more specialised, but I've reproduced a version
-that captures the essentials below:</p>
+    <p><img alt="Version Check එ​ක" src="https://janithl.github.io/images/version-output.png"></p>
+<p>දැනට මම ඉන්න වැඩපොලේ සයිට් 15ක විතර version ට්‍රැක් කරගෙන යාවත්කාලීන
+කරන්න අවශ්‍යතාවයක් තියනව. අපි ඕක automate කරගන්න සරළ Go මෘදුකාංගයක්
+ලියාගත්ත. ඒකෙ කතාව තමයි මේ...</p>
+<p>ලයිව් සයිට් එකේ පාවිච්චි කරන කෝඩ් එකට වඩා පොඩ්ඩක් මේක සරළ කරලයි
+තියෙන්නෙ, ඒත් මූලික ක්‍රියාවලිය එකමයි. සයිට් වල තියෙන generator මෙටා ටැග්
+කියවන එක තමයි මේකෙ​න් වෙන්නෙ<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Go වල තියෙන Goroutines කියන සමාන්තරව
+වැඩ ගොඩක් කරගන්න පුළුවන් විශේෂාංගය තමයි මේකට අපි පාවිච්චි කරේ.</p>
 <div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
@@ -156,11 +155,14 @@ that captures the essentials below:</p>
 </pre></div>
 
 
-<p><code>Site</code> is simply a struct that holds info about the particular site, and fields
-to capture the version and the time taken to do the scrape<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
-<p>We've initialised a slice of sites with the URLs we need to scrape.</p>
-<p>The <code>Parser</code> simply encapsulates parsing behaviour, and has two more methods,
-reproduced below. For each scrape, we initialise a new parser.</p>
+<p><code>Site</code> කියන්නෙ සයිට් එක එක ගැන දත්ත ටික තියාගන්න struct එකක්. මේකෙම පස්සෙ
+පුරෝගන්න version එකයි දත්ත ටික් රික්වෙස්ට් කරල ලබාගන්න ගිය වෙලාවයි දාන්නත් ඉඩ
+තියාගෙන තියෙනව.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<p>සයිට් ගොඩක් තිය​න slice එකක් අපි හදල ඒකෙ ත​තු ලබාගන්න ඕනෙ සයිට් ටිකේ URL ටික
+දාගන්නව.</p>
+<p><code>Parser</code> එක තියෙන්නෙ දත්ත ලබාගන්නයි ලබාගත්ත දත්ත ඇතුළෙන් අපිට ඕනෙ version
+නොම්බරේ ලබාගන්න එකයි කරන්න. හැම සයිට් එකකටම අලුත් parser එකක් අපි පාවිච්චි
+කරනව. Parser එකේ තව මෙත​ඩ් දෙකකුත් තියෙනව: </p>
 <div class="highlight"><pre><span></span><span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Parser</span><span class="p">)</span> <span class="nx">getMatches</span><span class="p">(</span><span class="nx">regexString</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
     <span class="nx">regex</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">regexp</span><span class="p">.</span><span class="nx">Compile</span><span class="p">(</span><span class="nx">regexString</span><span class="p">)</span>
 
@@ -190,9 +192,10 @@ reproduced below. For each scrape, we initialise a new parser.</p>
 </pre></div>
 
 
-<p><code>getVersion()</code> simply gets and reads the page body, and <code>getMatches()</code> is a method
-to try and match the generator tag regex and return the value of the tag.</p>
-<p>Now, we get to the main function and the <code>getSiteVersion()</code> goroutine:</p>
+<p><code>getVersion()</code> එකෙන් වෙබ් පිටුවෙ අන්තර්ගතය ලබාගන්න එක තම​යි වෙන්නෙ. <code>getMatches()</code>
+එකෙන් තමයි regular expression (regex) එකක් පාවිච්චි කරල generator tag එක අල්ලගෙන
+ඒකෙන් අපිට ඕනෙ version නොම්බරේ ලබාගන්නෙ.</p>
+<p>අනිතිමටම තියෙන​ව main function එක​යි <code>getSiteVersion()</code> goroutine එක​යි:</p>
 <div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">getSiteVersion</span><span class="p">(</span><span class="nx">key</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">done</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">start</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span> <span class="c1">// to check the time taken</span>
 
@@ -220,40 +223,44 @@ to try and match the generator tag regex and return the value of the tag.</p>
 </pre></div>
 
 
-<p><code>getSiteVersion()</code> gets called in a loop, initialises the Parser, does the scrape,
-and does simple time keeping of how long a scrape takes. We don't use a <a href="https://gobyexample.com/mutexes">mutex</a>
-when accessing the <code>sites</code> slice here because each element is only accessed by one
-Goroutine, but if this was not the case a mutex would be essential here.</p>
-<p>In <code>main()</code>, we're simply using a channel called <code>done</code> to make sure all the
-Goroutines are done executing before we quit the application, and as a final step
-we output the <code>sites</code> slice as JSON. As an alternative, a <a href="https://gobyexample.com/waitgroups">WaitGroup</a> can be used.</p>
-<p>This is sadly the only piece of Go code I have written <s>at</s> for work, but it does
-its job admirably, and I would highly recommend Go for tasks like these.</p>
-<p><a href="https://gist.github.com/janithl/a7c7369785c0b7b26c17f7a2673f8bea"><strong>The full code can be found on Github.</strong></a></p>
+<p><code>getSiteVersion()</code> එක ලූප් එකක් ඇතුළෙ කෝල් වෙනව. ඒකෙන් අලුත් Parser එකක් හැදිල,
+පේජ් එකේ අන්තර්ගතය අරන්, version නොම්බරේ හොයාගෙන, ඔක්කොටම ගතවෙච්ච කාලෙත්
+සටහන් කරගන්නව. මේකෙ <a href="https://gobyexample.com/mutexes">mutex</a> එකක් අපි පාවිච්චි කරන්නෙ නෑ මොකෝ <code>sites</code> slice
+එක පාවිච්චි කරද්දි හැම slice element එකම කියවන්නෙයි ලියන්නෙයි ඒකට අදාල Goroutine
+එකෙන් විතරක් නිසා. එහෙම නොවුනනම් අනිවා mutex එකක් පාවිච්චි කරන්න වෙනව.</p>
+<p><code>main()</code> එකේ <code>done</code> කියල channel එකක් අපි පාවිච්චි කරනව. ඒ program එක ඉවර කරන්න
+කලිං ඔක්කොම Goroutines ටික වැඩ ඉවරයි නේද කියල චෙක් කරන්න. මේ වෙනුවට
+<a href="https://gobyexample.com/waitgroups">WaitGroup</a> එකක් පාවිච්චි කරන්නත් පුලුවන්. අන්තිමට අපි <code>sites</code> slice එක JSON එකක්
+විදිහට එළියට දානව.</p>
+<p>රස්සාව <s>වෙලා​වෙ</s> වෙනුවෙන් ලියපු එකම Go කෝඩ් කෑල්ල මේක තමයි. තව ලියන්න
+තිබ්බ නං කියල හිතෙනව, එච්චරට language එක ලස්සනයි. මේ වගේ systems වැඩ කරන්න
+එහෙම කියාපු language එක.</p>
+<p><a href="https://gist.github.com/janithl/a7c7369785c0b7b26c17f7a2673f8bea"><strong>මුලු කෝඩ් එකම Github එකේ තියෙනව.</strong></a></p>
 <div class="footnote">
 <hr>
 <ol>
 <li id="fn:1">
-<p>Might not be a good idea for software with a known CVE list where letting an
-attacker know your specific version will open you up to attacks.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>ඕපන් සෝස් සොෆ්ට්වෙයාර් වල එහෙමනම් මෙහෙම එලිපිට වර්ශන් එක දාන එක
+අවුලක් වෙන්න පුළුවන්, මොකෝ known bugs පාවිච්චි කරල හැකර් අයියල සයිට් එකට
+බහින්න ඉඩ තියෙන නිසා.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>This piece of info is interesting in a site speed/debugging context.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>සයිට් එකේ response times එහෙම අවුල්ද කියල බලාගන්න මේක උදව් වෙනව.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
   </div>
   <div class="article_meta">
-    <p>Posted on: Sat 14 December 2019</p>
+    <p>Posted on: Mon 16 December 2019</p>
     <p>Category: <a href="https://janithl.github.io/category/general/">General</a>
  &ndash; Tags:
-      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/golang/">golang</a>    </p>
+      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/golang/">golang</a>,      <a href="https://janithl.github.io/tag/sinhala/">sinhala</a>    </p>
   </div>
 
   <div id="article_comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        var disqus_identifier = "2019/12/a-simple-version-checker-in-go/";
+        var disqus_identifier = "2019/12/a-simple-version-checker-in-go-si/";
         (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
              dsq.src = '//janithl.disqus.com/embed.js';
