@@ -65,11 +65,11 @@ regardless of the source. [As Imtiaz Bakeer Markar once said][3]:
 
 > Think not in terms of _who_ is right and who is wrong, but _what_ is right and what is wrong".
 
-[^1]  I would argue this dates back to enlightenment thinking and classical liberalism.
+[^1]:  I would argue this dates back to enlightenment thinking and classical liberalism.
 
-[^2] Still very much the actual villain—see Prince Andrew.
+[^2]: Still very much the actual villain—see Prince Andrew.
 
-[^3] I personally do not believe it is a zero sum game. Living in a republic is based on a social contract, and some individualistic excesses might have to be foregone in the service of cohesion.
+[^3]: I personally do not believe it is a zero sum game. Living in a republic is based on a social contract, and some individualistic excesses might have to be foregone in the service of cohesion.
 
 [1]: https://www.reddit.com/r/PropagandaPosters/comments/e9lwve/labour_clears_the_way_uk_labour_party_poster_1910/
 [2]: https://www.theguardian.com/commentisfree/2019/dec/29/lesson-in-boris-johnson-jolliness-liberal-miserabilsm-is-a-turn-off
