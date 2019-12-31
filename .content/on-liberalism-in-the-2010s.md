@@ -63,7 +63,7 @@ _how awesome science is_, and how excited we are about exploring outer space, re
 planet, or curing disease. Stand against bigotry, while also acknowledging that bigotry is bigotry
 regardless of the source. [As the great Imtiaz Bakeer Markar once said][3]:
 
-> Think not in terms of _who_ is right and who is wrong, but _what_ is right and what is wrong".
+> Think not in terms of _who_ is right and who is wrong, but _what_ is right and what is wrong.
 
 [^1]:  I would argue this dates back to enlightenment thinking and classical liberalism.
 
