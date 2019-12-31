@@ -61,7 +61,7 @@ or being called racist because they were simply well-meaning but ignorant. Bring
 bring back the fight, bring back Travellers on the Discovery Channel. Shout from the rooftops
 _how awesome science is_, and how excited we are about exploring outer space, reforesting our
 planet, or curing disease. Stand against bigotry, while also acknowledging that bigotry is bigotry
-regardless of the source. [As Imtiaz Bakeer Markar once said][3]:
+regardless of the source. [As the great Imtiaz Bakeer Markar once said][3]:
 
 > Think not in terms of _who_ is right and who is wrong, but _what_ is right and what is wrong".
 
@@ -69,7 +69,8 @@ regardless of the source. [As Imtiaz Bakeer Markar once said][3]:
 
 [^2]: Still very much the actual villain—see Prince Andrew.
 
-[^3]: I personally do not believe it is a zero sum game. Living in a republic is based on a social contract, and some individualistic excesses might have to be foregone in the service of cohesion.
+[^3]: I personally do not believe it is a zero sum game. Living in a republic is based on a
+social contract, and some individualistic excesses might have to be foregone in the service of cohesion.
 
 [1]: https://www.reddit.com/r/PropagandaPosters/comments/e9lwve/labour_clears_the_way_uk_labour_party_poster_1910/
 [2]: https://www.theguardian.com/commentisfree/2019/dec/29/lesson-in-boris-johnson-jolliness-liberal-miserabilsm-is-a-turn-off
