@@ -91,7 +91,7 @@ Drawing more and putting it out there is a goal that I want to work towards in
 2020. I've also uploaded 18 song snippets to my SoundCloud, and plan to upload
 longer and more developed pieces in 2020 (fingers crossed!)
 
----
+<p class="text-center text-muted">* * *</p>
 
 And so, those are some of my stats for the year. How has 2019 been for you
 and how do you plan to spend your 2020?
