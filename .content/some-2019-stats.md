@@ -1,6 +1,6 @@
 Title: Some 2019 Stats
 Date: 2020-01-01 22:15
-Category: General
+Category: Personal
 Tags: data
 
 ### The Blog
