@@ -1,5 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-12-31T08:35:00+05:30</updated><entry><title>On Liberalism in the 2010s</title><link href="https://janithl.github.io/2019/12/on-liberalism-in-the-2010s/" rel="alternate"></link><published>2019-12-31T08:35:00+05:30</published><updated>2019-12-31T08:35:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-31:/2019/12/on-liberalism-in-the-2010s/</id><summary type="html">&lt;p&gt;&lt;a href="https://www.reddit.com/r/PropagandaPosters/comments/e9lwve/labour_clears_the_way_uk_labour_party_poster_1910/"&gt;&lt;img alt="Labour Poster" src="https://janithl.github.io/images/labour-poster.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-01-01T22:15:00+05:30</updated><entry><title>Some 2019 Stats</title><link href="https://janithl.github.io/2020/01/some-2019-stats/" rel="alternate"></link><published>2020-01-01T22:15:00+05:30</published><updated>2020-01-01T22:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-01-01:/2020/01/some-2019-stats/</id><summary type="html">&lt;h3&gt;The Blog&lt;/h3&gt;
+&lt;p&gt;I've written 18 blog posts in 2019, which is below the target I set at the start
+of the year (two blog posts a month, for a total of 24), but it's progress.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Posts per month" src="https://janithl.github.io/images/posts-per-month.png"&gt;&lt;/p&gt;
+&lt;p&gt;In comparison, &lt;a href="https://janithl.github.io/2018/06/some-things-i-wish-i-knew-as-a-young-startup-dev/"&gt;I wrote only 1 post in 2018&lt;/a&gt;. 🙈&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Posts per year, 2009 - 2019" src="https://janithl.github.io/images/blogposts-2009-2019.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Transport&lt;/h3&gt;
+&lt;p&gt;I've taken 265 bus rides …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;The Blog&lt;/h3&gt;
+&lt;p&gt;I've written 18 blog posts in 2019, which is below the target I set at the start
+of the year (two blog posts a month, for a total of 24), but it's progress.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Posts per month" src="https://janithl.github.io/images/posts-per-month.png"&gt;&lt;/p&gt;
+&lt;p&gt;In comparison, &lt;a href="https://janithl.github.io/2018/06/some-things-i-wish-i-knew-as-a-young-startup-dev/"&gt;I wrote only 1 post in 2018&lt;/a&gt;. 🙈&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Posts per year, 2009 - 2019" src="https://janithl.github.io/images/blogposts-2009-2019.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Transport&lt;/h3&gt;
+&lt;p&gt;I've taken 265 bus rides in 2019, down from 556 in 2018. There is a dramatic
+reduction in bus rides after the Easter Attacks in April.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bus journeys by month" src="https://janithl.github.io/images/bus-journeys-by-month.png"&gt;&lt;/p&gt;
+&lt;p&gt;After April, I switched to tuks as my primary mode of commuting to work in the
+morning, only taking the bus in the evening during my commute home.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bus journeys by time of day" src="https://janithl.github.io/images/bus-journeys-by-time-of-day.png"&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Month&lt;/th&gt;
+&lt;th align="right"&gt;Morning&lt;/th&gt;
+&lt;th align="right"&gt;Afternoon&lt;/th&gt;
+&lt;th align="right"&gt;Evening&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;January&lt;/td&gt;
+&lt;td align="right"&gt;27&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;February&lt;/td&gt;
+&lt;td align="right"&gt;36&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;17&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;March&lt;/td&gt;
+&lt;td align="right"&gt;28&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;April&lt;/td&gt;
+&lt;td align="right"&gt;6&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;May&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;June&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;July&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;August&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;September&lt;/td&gt;
+&lt;td align="right"&gt;9&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;October&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;November&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;December&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;113&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;8&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;144&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Tuks have picked up the slack, with 245 PickMe rides&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;, 29 rides on YOGO and
+normal metered tuks, and 5 rides on shared Ubers&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; throughout the year.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Taxi journeys by time of day" src="https://janithl.github.io/images/taxi-journeys-by-time-of-day.png"&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Month&lt;/th&gt;
+&lt;th align="right"&gt;Morning&lt;/th&gt;
+&lt;th align="right"&gt;Afternoon&lt;/th&gt;
+&lt;th align="right"&gt;Evening&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;January&lt;/td&gt;
+&lt;td align="right"&gt;7&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;February&lt;/td&gt;
+&lt;td align="right"&gt;4&lt;/td&gt;
+&lt;td align="right"&gt;0&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;March&lt;/td&gt;
+&lt;td align="right"&gt;7&lt;/td&gt;
+&lt;td align="right"&gt;4&lt;/td&gt;
+&lt;td align="right"&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;April&lt;/td&gt;
+&lt;td align="right"&gt;8&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;May&lt;/td&gt;
+&lt;td align="right"&gt;8&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;June&lt;/td&gt;
+&lt;td align="right"&gt;18&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;July&lt;/td&gt;
+&lt;td align="right"&gt;23&lt;/td&gt;
+&lt;td align="right"&gt;5&lt;/td&gt;
+&lt;td align="right"&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;August&lt;/td&gt;
+&lt;td align="right"&gt;21&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;September&lt;/td&gt;
+&lt;td align="right"&gt;12&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;October&lt;/td&gt;
+&lt;td align="right"&gt;20&lt;/td&gt;
+&lt;td align="right"&gt;5&lt;/td&gt;
+&lt;td align="right"&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;November&lt;/td&gt;
+&lt;td align="right"&gt;17&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;December&lt;/td&gt;
+&lt;td align="right"&gt;18&lt;/td&gt;
+&lt;td align="right"&gt;5&lt;/td&gt;
+&lt;td align="right"&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;163&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;33&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;83&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;While initially driven by post-Easter attack paranoia, environmental factors have
+also been a concern especially with the increase in average temperatures. Although
+still a firm believer in public transport, I no longer wanted to turn up at work a
+sweaty mess. Let's hope A/C buses start rolling out on the 138 route soon&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt;. 🙏🏽&lt;/p&gt;
+&lt;h3&gt;Other Expenses&lt;/h3&gt;
+&lt;p&gt;I've bought food 247 times in 2020, up from 200 times in 2018. The average order
+value has gone up slightly, from 572 LKR to 600 LKR. I've bought clothing 4 times,
+up from just 2 times in 2018.&lt;/p&gt;
+&lt;p&gt;I've made 16 purchases on AliExpress this year, up from 5 purchases last year. The
+average order value has stayed roughly the same.&lt;/p&gt;
+&lt;h3&gt;Social Media&lt;/h3&gt;
+&lt;p&gt;I've been on a bit of a hiatus from Twitter and Instagram, with only 6
+images posted on my IG this year (and none since June). But I did start
+&lt;a href="https://www.instagram.com/chithrapotha/"&gt;an Instagram purely for my illustrations&lt;/a&gt; and I've managed to post about 29
+posts in the space of a month.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Chithrapotha" src="https://janithl.github.io/images/chithrapotha.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Drawing more and putting it out there is a goal that I want to work towards in
+2020. I've also uploaded 18 song snippets to my SoundCloud, and plan to upload
+longer and more developed pieces in 2020 (fingers crossed!)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;And so, those are some of my stats for the year. How has 2019 been for you
+and how do you plan to spend your 2020?&lt;/p&gt;
+&lt;script&gt;
+window.onload = function() {
+   $('table').addClass('table table-bordered table-condensed'); 
+}
+&lt;/script&gt;
+
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Up from 153 in 2018.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;I still don't have an Uber account, and don't plan on getting one.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;And eventually we can all take the Kelani Valley railway, which is
+&lt;a href="https://twitter.com/nuuuwan/status/1203260223378604033"&gt;currently incredibly under-utilised&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="data"></category></entry><entry><title>On Liberalism in the 2010s</title><link href="https://janithl.github.io/2019/12/on-liberalism-in-the-2010s/" rel="alternate"></link><published>2019-12-31T08:35:00+05:30</published><updated>2019-12-31T08:35:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-31:/2019/12/on-liberalism-in-the-2010s/</id><summary type="html">&lt;p&gt;&lt;a href="https://www.reddit.com/r/PropagandaPosters/comments/e9lwve/labour_clears_the_way_uk_labour_party_poster_1910/"&gt;&lt;img alt="Labour Poster" src="https://janithl.github.io/images/labour-poster.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;Yes, but can Liberals batter down doors anymore?&lt;/p&gt;
 
 &lt;p&gt;Last night, dealing with a bought of insomnia, &lt;a href="https://www.theguardian.com/commentisfree/2019/dec/29/lesson-in-boris-johnson-jolliness-liberal-miserabilsm-is-a-turn-off"&gt;I read this important take on BoJo&lt;/a&gt;
@@ -2384,72 +2629,4 @@ imaginable.&lt;/p&gt;</content><category term="conflict"></category><category te
 කරන්නැයි" කියල නැවතිච්ච එකා කලාවට නැඹුරු වෙන්න ගත්තහම ගෙදර කට්ටිය පොඩ්ඩක් ටෙනා ගහනව.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="The Strat" src="https://janithl.github.io/images/the-strat.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;ඉතින් ඔයවගේ මනෝවිකාර සීන් ටිකක් එක්ක තමයි පහුගිය මාස තුන ගත කරේ. ස්ටැට් විභාගෙ මේ සෙනසුරාද. පාස් වුනොත්
-හොඳයි, මොකෝ නැත්තම් "කොච්චර කළත් මෙච්චර තමයි" කියල අතෑරල දාන්න තමයි වෙන්නෙ. &lt;/p&gt;</content><category term="sinhala"></category><category term="work"></category><category term="uni"></category></entry><entry><title>Retaining</title><link href="https://janithl.github.io/2017/03/retaining/" rel="alternate"></link><published>2017-03-28T22:48:00+05:30</published><updated>2017-03-28T22:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-03-28:/2017/03/retaining/</id><summary type="html">&lt;p&gt;There was a really interesting &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can 
-Managers Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which asks a panel of female 
-technical employees on reasons they left jobs or in some cases even change their career 
-paths.&lt;/p&gt;
-&lt;p&gt;I believe it has some …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There was a really interesting &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;YC blog post&lt;/a&gt; titled &lt;strong&gt;"Ask a Female Engineer: How Can 
-Managers Help Retain Technical Women on Their Team?"&lt;/strong&gt;, which asks a panel of female 
-technical employees on reasons they left jobs or in some cases even change their career 
-paths.&lt;/p&gt;
-&lt;p&gt;I believe it has some really important takeaways not just for managers of technical teams,
-but all managers and all employees of whetever gender.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I’ve left companies after years of chaotically fighting fires while simultaneously
-needing to build new features, or after repeatedly getting disorganized braindumps or
-single line descriptions from stakeholders rather than the thoughtful, detailed specs
-they’ve promised.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This is something I've had to deal with personally as well: underspecification, or the
-people in charge not really knowing what they want. Rewriting code to fit their latest
-whim or fancy is wasteful and makes you feel like your project is going nowhere. Also,
-&lt;a href="https://en.wikipedia.org/wiki/Scope_creep"&gt;scope creep&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Making sure your team members have a comfortable relationship with someone in leadership
-outside their reporting chain is important; having someone who they feel they can go to
-with manager-related problems is key.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;As the recent &lt;a href="https://www.susanjfowler.com/blog/2017/2/19/reflecting-on-one-very-strange-year-at-uber"&gt;Susan Fowler/Uber debacle&lt;/a&gt; showed, though, upper leadership tends to
-favour the manager's side over the employee's.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Especially as a woman, I worry about being labeled hyper-sensitive, or that my gender
-will influence a person’s reaction to my feedback (e.g. the perception that women are
-hysterical). If a company’s leadership feels too tightly knit – where all the managers
-and founders are friends that aren’t open to critical feedback from employees – I won’t
-even try to work out the issue before leaving.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;See: the Uber thing above.&lt;/p&gt;
-&lt;p&gt;And finally, this gem:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;That employee shouldn’t have to train their boss in order to make the relationship
-productive.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;On finding a new job:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I might see an email from a recruiter about a job that sounds exciting and that pays
-well. I’ll start to consider leaving, and then someone I work with – usually my boss or
-manager – does something that makes me angry. Angry enough to rewrite my resume, email a
-recruiter back, brush up on interview questions and whiteboarding, and get off my butt
-and go interview.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Or deciding to stay:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;It’s important that my boss checks in with me even if I seem happy or like I’m doing
-really well. I don’t want to be asked for feedback only when things aren’t going well.
-When my boss respectfully listens to feedback and strives to incorporate at least some of
-it, I’m much more likely to stay at a company.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;On working at a startup:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;At a startup it can be hard to decipher whether your company is doing well, especially
-since progress isn’t always in a continuous, upward direction. As an employee, you’re not
-always privy to important information that would help you figure it out, especially if the
-company is struggling. I’ve often felt that trying to determine how well my company is
-doing is a guessing game. So then I turn to assessing my personal growth because that’s in
-theory more straight-forward. I ask myself questions like: How much have I learned? Do I
-get feedback? Am I challenged? What else can I accomplish here? If I can get excited about
-what’s next for me at a company, I will stay. If I can mix things up enough and learn new
-things where I am without actually finding a new job, I will do that.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Anyway, the &lt;a href="https://blog.ycombinator.com/ask-a-female-engineer-how-can-managers-help-retain-technical-women-on-their-team/"&gt;&lt;strong&gt;full blog post&lt;/strong&gt;&lt;/a&gt; is really interesting and a must-read for both 
-managers and employees. So do yourself a favour and go read!&lt;/p&gt;</content><category term="people"></category><category term="politics"></category><category term="work"></category></entry></feed>
+හොඳයි, මොකෝ නැත්තම් "කොච්චර කළත් මෙච්චර තමයි" කියල අතෑරල දාන්න තමයි වෙන්නෙ. &lt;/p&gt;</content><category term="sinhala"></category><category term="work"></category><category term="uni"></category></entry></feed>
