@@ -2,6 +2,7 @@ Title: Some 2019 Stats
 Date: 2020-01-01 22:15
 Category: Personal
 Tags: data
+Subtitle: The numbers, Mason!
 
 ### The Blog
 
