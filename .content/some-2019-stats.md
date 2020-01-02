@@ -69,6 +69,15 @@ also been a concern especially with the increase in average temperatures. Althou
 still a firm believer in public transport, I no longer wanted to turn up at work a
 sweaty mess. Let's hope A/C buses start rolling out on the 138 route soon[^3]. 🙏🏽
 
+These are the ride counts and average fares for 2019 in comparison to 2018:
+
+Type       | Count (2018) | Avg (2018) | Count (2019) | Avg (2019) | Count Diff | Avg Diff
+-----------|-------------:|-----------:|-------------:|-----------:|-----------:|---------:
+**Bus**    | 556          | 19.84      | 265          | 21.91      | -291       | +2.07
+**PickMe** | 153          | 424.08     | 245          | 394.35     | +92        | -29.73
+**Tuk**    | 12           | 142.08     | 29           | 356.21     | +17        | +214.12
+**Uber**   | 3            | 233.33     | 5            | 500.00     | +2         | +266.67
+
 ### Other Expenses
 
 I've bought food 247 times in 2020, up from 200 times in 2018. The average order
