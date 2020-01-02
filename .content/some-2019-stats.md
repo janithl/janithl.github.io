@@ -77,6 +77,10 @@ Type       | Count (2018) | Avg (2018) | Count (2019) | Avg (2019) | Count Diff 
 **PickMe** | 153          | 424.08     | 245          | 394.35     | +92        | -29.73
 **Tuk**    | 12           | 142.08     | 29           | 356.21     | +17        | +214.12
 **Uber**   | 3            | 233.33     | 5            | 500.00     | +2         | +266.67
+**Total**  | **724**      |            | **544**      |            | **-180**   |
+
+Huh, never realised I'd taken 180 less journeys in total this year. Must be all the
+sleeping in on weekends. 🙈
 
 ### Other Expenses
 
