@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/pygments.css">
 
-    <title>Janith's Blog &ndash; Posts by: Janith</title>
+    <title>Janith's Blog &ndash; My 2020 guide to rewriting a piece-of-shit codebase</title>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -30,6 +30,7 @@
 
     <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
 
+<meta name="keywords" content="code, work">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -56,7 +57,7 @@
 
                     <li><a href="https://janithl.github.io/pages/about.html">About</a></li>
 
-                    <li><a href="https://janithl.github.io/category/general/">General</a></li>
+                    <li class="active"><a href="https://janithl.github.io/category/general/">General</a></li>
                     <li><a href="https://janithl.github.io/category/links/">Links</a></li>
                     <li><a href="https://janithl.github.io/category/personal/">Personal</a></li>
 
@@ -104,103 +105,68 @@
     </nav>
     <div class="container">
 <article>
-  <div class="timestamps text-muted">15 Jul 2016</div>
   <div class="article_title">
-    <a href="https://janithl.github.io/2016/07/drift/">
-        <h3>
-            Drift <br>
-        </h3>
-    </a>
+    <h3><a href="https://janithl.github.io/2020/01/refactor-blues/">My 2020 guide to rewriting a piece-of-shit codebase</a></h3>
+    <p class="lead">I failed hard so you don't have to</p><hr>
   </div>
   <div class="article_text">
-    <p><em>Though I know I'll never lose affection</em></p>
-<p><em>For people and things that went before</em></p>
-<p>Drift is only natural in human relationships, and you shouldn't really feel bad
-about the inevitable. People change, relationships change, you meet new people,
-you  move to greener pastures. It's perfectly normal to be mobile in …</p>
+    <p><img alt="Soptair Enjiniya" src="https://janithl.github.io/images/engineering-meme.jpg"></p>
+<p><strong>First, you need to make up your mind.</strong> If you take this project on you <em>must</em>
+proactively try to make things better. How to do this will depend on a number of
+factors and the support of the stakeholders, but you must <em>actively try</em> to make
+the codebase a <em>better place</em>, or you'd come to the end of your 2 or whatever
+years looking after this garbage dump and not have anything good to show for it.</p>
+<p><strong>Understand the system.</strong> Learning the codebase might take time, but try to
+figure out what the overarching concepts, the business logic, and how users
+actually want to achieve. What users want to do with the system and what the
+system currently does might be misaligned, so porting the thing with warts and
+all into a shiny new shell might not make sense.</p>
+<p><strong>Try to get the stakeholders onboard.</strong> Try to make a point about how the
+shittiness of the current system is costing them customers and money. Businesses
+usually care about reputation and the bottom line, so you have to make your case
+in lingo they understand. Show them the numbers, show them how it could all be
+better.</p>
+<p><strong>Break down the system into parts.</strong> Moving everything wholesale into the new
+system is not going to be practical in most cases. See where you can start
+porting right now, and get to work. Things that could be services on their own,
+like reporting, exports, and external integrations, are good places to start.</p>
+<p><strong>Write tests.</strong> If I could go back in time and teach my older self anything,
+it's the value of writing tests first before getting down to implementations.
+This one thing will make your code more reliable and add value. In the case of
+a rewrite, this is even more straightforward: the user journeys are already
+concrete and you can easily write test cases for them to guide the new
+implementation.</p>
+<p><strong>Get your team excited.</strong> This has gone on long enough and I know you guys are
+fatigued, but we can work together and make life less shit for ourselves and
+our users. Try to understand their concerns and misgivings, but also don't
+compromise in your quest to <em>make the world a better place</em>. They'll thank you
+later.</p>
+<p class="text-center text-muted">* * *</p>
+
+<p>I always learn these lessons too late, when the chance for me to act on them
+has passed. But hey, maybe it'll come in handy someday.</p>
   </div>
-</article>
-<article>
-  <div class="timestamps text-muted">15 Jul 2016</div>
-  <div class="article_title">
-    <a href="https://janithl.github.io/2016/07/breathing/">
-        <h3>
-            Breathing <br>
-        </h3>
-    </a>
+  <div class="article_meta">
+    <p>Posted on: Fri 31 January 2020</p>
+    <p>Category: <a href="https://janithl.github.io/category/general/">General</a>
+ &ndash; Tags:
+      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/work/">work</a>    </p>
   </div>
-  <div class="article_text">
-    <p><em>'Cause I am hanging on every word you say</em></p>
-<p><em>And even if you don't want to speak tonight</em></p>
-<p><em>That's alright, alright with me...</em></p>
-<p>Today's been a bit of an off-day. In the last few days I've a couple of 
-interesting Medium posts. Highlights:</p>
-<blockquote>
-<p>A healthy product company is, confusingly, one …</p></blockquote>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2020/01/refactor-blues/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//janithl.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
   </div>
-</article>
-<article>
-  <div class="timestamps text-muted">14 Jul 2016</div>
-  <div class="article_title">
-    <a href="https://janithl.github.io/2016/07/shes-wot-m8/">
-        <h3>
-            She's Wot M8? <br>
-        </h3>
-    </a>
-  </div>
-  <div class="article_text">
-    <p><em>Why her though?</em></p>
-<p>She's...</p>
-<p><em>Not your type? At all?</em></p>
-<p>And what <em>is</em> my type, again?</p>
-<p><em>Not her</em></p>
-<p>Right.</p>
-<p><em>Come on, dude. I've known you since we had other people wash our bums for us.
-She's so not your type</em></p>
-<p>Well, we're grown-ups now. Shouldn't we look past "types" and all …</p>
-  </div>
-</article>
-<article>
-  <div class="timestamps text-muted">13 Jul 2016</div>
-  <div class="article_title">
-    <a href="https://janithl.github.io/2016/07/status-update/">
-        <h3>
-            Status Update <br>
-        </h3>
-    </a>
-  </div>
-  <div class="article_text">
-    <p>I was watching <a href="https://www.youtube.com/watch?v=KlJnsHpWamU">one of the talks Casey Neistat gave at
-Vidcon</a> this year, and he talks
-about his love for the 'act of creation', and how he loves his job just like  he
-loves his family. The drive he has to wake up early to edit a video and …</p>
-  </div>
-</article>
-<article>
-  <div class="timestamps text-muted">12 Jul 2016</div>
-  <div class="article_title">
-    <a href="https://janithl.github.io/2016/07/july/">
-        <h3>
-            July <br>
-        </h3>
-    </a>
-  </div>
-  <div class="article_text">
-    <p>It's July, I'm on a twelve week break from <em>jeewanopaya</em>, it's 
-almost midnight and I'm slacking off from doing actual productive
-work by checking out static site generators. Pelican seems nice, 
-and I've always wanted a hacky, markdown-powered thing for my 
-github.io page.</p>
-  </div>
+
 </article>
 
-<footer>
-<nav id="paginator">
-    <ul class="pager">
-    
-        <li class="next"><a href="https://janithl.github.io/author/janith/page/13/">Newer <span aria-hidden="true">&rarr;</span></a></li>
-</nav>
-</footer>
     </div>
 
     <div id="ending_message">

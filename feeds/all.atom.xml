@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-01-01T22:15:00+05:30</updated><entry><title>Some 2019 Stats</title><link href="https://janithl.github.io/2020/01/some-2019-stats/" rel="alternate"></link><published>2020-01-01T22:15:00+05:30</published><updated>2020-01-01T22:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-01-01:/2020/01/some-2019-stats/</id><summary type="html">&lt;h3&gt;The Blog&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-01-31T15:32:00+05:30</updated><entry><title>My 2020 guide to rewriting a piece-of-shit codebase</title><link href="https://janithl.github.io/2020/01/refactor-blues/" rel="alternate"></link><published>2020-01-31T15:32:00+05:30</published><updated>2020-01-31T15:32:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-01-31:/2020/01/refactor-blues/</id><summary type="html">&lt;p&gt;&lt;img alt="Soptair Enjiniya" src="https://janithl.github.io/images/engineering-meme.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;First, you need to make up your mind.&lt;/strong&gt; If you take this project on you &lt;em&gt;must&lt;/em&gt;
+proactively try to make things better. How to do this will depend on a number of
+factors and the support of the stakeholders, but you must &lt;em&gt;actively try&lt;/em&gt; to make
+the codebase a &lt;em&gt;better …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Soptair Enjiniya" src="https://janithl.github.io/images/engineering-meme.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;First, you need to make up your mind.&lt;/strong&gt; If you take this project on you &lt;em&gt;must&lt;/em&gt;
+proactively try to make things better. How to do this will depend on a number of
+factors and the support of the stakeholders, but you must &lt;em&gt;actively try&lt;/em&gt; to make
+the codebase a &lt;em&gt;better place&lt;/em&gt;, or you'd come to the end of your 2 or whatever
+years looking after this garbage dump and not have anything good to show for it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Understand the system.&lt;/strong&gt; Learning the codebase might take time, but try to
+figure out what the overarching concepts, the business logic, and how users
+actually want to achieve. What users want to do with the system and what the
+system currently does might be misaligned, so porting the thing with warts and
+all into a shiny new shell might not make sense.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Try to get the stakeholders onboard.&lt;/strong&gt; Try to make a point about how the
+shittiness of the current system is costing them customers and money. Businesses
+usually care about reputation and the bottom line, so you have to make your case
+in lingo they understand. Show them the numbers, show them how it could all be
+better.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Break down the system into parts.&lt;/strong&gt; Moving everything wholesale into the new
+system is not going to be practical in most cases. See where you can start
+porting right now, and get to work. Things that could be services on their own,
+like reporting, exports, and external integrations, are good places to start.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Write tests.&lt;/strong&gt; If I could go back in time and teach my older self anything,
+it's the value of writing tests first before getting down to implementations.
+This one thing will make your code more reliable and add value. In the case of
+a rewrite, this is even more straightforward: the user journeys are already
+concrete and you can easily write test cases for them to guide the new
+implementation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Get your team excited.&lt;/strong&gt; This has gone on long enough and I know you guys are
+fatigued, but we can work together and make life less shit for ourselves and
+our users. Try to understand their concerns and misgivings, but also don't
+compromise in your quest to &lt;em&gt;make the world a better place&lt;/em&gt;. They'll thank you
+later.&lt;/p&gt;
+&lt;p class="text-center text-muted"&gt;* * *&lt;/p&gt;
+
+&lt;p&gt;I always learn these lessons too late, when the chance for me to act on them
+has passed. But hey, maybe it'll come in handy someday.&lt;/p&gt;</content><category term="code"></category><category term="work"></category></entry><entry><title>Some 2019 Stats</title><link href="https://janithl.github.io/2020/01/some-2019-stats/" rel="alternate"></link><published>2020-01-01T22:15:00+05:30</published><updated>2020-01-01T22:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-01-01:/2020/01/some-2019-stats/</id><summary type="html">&lt;h3&gt;The Blog&lt;/h3&gt;
 &lt;p&gt;I've written 18 blog posts in 2019, which is below the target I set at the start
 of the year (two blog posts a month, for a total of 24), but it's progress.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Posts per month" src="https://janithl.github.io/images/posts-per-month.png"&gt;&lt;/p&gt;
@@ -2670,27 +2708,4 @@ imaginable.&lt;/p&gt;</content><category term="conflict"></category><category te
 &lt;p&gt;&lt;em&gt;අටපිරිකර පමණක්‌&lt;/em&gt; ඇතිව යම් දිසාවක ගමන් කරන භික්‍ෂුව පියාපත් සහිතව &lt;em&gt;සිව්දිගට ඉගිල්ලී යන පක්‍ෂියකු මෙන් නිදහස්&lt;/em&gt;‌ යෑයි 
 බුදුහිමි කරණීය මෙත්ත සූත්‍රයේදී සඳහන් කරයි.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img alt="Wandering Monk" src="https://janithl.github.io/images/wandering-monk.png"&gt;&lt;/p&gt;</content><category term="sinhala"></category><category term="religion"></category></entry><entry><title>ජීවනෝපාය ජීවනාලිය කරගැනීම</title><link href="https://janithl.github.io/2017/04/thoughts-on-being-busy-si/" rel="alternate"></link><published>2017-04-25T23:41:00+05:30</published><updated>2017-04-25T23:41:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2017-04-25:/2017/04/thoughts-on-being-busy-si/</id><summary type="html">&lt;p&gt;ගොඩදෙනෙක් "රාජකාරිය දේවකාරිය" කරගෙන තියෙනවනෙ. මාත් ඒ වගේ කෙනෙක්. ජීවිතේ මොන මොන කරදර තිබුනත්
-මාසෙ අන්තිමට පඩිය හරි හම්බවෙනවනෙ කියාගෙන …&lt;/p&gt;</summary><content type="html">&lt;p&gt;ගොඩදෙනෙක් "රාජකාරිය දේවකාරිය" කරගෙන තියෙනවනෙ. මාත් ඒ වගේ කෙනෙක්. ජීවිතේ මොන මොන කරදර තිබුනත්
-මාසෙ අන්තිමට පඩිය හරි හම්බවෙනවනෙ කියාගෙන බොක්කෙන් බැහැල වැඩ කරපු ඩයල් එකක්. එහෙම කියල අර ස්ට්‍රෙස් හදාගෙන
-දුක් වින්දෙත් නෑ. (එහෙම පීඩාකාරී දවස් නොතිබුනාමත් නෙමෙයි. ඒත් මම ඉන්න IT ෆීල්ඩ් එකේ ඕව සුලභ දසුන්.) කොහොම
-උනත්, ජීවිතේ ඒ වගේ යම් ඉලක්කයක් තියාගෙන, කාර්ය බහුල වෙලා ඉන්නකොට දුක අඩුයි. ඕනෙ ඕනෙ නැති දේවල් ගැන
-වැඩිය එරීගෙන හිතන්න වෙලා නැතිවෙනව. කෙලි ප්‍රශ්න, රටේ ප්‍රශ්න, බොන්න ඕනෙ ප්‍රශ්න ඔක්කොම අමතක වෙනව හොඳ
-කෝඩ් කෑල්ලක් ගහන්න සෙට් වුනාම. &lt;/p&gt;
-&lt;p&gt;දැන් ඉතින් ඔහොම කොහෙන් කොහෙන් හරි ගේම ගැටගහන් හිටපු අපේ උන්දට රස්සාව දාල යන්න උනා මාස තුනකට කලින් විතර.
-මොරටුව කැම්පස් එකේ කරන් යන MSc එකේ වැඩ කෝටියක් ගොඩ ගැහිල තිබුනෙ. මතක කාලෙක ඉඳන් ඇණයක් වෙලා
-තිබ්බ  &lt;em&gt;ස්ටැටිස්ටික්ස්&lt;/em&gt; සබ්ජෙක්ට් එක මේකෙත් තිබ්බ. ඒක දැන් අවුරුදු දෙකක් තිස්සෙ ෆේල්. මේ පාර ගෙදර ඉඳන් හරි ගොඩ දානව 
-කියල තමයි ගේමට බැස්සෙ. හොඳ වෙලාවට &lt;a href="https://www.udacity.com/course/intro-to-descriptive-statistics--ud827"&gt;උඩෑසිටී&lt;/a&gt; එකේ හොඳ ස්ටැට් කෝස් එකක් සෙට් වුනා. නැත්තම් ඒක ආයෙත් 
-කපෝති.&lt;/p&gt;
-&lt;p&gt;හරි හරි, මම කියන්න පටන් ගත්ත කතාව නෙමෙයිනෙ.&lt;/p&gt;
-&lt;p&gt;මට කියන්න ඕනෙ වුනේ කරන්න රස්සාවක් නැති වුනාම ඔය හිත ඇතුලෙ තියෙන කුණුගොඩවල් ඔක්කොම එලියට එනව. ඕනෙ 
-නැති හැම මගුල ගැනම කියෝ කියෝ විග්‍රහ දෙන්න ෆුල් ට්‍ර්යි එක දෙනව. &lt;/p&gt;
-&lt;p&gt;ඉස්සර තිබ්බ වගේ තනියෙම හිතල &lt;a href="https://janithl.github.io/2016/07/busroutejs/"&gt;ඇප් එකක්&lt;/a&gt;, ඩිසයින් එකක්, &lt;a href="https://janithl.github.io/2016/09/the-unp-at-70/"&gt;දත්ත ටිකක් අරන් ඒ ගැන ඇනෑලිසිස් එකක්&lt;/a&gt; වගේ 
-දේවල් කරන්න  කිසිම උනන්‍දුවක් නෑ. යසට හිටපු සතාට මොනා වුනාද කියල හිතාගන්න මටවත් බෑ. 😢&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Motivation - Owlturd Comix" src="https://janithl.github.io/images/motivation.png"&gt;
-&lt;p class="text-center"&gt;&lt;em&gt;උපුටාගැනීම:&lt;/em&gt; &lt;a href="https://www.facebook.com/owlturdcomix/photos/a.248552535284688.1073741825.218730561600219/864263317046937/?type=3&amp;amp;theater"&gt;Owlturd Comix&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;අලුතෙන් දෙයක් කරන්න හිතෙනවනම් ඒ ගිටාර් ගැහිල්ල විතරයි. ඒකත් පොඩ්ඩක් හිමින් සීරුවේ කරන්නෙ, මොකෝ "පාඩම් 
-කරන්නැයි" කියල නැවතිච්ච එකා කලාවට නැඹුරු වෙන්න ගත්තහම ගෙදර කට්ටිය පොඩ්ඩක් ටෙනා ගහනව.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="The Strat" src="https://janithl.github.io/images/the-strat.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;ඉතින් ඔයවගේ මනෝවිකාර සීන් ටිකක් එක්ක තමයි පහුගිය මාස තුන ගත කරේ. ස්ටැට් විභාගෙ මේ සෙනසුරාද. පාස් වුනොත්
-හොඳයි, මොකෝ නැත්තම් "කොච්චර කළත් මෙච්චර තමයි" කියල අතෑරල දාන්න තමයි වෙන්නෙ. &lt;/p&gt;</content><category term="sinhala"></category><category term="work"></category><category term="uni"></category></entry></feed>
+&lt;p&gt;&lt;img alt="Wandering Monk" src="https://janithl.github.io/images/wandering-monk.png"&gt;&lt;/p&gt;</content><category term="sinhala"></category><category term="religion"></category></entry></feed>

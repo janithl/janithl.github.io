@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2019-12-14T09:15:00+05:30</updated><entry><title>A Simple Version Checker In Go</title><link href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go/" rel="alternate"></link><published>2019-12-14T09:15:00+05:30</published><updated>2019-12-14T09:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-14:/2019/12/a-simple-version-checker-in-go/</id><summary type="html">&lt;p&gt;&lt;img alt="Version Check Output" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-01-31T15:32:00+05:30</updated><entry><title>My 2020 guide to rewriting a piece-of-shit codebase</title><link href="https://janithl.github.io/2020/01/refactor-blues/" rel="alternate"></link><published>2020-01-31T15:32:00+05:30</published><updated>2020-01-31T15:32:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-01-31:/2020/01/refactor-blues/</id><summary type="html">&lt;p&gt;&lt;img alt="Soptair Enjiniya" src="https://janithl.github.io/images/engineering-meme.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;First, you need to make up your mind.&lt;/strong&gt; If you take this project on you &lt;em&gt;must&lt;/em&gt;
+proactively try to make things better. How to do this will depend on a number of
+factors and the support of the stakeholders, but you must &lt;em&gt;actively try&lt;/em&gt; to make
+the codebase a &lt;em&gt;better …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Soptair Enjiniya" src="https://janithl.github.io/images/engineering-meme.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;First, you need to make up your mind.&lt;/strong&gt; If you take this project on you &lt;em&gt;must&lt;/em&gt;
+proactively try to make things better. How to do this will depend on a number of
+factors and the support of the stakeholders, but you must &lt;em&gt;actively try&lt;/em&gt; to make
+the codebase a &lt;em&gt;better place&lt;/em&gt;, or you'd come to the end of your 2 or whatever
+years looking after this garbage dump and not have anything good to show for it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Understand the system.&lt;/strong&gt; Learning the codebase might take time, but try to
+figure out what the overarching concepts, the business logic, and how users
+actually want to achieve. What users want to do with the system and what the
+system currently does might be misaligned, so porting the thing with warts and
+all into a shiny new shell might not make sense.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Try to get the stakeholders onboard.&lt;/strong&gt; Try to make a point about how the
+shittiness of the current system is costing them customers and money. Businesses
+usually care about reputation and the bottom line, so you have to make your case
+in lingo they understand. Show them the numbers, show them how it could all be
+better.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Break down the system into parts.&lt;/strong&gt; Moving everything wholesale into the new
+system is not going to be practical in most cases. See where you can start
+porting right now, and get to work. Things that could be services on their own,
+like reporting, exports, and external integrations, are good places to start.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Write tests.&lt;/strong&gt; If I could go back in time and teach my older self anything,
+it's the value of writing tests first before getting down to implementations.
+This one thing will make your code more reliable and add value. In the case of
+a rewrite, this is even more straightforward: the user journeys are already
+concrete and you can easily write test cases for them to guide the new
+implementation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Get your team excited.&lt;/strong&gt; This has gone on long enough and I know you guys are
+fatigued, but we can work together and make life less shit for ourselves and
+our users. Try to understand their concerns and misgivings, but also don't
+compromise in your quest to &lt;em&gt;make the world a better place&lt;/em&gt;. They'll thank you
+later.&lt;/p&gt;
+&lt;p class="text-center text-muted"&gt;* * *&lt;/p&gt;
+
+&lt;p&gt;I always learn these lessons too late, when the chance for me to act on them
+has passed. But hey, maybe it'll come in handy someday.&lt;/p&gt;</content><category term="code"></category><category term="work"></category></entry><entry><title>A Simple Version Checker In Go</title><link href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go/" rel="alternate"></link><published>2019-12-14T09:15:00+05:30</published><updated>2019-12-14T09:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-14:/2019/12/a-simple-version-checker-in-go/</id><summary type="html">&lt;p&gt;&lt;img alt="Version Check Output" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
 &lt;p&gt;My current work requires keeping track of more than a dozen live websites and
 making sure that their versions are kept up to date. We have employed a small Go
 program to make this possible, which enable us to scrape the generator meta tags
