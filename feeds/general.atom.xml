@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-01-31T15:32:00+05:30</updated><entry><title>My 2020 guide to rewriting a piece-of-shit codebase</title><link href="https://janithl.github.io/2020/01/refactor-blues/" rel="alternate"></link><published>2020-01-31T15:32:00+05:30</published><updated>2020-01-31T15:32:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-01-31:/2020/01/refactor-blues/</id><summary type="html">&lt;p&gt;&lt;img alt="Soptair Enjiniya" src="https://janithl.github.io/images/engineering-meme.jpg"&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;Meme by
+&lt;a href="https://www.facebook.com/JusticeForTharindu/photos/a.594439464358595/806533719815834/?type=3&amp;theater"&gt;Justice For Tharindu&lt;/a&gt;
+&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;First, you need to make up your mind.&lt;/strong&gt; If you take this project on you &lt;em&gt;must&lt;/em&gt;
 proactively try to make things better. How to do this will depend on a number of
-factors and the support of the stakeholders, but you must &lt;em&gt;actively try&lt;/em&gt; to make
-the codebase a &lt;em&gt;better …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Soptair Enjiniya" src="https://janithl.github.io/images/engineering-meme.jpg"&gt;&lt;/p&gt;
+factors and the support of the stakeholders, but you must &lt;em&gt;actively try&lt;/em&gt; to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Soptair Enjiniya" src="https://janithl.github.io/images/engineering-meme.jpg"&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;Meme by
+&lt;a href="https://www.facebook.com/JusticeForTharindu/photos/a.594439464358595/806533719815834/?type=3&amp;theater"&gt;Justice For Tharindu&lt;/a&gt;
+&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;First, you need to make up your mind.&lt;/strong&gt; If you take this project on you &lt;em&gt;must&lt;/em&gt;
 proactively try to make things better. How to do this will depend on a number of
 factors and the support of the stakeholders, but you must &lt;em&gt;actively try&lt;/em&gt; to make

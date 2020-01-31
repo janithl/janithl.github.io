@@ -7,6 +7,10 @@ Subtitle: I failed hard so you don't have to
 
 ![Soptair Enjiniya]({filename}/images/engineering-meme.jpg)
 
+<p class="text-center">Meme by
+<a href="https://www.facebook.com/JusticeForTharindu/photos/a.594439464358595/806533719815834/?type=3&theater">Justice For Tharindu</a>
+</p>
+
 **First, you need to make up your mind.** If you take this project on you _must_
 proactively try to make things better. How to do this will depend on a number of
 factors and the support of the stakeholders, but you must _actively try_ to make
