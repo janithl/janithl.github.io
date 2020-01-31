@@ -18,10 +18,11 @@ the codebase a _better place_, or you'd come to the end of your 2 or whatever
 years looking after this garbage dump and not have anything good to show for it.
 
 **Understand the system.** Learning the codebase might take time, but try to
-figure out what the overarching concepts, the business logic, and how users
-actually want to achieve. What users want to do with the system and what the
-system currently does might be misaligned, so porting the thing with warts and
-all into a shiny new shell might not make sense.
+figure out what the overarching concepts, the business logic, and what users
+actually want to achieve. What users _want_ to do with the system and what the
+system _currently does_ might be misaligned, so porting the thing with warts
+and all into a shiny new shell might not make sense. Use that misalignment, make
+it a chance to drive a wedge between the client and his software and...
 
 **Try to get the stakeholders onboard.** Try to make a point about how the
 shittiness of the current system is costing them customers and money. Businesses
@@ -49,5 +50,5 @@ later.
 
 <p class="text-center text-muted">* * *</p>
 
-I always learn these lessons too late, when the chance for me to act on them
-has passed. But hey, maybe it'll come in handy someday.
+I always learn these lessons too late, when the chance for me to _act_ on
+them has already passed. But hey, maybe it'll come in handy someday.
