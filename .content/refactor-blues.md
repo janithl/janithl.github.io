@@ -22,7 +22,7 @@ figure out what the overarching concepts, the business logic, and what users
 actually want to achieve. What users _want_ to do with the system and what the
 system _currently does_ might be misaligned, so porting the thing with warts
 and all into a shiny new shell might not make sense. Use that misalignment, make
-it a chance to drive a wedge between the client and his software and...
+it a chance to drive a wedge between the client and his software, and...
 
 **Try to get the stakeholders onboard.** Try to make a point about how the
 shittiness of the current system is costing them customers and money. Businesses
