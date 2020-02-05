@@ -29,8 +29,9 @@ in lingo they understand. Show them the numbers, show them how it could all be
 better.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Break down the system into parts.&lt;/strong&gt; Moving everything wholesale into the new
 system is not going to be practical in most cases. See where you can start
-porting right now, and get to work. Things that could be services on their own,
-like reporting, exports, and external integrations, are good places to start.&lt;/p&gt;
+porting right now, and get to work. Things that could be services&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; on their
+own, like reporting, exports, and external integrations, are good places to
+start.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Write tests.&lt;/strong&gt; If I could go back in time and teach my older self anything,
 it's the value of writing tests first before getting down to implementations.
 This one thing will make your code more reliable and add value. In the case of
@@ -45,7 +46,15 @@ later.&lt;/p&gt;
 &lt;p class="text-center text-muted"&gt;* * *&lt;/p&gt;
 
 &lt;p&gt;I always learn these lessons too late, when the chance for me to &lt;em&gt;act&lt;/em&gt; on
-them has already passed. But hey, maybe it'll come in handy someday.&lt;/p&gt;</content><category term="code"></category><category term="work"></category></entry><entry><title>Some 2019 Stats</title><link href="https://janithl.github.io/2020/01/some-2019-stats/" rel="alternate"></link><published>2020-01-01T22:15:00+05:30</published><updated>2020-01-01T22:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-01-01:/2020/01/some-2019-stats/</id><summary type="html">&lt;h3&gt;The Blog&lt;/h3&gt;
+them has already passed. But hey, maybe it'll come in handy someday.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;I don't really mean &lt;em&gt;microservices&lt;/em&gt; here, though you could go for it if that makes sense for you.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="code"></category><category term="work"></category></entry><entry><title>Some 2019 Stats</title><link href="https://janithl.github.io/2020/01/some-2019-stats/" rel="alternate"></link><published>2020-01-01T22:15:00+05:30</published><updated>2020-01-01T22:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-01-01:/2020/01/some-2019-stats/</id><summary type="html">&lt;h3&gt;The Blog&lt;/h3&gt;
 &lt;p&gt;I've written 18 blog posts in 2019, which is below the target I set at the start
 of the year (two blog posts a month, for a total of 24), but it's progress.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Posts per month" src="https://janithl.github.io/images/posts-per-month.png"&gt;&lt;/p&gt;
@@ -316,7 +325,7 @@ sweaty mess. Let's hope A/C buses start rolling out on the 138 route soon&lt;sup
 &lt;p&gt;Huh, never realised I'd taken 180 less journeys in total this year. Must be all the
 sleeping in on weekends. 🙈&lt;/p&gt;
 &lt;h3&gt;Other Expenses&lt;/h3&gt;
-&lt;p&gt;I've bought food 247 times in 2020, up from 200 times in 2018. The average order
+&lt;p&gt;I've bought food 247 times in 2019, up from 200 times in 2018. The average order
 value has gone up slightly, from 572 LKR to 600 LKR. I've bought clothing 4 times,
 up from just 2 times in 2018.&lt;/p&gt;
 &lt;p&gt;I've made 16 purchases on AliExpress this year, up from 5 purchases last year. The
@@ -327,8 +336,8 @@ images posted on my IG this year (and none since June). But I did start
 &lt;a href="https://www.instagram.com/chithrapotha/"&gt;an Instagram purely for my illustrations&lt;/a&gt; and I've managed to post about 29
 posts in the space of a month.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Chithrapotha" src="https://janithl.github.io/images/chithrapotha.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;Drawing more and putting it out there is a goal that I want to work towards in
-2020. I've also uploaded 18 song snippets to my SoundCloud, and plan to upload
+&lt;p&gt;Drawing more and putting it out there is a goal that I want to work towards
+in 2020. I've also uploaded 18 song snippets to my SoundCloud, and plan to upload
 longer and more developed pieces in 2020 (fingers crossed!)&lt;/p&gt;
 &lt;p class="text-center text-muted"&gt;* * *&lt;/p&gt;
 
@@ -350,8 +359,7 @@ window.onload = function() {
 &lt;p&gt;I still don't have an Uber account, and don't plan on getting one.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:3"&gt;
-&lt;p&gt;And eventually we can all take the Kelani Valley railway, which is
-&lt;a href="https://twitter.com/nuuuwan/status/1203260223378604033"&gt;currently incredibly under-utilised&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And eventually we can all take the Kelani Valley railway, which is &lt;a href="https://twitter.com/nuuuwan/status/1203260223378604033"&gt;currently incredibly under-utilised&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</content><category term="data"></category></entry><entry><title>On Liberalism in the 2010s</title><link href="https://janithl.github.io/2019/12/on-liberalism-in-the-2010s/" rel="alternate"></link><published>2019-12-31T08:35:00+05:30</published><updated>2019-12-31T08:35:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-31:/2019/12/on-liberalism-in-the-2010s/</id><summary type="html">&lt;p&gt;&lt;a href="https://www.reddit.com/r/PropagandaPosters/comments/e9lwve/labour_clears_the_way_uk_labour_party_poster_1910/"&gt;&lt;img alt="Labour Poster" src="https://janithl.github.io/images/labour-poster.jpg"&gt;&lt;/a&gt;&lt;/p&gt;

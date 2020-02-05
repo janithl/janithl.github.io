@@ -29,8 +29,9 @@ in lingo they understand. Show them the numbers, show them how it could all be
 better.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Break down the system into parts.&lt;/strong&gt; Moving everything wholesale into the new
 system is not going to be practical in most cases. See where you can start
-porting right now, and get to work. Things that could be services on their own,
-like reporting, exports, and external integrations, are good places to start.&lt;/p&gt;
+porting right now, and get to work. Things that could be services&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; on their
+own, like reporting, exports, and external integrations, are good places to
+start.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Write tests.&lt;/strong&gt; If I could go back in time and teach my older self anything,
 it's the value of writing tests first before getting down to implementations.
 This one thing will make your code more reliable and add value. In the case of
@@ -45,7 +46,15 @@ later.&lt;/p&gt;
 &lt;p class="text-center text-muted"&gt;* * *&lt;/p&gt;
 
 &lt;p&gt;I always learn these lessons too late, when the chance for me to &lt;em&gt;act&lt;/em&gt; on
-them has already passed. But hey, maybe it'll come in handy someday.&lt;/p&gt;</content><category term="code"></category><category term="work"></category></entry><entry><title>A Simple Version Checker In Go</title><link href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go/" rel="alternate"></link><published>2019-12-14T09:15:00+05:30</published><updated>2019-12-14T09:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-14:/2019/12/a-simple-version-checker-in-go/</id><summary type="html">&lt;p&gt;&lt;img alt="Version Check Output" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
+them has already passed. But hey, maybe it'll come in handy someday.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;I don't really mean &lt;em&gt;microservices&lt;/em&gt; here, though you could go for it if that makes sense for you.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="code"></category><category term="work"></category></entry><entry><title>A Simple Version Checker In Go</title><link href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go/" rel="alternate"></link><published>2019-12-14T09:15:00+05:30</published><updated>2019-12-14T09:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-14:/2019/12/a-simple-version-checker-in-go/</id><summary type="html">&lt;p&gt;&lt;img alt="Version Check Output" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
 &lt;p&gt;My current work requires keeping track of more than a dozen live websites and
 making sure that their versions are kept up to date. We have employed a small Go
 program to make this possible, which enable us to scrape the generator meta tags

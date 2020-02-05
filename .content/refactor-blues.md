@@ -32,8 +32,9 @@ better.
 
 **Break down the system into parts.** Moving everything wholesale into the new
 system is not going to be practical in most cases. See where you can start
-porting right now, and get to work. Things that could be services on their own,
-like reporting, exports, and external integrations, are good places to start.
+porting right now, and get to work. Things that could be services[^1] on their
+own, like reporting, exports, and external integrations, are good places to
+start.
 
 **Write tests.** If I could go back in time and teach my older self anything,
 it's the value of writing tests first before getting down to implementations.
@@ -52,3 +53,5 @@ later.
 
 I always learn these lessons too late, when the chance for me to _act_ on
 them has already passed. But hey, maybe it'll come in handy someday.
+
+[^1]: I don't really mean _microservices_ here, though you could go for it if that makes sense for you.
