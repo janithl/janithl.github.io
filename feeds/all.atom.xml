@@ -21,9 +21,11 @@ composing the state and reducers. I use two &lt;code&gt;useEffect&lt;/code&gt; h
 device storage&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; whenever it changes, and load it from storage at app start.&lt;/p&gt;
 &lt;h3&gt;Components&lt;/h3&gt;
 &lt;p&gt;There is your standard &lt;code&gt;Header&lt;/code&gt;, &lt;code&gt;Footer&lt;/code&gt;, &lt;code&gt;Menu&lt;/code&gt; etc. components, and a bunch
-of &lt;code&gt;renderSomething&lt;/code&gt; components that render either charges or divisions. SVG is a
-fantastic language for laying out shapes and designs, and I used a bunch of features
-including &lt;a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Patterns"&gt;patterns&lt;/a&gt; and &lt;a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform"&gt;transform&lt;/a&gt; to enable various rendering needs.&lt;/p&gt;
+of &lt;code&gt;renderSomething&lt;/code&gt; components that render either charges or divisions. Most of the
+action happens inside the &lt;code&gt;Editor&lt;/code&gt; component, and we're using SVG—a fantastic language
+that really should get more love—for the design and layout of shapes and designs. I
+used a bunch of SVG features such as &lt;a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Patterns"&gt;patterns&lt;/a&gt; and &lt;a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform"&gt;transform&lt;/a&gt; to enable various
+rendering needs.&lt;/p&gt;
 &lt;h3&gt;Finally&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://github.com/janithl/Flagitect"&gt;Flagitect is completely free and open source (MIT licensed)&lt;/a&gt;, and I'd love for
 people using it to submit issues and PRs, or even fork it and make things better. I
@@ -33,7 +35,7 @@ Flagitect in the hope that amateur vexillologists like myself would find it usef
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn:1"&gt;
-&lt;p&gt;For this, I'm using [&lt;a href="https://github.com/react-native-community/async-storage"&gt;React Native Async Storage&lt;/a&gt; as this functionality has been spun off from the React Native core.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For this, I'm using &lt;a href="https://github.com/react-native-community/async-storage"&gt;React Native Async Storage&lt;/a&gt; as this functionality has been spun off from the React Native core.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</content><category term="code"></category><category term="design"></category></entry><entry><title>Late Night: A Timeline</title><link href="https://janithl.github.io/2020/05/late-night-a-timeline/" rel="alternate"></link><published>2020-05-29T21:50:00+05:30</published><updated>2020-05-29T21:50:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-05-29:/2020/05/late-night-a-timeline/</id><summary type="html">&lt;p&gt;I created this little timeline graphic as a crutch for my non-American self trying

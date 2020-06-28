@@ -127,9 +127,11 @@ composing the state and reducers. I use two <code>useEffect</code> hooks to stor
 device storage<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> whenever it changes, and load it from storage at app start.</p>
 <h3>Components</h3>
 <p>There is your standard <code>Header</code>, <code>Footer</code>, <code>Menu</code> etc. components, and a bunch
-of <code>renderSomething</code> components that render either charges or divisions. SVG is a
-fantastic language for laying out shapes and designs, and I used a bunch of features
-including <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Patterns">patterns</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform">transform</a> to enable various rendering needs.</p>
+of <code>renderSomething</code> components that render either charges or divisions. Most of the
+action happens inside the <code>Editor</code> component, and we're using SVG—a fantastic language
+that really should get more love—for the design and layout of shapes and designs. I
+used a bunch of SVG features such as <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Patterns">patterns</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform">transform</a> to enable various
+rendering needs.</p>
 <h3>Finally</h3>
 <p><a href="https://github.com/janithl/Flagitect">Flagitect is completely free and open source (MIT licensed)</a>, and I'd love for
 people using it to submit issues and PRs, or even fork it and make things better. I
@@ -139,7 +141,7 @@ Flagitect in the hope that amateur vexillologists like myself would find it usef
 <hr>
 <ol>
 <li id="fn:1">
-<p>For this, I'm using [<a href="https://github.com/react-native-community/async-storage">React Native Async Storage</a> as this functionality has been spun off from the React Native core.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>For this, I'm using <a href="https://github.com/react-native-community/async-storage">React Native Async Storage</a> as this functionality has been spun off from the React Native core.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

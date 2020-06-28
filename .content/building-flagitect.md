@@ -28,9 +28,11 @@ device storage[^1] whenever it changes, and load it from storage at app start.
 ### Components
 
 There is your standard `Header`, `Footer`, `Menu` etc. components, and a bunch
-of `renderSomething` components that render either charges or divisions. SVG is a
-fantastic language for laying out shapes and designs, and I used a bunch of features
-including [patterns][5] and [transform][6] to enable various rendering needs.
+of `renderSomething` components that render either charges or divisions. Most of the
+action happens inside the `Editor` component, and we're using SVG—a fantastic language
+that really should get more love—for the design and layout of shapes and designs. I
+used a bunch of SVG features such as [patterns][5] and [transform][6] to enable various
+rendering needs.
 
 ### Finally
 
@@ -39,7 +41,7 @@ people using it to submit issues and PRs, or even fork it and make things better
 found that Google Play was lacking when it came to flag design apps, and so I created
 Flagitect in the hope that amateur vexillologists like myself would find it useful. ☺️
 
-[^1]: For this, I'm using [[React Native Async Storage][8] as this functionality has been spun off from the React Native core.
+[^1]: For this, I'm using [React Native Async Storage][8] as this functionality has been spun off from the React Native core.
 
 [1]: https://play.google.com/store/apps/details?id=com.flagitect
 [2]: https://github.com/react-native-community/react-native-svg
