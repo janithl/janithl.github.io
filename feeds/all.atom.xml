@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-03-03T20:45:00+05:30</updated><entry><title>To Exist</title><link href="https://janithl.github.io/2020/03/to-exist/" rel="alternate"></link><published>2020-03-03T20:45:00+05:30</published><updated>2020-03-03T20:45:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-03-03:/2020/03/to-exist/</id><summary type="html">&lt;p&gt;Am I doomed&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-06-28T09:55:00+05:30</updated><entry><title>Building Flagitect</title><link href="https://janithl.github.io/2020/06/building-flagitect/" rel="alternate"></link><published>2020-06-28T09:55:00+05:30</published><updated>2020-06-28T09:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-06-28:/2020/06/building-flagitect/</id><summary type="html">&lt;p&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.flagitect"&gt;Flagitect just hit version 1.2.0&lt;/a&gt;, and so this is a brief introduction
+into the technical aspects of how the app is structured.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Flagitect v1.2.0" src="https://janithl.github.io/images/flagitect-1.2.0.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;Stack&lt;/h3&gt;
+&lt;p&gt;The app is written in React Native (currently version 0.62). There is no navigation
+library in use, as the app only needs some modals …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.flagitect"&gt;Flagitect just hit version 1.2.0&lt;/a&gt;, and so this is a brief introduction
+into the technical aspects of how the app is structured.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Flagitect v1.2.0" src="https://janithl.github.io/images/flagitect-1.2.0.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;Stack&lt;/h3&gt;
+&lt;p&gt;The app is written in React Native (currently version 0.62). There is no navigation
+library in use, as the app only needs some modals in the UI at the moment. The editor
+uses &lt;a href="https://github.com/react-native-community/react-native-svg"&gt;react-native-svg&lt;/a&gt; to render the flags. &lt;a href="https://github.com/joltup/rn-fetch-blob"&gt;rn-fetch-blob&lt;/a&gt; is used to save
+the various output files (as a PNG raster or SVG vector inside an HTML) to device storage.&lt;/p&gt;
+&lt;h3&gt;State Management&lt;/h3&gt;
+&lt;p&gt;State is managed using a &lt;a href="https://reactjs.org/docs/hooks-reference.html#usereducer"&gt;single &lt;code&gt;useReducer&lt;/code&gt; hook&lt;/a&gt; near the root of the component
+tree. The store is currently divided into 3 parts with their own reducer functions:
+flag, ui, and charges. I found this approach had most of the advantages of Redux (since
+the component tree was shallow and I didn't need to use the Context API) when it came to
+composing the state and reducers. I use two &lt;code&gt;useEffect&lt;/code&gt; hooks to store the state in
+device storage&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; whenever it changes, and load it from storage at app start.&lt;/p&gt;
+&lt;h3&gt;Components&lt;/h3&gt;
+&lt;p&gt;There is your standard &lt;code&gt;Header&lt;/code&gt;, &lt;code&gt;Footer&lt;/code&gt;, &lt;code&gt;Menu&lt;/code&gt; etc. components, and a bunch
+of &lt;code&gt;renderSomething&lt;/code&gt; components that render either charges or divisions. SVG is a
+fantastic language for laying out shapes and designs, and I used a bunch of features
+including &lt;a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Patterns"&gt;patterns&lt;/a&gt; and &lt;a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform"&gt;transform&lt;/a&gt; to enable various rendering needs.&lt;/p&gt;
+&lt;h3&gt;Finally&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/janithl/Flagitect"&gt;Flagitect is completely free and open source (MIT licensed)&lt;/a&gt;, and I'd love for
+people using it to submit issues and PRs, or even fork it and make things better. I
+found that Google Play was lacking when it came to flag design apps, and so I created
+Flagitect in the hope that amateur vexillologists like myself would find it useful. ☺️&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;For this, I'm using [&lt;a href="https://github.com/react-native-community/async-storage"&gt;React Native Async Storage&lt;/a&gt; as this functionality has been spun off from the React Native core.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="code"></category><category term="design"></category></entry><entry><title>Late Night: A Timeline</title><link href="https://janithl.github.io/2020/05/late-night-a-timeline/" rel="alternate"></link><published>2020-05-29T21:50:00+05:30</published><updated>2020-05-29T21:50:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-05-29:/2020/05/late-night-a-timeline/</id><summary type="html">&lt;p&gt;I created this little timeline graphic as a crutch for my non-American self trying
+to navigate the complex history, culture, and inter-network rivalries of American
+Late Night TV shows.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Late Night Timeline" src="https://janithl.github.io/images/late-night-timeline.png"&gt;&lt;/p&gt;
+&lt;p&gt;There are some shows that should be mentioned but aren’t, because they weren’t on
+the big three:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/The_Late_Show_(1986_talk_show)"&gt;The Late …&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;I created this little timeline graphic as a crutch for my non-American self trying
+to navigate the complex history, culture, and inter-network rivalries of American
+Late Night TV shows.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Late Night Timeline" src="https://janithl.github.io/images/late-night-timeline.png"&gt;&lt;/p&gt;
+&lt;p&gt;There are some shows that should be mentioned but aren’t, because they weren’t on
+the big three:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/The_Late_Show_(1986_talk_show)"&gt;The Late Show&lt;/a&gt;/&lt;a href="https://en.wikipedia.org/wiki/The_Joan_Rivers_Show"&gt;The Joan Rivers Show&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/The_Arsenio_Hall_Show"&gt;The Arsenio Hall Show&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/The_Jon_Stewart_Show"&gt;The Jon Stewart Show&lt;/a&gt; on MTV&lt;/li&gt;
+&lt;li&gt;The various syndicated versions of &lt;a href="https://en.wikipedia.org/wiki/The_Dick_Cavett_Show"&gt;The Dick Cavett Show&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/The_Daily_Show"&gt;The Daily Show&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/The_Colbert_Report"&gt;The Colbert Report&lt;/a&gt; on Comedy Central (Stewart says
+   Letterman called them the “cable twins”)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Conan_(talk_show)"&gt;Conan&lt;/a&gt; on TBS (my current favourite)&lt;/li&gt;
+&lt;/ol&gt;</content><category term="data"></category><category term="design"></category></entry><entry><title>To Exist</title><link href="https://janithl.github.io/2020/03/to-exist/" rel="alternate"></link><published>2020-03-03T20:45:00+05:30</published><updated>2020-03-03T20:45:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-03-03:/2020/03/to-exist/</id><summary type="html">&lt;p&gt;Am I doomed&lt;/p&gt;
 &lt;p&gt;To an existence&lt;/p&gt;
 &lt;p&gt;Where you&lt;/p&gt;
 &lt;p&gt;You, you, &lt;em&gt;and you&lt;/em&gt;&lt;/p&gt;
@@ -2573,217 +2631,4 @@ don’t set realistic expectations, set boundaries, or don’t say no enough.&lt
 &lt;p&gt;This post has no grand message, but I’ve had a shitty month so far, and:&lt;br&gt;
 a) &lt;a href="https://alifeofsaturdays.wordpress.com/2019/01/27/reasons-not-to-write/"&gt;Adilah’s lovely post about excuses not to write&lt;/a&gt;, and&lt;br&gt;
 b) &lt;a href="https://thamara.blog/expectations-97685dd85811"&gt;Thamara’s about managing expectations&lt;/a&gt;, made me just want to get this out of my system. 🤷&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://medium.com/@janithl/life-is-a-wip-e4b911ae1a7d"&gt;&lt;em&gt;Originally Posted on Medium&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="biology"></category><category term="work"></category></entry><entry><title>A brief history of my ‘work music’</title><link href="https://janithl.github.io/2019/01/a-brief-history-of-my-work-music/" rel="alternate"></link><published>2019-01-09T10:44:00+05:30</published><updated>2019-01-09T10:44:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-01-09:/2019/01/a-brief-history-of-my-work-music/</id><summary type="html">&lt;h3&gt;2011: Live Forever — Oasis&lt;/h3&gt;
-&lt;p&gt;These were the heady days of youthful exuberance, when any idea seemed
-like it was worth pursuing — all the world’s problems could be solved
-with code, y’know? — and the internet was new, exciting, and as yet
-relatively uncommercialised. I was going through a major …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;2011: Live Forever — Oasis&lt;/h3&gt;
-&lt;p&gt;These were the heady days of youthful exuberance, when any idea seemed
-like it was worth pursuing — all the world’s problems could be solved
-with code, y’know? — and the internet was new, exciting, and as yet
-relatively uncommercialised. I was going through a major Britpop phase
-and this anthem seemed to best capture the spirit of the age.&lt;/p&gt;
-&lt;iframe width="640" height="480" src="https://www.youtube.com/embed/i_2mWhfOhGU"
-frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p class="text-center"&gt;My favourite member of the band was obviously Guigsy, the bassist.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Maybe you’re the same as me&lt;br&gt;
-We see things they’ll never see&lt;br&gt;
-You and I are gonna live forever&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;There were no limits back then, no wary old voice at the back of your
-head saying &lt;em&gt;“someone must’ve written a library for this before”&lt;/em&gt;, or
-&lt;em&gt;“if this is worth anything Google would’ve done it already”.&lt;/em&gt; Bus route
-finders and blog aggregators just sprung up, with hopelessly naive yet
-somehow (barely) functioning code that got the job done.&lt;/p&gt;
-&lt;h3&gt;2012: A Certain Romance — Arctic Monkeys&lt;/h3&gt;
-&lt;p&gt;My final year of uni was happening, and there was a real chance of me failing.&lt;/p&gt;
-&lt;p&gt;In retrospect, this might’ve been an overreaction to the statement by a
-lecturer that last year’s batch had done awfully, and half had flunked their
-finals. But I was fed up of the years of uni I’d already been through, and
-wanted to finally be a salaryman. No chances were hence taken, and no quarter
-given. From the end of the day’s lecturers right up until 8 PM when the library
-closed down, I would be in there studying. Every. Single. Day.&lt;/p&gt;
-&lt;p&gt;There were some perks. Pretty librarians, and even prettier girls. Nothing
-(obviously) came of it, but I got introduced to a lot of good music: Hendrix,
-Clapton, and the Monkeys from Sheffield. I still consider their debut album
-— chronicling a night out clubbing— one of the finest ever crafted. Alex Turner
-was barely 20 at the time.&lt;/p&gt;
-&lt;iframe width="700" height="393" src="https://www.youtube.com/embed/RyEiRKJJr6A"
-frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p class="text-center"&gt;Alex ❤&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Well over there, there’s friends of mine&lt;br&gt;
-What can I say? I’ve known ’em for a long long time&lt;br&gt;
-And yeah they might overstep the line&lt;br&gt;
-But I just cannot get angry in the same way&lt;br&gt;
-Not in the same way&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Oh, and I passed. :)&lt;/p&gt;
-&lt;h3&gt;2017: Don’t Stop — Fleetwood Mac&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Was it even a &lt;strong&gt;break up&lt;/strong&gt; if you didn’t listen to &lt;strong&gt;Rumours&lt;/strong&gt;
-by &lt;strong&gt;Fleetwood Mac&lt;/strong&gt; at least 6 times?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I was trudging through my second job like a British tax inspector through a cold
-thunderstorm. The project I was working through had been through 6 weeks of hell
-and back — all to deliver a product that would’ve taken &lt;em&gt;n&lt;/em&gt; number of weeks in
-&lt;em&gt;half the time&lt;/em&gt;, all because it had been sold to the client as something that
-could be done.&lt;/p&gt;
-&lt;p&gt;Everyone involved in that sales pitch had disappeared, and a team of mostly
-greenhorns had to spend late nights and weekends, clocking up 100-hour weeks for
-this impossible goal. There was a week where I had spent 6 midnights in a row at
-the office. We’d go home at 2 AM (on a good day) and be back at work at 9 AM for
-the morning client call with the team in Brisbane.&lt;/p&gt;
-&lt;p&gt;As 2017 ended, and I spent Christmas ‘holidays’ in an empty office working, my
-mind was set on quitting as soon as possible. The only thing keeping me going
-were the breakup songs playing through my tinny headset.&lt;/p&gt;
-&lt;iframe width="700" height="393" src="https://www.youtube.com/embed/QV9JJmSCiI8"
-frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p class="text-center"&gt;Everyone needs some of that coke in their lives.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If you wake up and don’t want to smile&lt;br&gt;
-If it takes just a little while&lt;br&gt;
-Open your eyes and look at the day&lt;br&gt;
-You’ll see things in a different way&lt;/p&gt;
-&lt;p&gt;Don’t stop thinking about tomorrow&lt;br&gt;
-Don’t stop, it’ll soon be here&lt;br&gt;
-It’ll be, better than before&lt;br&gt;
-Yesterday’s gone, yesterday’s gone&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;2018: Renu Renu — Rookantha Gunathilake&lt;/h3&gt;
-&lt;p&gt;2018 was an year of catharsis in many ways. I was able to leave my second job
-and transition to my third, work with a group of people whom I enjoy being
-around, and work at my own pace. I listen to a lot of Rookantha and &lt;a href="https://soundcloud.com/tags/synthwave"&gt;Synthwave&lt;/a&gt;
-these days, when I need to get deep work done and block out the distractions of the
-co-working space we operate out of.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Renu Renu&lt;/em&gt; is the 7th track from Roo’s seminal 1988 release &lt;a href="https://itunes.apple.com/lk/album/bambara-pahasa/1440268046"&gt;&lt;em&gt;Bambara Pahasa&lt;/em&gt;&lt;/a&gt;.
-With such evergreen hits like the title track, the patriotic anthem &lt;em&gt;Indunil Gangulel&lt;/em&gt;,
-&lt;em&gt;Sithin Sina Sisi&lt;/em&gt; (one of my favourite love songs ever), &lt;em&gt;Anatha Maruthe&lt;/em&gt;,
-&lt;em&gt;Suwanda Dena Mal Wane&lt;/em&gt; and &lt;em&gt;Lande Mula Wee&lt;/em&gt;, the &lt;em&gt;Bambara Pahasa&lt;/em&gt; cassette (which I
-grew up listening to) marked a high point in the Sri Lankan popular music industry.&lt;/p&gt;
-&lt;p&gt;One year later, its greatest ever songwriter Premakeerthi de Alwis was killed in the
-midst of an extremely gruesome war between Marxist insurgents and government death squads
-that were ready to match and amplify the savagery, marking the start of a slow but steady
-decline in both the commercial reach and the artistic achievements of the industry.&lt;/p&gt;
-&lt;p&gt;As for the work itself — it isn’t the most exciting in the world. I’m no longer working
-with the latest cutting-edge tech and writing code in a language that came out 6 months
-ago and Babel transpiles into 16 different varieties of Javascript, but sometimes
-&lt;em&gt;boring is good&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;This beautiful track is like 3-songs-in-one. Also, Rupavahini should bring back
-Saxophonists in naval suits.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;රේණු රේණු මල් මිටේ රේණු&lt;br&gt;
-ඈට පෙම් කරන්න මට බෑලු&lt;br&gt;
-රන් සමනල තටු මට ලැබෙන්නෙ නෑලු&lt;br&gt;
-රොන් පිරී සැලෙන්න මල් රේණු&lt;/p&gt;
-&lt;p&gt;සඳවත දෝ මා දුටුවේ&lt;br&gt;
-ඔබෙ ගත දෝ මා දුටුවේ&lt;br&gt;
-සිතුවම් දෝ මා දුටුවේ&lt;br&gt;
-හැබැහින් දෝ ඔබ දුටුවේ&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img alt="Bambara Pahasa Album Cover" src="https://janithl.github.io/images/bambara-pahasa.jpg"&gt;&lt;/p&gt;
-&lt;p class="text-center"&gt;Greatest Sri Lankan album cover design ever?&lt;/p&gt;
-
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="https://medium.com/@janithl/a-brief-history-of-my-work-music-2efd190619e8"&gt;&lt;em&gt;Originally Posted on Medium&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="music"></category><category term="uni"></category><category term="work"></category></entry><entry><title>Some things I wish I knew as a young startup dev</title><link href="https://janithl.github.io/2018/06/some-things-i-wish-i-knew-as-a-young-startup-dev/" rel="alternate"></link><published>2018-06-08T19:17:00+05:30</published><updated>2018-06-08T19:17:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2018-06-08:/2018/06/some-things-i-wish-i-knew-as-a-young-startup-dev/</id><summary type="html">&lt;p&gt;As some of you might know, I started my career as the first
-developer at a startup, way back in 2012. It was a challenging
-but rewarding experience, and I got to learn a lot and explore
-the full breadth of the software stack. The following are some
-learnings that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As some of you might know, I started my career as the first
-developer at a startup, way back in 2012. It was a challenging
-but rewarding experience, and I got to learn a lot and explore
-the full breadth of the software stack. The following are some
-learnings that I wish I could tell my younger self.&lt;/p&gt;
-&lt;h3&gt;Prototype like your life depends on it&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“I know you guys are restless to get started, but before you
-write a single line of code — Make a prototype and run it by your client”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I heard this line from one of the co-founders of a very successful
-software services company. In a startup, the client might be your
-founder who’s sitting in the desk in front of you, but code is costly
-to work and rework. Always prototype, at least on paper. It’ll help
-everyone visualise what they’re building, and see issues and limitations
-before you even start on the implementation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Paper Prototype" src="https://janithl.github.io/images/paper-prototype.jpg"&gt;&lt;/p&gt;
-&lt;p class="text-center"&gt;Image by &lt;a href="https://www.flickr.com/photos/21218849@N03"&gt;Samuel Mann&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;Write a spec, and check it twice&lt;/h3&gt;
-&lt;p&gt;Software is all about the spec. It defines the scope and the tests that
-need to pass to mark the work as done. A spec might be as simple as a user
-story followed by some acceptance criteria in the &lt;a href="http://docs.behat.org/en/v2.5/guides/1.gherkin.html"&gt;Gherkin format&lt;/a&gt;, but it’s
-very important for estimations, avoiding the dreaded scope creep, and writing
-high quality code.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A sample spec:&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;As a &lt;strong&gt;logged in user&lt;/strong&gt;,&lt;/p&gt;
-&lt;p&gt;I want to &lt;strong&gt;access the Account page&lt;/strong&gt;,&lt;/p&gt;
-&lt;p&gt;so that I can &lt;strong&gt;see my Account Settings&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Acceptance criteria:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Feature:&lt;/span&gt;&lt;span class="nf"&gt; Access account settings page&lt;/span&gt;
-
-&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; Janith accesses the account settings page&lt;/span&gt;
-
-&lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;I am logged in as &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;janith@startup.lk&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot;,&lt;/span&gt;
-&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;I am in the home page&lt;/span&gt;
-
-&lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;I click on &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;Account&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot; on the top menu,&lt;/span&gt;
-
-&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;I am navigated to the &amp;quot;&lt;/span&gt;&lt;span class="s"&gt;Account&lt;/span&gt;&lt;span class="nf"&gt;&amp;quot; page,&lt;/span&gt;
-&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;I can see my Account Settings.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Remember, you will most probably be your own QA, so write a solid automated
-test suite that covers these conditions.&lt;/p&gt;
-&lt;h3&gt;Timebox, timebox, timebox&lt;/h3&gt;
-&lt;p&gt;You probably won’t have a Project Manager, nor will anyone really care about
-Agile or sprints. The constant mantra will be &lt;em&gt;“just get it shipped”&lt;/em&gt;. This is
-damaging in two aspects: a team without a welldefined end goal and a timeframe
-to achieve it in will drift and probably get demotivated, and you will not be
-able to set up a good measure of how much work your team is able to tackle in a
-given period of time--which will make it really difficult to draw up a project
-timeline.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Sprint Plan" src="https://janithl.github.io/images/sprint-plan.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;Avoid this trap. Set up 1 or 2 week sprints, take up only stories that the team is
-confident they can achieve in that timebox, and &lt;a href="https://medium.com/softwaredevtools/agile-retrospectives-why-your-team-should-be-having-them-even-if-youre-not-in-the-tech-industry-b98c3df6501d"&gt;&lt;strong&gt;have a retro&lt;/strong&gt; at the end of each sprint
-to discuss what went well, what failed, and how the team can improve&lt;/a&gt;. Try your best to
-ship production code at the end of every sprint. It will give the team a sense of
-achievement, and &lt;a href="https://ma.tt/2010/11/one-point-oh/"&gt;that which is most valuable: customer feedback&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Know when to use Frameworks and Libraries&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;There are some terrible frameworks.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Often, code you write from the ground-up for a specific purpose will be faster and more performant.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Both of the points above a valid, and I avoided using PHP and frontend Javascript
-frameworks for the longest time. This cost us a lot in terms of delivery speed and
-maintainability, and especially made onboarding new developers hell. I still wonder
-how things would’ve turned out had I used — say, Laravel or Python with Flask, or
-KnockoutJS from the earliest days. We probably would’ve shipped a lot more features,
-and at much higher quality.&lt;/p&gt;
-&lt;h3&gt;Read up, seek support&lt;/h3&gt;
-&lt;p&gt;Look, when it’s a tiny startup and it’s just two junior devs fighting fires every
-day, you will miss out on a lot. You won’t have leads who will guide you on best
-practices and design patterns, or architects who explain why TDD is awesome, and
-why you should read &lt;a href="https://www.goodreads.com/book/show/3735293-clean-code"&gt;Clean Code by Robert C. Martin&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;It will be up to you to reach out: follow your &lt;a href="https://twitter.com/dan_abramov"&gt;favourite&lt;/a&gt; &lt;a href="https://twitter.com/dhh"&gt;library&lt;/a&gt; &lt;a href="https://twitter.com/John_Papa"&gt;authors&lt;/a&gt; on Twitter,
-subscribe to a few good tech blogs on Medium and turn on the “Daily Digest” email.
-Participate in the community and tech meet ups, and try to reach out to batch mates
-or seniors working in bigger companies for advice and tips. There are so many people
-willing to help if only you’d ask.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Workshop" src="https://janithl.github.io/images/workshop.jpg"&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;So yeah. Those are a few things I learned the hard way, and I wouldn’t trade it for the world. I hope you find it useful.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://medium.com/@janithl/some-things-i-wish-i-knew-as-a-young-startup-dev-d6475d3f8151"&gt;&lt;em&gt;Originally Posted on Medium&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category><category term="people"></category><category term="work"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://medium.com/@janithl/life-is-a-wip-e4b911ae1a7d"&gt;&lt;em&gt;Originally Posted on Medium&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="biology"></category><category term="work"></category></entry></feed>
