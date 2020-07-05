@@ -72,9 +72,10 @@ const description = highlightText(
 
 
 &lt;p&gt;Aaand, we're done! 🎉&lt;/p&gt;
-&lt;p&gt;Edit: Many of you will rightly wonder if &lt;code&gt;action&lt;/code&gt;, &lt;code&gt;user&lt;/code&gt;, and &lt;code&gt;styles&lt;/code&gt; will need to be
-defined in the same file as the Template Literal. No, we can simply make it a function
-and pass these values direct from the component, like so:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; Many of you will rightly wonder if &lt;code&gt;action&lt;/code&gt;, &lt;code&gt;user&lt;/code&gt;, and &lt;code&gt;styles&lt;/code&gt; will need
+to be defined in the same file as the Template Literal. No, we can simply make it a
+function and pass these values direct from the component, like so:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;const description = (user, action, styles) =&amp;gt; highlightText(
   styles.text,
   styles.highlight

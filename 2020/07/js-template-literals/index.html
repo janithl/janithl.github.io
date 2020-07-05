@@ -109,6 +109,7 @@
 <article>
   <div class="article_title">
     <h3><a href="https://janithl.github.io/2020/07/js-template-literals/">Tagged Template Literals are Awesome!</a></h3>
+    <p class="lead">Tagged under "better write this down before I forget"</p><hr>
   </div>
   <div class="article_text">
     <p>You will often need to implement text that looks like this:</p>
@@ -179,9 +180,10 @@ const description = highlightText(
 
 
 <p>Aaand, we're done! 🎉</p>
-<p>Edit: Many of you will rightly wonder if <code>action</code>, <code>user</code>, and <code>styles</code> will need to be
-defined in the same file as the Template Literal. No, we can simply make it a function
-and pass these values direct from the component, like so:</p>
+<hr>
+<p><strong>Edit:</strong> Many of you will rightly wonder if <code>action</code>, <code>user</code>, and <code>styles</code> will need
+to be defined in the same file as the Template Literal. No, we can simply make it a
+function and pass these values direct from the component, like so:</p>
 <div class="highlight"><pre><span></span>const description = (user, action, styles) =&gt; highlightText(
   styles.text,
   styles.highlight

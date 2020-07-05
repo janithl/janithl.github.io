@@ -1,8 +1,9 @@
 Title: Tagged Template Literals are Awesome!
 Date: 2020-07-05 07:20
 Category: General
-Slug: js-template-literals
 Tags: code, design, js and ts, react
+Slug: js-template-literals
+Subtitle: Tagged under "better write this down before I forget"
 
 You will often need to implement text that looks like this:
 
@@ -83,9 +84,11 @@ const description = highlightText(
 
 Aaand, we're done! 🎉
 
-Edit: Many of you will rightly wonder if `action`, `user`, and `styles` will need to be
-defined in the same file as the Template Literal. No, we can simply make it a function
-and pass these values direct from the component, like so:
+---
+
+**Edit:** Many of you will rightly wonder if `action`, `user`, and `styles` will need
+to be defined in the same file as the Template Literal. No, we can simply make it a
+function and pass these values direct from the component, like so:
 
 ```
 const description = (user, action, styles) => highlightText(
