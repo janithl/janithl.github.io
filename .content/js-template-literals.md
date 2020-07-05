@@ -78,7 +78,7 @@ const description = highlightText(
   styles.highlight
 )`You’re going to ${action} to ${user}. Please confirm?`;
 
-// ...app code
+// in the render method
 <Text>{description}</Text>;
 ```
 
@@ -96,7 +96,7 @@ const description = (user, action, styles) => highlightText(
   styles.highlight
 )`You’re going to ${action} to ${user}. Please confirm?`;
 
-// ...app code
+// in the render method
 <Text>{description('Pingpong', 'Send a message', styles)}</Text>;
 ```
 

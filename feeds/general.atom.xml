@@ -66,7 +66,7 @@ const description = highlightText(
   styles.highlight
 )`You’re going to ${action} to ${user}. Please confirm?`;
 
-// ...app code
+// in the render method
 &amp;lt;Text&amp;gt;{description}&amp;lt;/Text&amp;gt;;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -81,7 +81,7 @@ function and pass these values direct from the component, like so:&lt;/p&gt;
   styles.highlight
 )`You’re going to ${action} to ${user}. Please confirm?`;
 
-// ...app code
+// in the render method
 &amp;lt;Text&amp;gt;{description(&amp;#39;Pingpong&amp;#39;, &amp;#39;Send a message&amp;#39;, styles)}&amp;lt;/Text&amp;gt;;
 &lt;/pre&gt;&lt;/div&gt;
 
