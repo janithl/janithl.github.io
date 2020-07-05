@@ -52,11 +52,11 @@ Okay, with a quick few tweaks we can definitely apply this to React Native, righ
 ```
 const highlightText = (baseStyle, highlightStyle) => (strings, ...values) => (
   <Text style={baseStyle}>
-    {strings.map((s, i) => (
+    {strings.map((string, index) => (
       <>
-        {s}
-        <Text style={highlightStyle} id={i}>
-          {values[i]}
+        {string}
+        <Text style={highlightStyle}>
+          {values[index]}
         </Text>
       </>
     ))}

@@ -150,11 +150,11 @@ in JS. Seeing this example blew my mind:</p>
 <h3>Highlighting Text in React Native</h3>
 <div class="highlight"><pre><span></span>const highlightText = (baseStyle, highlightStyle) =&gt; (strings, ...values) =&gt; (
   &lt;Text style={baseStyle}&gt;
-    {strings.map((s, i) =&gt; (
+    {strings.map((string, index) =&gt; (
       &lt;&gt;
-        {s}
-        &lt;Text style={highlightStyle} id={i}&gt;
-          {values[i]}
+        {string}
+        &lt;Text style={highlightStyle}&gt;
+          {values[index]}
         &lt;/Text&gt;
       &lt;/&gt;
     ))}

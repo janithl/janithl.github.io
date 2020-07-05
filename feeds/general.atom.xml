@@ -43,11 +43,11 @@ in JS. Seeing this example blew my mind:&lt;/p&gt;
 &lt;h3&gt;Highlighting Text in React Native&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;const highlightText = (baseStyle, highlightStyle) =&amp;gt; (strings, ...values) =&amp;gt; (
   &amp;lt;Text style={baseStyle}&amp;gt;
-    {strings.map((s, i) =&amp;gt; (
+    {strings.map((string, index) =&amp;gt; (
       &amp;lt;&amp;gt;
-        {s}
-        &amp;lt;Text style={highlightStyle} id={i}&amp;gt;
-          {values[i]}
+        {string}
+        &amp;lt;Text style={highlightStyle}&amp;gt;
+          {values[index]}
         &amp;lt;/Text&amp;gt;
       &amp;lt;/&amp;gt;
     ))}
