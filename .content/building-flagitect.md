@@ -1,7 +1,7 @@
 Title: Building Flagitect
 Date: 2020-06-28 09:55
 Category: General
-Tags: code, design
+Tags: code, design, js and ts, react
 Subtitle: just like a wavin flag
 
 [Flagitect just hit version 1.2.0][1], and so this is a brief introduction

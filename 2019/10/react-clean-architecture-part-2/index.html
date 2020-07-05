@@ -30,7 +30,7 @@
 
     <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
 
-<meta name="keywords" content="code, design, work">
+<meta name="keywords" content="code, design, js and ts, react, work">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -82,12 +82,14 @@
                           <li><a href="https://janithl.github.io/tag/films/">films</a></li>
                           <li><a href="https://janithl.github.io/tag/geopolitics/">geopolitics</a></li>
                           <li><a href="https://janithl.github.io/tag/golang/">golang</a></li>
+                          <li><a href="https://janithl.github.io/tag/js-and-ts/">js and ts</a></li>
                           <li><a href="https://janithl.github.io/tag/machine-learning/">machine learning</a></li>
                           <li><a href="https://janithl.github.io/tag/music/">music</a></li>
                           <li><a href="https://janithl.github.io/tag/oasis/">oasis</a></li>
                           <li><a href="https://janithl.github.io/tag/people/">people</a></li>
                           <li><a href="https://janithl.github.io/tag/politics/">politics</a></li>
                           <li><a href="https://janithl.github.io/tag/prudishness/">prudishness</a></li>
+                          <li><a href="https://janithl.github.io/tag/react/">react</a></li>
                           <li><a href="https://janithl.github.io/tag/religion/">religion</a></li>
                           <li><a href="https://janithl.github.io/tag/sexuality/">sexuality</a></li>
                           <li><a href="https://janithl.github.io/tag/sinhala/">sinhala</a></li>
@@ -228,12 +230,12 @@ as this code is on an architectural boundary and will change quite frequently.</
 <div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
   <span class="nx">LIST_LOAD_REQUEST</span><span class="p">,</span>
   <span class="nx">LIST_LOAD_SUCCESS</span><span class="p">,</span>
-  <span class="nx">LIST_LOAD_FAILURE</span>
+  <span class="nx">LIST_LOAD_FAILURE</span><span class="p">,</span>
 <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;./Item.types&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">ItemServiceImpl</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;../core/usecases/ItemService&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">ItemRepositoryImpl</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;../core/infrastructure/ItemRepositoryImpl&quot;</span><span class="p">;</span>
 
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">refreshList</span> <span class="o">=</span> <span class="nx">async</span> <span class="nx">dispatch</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">refreshList</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">LIST_LOAD_REQUEST</span> <span class="p">});</span>
 
   <span class="k">try</span> <span class="p">{</span>
@@ -295,7 +297,7 @@ boundaries and a ton of other architectural and programming practicies.</p>
     <p>Posted on: Mon 14 October 2019</p>
     <p>Category: <a href="https://janithl.github.io/category/general/">General</a>
  &ndash; Tags:
-      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/design/">design</a>,      <a href="https://janithl.github.io/tag/work/">work</a>    </p>
+      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/design/">design</a>,      <a href="https://janithl.github.io/tag/js-and-ts/">js and ts</a>,      <a href="https://janithl.github.io/tag/react/">react</a>,      <a href="https://janithl.github.io/tag/work/">work</a>    </p>
   </div>
 
   <div id="article_comments">

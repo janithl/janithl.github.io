@@ -1,7 +1,7 @@
 Title: My take on doing 'Clean Architecture' in React (Part 1)
 Date: 2019-10-06 19:10
 Category: General
-Tags: code, design, work
+Tags: code, design, js and ts, react, work
 Slug: react-clean-architecture-part-1
 Subtitle: Friendship is magic? Wait till you see Dependency Inversion!
 
@@ -78,18 +78,15 @@ const ItemList = ({ items, refreshList }) => (
 It'll be hooked up to Redux using something like this:
 
 ```js
-const mapStateToProps = state => ({
-  items: state.items
+const mapStateToProps = (state) => ({
+  items: state.items,
 });
 
-const mapDispatchToProps = dispatch => ({
-  refreshList: () => dispatch(refreshList)
+const mapDispatchToProps = (dispatch) => ({
+  refreshList: () => dispatch(refreshList),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ItemList);
+export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
 ```
 
 And I'd guess your Thunk (or Saga) would look a bit like this:

@@ -1,7 +1,7 @@
 Title: My take on doing 'Clean Architecture' in React (Part 2)
 Date: 2019-10-14 08:28
 Category: General
-Tags: code, design, work
+Tags: code, design, js and ts, react, work
 Slug: react-clean-architecture-part-2
 Subtitle: What's your type?
 
@@ -141,12 +141,12 @@ We can now edit our Thunk to use the service instead of directly calling the API
 import {
   LIST_LOAD_REQUEST,
   LIST_LOAD_SUCCESS,
-  LIST_LOAD_FAILURE
+  LIST_LOAD_FAILURE,
 } from "./Item.types";
 import { ItemServiceImpl } from "../core/usecases/ItemService";
 import { ItemRepositoryImpl } from "../core/infrastructure/ItemRepositoryImpl";
 
-export const refreshList = async dispatch => {
+export const refreshList = async (dispatch) => {
   dispatch({ type: LIST_LOAD_REQUEST });
 
   try {

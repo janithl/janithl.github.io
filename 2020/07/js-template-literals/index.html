@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="author" content="Janith">
+    <meta name="description" content="Janith's blog">
+    <link rel="icon" href="https://janithl.github.io/favicon.ico">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,700&amp;subset=sinhala">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/pygments.css">
+
+    <title>Janith's Blog &ndash; Tagged Template Literals are Awesome!</title>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7602960-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+    <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
+
+<meta name="keywords" content="code, design, js and ts, react">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://janithl.github.io/">Janith's Blog</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="https://janithl.github.io/pages/about.html">About</a></li>
+
+                    <li class="active"><a href="https://janithl.github.io/category/general/">General</a></li>
+                    <li><a href="https://janithl.github.io/category/links/">Links</a></li>
+                    <li><a href="https://janithl.github.io/category/personal/">Personal</a></li>
+
+                    <li><a href="https://github.com/janithl" target="_blank">Github</a></li>
+
+                    <li><a href="https://janithl.github.io/archives.html">Archives</a></li>
+
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tags <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="https://janithl.github.io/tag/biology/">biology</a></li>
+                          <li><a href="https://janithl.github.io/tag/casey-neistat/">casey neistat</a></li>
+                          <li><a href="https://janithl.github.io/tag/code/">code</a></li>
+                          <li><a href="https://janithl.github.io/tag/comics/">comics</a></li>
+                          <li><a href="https://janithl.github.io/tag/conflict/">conflict</a></li>
+                          <li><a href="https://janithl.github.io/tag/conversations/">conversations</a></li>
+                          <li><a href="https://janithl.github.io/tag/data/">data</a></li>
+                          <li><a href="https://janithl.github.io/tag/design/">design</a></li>
+                          <li><a href="https://janithl.github.io/tag/docker/">docker</a></li>
+                          <li><a href="https://janithl.github.io/tag/education/">education</a></li>
+                          <li><a href="https://janithl.github.io/tag/films/">films</a></li>
+                          <li><a href="https://janithl.github.io/tag/geopolitics/">geopolitics</a></li>
+                          <li><a href="https://janithl.github.io/tag/golang/">golang</a></li>
+                          <li><a href="https://janithl.github.io/tag/js-and-ts/">js and ts</a></li>
+                          <li><a href="https://janithl.github.io/tag/machine-learning/">machine learning</a></li>
+                          <li><a href="https://janithl.github.io/tag/music/">music</a></li>
+                          <li><a href="https://janithl.github.io/tag/oasis/">oasis</a></li>
+                          <li><a href="https://janithl.github.io/tag/people/">people</a></li>
+                          <li><a href="https://janithl.github.io/tag/politics/">politics</a></li>
+                          <li><a href="https://janithl.github.io/tag/prudishness/">prudishness</a></li>
+                          <li><a href="https://janithl.github.io/tag/react/">react</a></li>
+                          <li><a href="https://janithl.github.io/tag/religion/">religion</a></li>
+                          <li><a href="https://janithl.github.io/tag/sexuality/">sexuality</a></li>
+                          <li><a href="https://janithl.github.io/tag/sinhala/">sinhala</a></li>
+                          <li><a href="https://janithl.github.io/tag/travel/">travel</a></li>
+                          <li><a href="https://janithl.github.io/tag/uni/">uni</a></li>
+                          <li><a href="https://janithl.github.io/tag/wes-anderson/">wes anderson</a></li>
+                          <li><a href="https://janithl.github.io/tag/work/">work</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a href="https://janithl.github.io/feeds/all.atom.xml">Atom</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+<article>
+  <div class="article_title">
+    <h3><a href="https://janithl.github.io/2020/07/js-template-literals/">Tagged Template Literals are Awesome!</a></h3>
+  </div>
+  <div class="article_text">
+    <p>You will often need to implement text that looks like this:</p>
+<p><img alt="Highlighted Text" src="https://janithl.github.io/images/highlighted-text.png"></p>
+<p>Now, it's fairly simple enough to do in HTML, but when you do it in React Native
+it looks a bit gnarly:</p>
+<div class="highlight"><pre><span></span>&lt;Text style={styles.text}&gt;
+  You’re going to &lt;Text style={styles.highlighted}&gt;send a message&lt;/Text&gt; to{&quot; &quot;}
+  &lt;Text style={styles.highlighted}&gt;Pingpong&lt;/Text&gt;. Please confirm?
+&lt;/Text&gt;
+</pre></div>
+
+
+<p>Now, I prefer to keep strings like this in a separate file in React Native, to make
+the frequent requests for text changes contained to a single file. But a complex
+template string like this was impossible to store that way, until...</p>
+<h3>Enter Tagged Template Literals</h3>
+<p><a href="https://www.taniarascia.com/understanding-template-literals/">This post by Tania Rascia</a> opened my eyes to the power of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">Tagged Template Literals</a>
+in JS. Seeing this example blew my mind:</p>
+<div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">bold</span><span class="p">(</span><span class="nx">strings</span><span class="p">,</span> <span class="p">...</span><span class="nx">expressions</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">finalString</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+
+  <span class="c1">// Loop through all expressions</span>
+  <span class="nx">expressions</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">value</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">finalString</span> <span class="o">+=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">strings</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="si">}</span><span class="sb">&lt;strong&gt;</span><span class="si">${</span><span class="nx">value</span><span class="si">}</span><span class="sb">&lt;/strong&gt;`</span><span class="p">;</span>
+  <span class="p">});</span>
+
+  <span class="c1">// Add the last string literal</span>
+  <span class="nx">finalString</span> <span class="o">+=</span> <span class="nx">strings</span><span class="p">[</span><span class="nx">strings</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+  <span class="k">return</span> <span class="nx">finalString</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">bold</span><span class="sb">`This is a string with </span><span class="si">${</span><span class="kc">true</span><span class="si">}</span><span class="sb"> and </span><span class="si">${</span><span class="kc">false</span><span class="si">}</span><span class="sb"> and </span><span class="si">${</span><span class="mi">100</span><span class="si">}</span><span class="sb"> interpolated inside.`</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Okay, with a quick few tweaks we can definitely apply this to React Native, right?</p>
+<h3>Highlighting Text in React Native</h3>
+<div class="highlight"><pre><span></span>const highlightText = (baseStyle, highlightStyle) =&gt; (strings, ...values) =&gt; (
+  &lt;Text style={baseStyle}&gt;
+    {strings.map((s, i) =&gt; (
+      &lt;&gt;
+        {s}
+        &lt;Text style={highlightStyle} id={i}&gt;
+          {values[i]}
+        &lt;/Text&gt;
+      &lt;/&gt;
+    ))}
+  &lt;/Text&gt;
+);
+</pre></div>
+
+
+<p>Note I am using a higher order function so that I can pass in custom styles. We can also
+pass in other stuff like entire components, if that is the requirement.</p>
+<p>Now, we could store the Tagged Template Literal and use it wherever in our JSX.</p>
+<div class="highlight"><pre><span></span>const action = &quot;send a message&quot;;
+const user = &quot;Pingpong&quot;;
+const description = highlightText(
+  styles.text,
+  styles.highlight
+)`You’re going to ${action} to ${user}. Please confirm?`;
+
+//... app code
+&lt;Text&gt;{description}&lt;/Text&gt;;
+</pre></div>
+
+
+<p>And done! 🎉</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Sun 05 July 2020</p>
+    <p>Category: <a href="https://janithl.github.io/category/general/">General</a>
+ &ndash; Tags:
+      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/design/">design</a>,      <a href="https://janithl.github.io/tag/js-and-ts/">js and ts</a>,      <a href="https://janithl.github.io/tag/react/">react</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2020/07/js-template-literals/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = '//janithl.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+    </div>
+
+    <div id="ending_message">
+        <hr>
+        <p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

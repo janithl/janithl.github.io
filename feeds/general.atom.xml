@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-06-28T09:55:00+05:30</updated><entry><title>Building Flagitect</title><link href="https://janithl.github.io/2020/06/building-flagitect/" rel="alternate"></link><published>2020-06-28T09:55:00+05:30</published><updated>2020-06-28T09:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-06-28:/2020/06/building-flagitect/</id><summary type="html">&lt;p&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.flagitect"&gt;Flagitect just hit version 1.2.0&lt;/a&gt;, and so this is a brief introduction
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-07-05T07:20:00+05:30</updated><entry><title>Tagged Template Literals are Awesome!</title><link href="https://janithl.github.io/2020/07/js-template-literals/" rel="alternate"></link><published>2020-07-05T07:20:00+05:30</published><updated>2020-07-05T07:20:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-07-05:/2020/07/js-template-literals/</id><summary type="html">&lt;p&gt;You will often need to implement text that looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Highlighted Text" src="https://janithl.github.io/images/highlighted-text.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now, it's fairly simple enough to do in HTML, but when you do it in React Native
+it looks a bit gnarly:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;Text style={styles.text}&amp;gt;
+  You’re going to &amp;lt;Text style={styles.highlighted}&amp;gt;send a message&amp;lt;/Text&amp;gt; to …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;You will often need to implement text that looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Highlighted Text" src="https://janithl.github.io/images/highlighted-text.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now, it's fairly simple enough to do in HTML, but when you do it in React Native
+it looks a bit gnarly:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;Text style={styles.text}&amp;gt;
+  You’re going to &amp;lt;Text style={styles.highlighted}&amp;gt;send a message&amp;lt;/Text&amp;gt; to{&amp;quot; &amp;quot;}
+  &amp;lt;Text style={styles.highlighted}&amp;gt;Pingpong&amp;lt;/Text&amp;gt;. Please confirm?
+&amp;lt;/Text&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, I prefer to keep strings like this in a separate file in React Native, to make
+the frequent requests for text changes contained to a single file. But a complex
+template string like this was impossible to store that way, until...&lt;/p&gt;
+&lt;h3&gt;Enter Tagged Template Literals&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.taniarascia.com/understanding-template-literals/"&gt;This post by Tania Rascia&lt;/a&gt; opened my eyes to the power of &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"&gt;Tagged Template Literals&lt;/a&gt;
+in JS. Seeing this example blew my mind:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;bold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;strings&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="nx"&gt;expressions&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;finalString&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="c1"&gt;// Loop through all expressions&lt;/span&gt;
+  &lt;span class="nx"&gt;expressions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;finalString&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;strings&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;&amp;lt;/strong&amp;gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;});&lt;/span&gt;
+
+  &lt;span class="c1"&gt;// Add the last string literal&lt;/span&gt;
+  &lt;span class="nx"&gt;finalString&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nx"&gt;strings&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;strings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;finalString&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;string&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;bold&lt;/span&gt;&lt;span class="sb"&gt;`This is a string with &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt; and &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt; and &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt; interpolated inside.`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;string&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Okay, with a quick few tweaks we can definitely apply this to React Native, right?&lt;/p&gt;
+&lt;h3&gt;Highlighting Text in React Native&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;const highlightText = (baseStyle, highlightStyle) =&amp;gt; (strings, ...values) =&amp;gt; (
+  &amp;lt;Text style={baseStyle}&amp;gt;
+    {strings.map((s, i) =&amp;gt; (
+      &amp;lt;&amp;gt;
+        {s}
+        &amp;lt;Text style={highlightStyle} id={i}&amp;gt;
+          {values[i]}
+        &amp;lt;/Text&amp;gt;
+      &amp;lt;/&amp;gt;
+    ))}
+  &amp;lt;/Text&amp;gt;
+);
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Note I am using a higher order function so that I can pass in custom styles. We can also
+pass in other stuff like entire components, if that is the requirement.&lt;/p&gt;
+&lt;p&gt;Now, we could store the Tagged Template Literal and use it wherever in our JSX.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;const action = &amp;quot;send a message&amp;quot;;
+const user = &amp;quot;Pingpong&amp;quot;;
+const description = highlightText(
+  styles.text,
+  styles.highlight
+)`You’re going to ${action} to ${user}. Please confirm?`;
+
+//... app code
+&amp;lt;Text&amp;gt;{description}&amp;lt;/Text&amp;gt;;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And done! 🎉&lt;/p&gt;</content><category term="code"></category><category term="design"></category><category term="js and ts"></category><category term="react"></category></entry><entry><title>Building Flagitect</title><link href="https://janithl.github.io/2020/06/building-flagitect/" rel="alternate"></link><published>2020-06-28T09:55:00+05:30</published><updated>2020-06-28T09:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-06-28:/2020/06/building-flagitect/</id><summary type="html">&lt;p&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.flagitect"&gt;Flagitect just hit version 1.2.0&lt;/a&gt;, and so this is a brief introduction
 into the technical aspects of how the app is structured.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Flagitect v1.2.0" src="https://janithl.github.io/images/flagitect-1.2.0.jpg"&gt;&lt;/p&gt;
 &lt;h3&gt;Stack&lt;/h3&gt;
@@ -38,7 +110,7 @@ Flagitect in the hope that amateur vexillologists like myself would find it usef
 &lt;p&gt;For this, I'm using &lt;a href="https://github.com/react-native-community/async-storage"&gt;React Native Async Storage&lt;/a&gt; as this functionality has been spun off from the React Native core.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="code"></category><category term="design"></category></entry><entry><title>Late Night: A Timeline</title><link href="https://janithl.github.io/2020/05/late-night-a-timeline/" rel="alternate"></link><published>2020-05-29T21:50:00+05:30</published><updated>2020-05-29T21:50:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-05-29:/2020/05/late-night-a-timeline/</id><summary type="html">&lt;p&gt;I created this little timeline graphic as a crutch for my non-American self trying
+&lt;/div&gt;</content><category term="code"></category><category term="design"></category><category term="js and ts"></category><category term="react"></category></entry><entry><title>Late Night: A Timeline</title><link href="https://janithl.github.io/2020/05/late-night-a-timeline/" rel="alternate"></link><published>2020-05-29T21:50:00+05:30</published><updated>2020-05-29T21:50:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-05-29:/2020/05/late-night-a-timeline/</id><summary type="html">&lt;p&gt;I created this little timeline graphic as a crutch for my non-American self trying
 to navigate the complex history, culture, and inter-network rivalries of American
 Late Night TV shows.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Late Night Timeline" src="https://janithl.github.io/images/late-night-timeline.png"&gt;&lt;/p&gt;
@@ -367,12 +439,12 @@ as this code is on an architectural boundary and will change quite frequently.&l
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="nx"&gt;LIST_LOAD_REQUEST&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
   &lt;span class="nx"&gt;LIST_LOAD_SUCCESS&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-  &lt;span class="nx"&gt;LIST_LOAD_FAILURE&lt;/span&gt;
+  &lt;span class="nx"&gt;LIST_LOAD_FAILURE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;./Item.types&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;ItemServiceImpl&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;../core/usecases/ItemService&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;ItemRepositoryImpl&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;../core/infrastructure/ItemRepositoryImpl&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;refreshList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="nx"&gt;dispatch&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;refreshList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;LIST_LOAD_REQUEST&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
 
   &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -428,7 +500,7 @@ that change for different reasons.&lt;/p&gt;
 &lt;p&gt;This series of posts is dedicated to &lt;a href="https://www.linkedin.com/in/mahasenbandara/"&gt;Mr. Mahasen Bandara&lt;/a&gt;, architect extraordinaire,
 from whom I had the priviledge of learning about Robert C. Martin and architectural
 boundaries and a ton of other architectural and programming practicies.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/janithl/react-clean-arch"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category><category term="design"></category><category term="work"></category></entry><entry><title>My take on doing 'Clean Architecture' in React (Part 1)</title><link href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/" rel="alternate"></link><published>2019-10-06T19:10:00+05:30</published><updated>2019-10-06T19:10:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-06:/2019/10/react-clean-architecture-part-1/</id><summary type="html">&lt;p&gt;&lt;img alt="Clean Architecture" src="https://janithl.github.io/images/clean-arch-diagram.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/janithl/react-clean-arch"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category><category term="design"></category><category term="js and ts"></category><category term="react"></category><category term="work"></category></entry><entry><title>My take on doing 'Clean Architecture' in React (Part 1)</title><link href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/" rel="alternate"></link><published>2019-10-06T19:10:00+05:30</published><updated>2019-10-06T19:10:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-06:/2019/10/react-clean-architecture-part-1/</id><summary type="html">&lt;p&gt;&lt;img alt="Clean Architecture" src="https://janithl.github.io/images/clean-arch-diagram.png"&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;Clean Architecture, simplified.&lt;/p&gt;
 
 &lt;p&gt;I'm a huge fan of Robert C. Martin's work in general, and &lt;a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean Architecture&lt;/a&gt; in
@@ -501,18 +573,15 @@ state and hence the UI.&lt;/p&gt;
 
 
 &lt;p&gt;It'll be hooked up to Redux using something like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;mapStateToProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;state&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
-  &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;items&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;mapStateToProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
+  &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="p"&gt;});&lt;/span&gt;
 
-&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;mapDispatchToProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;dispatch&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
-  &lt;span class="nx"&gt;refreshList&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;refreshList&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;mapDispatchToProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
+  &lt;span class="nx"&gt;refreshList&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;refreshList&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
 &lt;span class="p"&gt;});&lt;/span&gt;
 
-&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="nx"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-  &lt;span class="nx"&gt;mapStateToProps&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-  &lt;span class="nx"&gt;mapDispatchToProps&lt;/span&gt;
-&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="nx"&gt;ItemList&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="nx"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;mapStateToProps&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;mapDispatchToProps&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="nx"&gt;ItemList&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -579,7 +648,7 @@ don’t want anything in an outer circle to impact the inner circles.&lt;/p&gt;
 &lt;p&gt;With or without Redux (or Redux-like) state management&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="code"></category><category term="design"></category><category term="work"></category></entry><entry><title>On-Premise CloudWatch Metrics with AWS CLI</title><link href="https://janithl.github.io/2019/10/cloudwatch-metrics-aws-cli/" rel="alternate"></link><published>2019-10-02T21:16:00+05:30</published><updated>2019-10-02T21:16:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-02:/2019/10/cloudwatch-metrics-aws-cli/</id><summary type="html">&lt;p&gt;&lt;img alt="Have you tried AWS CLI?" src="https://janithl.github.io/images/aws-cli.jpg"&gt;&lt;/p&gt;
+&lt;/div&gt;</content><category term="code"></category><category term="design"></category><category term="js and ts"></category><category term="react"></category><category term="work"></category></entry><entry><title>On-Premise CloudWatch Metrics with AWS CLI</title><link href="https://janithl.github.io/2019/10/cloudwatch-metrics-aws-cli/" rel="alternate"></link><published>2019-10-02T21:16:00+05:30</published><updated>2019-10-02T21:16:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-02:/2019/10/cloudwatch-metrics-aws-cli/</id><summary type="html">&lt;p&gt;&lt;img alt="Have you tried AWS CLI?" src="https://janithl.github.io/images/aws-cli.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;CloudWatch is pretty cool, and looking at a metrics dashboard and setting up
 alarms is pretty badass—especially when you're not a full-time DevOps and
 don't have the time to worry about your &lt;em&gt;monitoring solution&lt;/em&gt; in addition to
@@ -2737,28 +2806,28 @@ I have good friends who are drinkers, and also want all the non-drinkers to
 drink too. I have good friends who aren't drinkers and want to eradicate 
 drinking, and maybe the drinkers too.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;And if you are a good friend of mine, you'd know that this post isn't about 
-drinking at all.&lt;/p&gt;</content><category term="conflict"></category><category term="people"></category><category term="religion"></category></entry><entry><title>July is the month of buses, and 2016 is the year of JS</title><link href="https://janithl.github.io/2016/07/busroutejs/" rel="alternate"></link><published>2016-07-22T08:32:00+05:30</published><updated>2016-07-22T08:32:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-22:/2016/07/busroutejs/</id><summary type="html">&lt;p&gt;Yesterday, there I was, minding my own business, when Facebook 
+drinking at all.&lt;/p&gt;</content><category term="conflict"></category><category term="people"></category><category term="religion"></category></entry><entry><title>July is the month of buses, and 2016 is the year of JS</title><link href="https://janithl.github.io/2016/07/busroutejs/" rel="alternate"></link><published>2016-07-22T08:32:00+05:30</published><updated>2016-07-22T08:32:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-22:/2016/07/busroutejs/</id><summary type="html">&lt;p&gt;Yesterday, there I was, minding my own business, when Facebook
 "memories" or whatever threw this curveball at me:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Bus Route Anniversary" src="https://janithl.github.io/images/bus-route-anni.png"&gt;&lt;/p&gt;
-&lt;p&gt;Turns out it was exactly 5 years ago that I hacked together 
-&lt;a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html"&gt;a small piece of PHP&lt;/a&gt;, with a &lt;em&gt;liberal&lt;/em&gt; amount of SQL logic 
-thrown in, and it became sort of popular …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Yesterday, there I was, minding my own business, when Facebook 
+&lt;p&gt;Turns out it was exactly 5 years ago that I hacked together
+&lt;a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html"&gt;a small piece of PHP&lt;/a&gt;, with a &lt;em&gt;liberal&lt;/em&gt; amount of SQL logic
+thrown in, and it became sort of popular …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Yesterday, there I was, minding my own business, when Facebook
 "memories" or whatever threw this curveball at me:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Bus Route Anniversary" src="https://janithl.github.io/images/bus-route-anni.png"&gt;&lt;/p&gt;
-&lt;p&gt;Turns out it was exactly 5 years ago that I hacked together 
-&lt;a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html"&gt;a small piece of PHP&lt;/a&gt;, with a &lt;em&gt;liberal&lt;/em&gt; amount of SQL logic 
-thrown in, and it became sort of popular. We're talking a 
+&lt;p&gt;Turns out it was exactly 5 years ago that I hacked together
+&lt;a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html"&gt;a small piece of PHP&lt;/a&gt;, with a &lt;em&gt;liberal&lt;/em&gt; amount of SQL logic
+thrown in, and it became sort of popular. We're talking a
 &lt;a href="https://github.com/janithl/Bus-Route-Finder"&gt;codebase&lt;/a&gt; like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;find3Bus&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$to&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="nv"&gt;$dbconn&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="nv"&gt;$sql&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="dl"&gt;SQL&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
-&lt;span class="s"&gt;SELECT s1.`bid` as busid1, s3.`bid` as busid2, s5.`bid` as busid3, &lt;/span&gt;
-&lt;span class="s"&gt;ch1.`changeid` as changeid1, ch2.`changeid` as changeid2, &lt;/span&gt;
-&lt;span class="s"&gt;(s2.`stopNo` - s1.`stopNo`) as dist1, &lt;/span&gt;
-&lt;span class="s"&gt;(s4.`stopNo` - s3.`stopNo`) as dist2, &lt;/span&gt;
+&lt;span class="s"&gt;SELECT s1.`bid` as busid1, s3.`bid` as busid2, s5.`bid` as busid3,&lt;/span&gt;
+&lt;span class="s"&gt;ch1.`changeid` as changeid1, ch2.`changeid` as changeid2,&lt;/span&gt;
+&lt;span class="s"&gt;(s2.`stopNo` - s1.`stopNo`) as dist1,&lt;/span&gt;
+&lt;span class="s"&gt;(s4.`stopNo` - s3.`stopNo`) as dist2,&lt;/span&gt;
 &lt;span class="s"&gt;(s6.`stopNo` - s5.`stopNo`) as dist3&lt;/span&gt;
 &lt;span class="s"&gt;FROM `changeover` AS ch1, `changeover` AS ch2, `stop` AS s1 INNER JOIN `stop` AS s2&lt;/span&gt;
 &lt;span class="s"&gt;ON s1.`bid` = s2.`bid`&lt;/span&gt;
@@ -2769,9 +2838,9 @@ thrown in, and it became sort of popular. We're talking a
 &lt;span class="s"&gt;INNER JOIN `stop` AS s5&lt;/span&gt;
 &lt;span class="s"&gt;ON s4.`pid` = s5.`pid`&lt;/span&gt;
 &lt;span class="s"&gt;INNER JOIN `stop` AS s6&lt;/span&gt;
-&lt;span class="s"&gt;ON s5.`bid` = s6.`bid`  &lt;/span&gt;
-&lt;span class="s"&gt;WHERE s1.`pid` = :from AND s2.`pid` = ch1.`changeid` AND s4.`pid` = ch2.`changeid` &lt;/span&gt;
-&lt;span class="s"&gt;AND s6.`pid` = :to AND s2.`stopNo` &amp;gt; s1.`stopNo` AND s4.`stopNo` &amp;gt; s3.`stopNo` &lt;/span&gt;
+&lt;span class="s"&gt;ON s5.`bid` = s6.`bid`&lt;/span&gt;
+&lt;span class="s"&gt;WHERE s1.`pid` = :from AND s2.`pid` = ch1.`changeid` AND s4.`pid` = ch2.`changeid`&lt;/span&gt;
+&lt;span class="s"&gt;AND s6.`pid` = :to AND s2.`stopNo` &amp;gt; s1.`stopNo` AND s4.`stopNo` &amp;gt; s3.`stopNo`&lt;/span&gt;
 &lt;span class="s"&gt;AND s6.`stopNo` &amp;gt; s5.`stopNo` ORDER BY (dist1 + dist2 + dist3);&lt;/span&gt;
 &lt;span class="dl"&gt;SQL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="nv"&gt;$res&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$dbconn&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;query&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$sql&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;:from&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;$from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;:to&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;$to&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
@@ -2788,179 +2857,108 @@ thrown in, and it became sort of popular. We're talking a
 
 
 &lt;p&gt;Yikes.&lt;/p&gt;
-&lt;p&gt;Anyway, this was hosted on a shitty &lt;a href="http://chavs.000a.biz"&gt;000a host&lt;/a&gt; that somehow 
+&lt;p&gt;Anyway, this was hosted on a shitty &lt;a href="http://chavs.000a.biz"&gt;000a host&lt;/a&gt; that somehow
 still exists on the internet, and it looked like this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Bus Route Site Screenshot" src="https://janithl.github.io/images/bus-route-original.png"&gt;&lt;/p&gt;
 &lt;p&gt;And gave out results that looked like:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Bus Route Site Results" src="https://janithl.github.io/images/bus-route-original-results.png"&gt;&lt;/p&gt;
 &lt;p&gt;Which somehow is better looking than anything I've managed since.&lt;/p&gt;
 &lt;h2&gt;ANYWAY&lt;/h2&gt;
-&lt;p&gt;I've been wanting to rewrite &lt;a href="https://github.com/janithl/BusRouteJS/commit/eac72894410693c47426720e240a8d5719316b1b"&gt;this thing in JS since 2014&lt;/a&gt;, 
-and I've been grappling with Dijkstra's algorithm for months 
-over this. The moment of clarity was realising that bus routes 
-&lt;em&gt;aren't graphs, they're linked lists&lt;/em&gt;, and using complicated 
+&lt;p&gt;I've been wanting to rewrite &lt;a href="https://github.com/janithl/BusRouteJS/commit/eac72894410693c47426720e240a8d5719316b1b"&gt;this thing in JS since 2014&lt;/a&gt;,
+and I've been grappling with Dijkstra's algorithm for months
+over this. The moment of clarity was realising that bus routes
+&lt;em&gt;aren't graphs, they're linked lists&lt;/em&gt;, and using complicated
 graph algorithms is unnecessary.&lt;/p&gt;
 &lt;p&gt;This Facebook reminder yesterday and having a &lt;em&gt;bit&lt;/em&gt; of free
 time on my hands led to a 24-hour code sprint that produced
 &lt;a href="https://janithl.github.io/BusRouteJS/"&gt;this little thingy&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It's not &lt;em&gt;better&lt;/em&gt; than the original, for example the same query
-as the above Galle Face - Kottawa one gives a stupid result 
+as the above Galle Face - Kottawa one gives a stupid result
 like this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Bus Route JS Results" src="https://janithl.github.io/images/bus-route-js-results.png"&gt;&lt;/p&gt;
-&lt;p&gt;The data is ~ 5 years old and needs to be tweaked, and I think 
-the algorithms can do with a lot of tweaking, but here it is 
+&lt;p&gt;The data is ~ 5 years old and needs to be tweaked, and I think
+the algorithms can do with a lot of tweaking, but here it is
 and it runs 100% client-side. Yay 2016!&lt;/p&gt;
 &lt;h2&gt;What is this CRAP?!&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; The UI code is now completely React-based! All clean and 
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; The UI code is now completely React-based! All clean and
 beautiful. Yay!&lt;/p&gt;
-&lt;p&gt;"Janith", I hear you say, "you go around the place talking about 
-the how great React is and how important readable code is, and 
+&lt;p&gt;"Janith", I hear you say, "you go around the place talking about
+the how great React is and how important readable code is, and
 then you write crap UI code like this:"&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;col-xs-12&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
-        &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;/div&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;col-xs-6&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
-        &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;col-xs-12&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;col-xs-6&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;col-xs-6&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-        &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
-    &lt;span class="s1"&gt;&amp;#39;&amp;lt;/div&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;col-xs-4&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
-        &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+    &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;col-xs-4&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;col-xs-4&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-        &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;col-xs-4&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-        &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
-    &lt;span class="s1"&gt;&amp;#39;&amp;lt;/div&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;renderRoute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="nx"&gt;route&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;routes&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;panel panel-warning&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;panel-heading&amp;quot;&amp;gt;&amp;lt;h3 class=&amp;quot;panel-title&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
-    &lt;span class="s1"&gt;&amp;#39;&amp;lt;span class=&amp;quot;glyphicon glyphicon-star&amp;quot;&amp;gt;&amp;lt;/span&amp;gt; Recommended Route&amp;lt;/h3&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;panel-body row&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;panel panel-warning&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;panel-heading&amp;quot;&amp;gt;&amp;lt;h3 class=&amp;quot;panel-title&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;&amp;lt;span class=&amp;quot;glyphicon glyphicon-star&amp;quot;&amp;gt;&amp;lt;/span&amp;gt; Recommended Route&amp;lt;/h3&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;panel-body row&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
     &lt;span class="nx"&gt;output&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;panel-body row&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;output&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;panel panel-default&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;panel-body row&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;output&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Okay, I'm a hypocrite. I only had 24 hours to write this and I 
-cut some corners. REACT TAKES LIKE &lt;strong&gt;6 HOURS&lt;/strong&gt; TO SET UP, OKAY? &lt;/p&gt;
+&lt;p&gt;Okay, I'm a hypocrite. I only had 24 hours to write this and I
+cut some corners. REACT TAKES LIKE &lt;strong&gt;6 HOURS&lt;/strong&gt; TO SET UP, OKAY?&lt;/p&gt;
 &lt;p&gt;I'm sorry. :C&lt;/p&gt;
-&lt;p&gt;(It took a couple of days of hard toil to finally convert the UI 
-code to React. I would never have made my self-imposed 24 hour 
+&lt;p&gt;(It took a couple of days of hard toil to finally convert the UI
+code to React. I would never have made my self-imposed 24 hour
 deadline had I gone with React the first time.)&lt;/p&gt;
 &lt;h2&gt;Why's half of router.js stolen code?&lt;/h2&gt;
-&lt;p&gt;Let's face it, we all do this. Copy stuff &lt;em&gt;gedi pitin&lt;/em&gt; from 
-StackOverflow. I just linked back to the sources, legal 
+&lt;p&gt;Let's face it, we all do this. Copy stuff &lt;em&gt;gedi pitin&lt;/em&gt; from
+StackOverflow. I just linked back to the sources, legal
 ramifications be damned.&lt;/p&gt;
 &lt;h2&gt;Is this bus thing the only good thing you've written? Are you flogging a dead horse?&lt;/h2&gt;
 &lt;p&gt;I wouldn't call it good, but yes.&lt;/p&gt;
 &lt;h2&gt;What now?&lt;/h2&gt;
-&lt;p&gt;I've barely tested it, so I'll probably make some tweaks here 
+&lt;p&gt;I've barely tested it, so I'll probably make some tweaks here
 and there. The code, as usual, is on &lt;a href="https://github.com/janithl/BusRouteJS"&gt;Github and MIT licensed&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;TL;DR&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://janithl.github.io/BusRouteJS/"&gt;Go to this page, and it'll throw you not great bus route suggestions&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category></entry><entry><title>The Lastfm Dataset</title><link href="https://janithl.github.io/2016/07/the-lastfm-dataset/" rel="alternate"></link><published>2016-07-20T09:09:00+05:30</published><updated>2016-07-20T09:09:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-07-20:/2016/07/the-lastfm-dataset/</id><summary type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Todoist reminding me that my Last.fm analysis is overdue&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I downloaded my &lt;a href="http://www.last.fm/user/JanithL"&gt;Last.fm scrobble data&lt;/a&gt; a week
-or so back using &lt;a href="https://benjaminbenben.com/lastfm-to-csv/"&gt;this excellent online tool&lt;/a&gt;. 
-It contains almost every song I listened to on my PC (and some from my phone 
-and iPod) between March 2011 and November …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Lastfm Reminder" src="https://janithl.github.io/images/todoist-lastfm.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Todoist reminding me that my Last.fm analysis is overdue&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I downloaded my &lt;a href="http://www.last.fm/user/JanithL"&gt;Last.fm scrobble data&lt;/a&gt; a week
-or so back using &lt;a href="https://benjaminbenben.com/lastfm-to-csv/"&gt;this excellent online tool&lt;/a&gt;. 
-It contains almost every song I listened to on my PC (and some from my phone 
-and iPod) between March 2011 and November 2014, 12784 scrobbles in total.&lt;/p&gt;
-&lt;p&gt;I will do a proper analysis &lt;em&gt;soon&lt;/em&gt; (sorry, Todoist), but here are some 
-descriptive stats that &lt;a href="http://pandas.pydata.org/pandas-docs/stable/"&gt;Pandas&lt;/a&gt; 
-throws out:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;             Artist         Album         Title          Timestamp
-count         12784         12593         12784              12784
-unique          354           752          2048              12709
-top     The Beatles  Past Masters  Sleeping Sun  09 Feb 2013 13:24
-freq           1904           285            39                  8
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;I want to do an analysis of how I discovered and fell in love with new bands 
-over the course of these three years. I don't listen to music as much these 
-days, but this is a good dataset and I promise not to let it go to waste.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Added the frequencies and histograms for artists and song titles.&lt;/p&gt;
-&lt;h2&gt;Artists&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; df.Artist.value_counts()
-The Beatles                        1904
-Coldplay                            842
-John Mayer                          604
-Oasis                               499
-Arctic Monkeys                      447
-The Who                             345
-The Rolling Stones                  318
-Snow Patrol                         315
-The Velvet Underground              297
-Bob Marley &amp;amp; The Wailers            287
-Noah and the Whale                  280
-The Kooks                           246
-Norah Jones                         211
-The Kinks                           201
-Badfinger                           189
-Paul Simon                          179
-The Jimi Hendrix Experience         160
-Pink Floyd                          159
-John Lennon                         146
-Queen                               141
-The Wailers                         140
-Radiohead                           127
-U2                                  121
-Cream                               114
-George Harrison                     111
-Lorde                               100
-Bee Gees                             97
-Simon &amp;amp; Garfunkel                    92
-Roy Orbison                          92
-Billy Joel                           92
-                                   ... 
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;a href="https://janithl.github.io/images/artist-histogram.png"&gt;&lt;img alt="Artist Histogram" src="https://janithl.github.io/images/artist-histogram.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Song Titles&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; df.Title.value_counts()
-Sleeping Sun                         39
-Could You Be Loved                   38
-Parachutes                           35
-Stuck on the Puzzle                  34
-You&amp;#39;ve Got to Hide Your Love Away    34
-Word                                 34
-Brothers &amp;amp; Sisters                   34
-My Girl                              32
-One Day                              32
-Wild Thing                           32
-Bigger Than My Body                  32
-Junk of the Heart (Happy)            31
-Stir It Up                           31
-Blue Skies                           31
-Day Tripper                          31
-Don&amp;#39;t Look Back in Anger             30
-No Woman No Cry                      30
-For You (Shiver single Version)      30
-All Around the World                 29
-Strawberry Swing                     29
-Lifeboats                            28
-Let Me Go (acoustic)                 28
-Ruby                                 28
-Baby You&amp;#39;re a Rich Man               28
-Bitter Sweet Symphony                28
-In Repair                            27
-Getting Better                       27
-Rainy Day                            27
-Love Is All Around                   27
-Here Comes the Sun                   27
-                                     ..
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;a href="https://janithl.github.io/images/song-title-histogram.png"&gt;&lt;img alt="Song Title Histogram" src="https://janithl.github.io/images/song-title-histogram.png"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="data"></category><category term="music"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://janithl.github.io/BusRouteJS/"&gt;Go to this page, and it'll throw you not great bus route suggestions&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category><category term="js and ts"></category><category term="react"></category></entry></feed>
