@@ -77,11 +77,27 @@ const description = highlightText(
   styles.highlight
 )`You’re going to ${action} to ${user}. Please confirm?`;
 
-//... app code
+// ...app code
 <Text>{description}</Text>;
 ```
 
-And done! 🎉
+Aaand, we're done! 🎉
+
+Edit: Many of you will rightly wonder if `action`, `user`, and `styles` will need to be
+defined in the same file as the Template Literal. No, we can simply make it a function
+and pass these values direct from the component, like so:
+
+```
+const description = (user, action, styles) => highlightText(
+  styles.text,
+  styles.highlight
+)`You’re going to ${action} to ${user}. Please confirm?`;
+
+// ...app code
+<Text>{description('Pingpong', 'Send a message', styles)}</Text>;
+```
+
+Pretty cool, right?
 
 [1]: https://www.taniarascia.com/understanding-template-literals/
 [2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals

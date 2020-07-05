@@ -173,12 +173,26 @@ const description = highlightText(
   styles.highlight
 )`You’re going to ${action} to ${user}. Please confirm?`;
 
-//... app code
+// ...app code
 &lt;Text&gt;{description}&lt;/Text&gt;;
 </pre></div>
 
 
-<p>And done! 🎉</p>
+<p>Aaand, we're done! 🎉</p>
+<p>Edit: Many of you will rightly wonder if <code>action</code>, <code>user</code>, and <code>styles</code> will need to be
+defined in the same file as the Template Literal. No, we can simply make it a function
+and pass these values direct from the component, like so:</p>
+<div class="highlight"><pre><span></span>const description = (user, action, styles) =&gt; highlightText(
+  styles.text,
+  styles.highlight
+)`You’re going to ${action} to ${user}. Please confirm?`;
+
+// ...app code
+&lt;Text&gt;{description(&#39;Pingpong&#39;, &#39;Send a message&#39;, styles)}&lt;/Text&gt;;
+</pre></div>
+
+
+<p>Pretty cool, right?</p>
   </div>
   <div class="article_meta">
     <p>Posted on: Sun 05 July 2020</p>

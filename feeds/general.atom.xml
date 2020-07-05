@@ -66,12 +66,26 @@ const description = highlightText(
   styles.highlight
 )`You’re going to ${action} to ${user}. Please confirm?`;
 
-//... app code
+// ...app code
 &amp;lt;Text&amp;gt;{description}&amp;lt;/Text&amp;gt;;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;And done! 🎉&lt;/p&gt;</content><category term="code"></category><category term="design"></category><category term="js and ts"></category><category term="react"></category></entry><entry><title>Building Flagitect</title><link href="https://janithl.github.io/2020/06/building-flagitect/" rel="alternate"></link><published>2020-06-28T09:55:00+05:30</published><updated>2020-06-28T09:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-06-28:/2020/06/building-flagitect/</id><summary type="html">&lt;p&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.flagitect"&gt;Flagitect just hit version 1.2.0&lt;/a&gt;, and so this is a brief introduction
+&lt;p&gt;Aaand, we're done! 🎉&lt;/p&gt;
+&lt;p&gt;Edit: Many of you will rightly wonder if &lt;code&gt;action&lt;/code&gt;, &lt;code&gt;user&lt;/code&gt;, and &lt;code&gt;styles&lt;/code&gt; will need to be
+defined in the same file as the Template Literal. No, we can simply make it a function
+and pass these values direct from the component, like so:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;const description = (user, action, styles) =&amp;gt; highlightText(
+  styles.text,
+  styles.highlight
+)`You’re going to ${action} to ${user}. Please confirm?`;
+
+// ...app code
+&amp;lt;Text&amp;gt;{description(&amp;#39;Pingpong&amp;#39;, &amp;#39;Send a message&amp;#39;, styles)}&amp;lt;/Text&amp;gt;;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pretty cool, right?&lt;/p&gt;</content><category term="code"></category><category term="design"></category><category term="js and ts"></category><category term="react"></category></entry><entry><title>Building Flagitect</title><link href="https://janithl.github.io/2020/06/building-flagitect/" rel="alternate"></link><published>2020-06-28T09:55:00+05:30</published><updated>2020-06-28T09:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-06-28:/2020/06/building-flagitect/</id><summary type="html">&lt;p&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.flagitect"&gt;Flagitect just hit version 1.2.0&lt;/a&gt;, and so this is a brief introduction
 into the technical aspects of how the app is structured.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Flagitect v1.2.0" src="https://janithl.github.io/images/flagitect-1.2.0.jpg"&gt;&lt;/p&gt;
 &lt;h3&gt;Stack&lt;/h3&gt;
