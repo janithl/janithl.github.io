@@ -108,9 +108,13 @@ footer {
   text-align: center;
   margin: 2em auto -1em;
 }
-.timestamps:before, .timestamps:after {
+.timestamps:before,
+.timestamps:after {
   content: "\2015";
   padding: 0 0.2em;
+}
+.dropdown-menu {
+  font-size: 12px;
 }
 @media screen and (min-width: 1024px) {
   header {
