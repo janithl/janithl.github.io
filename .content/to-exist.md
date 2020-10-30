@@ -29,7 +29,7 @@ After a hard day
 
 To celebrate your wins
 
-(Not that you'll never know)
+(Not that you'll ever know)
 
 Applaud, be proud of,
 
