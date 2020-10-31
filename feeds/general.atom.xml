@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-07-05T07:20:00+05:30</updated><entry><title>Tagged Template Literals are Awesome!</title><link href="https://janithl.github.io/2020/07/js-template-literals/" rel="alternate"></link><published>2020-07-05T07:20:00+05:30</published><updated>2020-07-05T07:20:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-07-05:/2020/07/js-template-literals/</id><summary type="html">&lt;p&gt;You will often need to implement text that looks like this:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-10-31T20:05:00+05:30</updated><entry><title>On Foundation</title><link href="https://janithl.github.io/2020/10/on-foundation/" rel="alternate"></link><published>2020-10-31T20:05:00+05:30</published><updated>2020-10-31T20:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-10-31:/2020/10/on-foundation/</id><summary type="html">&lt;p&gt;I finished Isaac Asimov's seminal work, the first book of the &lt;a href="https://en.wikipedia.org/wiki/Foundation_series"&gt;Foundation trilogy&lt;/a&gt;,
+yesterday. This is &lt;a href="https://www.goodreads.com/review/show/3621843372"&gt;my short review&lt;/a&gt; that I added on Goodreads:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I think it's a bit harsh to rate this book using modern standards when it was
+written in the 1940s. Yes, it's not as fast paced …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I finished Isaac Asimov's seminal work, the first book of the &lt;a href="https://en.wikipedia.org/wiki/Foundation_series"&gt;Foundation trilogy&lt;/a&gt;,
+yesterday. This is &lt;a href="https://www.goodreads.com/review/show/3621843372"&gt;my short review&lt;/a&gt; that I added on Goodreads:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I think it's a bit harsh to rate this book using modern standards when it was
+written in the 1940s. Yes, it's not as fast paced or as expansive as modern SciFi,
+and there is a woeful lack of female characters (only one gets a speaking part).
+But modern SciFi didn't exist when Asimov wrote this, and so much of it even to
+this day draws from the vein Asimov struck (the parallels with the Star Wars universe
+a few decades later is notable, for example).&lt;/p&gt;
+&lt;p&gt;Instead, it might be a good idea to look at where Asimov himself drew inspiration
+from: Edward Gibbon's &lt;a href="https://en.wikipedia.org/wiki/The_History_of_the_Decline_and_Fall_of_the_Roman_Empire"&gt;&lt;em&gt;The History of the Decline and Fall of the Roman Empire&lt;/em&gt;&lt;/a&gt;.
+Basically, we can class the work as a &lt;em&gt;space history&lt;/em&gt;, concerning how vast empires
+decay, how the people living in the midst of such empires experience this fall much
+more differently than the people living in the peripheries, and how opportunists
+come for the scraps. One wonders how Asimov predicted so well the work of the oligarchs
+and pocket dictators after the fall of his native Soviet Union, and fifty years before
+the fact.&lt;/p&gt;
+&lt;p&gt;What I found strikingly modern though are its takes on religion as a means of social
+control, ivory tower academics who were unconcerned with all but dogma while the Rome
+that sustained their work burned around them, and how societies tend to reject
+science and technology it doesn't understand-a theme that reverberates well in
+today's post-Covid world.&lt;/p&gt;</content><category term="conflict"></category><category term="people"></category><category term="politics"></category></entry><entry><title>Tagged Template Literals are Awesome!</title><link href="https://janithl.github.io/2020/07/js-template-literals/" rel="alternate"></link><published>2020-07-05T07:20:00+05:30</published><updated>2020-07-05T07:20:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-07-05:/2020/07/js-template-literals/</id><summary type="html">&lt;p&gt;You will often need to implement text that looks like this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Highlighted Text" src="https://janithl.github.io/images/highlighted-text.png"&gt;&lt;/p&gt;
 &lt;p&gt;Now, it's fairly simple enough to do in HTML, but when you do it in React Native
 it looks a bit gnarly:&lt;/p&gt;
@@ -2788,31 +2813,4 @@ created with the birth (and partitioning) of India is particularly sad.&lt;/p&gt
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Radcliffe_Line"&gt;Radcliffe Line&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="conflict"></category><category term="geopolitics"></category></entry><entry><title>කාලෙකින් හෙළ බසින්: චීන නිල මුද්‍රා</title><link href="https://janithl.github.io/2016/08/chinese-wax-seals/" rel="alternate"></link><published>2016-08-17T19:23:00+05:30</published><updated>2016-08-17T19:23:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-17:/2016/08/chinese-wax-seals/</id><summary type="html">&lt;p&gt;අන්තිමට සිංහලෙන් පෝස්ටුවක් ලිව්ව කාලයක් මතක නෑ. ඇත්තටම කිව්වොත් 
-&lt;a href="http://askubuntu.com/questions/459349/sinhala-unicode-wijesekara-keyboard-in-ibus-on-ubuntu-14-04-not-working"&gt;උබුන්ටු 16.04 දැම්මට පස්සෙ iBus එක හදාගත්තෙ&lt;/a&gt; අද.&lt;/p&gt;
-&lt;p&gt;වෙනදටනං මොනාහරි බෙදාගන්න ලින …&lt;/p&gt;</summary><content type="html">&lt;p&gt;අන්තිමට සිංහලෙන් පෝස්ටුවක් ලිව්ව කාලයක් මතක නෑ. ඇත්තටම කිව්වොත් 
-&lt;a href="http://askubuntu.com/questions/459349/sinhala-unicode-wijesekara-keyboard-in-ibus-on-ubuntu-14-04-not-working"&gt;උබුන්ටු 16.04 දැම්මට පස්සෙ iBus එක හදාගත්තෙ&lt;/a&gt; අද.&lt;/p&gt;
-&lt;p&gt;වෙනදටනං මොනාහරි බෙදාගන්න ලින්ක් එකක් හරි තියෙනවනෙ. අද එහෙම 
-එකක් නෑ, හැබැයි පහුගිය දවසක reddit එකේ AskHistorians (ඉතිහාසඥයන්ගෙන් 
-අසමු) සමූහයේ දැකපු අපූරු පෝස්ටුවක් ගැන කියන්නයි මම යන්නෙ.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/AskHistorians/comments/4xqfs0/how_were_wax_seals_and_such_not_counterfeited/"&gt;&lt;em&gt;How were wax seals and such not counterfeited?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;චීනය, ජපානය ඇතුළු පෙරදිග රටවල් වල අධිරාජ්‍යවරු භාවිත කරපු මේ නිල 
-මුද්‍රා ව්‍යාජ ලෙස පිටපත් කරන්න තිබුනු ප්‍රධානම බාදකය මේවගෙ තියෙන 
-තියුණු අඩුපාඩුකම්ලු. මීට හේතුව මේව අතින් නිර්මාණය වීමයි.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Han Imperial Seal" src="https://janithl.github.io/images/han-seal.png"&gt;&lt;/p&gt;
-&lt;p&gt;හැබැයි පුදුමසහගතම දේ තමයි අද වෙන තුරුත් පෙරදිග ලෝකෙ එදිනෙදා කටයුතු 
-වලට මේ මුද්‍රා භාවිත වෙනවලු. &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Even today, you can't sign a lease or buy a car/motorcycle or open a bank 
-account without one (at least in Taiwan, Japan, Korea, with some exceptions). 
-People mostly consider them more secure than a signature.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;තව:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;When selling a car or setting up a bank account, you need to not only stamp 
-the papers, but also bring a paper from city hall certifying your stamp being 
-legit (when you get a new stamp you bring it to city hall, so they have a kind 
-of master copy).&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;කවදාවත් වුවමනාවකට හරියට අත්සනක් ගහගන්න බැරි අපි වගේ අයටනම් මේක 
-කියාපු විසඳුමක්.&lt;/p&gt;</content><category term="sinhala"></category></entry></feed>
+&lt;/ul&gt;</content><category term="conflict"></category><category term="geopolitics"></category></entry></feed>
