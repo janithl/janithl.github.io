@@ -2,6 +2,7 @@ Title: On Foundation
 Date: 2020-10-31 20:05
 Category: General
 Tags: conflict, people, politics
+Subtitle: Was Issac Asimov Hari Seldon?
 
 I finished Isaac Asimov's seminal work, the first book of the [Foundation trilogy][1],
 yesterday. This is [my short review][2] that I added on Goodreads:
