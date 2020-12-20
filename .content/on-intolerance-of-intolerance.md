@@ -50,6 +50,7 @@ I used to believe technology could help alleviate societal problems, but I now r
 technology is merely a _megaphone_—the voice and the words that come out of it will ultimately always
 be _your own_.
 
-[^1]: I would talk about solutions like Mastedon, but I really think that the convenience and network effect of, say, Facebook’s multi-network empire will take decades to dismantle.
+[^1]: I would talk about solutions like [Mastodon][2], but I really think that the convenience and network effect of, say, Facebook’s multi-network empire will take decades to dismantle.
 
 [1]: https://en.wikipedia.org/wiki/Paradox_of_tolerance
+[2]: https://joinmastodon.org
