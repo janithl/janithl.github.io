@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-10-31T20:05:00+05:30</updated><entry><title>On Foundation</title><link href="https://janithl.github.io/2020/10/on-foundation/" rel="alternate"></link><published>2020-10-31T20:05:00+05:30</published><updated>2020-10-31T20:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-10-31:/2020/10/on-foundation/</id><summary type="html">&lt;p&gt;I finished Isaac Asimov's seminal work, the first book of the &lt;a href="https://en.wikipedia.org/wiki/Foundation_series"&gt;Foundation trilogy&lt;/a&gt;,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-12-20T22:45:00+05:30</updated><entry><title>On Intolerance (of Intolerance)</title><link href="https://janithl.github.io/2020/12/on-intolerance-of-intolerance/" rel="alternate"></link><published>2020-12-20T22:45:00+05:30</published><updated>2020-12-20T22:45:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-12-20:/2020/12/on-intolerance-of-intolerance/</id><summary type="html">&lt;p&gt;I’m sure everyone at this point has read about the &lt;a href="https://en.wikipedia.org/wiki/Paradox_of_tolerance"&gt;&lt;em&gt;paradox of tolerance&lt;/em&gt;&lt;/a&gt;. It’s
+a pretty common sense argument and there are many historial examples that are often
+held up, one of the most popular being the rise of the Nazi party in the liberal
+democracy of the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I’m sure everyone at this point has read about the &lt;a href="https://en.wikipedia.org/wiki/Paradox_of_tolerance"&gt;&lt;em&gt;paradox of tolerance&lt;/em&gt;&lt;/a&gt;. It’s
+a pretty common sense argument and there are many historial examples that are often
+held up, one of the most popular being the rise of the Nazi party in the liberal
+democracy of the Weimar Republic.&lt;/p&gt;
+&lt;p&gt;A problem that I've see cropping up recently (first in online communities, but soon
+evolving to have offline consequences) is with the &lt;em&gt;definition of intolerance&lt;/em&gt;—and
+the actions the self-proclaimed ‘defenders’ of tolerance take to guard it.&lt;/p&gt;
+&lt;p&gt;One example from a few years back was the &lt;em&gt;Sinha-le&lt;/em&gt; stickers, and the &lt;em&gt;Colombo liberal&lt;/em&gt;
+reaction to it. Without even considering the origins of the sticker campaign, or
+motivations of those who chose to brand their vehicles with said sticker, a counter-campaign
+was launched to take photographs, identify owners of the vehicles, and basically notify
+their employees (with the ultimate intention of getting them fired, of course). Now, the
+obvious moral issues of doxxing aside, this was one of the first instances I observed
+the troubling phenomenon of online vigilantism, and what later came to be known as
+&lt;em&gt;cancel culture&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Now, many years later, cancel culture seems to be here to stay. It has led to a situation
+which I’ve only experienced previously due to the looming threat of violence from a repressive
+surveillance state: &lt;em&gt;self-censorship&lt;/em&gt;. Netizens, people who used to risk their necks to
+speak out against injustice being perpetrated by nation states, were now treating certain
+subjects as off-limits, lest they be branded &lt;em&gt;“-phobes”&lt;/em&gt; and cancelled. It is truly an
+unexpected low-intensity reign of terror, and unlike state actors where there might be
+&lt;em&gt;some&lt;/em&gt; legal recourse/FR petition/habeas corpus/international pressure to give you at
+least an iota of relief, in this case mobs accountable to no one and run by shadowy teenagers
+seem to mete out justice after kangaroo trials. It sort of feels like the &lt;em&gt;JVP days&lt;/em&gt; are here
+again.&lt;/p&gt;
+&lt;p&gt;So, what’s a society to do to emerge out of this mess and reclaim our right to discourse and
+divergent viewpoints? I honestly don’t know, but remember that an insurgency can only survive
+as long as the wider populace supports it. For far too long we’ve allowed &lt;em&gt;important online public spaces&lt;/em&gt;
+to be run by social media firms milking our emotions for ad revenue. They have, in turn, given
+us skewed elections, body image issues, FOMO, and free reign for online bullies. This fight is
+well and truly lost, &lt;strong&gt;unless&lt;/strong&gt; we take back our spaces. We will need to demand that the firms
+for whom we create so much value give us—the community—the tools to curate, moderate, and monitor
+those spaces&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;. We will need tougher regulations while guaranteeing freedom of expression, a tough
+balancing act whenever governments (especially in our little corner of the world) get involved.&lt;/p&gt;
+&lt;p&gt;But, an even more pressing need will be for us as a society to come to terms with what
+&lt;strong&gt;is and isn’t intolerant speech&lt;/strong&gt;. We will have to grow up and tolerate dissenting views, and
+not call for heads to roll whenever viewpoints that make us clutch our pearls come up on our feeds.&lt;/p&gt;
+&lt;p&gt;I used to believe technology could help alleviate societal problems, but I now realise that
+technology is merely a &lt;em&gt;megaphone&lt;/em&gt;—the voice and the words that come out of it will ultimately always
+be &lt;em&gt;your own&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;I would talk about solutions like Mastedon, but I really think that the convenience and network effect of, say, Facebook’s multi-network empire will take decades to dismantle.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="conflict"></category><category term="people"></category><category term="politics"></category></entry><entry><title>On Foundation</title><link href="https://janithl.github.io/2020/10/on-foundation/" rel="alternate"></link><published>2020-10-31T20:05:00+05:30</published><updated>2020-10-31T20:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-10-31:/2020/10/on-foundation/</id><summary type="html">&lt;p&gt;I finished Isaac Asimov's seminal work, the first book of the &lt;a href="https://en.wikipedia.org/wiki/Foundation_series"&gt;Foundation trilogy&lt;/a&gt;,
 yesterday. This is &lt;a href="https://www.goodreads.com/review/show/3621843372"&gt;my short review&lt;/a&gt; that I added on Goodreads:&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;I think it's a bit harsh to rate this book using modern standards when it was
@@ -2786,31 +2836,4 @@ disgust. &lt;/p&gt;
 &lt;p&gt;But the people of this country should, for once, look at the core issues 
 surrounding our tertiary education system and try to fix them at the 
 root, instead of palming it off to the private sector and forgetting 
-about it.&lt;/p&gt;</content><category term="uni"></category><category term="education"></category><category term="politics"></category></entry><entry><title>The Continuing Story of Bungalow Bill</title><link href="https://janithl.github.io/2016/08/the-continuing-story-of-bungalow-bill/" rel="alternate"></link><published>2016-08-20T15:58:00+05:30</published><updated>2016-08-20T15:58:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-08-20:/2016/08/the-continuing-story-of-bungalow-bill/</id><summary type="html">&lt;p&gt;&lt;em&gt;Deep in the jungle where the mighty tiger lies&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Bill and his elephants were taken by surprise&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;So Captain Marvel zapped in right between the eyes, zap!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;All the children sing&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Hey, Bungalow Bill&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;What did you kill, Bungalow Bill?&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Hey, Bungalow Bill&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;What did you kill, Bungalow Bill?&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Deep in the jungle where the mighty tiger lies&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Bill and his elephants were taken by surprise&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;So Captain Marvel zapped in right between the eyes, zap!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;All the children sing&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Hey, Bungalow Bill&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;What did you kill, Bungalow Bill?&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Hey, Bungalow Bill&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;What did you kill, Bungalow Bill?&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Of all the messes that colonisers left their former colonies in, the mess 
-created with the birth (and partitioning) of India is particularly sad.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pakistan" src="https://janithl.github.io/images/pakistan-ethnic.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;See:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Durand_Line"&gt;Durand Line&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Radcliffe_Line"&gt;Radcliffe Line&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content><category term="conflict"></category><category term="geopolitics"></category></entry></feed>
+about it.&lt;/p&gt;</content><category term="uni"></category><category term="education"></category><category term="politics"></category></entry></feed>
