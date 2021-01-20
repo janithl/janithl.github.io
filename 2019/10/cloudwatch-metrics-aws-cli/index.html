@@ -133,13 +133,12 @@ found while writing this post.</p>
 metrics to CloudWatch, which is <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent.html">covered in the CloudWatch agent docs</a>.</p>
 <p>For my setup, I just wanted to send the disk utilisation to CloudWatch, so I
 created a shell script that looked like this:</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="nv">freeSpace</span><span class="o">=</span><span class="sb">`</span>df -m <span class="p">|</span> awk <span class="s1">&#39;NR==2{print $4}&#39;</span><span class="sb">`</span>
 /usr/local/bin/aws cloudwatch put-metric-data --metric-name my-server-FreeDisk <span class="se">\</span>
 --value <span class="nv">$freeSpace</span> --unit Megabytes --namespace my-server --profile AmazonCloudWatchAgent
-</pre></div>
-
+</code></pre></div>
 
 <p>Here, I am using the <code>--profile</code> flag to select the correct IAM user, which has
 been added to my AWS <code>credentials</code> and <code>config</code> files.</p>

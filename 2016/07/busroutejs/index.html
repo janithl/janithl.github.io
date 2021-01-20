@@ -118,7 +118,7 @@
 <a href="https://janithl.blogspot.com/2011/07/bus-route-finder.html">a small piece of PHP</a>, with a <em>liberal</em> amount of SQL logic
 thrown in, and it became sort of popular. We're talking a
 <a href="https://github.com/janithl/Bus-Route-Finder">codebase</a> like this:</p>
-<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">function</span> <span class="nf">find3Bus</span><span class="p">(</span><span class="nv">$from</span><span class="p">,</span> <span class="nv">$to</span><span class="p">)</span>
 <span class="p">{</span>
@@ -153,8 +153,7 @@ thrown in, and it became sort of popular. We're talking a
 <span class="p">}</span>
 
 <span class="cp">?&gt;</span><span class="x"></span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Yikes.</p>
 <p>Anyway, this was hosted on a shitty <a href="http://chavs.000a.biz">000a host</a> that somehow
@@ -185,7 +184,7 @@ beautiful. Yay!</p>
 <p>"Janith", I hear you say, "you go around the place talking about
 the how great React is and how important readable code is, and
 then you write crap UI code like this:"</p>
-<div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">changes</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">output</span> <span class="o">=</span>
     <span class="s1">&#39;&lt;div class=&quot;col-xs-12&quot;&gt;&#39;</span> <span class="o">+</span>
     <span class="nx">renderRoute</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">from</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">to</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">distance</span><span class="p">,</span> <span class="nx">route</span><span class="p">.</span><span class="nx">routes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">routes</span><span class="p">)</span> <span class="o">+</span>
@@ -242,8 +241,7 @@ then you write crap UI code like this:"</p>
   <span class="nx">output</span> <span class="o">=</span>
     <span class="s1">&#39;&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-body row&quot;&gt;&#39;</span> <span class="o">+</span> <span class="nx">output</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Okay, I'm a hypocrite. I only had 24 hours to write this and I
 cut some corners. REACT TAKES LIKE <strong>6 HOURS</strong> TO SET UP, OKAY?</p>

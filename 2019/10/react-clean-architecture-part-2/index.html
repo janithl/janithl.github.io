@@ -120,24 +120,22 @@ part (without breaking the core out) can be found on Github</a>.</p>
 here because it has two things that we will make implementing Clean Architecture
 much easier: types, and interfaces. <a href="https://github.com/microsoft/TypeScript-React-Conversion-Guide">To add TypeScript to an existing React
 project</a>, we can simply run:</p>
-<div class="highlight"><pre><span></span>yarn add -D typescript awesome-typescript-loader source-map-loader
-</pre></div>
-
+<div class="highlight"><pre><span></span><code>yarn add -D typescript awesome-typescript-loader source-map-loader
+</code></pre></div>
 
 <h3>Entities</h3>
 <p>To separate out the core code from the rest of the app, so we'll first create a
 subfolder called <code>core</code>, with three subfolders for the Entity, Use Case, and
 Infra layers:</p>
-<div class="highlight"><pre><span></span>src/core
+<div class="highlight"><pre><span></span><code>src/core
 ├── entities
 ├── infrastructure
 └── usecases
-</pre></div>
-
+</code></pre></div>
 
 <p>Inside the <code>entities</code> subfolder, we'll first create the <code>Item</code> class which holds
 Item entities. This is a domain entity that will be used throughout the app.</p>
-<div class="highlight"><pre><span></span><span class="kr">export</span> <span class="kr">class</span> <span class="nx">Item</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kr">export</span> <span class="kr">class</span> <span class="nx">Item</span> <span class="p">{</span>
   <span class="nx">id</span>: <span class="kt">number</span><span class="p">;</span>
   <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
 
@@ -146,19 +144,17 @@ Item entities. This is a domain entity that will be used throughout the app.</p>
     <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>We will also create an <code>ItemRepository</code> interface that will enable us to abstract
 out the API calls (and maybe local storage caching later on) which actually get
 us the items.</p>
-<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Item</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;./Item&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">Item</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;./Item&quot;</span><span class="p">;</span>
 
 <span class="kr">export</span> <span class="kr">interface</span> <span class="nx">ItemRepository</span> <span class="p">{</span>
   <span class="nx">GetItems</span><span class="p">()</span><span class="o">:</span> <span class="nx">Promise</span><span class="o">&lt;</span><span class="nx">Item</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Note how it is returning a Promise (with a list of Items), as it will be an async
 operation.</p>
@@ -167,7 +163,7 @@ operation.</p>
 an interface because this will make writing tests etc. easier. There are arguments
 against single implementation interfaces, but that is a debate for another time. The
 service simply gets the items from the repository and returns them.</p>
-<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Item</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;../entities/Item&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">Item</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;../entities/Item&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">ItemRepository</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;../entities/ItemRepository&quot;</span><span class="p">;</span>
 
 <span class="kr">export</span> <span class="kr">interface</span> <span class="nx">ItemService</span> <span class="p">{</span>
@@ -185,8 +181,7 @@ service simply gets the items from the repository and returns them.</p>
     <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">itemRepo</span><span class="p">.</span><span class="nx">GetItems</span><span class="p">();</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Notice how the constructor of the service takes an item repository. This is the runtime
 injection of dependencies that makes this <strong>super exciting</strong>. We can swap implementations
@@ -196,7 +191,7 @@ relying on an interface defined at the <code>entity</code> layer.</p>
 <p>Finally, we implement the <code>UserRepository</code> we defined in the <code>entity</code> layer. It will
 just be a simple API call using <code>fetch()</code>. We should add error handling here, but I've
 left it out for now for the sake of simplicity.</p>
-<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Item</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;../entities/Item&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">Item</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;../entities/Item&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">ItemRepository</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;../entities/ItemRepository&quot;</span><span class="p">;</span>
 
 <span class="kr">class</span> <span class="nx">ItemDTO</span> <span class="p">{</span>
@@ -213,21 +208,19 @@ left it out for now for the sake of simplicity.</p>
     <span class="k">return</span> <span class="nx">jsonData</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span>: <span class="kt">ItemDTO</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">Item</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">));</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Note how we are defining an <code>ItemDTO</code> here. This is your contract with the API, and will
 change with time. The following line:</p>
-<div class="highlight"><pre><span></span><span class="k">return</span> <span class="nx">jsonData</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span>: <span class="kt">ItemDTO</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">Item</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">));</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="k">return</span> <span class="nx">jsonData</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span>: <span class="kt">ItemDTO</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">Item</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">));</span>
+</code></pre></div>
 
 <p>is also very important. This is where the DTO is being mapped to a domain entity. We
 can move this transformation to another file as our implementation grows in complexity,
 as this code is on an architectural boundary and will change quite frequently.</p>
 <h3>All Together Now</h3>
 <p>We can now edit our Thunk to use the service instead of directly calling the API:</p>
-<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span>
   <span class="nx">LIST_LOAD_REQUEST</span><span class="p">,</span>
   <span class="nx">LIST_LOAD_SUCCESS</span><span class="p">,</span>
   <span class="nx">LIST_LOAD_FAILURE</span><span class="p">,</span>
@@ -247,23 +240,19 @@ as this code is on an architectural boundary and will change quite frequently.</
     <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">LIST_LOAD_FAILURE</span><span class="p">,</span> <span class="nx">error</span> <span class="p">});</span>
   <span class="p">}</span>
 <span class="p">};</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>The first three lines within the try hold the essence of any dependency injection setup:</p>
-<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">itemRepo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItemRepositoryImpl</span><span class="p">();</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">itemRepo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItemRepositoryImpl</span><span class="p">();</span>
+</code></pre></div>
 
 <p>First, we initalise the repository.</p>
-<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">itemService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItemServiceImpl</span><span class="p">(</span><span class="nx">itemRepo</span><span class="p">);</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">itemService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ItemServiceImpl</span><span class="p">(</span><span class="nx">itemRepo</span><span class="p">);</span>
+</code></pre></div>
 
 <p>Then, we inject it into the service.</p>
-<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">itemService</span><span class="p">.</span><span class="nx">GetItems</span><span class="p">();</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">itemService</span><span class="p">.</span><span class="nx">GetItems</span><span class="p">();</span>
+</code></pre></div>
 
 <p>And finally, we access the methods offered by the service.</p>
 <p>It's good to keep these steps explicitly defined, so that the flow is clear and can

@@ -124,7 +124,7 @@ on the websites and thereby get the version number<sup id="fnref:1"><a class="fo
 <p>The code is simple and uses Goroutines to let us concurrently connect to the sites.
 The code we use in prod is a bit more specialised, but I've reproduced a version
 that captures the essentials below:</p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;encoding/json&quot;</span>
@@ -155,15 +155,14 @@ that captures the essentials below:</p>
     <span class="nx">p</span><span class="p">.</span><span class="nx">url</span> <span class="p">=</span> <span class="nx">url</span>
     <span class="nx">p</span><span class="p">.</span><span class="nx">body</span> <span class="p">=</span> <span class="s">&quot;&quot;</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><code>Site</code> is simply a struct that holds info about the particular site, and fields
 to capture the version and the time taken to do the scrape<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
 <p>We've initialised a slice of sites with the URLs we need to scrape.</p>
 <p>The <code>Parser</code> simply encapsulates parsing behaviour, and has two more methods,
 reproduced below. For each scrape, we initialise a new parser.</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Parser</span><span class="p">)</span> <span class="nx">getMatches</span><span class="p">(</span><span class="nx">regexString</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Parser</span><span class="p">)</span> <span class="nx">getMatches</span><span class="p">(</span><span class="nx">regexString</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
     <span class="nx">regex</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">regexp</span><span class="p">.</span><span class="nx">Compile</span><span class="p">(</span><span class="nx">regexString</span><span class="p">)</span>
 
     <span class="nx">matches</span> <span class="o">:=</span> <span class="nx">regex</span><span class="p">.</span><span class="nx">FindStringSubmatch</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span>
@@ -189,13 +188,12 @@ reproduced below. For each scrape, we initialise a new parser.</p>
     <span class="nx">p</span><span class="p">.</span><span class="nx">body</span> <span class="p">=</span> <span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span>
     <span class="k">return</span> <span class="nx">p</span><span class="p">.</span><span class="nx">getMatches</span><span class="p">(</span><span class="s">&quot;(&lt;meta name=\&quot;generator\&quot; content=\&quot;)([^\&quot;]+)&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><code>getVersion()</code> simply gets and reads the page body, and <code>getMatches()</code> is a method
 to try and match the generator tag regex and return the value of the tag.</p>
 <p>Now, we get to the main function and the <code>getSiteVersion()</code> goroutine:</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">getSiteVersion</span><span class="p">(</span><span class="nx">key</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">done</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nx">getSiteVersion</span><span class="p">(</span><span class="nx">key</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">done</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">start</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span> <span class="c1">// to check the time taken</span>
 
     <span class="nx">site</span> <span class="o">:=</span> <span class="nx">Parser</span><span class="p">{}</span>
@@ -219,8 +217,7 @@ to try and match the generator tag regex and return the value of the tag.</p>
     <span class="nx">enc</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nx">NewEncoder</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">)</span>
     <span class="nx">enc</span><span class="p">.</span><span class="nx">Encode</span><span class="p">(</span><span class="nx">sites</span><span class="p">)</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><code>getSiteVersion()</code> gets called in a loop, initialises the Parser, does the scrape,
 and does simple time keeping of how long a scrape takes. We don't use a <a href="https://gobyexample.com/mutexes">mutex</a>

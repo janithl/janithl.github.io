@@ -54,8 +54,10 @@ After letting your dough rise, break it into 3 or 4 parts. I really eyeball this
 don’t really care about accuracy at this point.
 
 Now, the tricky part of actual shaping. The dough is sticky af and will stick to
-anything, and I am currently experimenting with oil paper sheets cut into circles,
-[like what Adam Ragusea does sometimes][4].
+anything, and I am currently experimenting with <s>oil paper sheets cut into circles</s>,
+[like what Adam Ragusea does sometimes][4]. **Update:** The oil paper sticks like glue
+to the batter (hey, _paappa_ and _sau kola_ in essence), so a better alternative I have
+found is aluminium foil! Comes right off when the pizza cools.
 
 You drop the dough balls into a bowl of flour, and dust your fingers with flour as
 well. Drop the balls onto the oil paper and taking care not to deflate the edge (cornice)
@@ -92,8 +94,8 @@ toppings. Brush your crust with some oil if you want things to look fancy. Slide
 paper’d pizza onto a baking pan to bake[^1]. Your cook time will depend on your oven and
 other factors I guess, but for me it’s usually between 15–20 minutes. I know it’s done when
 the toppings are getting burnt and the crust starts looking brown (if the crust is still
-white I’d advice keeping it in for a bit more). The oil paper should come right off now that
-the pizza is baked.
+white I’d advice keeping it in for a bit more). <s>The oil paper should come right off now that
+the pizza is baked.</s> **Update:** It doesn't.
 
 Keep experimenting, and I’m sure you’ll find better ways of doing things. For example if
 you want a more burnt bottom you can try a small trick I do and use a _roti pan_ on the

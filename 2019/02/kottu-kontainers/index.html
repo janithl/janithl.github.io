@@ -146,7 +146,7 @@ resource) which is a bit Laravel-focused, and one from the
 Geeky Platypus <code>docker-compose.yml</code> file was cleaner, so I used it as the base
 with some bits pulled from the DigitalOcean guide. Note that both use nginx and
 not Apache because we’re civilised human beings nowadays.</p>
-<div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="s">&quot;2&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&quot;2&quot;</span>
 
 <span class="nt">services</span><span class="p">:</span>
   <span class="nt">webserver</span><span class="p">:</span>
@@ -186,8 +186,7 @@ not Apache because we’re civilised human beings nowadays.</p>
     <span class="nt">driver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bridge</span>
   <span class="nt">default</span><span class="p">:</span>
     <span class="nt">driver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">host</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Okay, there’s a bit to digest here:</p>
 <p>We’re creating three services that work together, namely webserver, php and db.
@@ -240,20 +239,19 @@ and the certificates you need.</p>
 <h3>Step 4: PHP Dockerfile</h3>
 <p>We need to install the mysql client and the <code>PDO_Mysql</code> PHP extension on the php
 service, so we’ll create a Dockerfile for that.</p>
-<div class="highlight"><pre><span></span>FROM php:5.6-fpm
+<div class="highlight"><pre><span></span><code>FROM php:5.6-fpm
 
 # install dependencies
 RUN apt-get update &amp;&amp; apt-get install -y mysql-client
 
 # install php extensions
 RUN docker-php-ext-install pdo_mysql
-</pre></div>
-
+</code></pre></div>
 
 <p>I later found out that none of the images on Kottu were showing up and it’s because
 Timthumb (yes, Kottu <em>still</em> uses Timthumb, please don’t hack us!) needs <code>GD</code>, which
 wasn’t installed. So let’s add those lines to the file too:</p>
-<div class="highlight"><pre><span></span># Install GD and it&#39;s dependencies
+<div class="highlight"><pre><span></span><code># Install GD and it&#39;s dependencies
 
 RUN apt-get update &amp;&amp; apt-get install -y \
 libfreetype6-dev \
@@ -262,20 +260,18 @@ libpng-dev \
 &amp;&amp; docker-php-ext-install -j$(nproc) iconv \
 &amp;&amp; docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 &amp;&amp; docker-php-ext-install -j$(nproc) gd
-</pre></div>
-
+</code></pre></div>
 
 <h3>Step 5: The mysql and nginx conf files</h3>
 <p><code>my.cnf</code> is so basic that it doesn’t even deserve mentioning, but obviously you can
 add more configurations here:</p>
-<div class="highlight"><pre><span></span>[mysqld]
+<div class="highlight"><pre><span></span><code>[mysqld]
 general_log = 1
 general_log_file = /var/lib/mysql/general.log
-</pre></div>
-
+</code></pre></div>
 
 <p>The <code>site.conf</code> file for nginx is your standard nginx + php site config:</p>
-<div class="highlight"><pre><span></span><span class="k">server</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">server</span> <span class="p">{</span>
     <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
     <span class="kn">index</span> <span class="s">index.php</span> <span class="s">index.html</span><span class="p">;</span>
     <span class="kn">server_name</span> <span class="s">localhost</span><span class="p">;</span>
@@ -297,8 +293,7 @@ general_log_file = /var/lib/mysql/general.log
         <span class="kn">fastcgi_param</span> <span class="s">PATH_INFO</span> <span class="nv">$fastcgi_path_info</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>It tells nginx to listen for traffic on port 80, make <code>/var/www</code> the web root, try to
 find static files for the paths that visitors are trying to access, and then redirect
@@ -306,9 +301,8 @@ those requests to <code>index.php</code> if that fails, and pass php requests to
 means port <code>9000</code> in the php service).</p>
 <h3>Step 6: Rock ’n’ Roll</h3>
 <p>We now get to say the magic words:</p>
-<div class="highlight"><pre><span></span>docker-compose up -d
-</pre></div>
-
+<div class="highlight"><pre><span></span><code>docker-compose up -d
+</code></pre></div>
 
 <p><img alt="Containers Starting" src="https://janithl.github.io/images/kottu/containers-starting.png"></p>
 <p class="text-center">Ah, satisfaction...</p>
@@ -320,13 +314,12 @@ to roll. We direct our web browser to <code>localhost:8000</code>, and...</p>
 <p class="text-center">Victo- <em>oh god!</em></p>
 
 <p>Whoops, we still need to import the database. But fear not, that’s pretty easy.</p>
-<div class="highlight"><pre><span></span>docker-compose exec php bash
+<div class="highlight"><pre><span></span><code>docker-compose exec php bash
 root@3836dc148c6a:/var/www/html# cd ..
 root@3836dc148c6a:/var/www# ls
 LICENSE  README.md  cache  config.php  docker  docker-compose.yml  html  img  index.php  kottu.sql  lib  static  templates  webcache
 root@3836dc148c6a:/var/www# mysql -h db -u root -pyour_mysql_root_password kottu &lt; kottu.sql
-</pre></div>
-
+</code></pre></div>
 
 <p>I just bash’d into the container, ran the mysql client<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> (remember installing that
 via the Dockerfile earlier?) and redirected <code>kottu.sql</code> (which holds the database

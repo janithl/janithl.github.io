@@ -120,16 +120,15 @@ change that.</p>
 <h3>Unicode</h3>
 <p>Unicode has some <a href="https://en.wikipedia.org/wiki/Block_Elements">nice characters</a> that can help us here. The ones we're
 going to use today are:</p>
-<div class="highlight"><pre><span></span>U+2591      ░       Light shade
+<div class="highlight"><pre><span></span><code>U+2591      ░       Light shade
 U+2592      ▒       Medium shade
 U+2593      ▓       Dark shade
 U+2588      █       Full block
-</pre></div>
-
+</code></pre></div>
 
 <p>We can update the <code>Print()</code> function to use these new shade blocks. We've also
 added a space to get the "no shade" effect.</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Print</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Print</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">mapShades</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="s">&quot;░&quot;</span><span class="p">,</span> <span class="s">&quot;▒&quot;</span><span class="p">,</span> <span class="s">&quot;▓&quot;</span><span class="p">,</span> <span class="s">&quot;█&quot;</span><span class="p">}</span>
 
     <span class="c1">// print out map</span>
@@ -155,8 +154,7 @@ added a space to get the "no shade" effect.</p>
         <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Go takes its types very seriously, so someone coming from a dynamically typed
 language like PHP or Javascript might be a bit confused. But trust me, it is well
@@ -171,7 +169,7 @@ currently looks. 😅</p>
 sequence<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> with your output. The colours I want to use are blue and cyan
 for the sea and shallows, and green and yellow for the fields and mountains.
 We'll modify <code>Print()</code> to add these and output the codes:</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Print</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Print</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">mapColours</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">36</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">}</span> <span class="c1">// blue, cyan, green, yellow</span>
     <span class="nx">mapShades</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;░&quot;</span><span class="p">,</span> <span class="s">&quot;▒&quot;</span><span class="p">,</span> <span class="s">&quot;▓&quot;</span><span class="p">,</span> <span class="s">&quot;█&quot;</span><span class="p">}</span>
 
@@ -204,8 +202,7 @@ We'll modify <code>Print()</code> to add these and output the codes:</p>
         <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>We first get the colour index, and then get the shade index within that
 colour. Let's compile and run it with the same flags as before:</p>

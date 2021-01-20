@@ -164,7 +164,7 @@ for state, or React hooks, or component state, but this diagram barely changes b
 in essence the user performs an action, which results in an API call, which updates the
 state and hence the UI.</p>
 <p>Your component code would look something like this:</p>
-<div class="highlight"><pre><span></span>const ItemList = ({ items, refreshList }) =&gt; (
+<div class="highlight"><pre><span></span><code>const ItemList = ({ items, refreshList }) =&gt; (
   &lt;div&gt;
     &lt;button onClick={refreshList}&gt;Refresh&lt;/button&gt;
     &lt;ul&gt;
@@ -174,11 +174,10 @@ state and hence the UI.</p>
     &lt;/ul&gt;
   &lt;/div&gt;
 );
-</pre></div>
-
+</code></pre></div>
 
 <p>It'll be hooked up to Redux using something like this:</p>
-<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">mapStateToProps</span> <span class="o">=</span> <span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">mapStateToProps</span> <span class="o">=</span> <span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
   <span class="nx">items</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">items</span><span class="p">,</span>
 <span class="p">});</span>
 
@@ -187,11 +186,10 @@ state and hence the UI.</p>
 <span class="p">});</span>
 
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span><span class="nx">mapStateToProps</span><span class="p">,</span> <span class="nx">mapDispatchToProps</span><span class="p">)(</span><span class="nx">ItemList</span><span class="p">);</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>And I'd guess your Thunk (or Saga) would look a bit like this:</p>
-<div class="highlight"><pre><span></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">refreshList</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">dispatch</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">refreshList</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">dispatch</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;LIST_LOAD_REQUEST&quot;</span> <span class="p">});</span>
 
   <span class="k">try</span> <span class="p">{</span>
@@ -202,8 +200,7 @@ state and hence the UI.</p>
     <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;LIST_LOAD_FAILURE&quot;</span><span class="p">,</span> <span class="nx">error</span> <span class="p">});</span>
   <span class="p">}</span>
 <span class="p">};</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Pretty simple and familiar, right?</p>
 <p><em>Let's break it</em> 😈</p>

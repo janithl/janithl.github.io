@@ -120,20 +120,19 @@ and iPod) between March 2011 and November 2014, 12784 scrobbles in total.</p>
 <p>I will do a proper analysis <em>soon</em> (sorry, Todoist), but here are some 
 descriptive stats that <a href="http://pandas.pydata.org/pandas-docs/stable/">Pandas</a> 
 throws out:</p>
-<div class="highlight"><pre><span></span>             Artist         Album         Title          Timestamp
+<div class="highlight"><pre><span></span><code>             Artist         Album         Title          Timestamp
 count         12784         12593         12784              12784
 unique          354           752          2048              12709
 top     The Beatles  Past Masters  Sleeping Sun  09 Feb 2013 13:24
 freq           1904           285            39                  8
-</pre></div>
-
+</code></pre></div>
 
 <p>I want to do an analysis of how I discovered and fell in love with new bands 
 over the course of these three years. I don't listen to music as much these 
 days, but this is a good dataset and I promise not to let it go to waste.</p>
 <p><strong>Update:</strong> Added the frequencies and histograms for artists and song titles.</p>
 <h2>Artists</h2>
-<div class="highlight"><pre><span></span>&gt;&gt;&gt; df.Artist.value_counts()
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; df.Artist.value_counts()
 The Beatles                        1904
 Coldplay                            842
 John Mayer                          604
@@ -165,12 +164,11 @@ Simon &amp; Garfunkel                    92
 Roy Orbison                          92
 Billy Joel                           92
                                    ... 
-</pre></div>
-
+</code></pre></div>
 
 <p><a href="https://janithl.github.io/images/artist-histogram.png"><img alt="Artist Histogram" src="https://janithl.github.io/images/artist-histogram.png"></a></p>
 <h2>Song Titles</h2>
-<div class="highlight"><pre><span></span>&gt;&gt;&gt; df.Title.value_counts()
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; df.Title.value_counts()
 Sleeping Sun                         39
 Could You Be Loved                   38
 Parachutes                           35
@@ -202,8 +200,7 @@ Rainy Day                            27
 Love Is All Around                   27
 Here Comes the Sun                   27
                                      ..
-</pre></div>
-
+</code></pre></div>
 
 <p><a href="https://janithl.github.io/images/song-title-histogram.png"><img alt="Song Title Histogram" src="https://janithl.github.io/images/song-title-histogram.png"></a></p>
   </div>

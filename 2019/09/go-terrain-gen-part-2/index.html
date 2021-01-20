@@ -133,11 +133,10 @@ things short and unambiguous. 😜</p>
 <p><img alt="Go Mod Init" src="https://janithl.github.io/images/go-terrain-gen/p2-go-mod-init.png"></p>
 <p>If we open up our <code>go.mod</code> file, we can find that it's very sparse right now since
 we don't have any dependencies:</p>
-<div class="highlight"><pre><span></span>module github.com/janithl/go-terrain-gen/part2
+<div class="highlight"><pre><span></span><code>module github.com/janithl/go-terrain-gen/part2
 
 go 1.12
-</pre></div>
-
+</code></pre></div>
 
 <h3>Multiple files</h3>
 <p>I don't want to keep all the terrain generator logic inside <code>main.go</code>, so let's first
@@ -146,7 +145,7 @@ try to separate them out into two files.</p>
 <p>We move most of our app code into a different file, and a different package
 called <code>terrain</code>. Since in Go, you have to keep packages in their different folders,
 we move the code into the <code>terrain</code> folder, and name the file <code>terrain.go</code>.</p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">terrain</span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">terrain</span>
 
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
@@ -192,11 +191,10 @@ we move the code into the <code>terrain</code> folder, and name the file <code>t
         <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">])</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>This leaves our <code>main.go</code> file wonderfully sparse, and it looks like this:</p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;github.com/janithl/go-terrain-gen/part2/terrain&quot;</span>
 
@@ -204,8 +202,7 @@ we move the code into the <code>terrain</code> folder, and name the file <code>t
     <span class="nx">terrain</span><span class="p">.</span><span class="nx">Generate</span><span class="p">()</span>
     <span class="nx">terrain</span><span class="p">.</span><span class="nx">Print</span><span class="p">()</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Pretty neat, right? Let's execute it!</p>
 <p><img alt="Output" src="https://janithl.github.io/images/go-terrain-gen/p2-output-1.png"></p>
@@ -216,15 +213,14 @@ and it's not very flexible (you can't even set the height and width of the map) 
 extensible. Let's explore Go's <a href="https://gobyexample.com/structs">structs</a> and <a href="https://gobyexample.com/methods">methods</a> to make things cleaner.
 We'll also use Go's <a href="https://gobyexample.com/slices">slices</a> to make the map resizeable at runtime.</p>
 <p>The fullMap struct will look like this:</p>
-<div class="highlight"><pre><span></span><span class="kd">type</span> <span class="nx">fullMap</span> <span class="kd">struct</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">type</span> <span class="nx">fullMap</span> <span class="kd">struct</span> <span class="p">{</span>
     <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">elevation</span><span class="p">,</span> <span class="nx">peakProbability</span> <span class="kt">int</span>
     <span class="nx">elements</span>                                  <span class="p">[][]</span><span class="kt">int</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>We can also add a function to construct a new fullMap<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:</p>
-<div class="highlight"><pre><span></span><span class="c1">// NewFullMap returns a new terrain map</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// NewFullMap returns a new terrain map</span>
 <span class="kd">func</span> <span class="nx">NewFullMap</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">elevation</span><span class="p">,</span> <span class="nx">peakProbability</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">fullMap</span> <span class="p">{</span>
     <span class="nx">elements</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">height</span><span class="p">)</span>
     <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
@@ -239,14 +235,13 @@ We'll also use Go's <a href="https://gobyexample.com/slices">slices</a> to make 
         <span class="nx">elements</span><span class="p">:</span>        <span class="nx">elements</span><span class="p">,</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Note how the height and the width of the map can be set dynamically now, in
 addition to the levels of elevation and the peak probability.</p>
 <p>We can now rewrite the <code>Generate()</code> and <code>Print()</code> functions to work with the
 new fullMap struct, which is pretty straightforward:</p>
-<div class="highlight"><pre><span></span><span class="c1">// Generate generates the terrain map</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Generate generates the terrain map</span>
 <span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Generate</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// rand needs to be seeded, so we set the current</span>
     <span class="c1">// nanosecond timestamp as the seed</span>
@@ -277,13 +272,12 @@ new fullMap struct, which is pretty straightforward:</p>
         <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">h</span><span class="p">])</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>The <a href="https://github.com/janithl/go-terrain-gen/blob/master/part2/terrain/terrain.go">full code can be seen here</a>.</p>
 <p>Now, the <code>main.go</code> file will look a bit different, but this allows us
 greater control over how the map is generated:</p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;github.com/janithl/go-terrain-gen/part2/terrain&quot;</span>
 
@@ -292,15 +286,14 @@ greater control over how the map is generated:</p>
     <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Generate</span><span class="p">()</span>
     <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Print</span><span class="p">()</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Let's run it:</p>
 <p><img alt="Output After Refactor" src="https://janithl.github.io/images/go-terrain-gen/p2-output-2.png"></p>
 <p>Yass! 🙌🏾</p>
 <h3>Add Some Flags</h3>
 <p>We can add some <a href="https://gobyexample.com/command-line-flags">CLI flags</a> to expose these newly added features to users.</p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;flag&quot;</span>
@@ -319,14 +312,13 @@ greater control over how the map is generated:</p>
     <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Generate</span><span class="p">()</span>
     <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Print</span><span class="p">()</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>To run it, let's first build it with <code>go build</code>, and point the output to the
 <code>bin</code> directory, and then execute with the CLI flags:</p>
 <p><img alt="Compile and Output After Flags" src="https://janithl.github.io/images/go-terrain-gen/p2-output-3.png"></p>
 <p>Running <code>bin/terrain --help</code> returns the usage details:</p>
-<div class="highlight"><pre><span></span>Usage of bin/terrain:
+<div class="highlight"><pre><span></span><code>Usage of bin/terrain:
   -elev int
         levels of elevation on the map (default 9)
   -height int
@@ -335,8 +327,7 @@ greater control over how the map is generated:</p>
         percentage probability a peak will randomly appear (default 5)
   -width int
         width of the map (default 16)
-</pre></div>
-
+</code></pre></div>
 
 <p>Pretty neat, Golang! 👏🏽👏🏽👏🏽</p>
 <hr>

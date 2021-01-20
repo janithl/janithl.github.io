@@ -116,12 +116,11 @@
 <p><img alt="Highlighted Text" src="https://janithl.github.io/images/highlighted-text.png"></p>
 <p>Now, it's fairly simple enough to do in HTML, but when you do it in React Native
 it looks a bit gnarly:</p>
-<div class="highlight"><pre><span></span>&lt;Text style={styles.text}&gt;
+<div class="highlight"><pre><span></span><code>&lt;Text style={styles.text}&gt;
   You’re going to &lt;Text style={styles.highlighted}&gt;send a message&lt;/Text&gt; to{&quot; &quot;}
   &lt;Text style={styles.highlighted}&gt;Pingpong&lt;/Text&gt;. Please confirm?
 &lt;/Text&gt;
-</pre></div>
-
+</code></pre></div>
 
 <p>Now, I prefer to keep strings like this in a separate file in React Native, to make
 the frequent requests for text changes contained to a single file. But a complex
@@ -129,7 +128,7 @@ template string like this was impossible to store that way, until...</p>
 <h3>Enter Tagged Template Literals</h3>
 <p><a href="https://www.taniarascia.com/understanding-template-literals/">This post by Tania Rascia</a> opened my eyes to the power of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">Tagged Template Literals</a>
 in JS. Seeing this example blew my mind:</p>
-<div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">bold</span><span class="p">(</span><span class="nx">strings</span><span class="p">,</span> <span class="p">...</span><span class="nx">expressions</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">bold</span><span class="p">(</span><span class="nx">strings</span><span class="p">,</span> <span class="p">...</span><span class="nx">expressions</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">finalString</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 
   <span class="c1">// Loop through all expressions</span>
@@ -144,12 +143,11 @@ in JS. Seeing this example blew my mind:</p>
 
 <span class="kr">const</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">bold</span><span class="sb">`This is a string with </span><span class="si">${</span><span class="kc">true</span><span class="si">}</span><span class="sb"> and </span><span class="si">${</span><span class="kc">false</span><span class="si">}</span><span class="sb"> and </span><span class="si">${</span><span class="mi">100</span><span class="si">}</span><span class="sb"> interpolated inside.`</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Okay, with a quick few tweaks we can definitely apply this to React Native, right?</p>
 <h3>Highlighting Text in React Native</h3>
-<div class="highlight"><pre><span></span>const highlightText = (baseStyle, highlightStyle) =&gt; (strings, ...values) =&gt; (
+<div class="highlight"><pre><span></span><code>const highlightText = (baseStyle, highlightStyle) =&gt; (strings, ...values) =&gt; (
   &lt;Text style={baseStyle}&gt;
     {strings.map((string, index) =&gt; (
       &lt;&gt;
@@ -161,13 +159,12 @@ in JS. Seeing this example blew my mind:</p>
     ))}
   &lt;/Text&gt;
 );
-</pre></div>
-
+</code></pre></div>
 
 <p>Note I am using a higher order function so that I can pass in custom styles. We can also
 pass in other stuff like entire components, if that is the requirement.</p>
 <p>Now, we could store the Tagged Template Literal and use it wherever in our JSX.</p>
-<div class="highlight"><pre><span></span>const action = &quot;send a message&quot;;
+<div class="highlight"><pre><span></span><code>const action = &quot;send a message&quot;;
 const user = &quot;Pingpong&quot;;
 const description = highlightText(
   styles.text,
@@ -176,23 +173,21 @@ const description = highlightText(
 
 // in the render method
 &lt;Text&gt;{description}&lt;/Text&gt;;
-</pre></div>
-
+</code></pre></div>
 
 <p>Aaand, we're done! 🎉</p>
 <hr>
 <p><strong>Edit:</strong> Many of you will rightly wonder if <code>action</code>, <code>user</code>, and <code>styles</code> will need
 to be defined in the same file as the Template Literal. No, we can simply make it a
 function and pass these values direct from the component, like so:</p>
-<div class="highlight"><pre><span></span>const description = (user, action, styles) =&gt; highlightText(
+<div class="highlight"><pre><span></span><code>const description = (user, action, styles) =&gt; highlightText(
   styles.text,
   styles.highlight
 )`You’re going to ${action} to ${user}. Please confirm?`;
 
 // in the render method
 &lt;Text&gt;{description(&#39;Pingpong&#39;, &#39;Send a message&#39;, styles)}&lt;/Text&gt;;
-</pre></div>
-
+</code></pre></div>
 
 <p>Pretty cool, right?</p>
   </div>

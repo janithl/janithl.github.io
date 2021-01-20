@@ -123,7 +123,7 @@ the random patchwork of heights we see here. So let's fix that!</p>
 <p>Wouldn't it be cool to see how the terrain gets generated layer by layer
 from the highest elevation to the lowest? Let's change our <code>Generate()</code>
 method to allow us to view this.</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Generate</span><span class="p">(</span><span class="nx">viewSteps</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Generate</span><span class="p">(</span><span class="nx">viewSteps</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// rand needs to be seeded, so we set the current</span>
     <span class="c1">// nanosecond timestamp as the seed</span>
     <span class="nx">rand</span><span class="p">.</span><span class="nx">Seed</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">UnixNano</span><span class="p">())</span>
@@ -154,12 +154,11 @@ method to allow us to view this.</p>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Let's also add it as a CLI flag in our <code>main.go</code> so that the user can
 turn it on when they want.</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">height</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;height&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s">&quot;height of the map&quot;</span><span class="p">)</span>
     <span class="nx">width</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;width&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s">&quot;width of the map&quot;</span><span class="p">)</span>
     <span class="nx">elevation</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;elev&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s">&quot;levels of elevation on the map&quot;</span><span class="p">)</span>
@@ -171,8 +170,7 @@ turn it on when they want.</p>
     <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Generate</span><span class="p">(</span><span class="o">*</span><span class="nx">steps</span><span class="p">)</span>
     <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Print</span><span class="p">()</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Now, we can compile and run with the <code>--steps</code> flag to view our little
 generator in action:</p>
@@ -187,7 +185,7 @@ elevation values would look like this around a peak:</p>
 <p>We'll refine this later (adding cliffs!), but for now, it looks like we need to
 find if you have an element adjacent to you at an elevation <code>e</code>, so we'll define
 a new unexported method:</p>
-<div class="highlight"><pre><span></span><span class="c1">// adjacentElevation checks if an adjacent element</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// adjacentElevation checks if an adjacent element</span>
 <span class="c1">// to the given element (h, w) is at a given elevation</span>
 <span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">adjacentElevation</span><span class="p">(</span><span class="nx">h</span><span class="p">,</span> <span class="nx">w</span><span class="p">,</span> <span class="nx">elevation</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
     <span class="k">for</span> <span class="nx">y</span> <span class="o">:=</span> <span class="nx">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">h</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="nx">y</span> <span class="o">&lt;=</span> <span class="nx">min</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">height</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">h</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="nx">y</span><span class="o">++</span> <span class="p">{</span>
@@ -200,13 +198,12 @@ a new unexported method:</p>
 
     <span class="k">return</span> <span class="kc">false</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Go's <code>Min()</code> and <code>Max()</code> methods, as provided by <a href="https://golang.org/pkg/math/">the <code>math</code> package</a>, work with
 <code>float64</code> numbers, so we'll also define two simple private functions to work with
 <code>int</code>s and get min and max values:</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">min</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nx">min</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
     <span class="k">if</span> <span class="nx">x</span> <span class="p">&lt;</span> <span class="nx">y</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nx">x</span>
     <span class="p">}</span>
@@ -219,11 +216,10 @@ a new unexported method:</p>
     <span class="p">}</span>
     <span class="k">return</span> <span class="nx">y</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Now, let's modify the <code>Generate()</code> method to use <code>adjacentElevation()</code>:</p>
-<div class="highlight"><pre><span></span><span class="c1">// Generate generates the terrain map</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Generate generates the terrain map</span>
 <span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">Generate</span><span class="p">(</span><span class="nx">viewSteps</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// rand needs to be seeded, so we set the current</span>
     <span class="c1">// nanosecond timestamp as the seed</span>
@@ -257,8 +253,7 @@ a new unexported method:</p>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Let's compile and run it!</p>
 <p><img alt="Output with adjacents" src="https://janithl.github.io/images/go-terrain-gen/p4-output-with-adjacent.gif"></p>
@@ -271,7 +266,7 @@ a new unexported method:</p>
 <p>Also, things are looking a wee bit too boxy, so let's add some randomness in the
 form of a <strong>cliff probability</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> to the <code>fullMap</code> struct and the <code>NewFullMap()</code>
 function:</p>
-<div class="highlight"><pre><span></span><span class="kd">type</span> <span class="nx">fullMap</span> <span class="kd">struct</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">type</span> <span class="nx">fullMap</span> <span class="kd">struct</span> <span class="p">{</span>
     <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">elevation</span><span class="p">,</span> <span class="nx">peakProbability</span><span class="p">,</span> <span class="nx">cliffProbability</span> <span class="kt">int</span>
     <span class="nx">elements</span>                                                    <span class="p">[][]</span><span class="kt">int</span>
 <span class="p">}</span>
@@ -292,11 +287,10 @@ function:</p>
         <span class="nx">elements</span><span class="p">:</span>         <span class="nx">elements</span><span class="p">,</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>We'll also edit <code>main.go</code> to take <code>--cliffs</code> as a CLI flag:</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">height</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;height&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s">&quot;height of the map&quot;</span><span class="p">)</span>
     <span class="nx">width</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;width&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s">&quot;width of the map&quot;</span><span class="p">)</span>
     <span class="nx">elevation</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;elev&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s">&quot;levels of elevation on the map&quot;</span><span class="p">)</span>
@@ -309,11 +303,10 @@ function:</p>
     <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Generate</span><span class="p">(</span><span class="o">*</span><span class="nx">steps</span><span class="p">)</span>
     <span class="nx">terrainMap</span><span class="p">.</span><span class="nx">Print</span><span class="p">()</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Let's now edit <code>adjacentElevation()</code> to use cliffProbability:</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">adjacentElevation</span><span class="p">(</span><span class="nx">h</span><span class="p">,</span> <span class="nx">w</span><span class="p">,</span> <span class="nx">elevation</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">fullMap</span><span class="p">)</span> <span class="nx">adjacentElevation</span><span class="p">(</span><span class="nx">h</span><span class="p">,</span> <span class="nx">w</span><span class="p">,</span> <span class="nx">elevation</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
     <span class="k">for</span> <span class="nx">y</span> <span class="o">:=</span> <span class="nx">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">h</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="nx">y</span> <span class="o">&lt;=</span> <span class="nx">min</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">height</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">h</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="nx">y</span><span class="o">++</span> <span class="p">{</span>
         <span class="k">for</span> <span class="nx">x</span> <span class="o">:=</span> <span class="nx">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">w</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="nx">x</span> <span class="o">&lt;=</span> <span class="nx">min</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">width</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">w</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="nx">x</span><span class="o">++</span> <span class="p">{</span>
             <span class="k">if</span> <span class="nx">f</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span> <span class="o">==</span> <span class="nx">elevation</span><span class="o">+</span><span class="mi">1</span> <span class="p">{</span>
@@ -325,8 +318,7 @@ function:</p>
 
     <span class="k">return</span> <span class="kc">false</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Okay, now to compile and run:</p>
 <p><img alt="Output with cliffs" src="https://janithl.github.io/images/go-terrain-gen/p4-output-cliffs.png"></p>

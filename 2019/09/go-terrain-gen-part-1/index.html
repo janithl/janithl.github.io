@@ -130,7 +130,7 @@ should keep randomly sprinkling peaks among the (not already assigned) elements
 in the map.</p>
 <h3>Pseudocode</h3>
 <p>The pseudocode for the most basic version would look something like this:</p>
-<div class="highlight"><pre><span></span># map initialised to 0s
+<div class="highlight"><pre><span></span><code># map initialised to 0s
 map[height][width]
 
 for elevation &lt;- 5 to 0
@@ -144,15 +144,14 @@ for elevation &lt;- 5 to 0
             # or picked as a peak randomly
             if map[h][w] next to elevation + 1 or random()
                 map[h][w] &lt;- elevation
-</pre></div>
-
+</code></pre></div>
 
 <p>Seems simple enough, right?</p>
 <h3>Go Implementation</h3>
 <p>The initialisations, loops and randomly picking an element to be a peak (and
 printing the result out) seem straightforward enough, so let's get those out
 of the way first and create our <code>main.go</code> file:</p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
@@ -196,8 +195,7 @@ of the way first and create our <code>main.go</code> file:</p>
         <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">fullMap</span><span class="p">[</span><span class="nx">h</span><span class="p">])</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>We run the code with <code>go run main.go</code>, and get the following output:</p>
 <p><img alt="First Iteration" src="https://janithl.github.io/images/iteration-1.png"></p>

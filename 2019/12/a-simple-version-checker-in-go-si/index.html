@@ -123,7 +123,7 @@
 තියෙන්නෙ, ඒත් මූලික ක්‍රියාවලිය එකමයි. සයිට් වල තියෙන generator මෙටා ටැග්
 කියවන එක තමයි මේකෙ​න් වෙන්නෙ<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Go වල තියෙන Goroutines කියන සමාන්තරව
 වැඩ ගොඩක් කරගන්න පුළුවන් විශේෂාංගය තමයි මේකට අපි පාවිච්චි කරේ.</p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;encoding/json&quot;</span>
@@ -154,8 +154,7 @@
     <span class="nx">p</span><span class="p">.</span><span class="nx">url</span> <span class="p">=</span> <span class="nx">url</span>
     <span class="nx">p</span><span class="p">.</span><span class="nx">body</span> <span class="p">=</span> <span class="s">&quot;&quot;</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><code>Site</code> කියන්නෙ සයිට් එක එක ගැන දත්ත ටික තියාගන්න struct එකක්. මේකෙම පස්සෙ
 පුරෝගන්න version එකයි දත්ත ටික් රික්වෙස්ට් කරල ලබාගන්න ගිය වෙලාවයි දාන්නත් ඉඩ
@@ -165,7 +164,7 @@
 <p><code>Parser</code> එක තියෙන්නෙ දත්ත ලබාගන්නයි ලබාගත්ත දත්ත ඇතුළෙන් අපිට ඕනෙ version
 නොම්බරේ ලබාගන්න එකයි කරන්න. හැම සයිට් එකකටම අලුත් parser එකක් අපි පාවිච්චි
 කරනව. Parser එකේ තව මෙත​ඩ් දෙකකුත් තියෙනව: </p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Parser</span><span class="p">)</span> <span class="nx">getMatches</span><span class="p">(</span><span class="nx">regexString</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Parser</span><span class="p">)</span> <span class="nx">getMatches</span><span class="p">(</span><span class="nx">regexString</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
     <span class="nx">regex</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">regexp</span><span class="p">.</span><span class="nx">Compile</span><span class="p">(</span><span class="nx">regexString</span><span class="p">)</span>
 
     <span class="nx">matches</span> <span class="o">:=</span> <span class="nx">regex</span><span class="p">.</span><span class="nx">FindStringSubmatch</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span>
@@ -191,14 +190,13 @@
     <span class="nx">p</span><span class="p">.</span><span class="nx">body</span> <span class="p">=</span> <span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span>
     <span class="k">return</span> <span class="nx">p</span><span class="p">.</span><span class="nx">getMatches</span><span class="p">(</span><span class="s">&quot;(&lt;meta name=\&quot;generator\&quot; content=\&quot;)([^\&quot;]+)&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><code>getVersion()</code> එකෙන් වෙබ් පිටුවෙ අන්තර්ගතය ලබාගන්න එක තම​යි වෙන්නෙ. <code>getMatches()</code>
 එකෙන් තමයි regular expression (regex) එකක් පාවිච්චි කරල generator tag එක අල්ලගෙන
 ඒකෙන් අපිට ඕනෙ version නොම්බරේ ලබාගන්නෙ.</p>
 <p>අනිතිමටම තියෙන​ව main function එක​යි <code>getSiteVersion()</code> goroutine එක​යි:</p>
-<div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">getSiteVersion</span><span class="p">(</span><span class="nx">key</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">done</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nx">getSiteVersion</span><span class="p">(</span><span class="nx">key</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">done</span> <span class="kd">chan</span><span class="o">&lt;-</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">start</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span> <span class="c1">// to check the time taken</span>
 
     <span class="nx">site</span> <span class="o">:=</span> <span class="nx">Parser</span><span class="p">{}</span>
@@ -222,8 +220,7 @@
     <span class="nx">enc</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nx">NewEncoder</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">)</span>
     <span class="nx">enc</span><span class="p">.</span><span class="nx">Encode</span><span class="p">(</span><span class="nx">sites</span><span class="p">)</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><code>getSiteVersion()</code> එක ලූප් එකක් ඇතුළෙ කෝල් වෙනව. ඒකෙන් අලුත් Parser එකක් හැදිල,
 පේජ් එකේ අන්තර්ගතය අරන්, version නොම්බරේ හොයාගෙන, ඔක්කොටම ගතවෙච්ච කාලෙත්
