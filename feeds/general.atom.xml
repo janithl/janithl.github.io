@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2020-12-31T10:05:00+05:30</updated><entry><title>Pizza Dough: What I've Learned</title><link href="https://janithl.github.io/2020/12/pizza-dough-what-ive-learned/" rel="alternate"></link><published>2020-12-31T10:05:00+05:30</published><updated>2020-12-31T10:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-12-31:/2020/12/pizza-dough-what-ive-learned/</id><summary type="html">&lt;p&gt;Watching the &lt;a href="https://www.youtube.com/watch?v=SDpCzJw2xm4"&gt;Adam Ragusea New York-style pizza dough recipe&lt;/a&gt; inspired me to make
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-03-15T07:40:00+05:30</updated><entry><title>On the making of "Paramitha"</title><link href="https://janithl.github.io/2021/03/paramitha/" rel="alternate"></link><published>2021-03-15T07:40:00+05:30</published><updated>2021-03-15T07:40:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-03-15:/2021/03/paramitha/</id><summary type="html">&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/mX2w9W4xIc4"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;One week ago, on 7 March, I released my animated short &lt;em&gt;Paramitha&lt;/em&gt;.
+I stared working on it in early February and just as I expected
+it took ~4 weeks of work to finish. I used &lt;a href="https://krita.org/en/"&gt;Krita&lt;/a&gt; for the
+drawing and frame-by-frame animations, and &lt;a href="https://www.synfig.org"&gt;Synfig Studio&lt;/a&gt; for
+things like parallax.&lt;/p&gt;
+&lt;p&gt;The …&lt;/p&gt;</summary><content type="html">&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/mX2w9W4xIc4"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;One week ago, on 7 March, I released my animated short &lt;em&gt;Paramitha&lt;/em&gt;.
+I stared working on it in early February and just as I expected
+it took ~4 weeks of work to finish. I used &lt;a href="https://krita.org/en/"&gt;Krita&lt;/a&gt; for the
+drawing and frame-by-frame animations, and &lt;a href="https://www.synfig.org"&gt;Synfig Studio&lt;/a&gt; for
+things like parallax.&lt;/p&gt;
+&lt;p&gt;The story and setting were inspired by a random piece I did a
+while back (I think I just liked the background!)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Storyboard" src="https://janithl.github.io/images/poya-girl.jpg"&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a href="https://www.instagram.com/p/CJZ5yHHhnqW/"&gt;Original Post on Instagram&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Storyboard and Animation&lt;/h3&gt;
+&lt;p&gt;I first started with a storyboard, and then animated it to get an
+idea of the timing and "beats":&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Storyboard" src="https://janithl.github.io/images/storyboard.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Very rough storyboard animation:&lt;/p&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/MI0XSQwvgjM"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I did a lot of rough renders to explore ideas and get a feel for my
+capabilities as an animator. This was my first short and I didn't want
+to bite off more than I could chew.&lt;/p&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/89_ar23BNUw"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The walk cycles were a major part of the animation. I do wish I could've
+spent a little bit more time on them, as they were animated on fours and
+would've looked much better if animated on twos.&lt;/p&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/eRpo2q4h6p0"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I deviated from the storyboard somewhat by adding two additional
+shots that were inspired by seeing how reflections were animated,
+and the idea of a "journey" was used in anime. So, the bus scene
+came into existence:&lt;/p&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/OYJzla1ju5I"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;Sound&lt;/h3&gt;
+&lt;p&gt;Finally, in the final two days of production (a weekend) I worked on
+the sound design and making a theme. &lt;a href="https://www.audacityteam.org"&gt;Audacity&lt;/a&gt; was a great help during
+this. I wanted a female voice for the Buddhist chant (to fit the
+character), but running short of time and people I could ask, I created
+a chorus of voices chanting by recording it myself. For the theme, I
+created a very simple droning, Eastern-inspired guitar and bass piece
+in D major and C major.&lt;/p&gt;
+&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/994887208&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
+&lt;div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"&gt;&lt;a href="https://soundcloud.com/janith-leanage" title="Jan" target="_blank" style="color: #cccccc; text-decoration: none;"&gt;Jan&lt;/a&gt; · &lt;a href="https://soundcloud.com/janith-leanage/paramitha-theme" title="&amp;quot;පාරමිතා&amp;quot; තේමා ගීතය | &amp;quot;Paramitha&amp;quot; Theme" target="_blank" style="color: #cccccc; text-decoration: none;"&gt;&amp;quot;පාරමිතා&amp;quot; තේමා ගීතය | &amp;quot;Paramitha&amp;quot; Theme&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;And that's how it was done. Given how it was my first time making
+something, and the fact that I had to learn so much on the job, I'm
+very happy with how it turned out. The film and music are released
+under a Creative Commons Attribution-ShareAlike 4.0 license
+(CC BY-SA 4.0), so everyone can use and build up on it!&lt;/p&gt;</content><category term="design"></category><category term="films"></category><category term="music"></category></entry><entry><title>Pizza Dough: What I've Learned</title><link href="https://janithl.github.io/2020/12/pizza-dough-what-ive-learned/" rel="alternate"></link><published>2020-12-31T10:05:00+05:30</published><updated>2020-12-31T10:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-12-31:/2020/12/pizza-dough-what-ive-learned/</id><summary type="html">&lt;p&gt;Watching the &lt;a href="https://www.youtube.com/watch?v=SDpCzJw2xm4"&gt;Adam Ragusea New York-style pizza dough recipe&lt;/a&gt; inspired me to make
 pizza at home, something that I never thought I was capable of. Now, about 3 batches
 of pizza later, I think I’ve got most of the big details sorted out. Credit also to
 &lt;a href="https://www.youtube.com/watch?v=J_3v7DEkjsk"&gt;Andrew Rea for …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Watching the &lt;a href="https://www.youtube.com/watch?v=SDpCzJw2xm4"&gt;Adam Ragusea New York-style pizza dough recipe&lt;/a&gt; inspired me to make
@@ -2188,577 +2251,4 @@ managers and employees. So do yourself a favour and go read!&lt;/p&gt;</content>
 දැනට අකුරු මුහුණත් ක්‍ෂේත්‍රයේ අළුත් දෙයක් කරන නිර්මාණශීලී යොවුන් පිරිසක් විදිහට මොවුන්ව 
 හඳුන්වන්න පුළුවන්.&lt;/p&gt;</content><category term="sinhala"></category><category term="design"></category></entry><entry><title>Somawathiya, September 2016</title><link href="https://janithl.github.io/2016/09/somawathiya-september-2016/" rel="alternate"></link><published>2016-09-19T12:16:00+05:30</published><updated>2016-09-19T12:16:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-19:/2016/09/somawathiya-september-2016/</id><summary type="html">&lt;p&gt;&lt;img alt="Somawathiya" src="https://janithl.github.io/images/somawathiya.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Shot in the early morning light.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Somawathiya" src="https://janithl.github.io/images/somawathiya.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;Shot in the early morning light.&lt;/p&gt;</content><category term="travel"></category><category term="religion"></category></entry><entry><title>The UNP at 70</title><link href="https://janithl.github.io/2016/09/the-unp-at-70/" rel="alternate"></link><published>2016-09-11T09:05:00+05:30</published><updated>2016-09-11T09:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-11:/2016/09/the-unp-at-70/</id><summary type="html">&lt;p&gt;&lt;img alt="The Elephant" src="https://janithl.github.io/images/unp-elephant.png"&gt;&lt;/p&gt;
-&lt;p&gt;The United National Party turned 70 this week. I thought I'd take a look at their electoral 
-record, for funsies.&lt;/p&gt;
-&lt;p&gt;The data for this (short) analysis was sourced from Wikipedia. That data was in turn sourced 
-from Department of Elections PDF files. I didn't cross-check the numbers because this is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="The Elephant" src="https://janithl.github.io/images/unp-elephant.png"&gt;&lt;/p&gt;
-&lt;p&gt;The United National Party turned 70 this week. I thought I'd take a look at their electoral 
-record, for funsies.&lt;/p&gt;
-&lt;p&gt;The data for this (short) analysis was sourced from Wikipedia. That data was in turn sourced 
-from Department of Elections PDF files. I didn't cross-check the numbers because this is a 
-blog and there is no accountability. &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;I'll only be looking at General Election data because that's the only election that matters. :P&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="right"&gt;Election&lt;/th&gt;
-&lt;th align="left"&gt;Leader*&lt;/th&gt;
-&lt;th align="right"&gt;Valid Votes&lt;/th&gt;
-&lt;th align="right"&gt;Votes Won&lt;/th&gt;
-&lt;th align="right"&gt;% Votes&lt;/th&gt;
-&lt;th align="right"&gt;Total Seats&lt;/th&gt;
-&lt;th align="right"&gt;Seats Won&lt;/th&gt;
-&lt;th align="right"&gt;% Seats&lt;/th&gt;
-&lt;th align="center"&gt;W/L&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1947&lt;/td&gt;
-&lt;td align="left"&gt;D. S. Senanayake&lt;/td&gt;
-&lt;td align="right"&gt;1,887,364&lt;/td&gt;
-&lt;td align="right"&gt;751,432&lt;/td&gt;
-&lt;td align="right"&gt;39.81&lt;/td&gt;
-&lt;td align="right"&gt;95&lt;/td&gt;
-&lt;td align="right"&gt;42&lt;/td&gt;
-&lt;td align="right"&gt;44.21&lt;/td&gt;
-&lt;td align="center"&gt;W&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1952&lt;/td&gt;
-&lt;td align="left"&gt;Dudley Senanayake&lt;/td&gt;
-&lt;td align="right"&gt;2,327,626&lt;/td&gt;
-&lt;td align="right"&gt;1,026,005&lt;/td&gt;
-&lt;td align="right"&gt;44.08&lt;/td&gt;
-&lt;td align="right"&gt;95&lt;/td&gt;
-&lt;td align="right"&gt;54&lt;/td&gt;
-&lt;td align="right"&gt;56.84&lt;/td&gt;
-&lt;td align="center"&gt;W&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1956&lt;/td&gt;
-&lt;td align="left"&gt;John Kotelawala&lt;/td&gt;
-&lt;td align="right"&gt;2,647,247&lt;/td&gt;
-&lt;td align="right"&gt;738,810&lt;/td&gt;
-&lt;td align="right"&gt;27.91&lt;/td&gt;
-&lt;td align="right"&gt;95&lt;/td&gt;
-&lt;td align="right"&gt;8&lt;/td&gt;
-&lt;td align="right"&gt;8.42&lt;/td&gt;
-&lt;td align="center"&gt;L&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;March 1960&lt;/td&gt;
-&lt;td align="left"&gt;Dudley Senanayake&lt;/td&gt;
-&lt;td align="right"&gt;3,041,420&lt;/td&gt;
-&lt;td align="right"&gt;909,043&lt;/td&gt;
-&lt;td align="right"&gt;29.89&lt;/td&gt;
-&lt;td align="right"&gt;151&lt;/td&gt;
-&lt;td align="right"&gt;50&lt;/td&gt;
-&lt;td align="right"&gt;33.11&lt;/td&gt;
-&lt;td align="center"&gt;W&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;July 1960&lt;/td&gt;
-&lt;td align="left"&gt;Dudley Senanayake&lt;/td&gt;
-&lt;td align="right"&gt;3,076,869&lt;/td&gt;
-&lt;td align="right"&gt;1,144,166&lt;/td&gt;
-&lt;td align="right"&gt;37.19&lt;/td&gt;
-&lt;td align="right"&gt;151&lt;/td&gt;
-&lt;td align="right"&gt;30&lt;/td&gt;
-&lt;td align="right"&gt;19.87&lt;/td&gt;
-&lt;td align="center"&gt;L&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1965&lt;/td&gt;
-&lt;td align="left"&gt;Dudley Senanayake&lt;/td&gt;
-&lt;td align="right"&gt;4,046,720&lt;/td&gt;
-&lt;td align="right"&gt;1,590,929&lt;/td&gt;
-&lt;td align="right"&gt;39.31&lt;/td&gt;
-&lt;td align="right"&gt;151&lt;/td&gt;
-&lt;td align="right"&gt;66&lt;/td&gt;
-&lt;td align="right"&gt;43.71&lt;/td&gt;
-&lt;td align="center"&gt;W&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1970&lt;/td&gt;
-&lt;td align="left"&gt;Dudley Senanayake&lt;/td&gt;
-&lt;td align="right"&gt;4,991,798&lt;/td&gt;
-&lt;td align="right"&gt;1,892,525&lt;/td&gt;
-&lt;td align="right"&gt;37.91&lt;/td&gt;
-&lt;td align="right"&gt;151&lt;/td&gt;
-&lt;td align="right"&gt;17&lt;/td&gt;
-&lt;td align="right"&gt;11.26&lt;/td&gt;
-&lt;td align="center"&gt;L&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1977&lt;/td&gt;
-&lt;td align="left"&gt;J. R. Jayewardene&lt;/td&gt;
-&lt;td align="right"&gt;6,243,573&lt;/td&gt;
-&lt;td align="right"&gt;3,179,221&lt;/td&gt;
-&lt;td align="right"&gt;50.92&lt;/td&gt;
-&lt;td align="right"&gt;168&lt;/td&gt;
-&lt;td align="right"&gt;140&lt;/td&gt;
-&lt;td align="right"&gt;83.33&lt;/td&gt;
-&lt;td align="center"&gt;W&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1989&lt;/td&gt;
-&lt;td align="left"&gt;R. Premadasa&lt;/td&gt;
-&lt;td align="right"&gt;5,596,468&lt;/td&gt;
-&lt;td align="right"&gt;2,838,005&lt;/td&gt;
-&lt;td align="right"&gt;50.71&lt;/td&gt;
-&lt;td align="right"&gt;225&lt;/td&gt;
-&lt;td align="right"&gt;125&lt;/td&gt;
-&lt;td align="right"&gt;55.56&lt;/td&gt;
-&lt;td align="center"&gt;W&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1994&lt;/td&gt;
-&lt;td align="left"&gt;D. B. Wijetunga&lt;/td&gt;
-&lt;td align="right"&gt;7,943,706&lt;/td&gt;
-&lt;td align="right"&gt;3,498,370&lt;/td&gt;
-&lt;td align="right"&gt;44.04&lt;/td&gt;
-&lt;td align="right"&gt;225&lt;/td&gt;
-&lt;td align="right"&gt;94&lt;/td&gt;
-&lt;td align="right"&gt;41.78&lt;/td&gt;
-&lt;td align="center"&gt;L&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2000&lt;/td&gt;
-&lt;td align="left"&gt;Ranil Wickremesinghe&lt;/td&gt;
-&lt;td align="right"&gt;8,647,668&lt;/td&gt;
-&lt;td align="right"&gt;3,477,770&lt;/td&gt;
-&lt;td align="right"&gt;40.22&lt;/td&gt;
-&lt;td align="right"&gt;225&lt;/td&gt;
-&lt;td align="right"&gt;89&lt;/td&gt;
-&lt;td align="right"&gt;39.56&lt;/td&gt;
-&lt;td align="center"&gt;L&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2001&lt;/td&gt;
-&lt;td align="left"&gt;Ranil Wickremesinghe&lt;/td&gt;
-&lt;td align="right"&gt;8,955,869&lt;/td&gt;
-&lt;td align="right"&gt;4,086,026&lt;/td&gt;
-&lt;td align="right"&gt;45.62&lt;/td&gt;
-&lt;td align="right"&gt;225&lt;/td&gt;
-&lt;td align="right"&gt;109&lt;/td&gt;
-&lt;td align="right"&gt;48.44&lt;/td&gt;
-&lt;td align="center"&gt;W&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2004&lt;/td&gt;
-&lt;td align="left"&gt;Ranil Wickremesinghe&lt;/td&gt;
-&lt;td align="right"&gt;9,262,732&lt;/td&gt;
-&lt;td align="right"&gt;3,504,200&lt;/td&gt;
-&lt;td align="right"&gt;37.83&lt;/td&gt;
-&lt;td align="right"&gt;225&lt;/td&gt;
-&lt;td align="right"&gt;82&lt;/td&gt;
-&lt;td align="right"&gt;36.44&lt;/td&gt;
-&lt;td align="center"&gt;L&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2010&lt;/td&gt;
-&lt;td align="left"&gt;Ranil Wickremesinghe&lt;/td&gt;
-&lt;td align="right"&gt;8,033,717&lt;/td&gt;
-&lt;td align="right"&gt;2,357,057&lt;/td&gt;
-&lt;td align="right"&gt;29.34&lt;/td&gt;
-&lt;td align="right"&gt;225&lt;/td&gt;
-&lt;td align="right"&gt;60&lt;/td&gt;
-&lt;td align="right"&gt;26.67&lt;/td&gt;
-&lt;td align="center"&gt;L&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2015&lt;/td&gt;
-&lt;td align="left"&gt;Ranil Wickremesinghe&lt;/td&gt;
-&lt;td align="right"&gt;11,166,975&lt;/td&gt;
-&lt;td align="right"&gt;5,098,916&lt;/td&gt;
-&lt;td align="right"&gt;45.66&lt;/td&gt;
-&lt;td align="right"&gt;225&lt;/td&gt;
-&lt;td align="right"&gt;106&lt;/td&gt;
-&lt;td align="right"&gt;47.11&lt;/td&gt;
-&lt;td align="center"&gt;W&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;A &lt;em&gt;win&lt;/em&gt; is when the UNP went on to form a government. This was sometimes done by forming 
-coalitions (e.g. in 1965).&lt;/p&gt;
-&lt;h2&gt;Some Descriptive Statistics&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; df[&amp;#39;% Votes&amp;#39;].describe()
-count    15.000000
-mean     40.029333
-std       7.121773
-min      27.910000
-25%      37.510000
-50%      39.810000
-75%      44.850000
-max      50.920000
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;On average the UNP won 40% of the vote, with a fairly low deviation from that 
-norm. The percentage of seats it has won has varied wildly from 8.4% to 83.3% 
-(in the infamous 1977 election), mostly thanks to the winner-takes-all craziness 
-of the &lt;em&gt;First Past The Post&lt;/em&gt; electoral system.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; df[&amp;#39;% Seats&amp;#39;].describe()
-count    15.000000
-mean     39.754000
-std      18.945885
-min       8.420000
-25%      29.890000
-50%      41.780000
-75%      47.775000
-max      83.330000
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;Some Interesting Notes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Sri Lanka, at least electorally, is not a &lt;a href="https://en.wikipedia.org/wiki/Two-party_system"&gt;two-party system&lt;/a&gt;. The UNP only won 
-the majority of the popular vote on two occasions (1977 and 1989), and both under 
-extraordinary circumstances. In 1977, the country was emerging from an unpopular 
-experiment with a strictly-controlled, statist economy. The 1989 election was held 
-during an extremely violent period of the country's history (more on that below).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="UNP Percentage of Valid Votes" src="https://janithl.github.io/images/percentage-valid-votes.png"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The percentage of the popular vote mattered little in the &lt;a href="https://en.wikipedia.org/wiki/First-past-the-post_voting"&gt;First Past The Post&lt;/a&gt;
-system. The election was essentially a series of isolated local contests to win a 
-particular electorate. It is even more surprising, then, to see that the UNP has only 
-managed to win absolute majorities in only 3 of the 15 elections we looked at, and 
-only twice under the FPTP system. &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="UNP Percentage of Seats" src="https://janithl.github.io/images/percentage-seats.png"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;In the &lt;a href="https://en.wikipedia.org/wiki/Ceylonese_parliamentary_election,_1947"&gt;1947 election&lt;/a&gt;, 29.11% of the popular vote and 21 (of 95) seats were won 
-by independent candidates. One wonders how Sri Lankan electoral history would've evolved 
-if &lt;a href="https://en.wikipedia.org/wiki/Proportional_representation"&gt;Proportional Representation&lt;/a&gt; was introduced during this time.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;1977 remains the UNP's biggest electoral victory. The UNP won 50.92% of the 
-popular vote and a 5/6th majority in parliament. The biggest win ever recorded (in terms 
-of the popular vote) by any party though was &lt;a href="https://en.wikipedia.org/wiki/Sri_Lankan_parliamentary_election,_2010"&gt;6 years ago, by the UPFA led by Mahinda Rajapaksa&lt;/a&gt;, 
-which managed to win 60.33% of the popular vote.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Two of the UNP's most celebrated leaders, J. R. Jayewardene and D. S. Senanayake, 
-have both only led a single election each, winning comfortably. J. R. avoided having the election 
-due for 1983 by sneakily &lt;a href="https://en.wikipedia.org/wiki/Sri_Lankan_national_referendum,_1982"&gt;holding a referendum to extend the term of the 1977 parliament&lt;/a&gt;. 
-D. S. fell off a horse.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The term &lt;em&gt;leader&lt;/em&gt; becomes a bit muddled (like everything else) after the Executive
-Presidency is created. In 1989, R. Premadasa was the leader of the UNP but wasn't running 
-for the post of Prime Minister, and after the 1994 election Gamini Dissanayake went on 
-to become the Leader of the Opposition (over Ranil Wickremesinghe, the previous UNP 
-Prime Minister).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Ranil Wickremesinghe has led the UNP at 5 General Elections, winning twice. If he leads 
-the UNP at the next General Election, he'll surpass Dudley Senanayake (5 elections, 3 wins) 
-as the UNP leader who's led at the most number of General Elections.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In the First Past The Post era, the UNP frequently won the &lt;em&gt;plurality&lt;/em&gt; of the 
-total vote, but lost the election thanks to the way electorates and the system was 
-structured. Note the discrepancies between percentage votes and percentage seats, and 
-the drastic reduction after Proportional Representation was introduced in the 80s:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Before PR:&lt;/strong&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="right"&gt;Election&lt;/th&gt;
-&lt;th align="right"&gt;% Votes&lt;/th&gt;
-&lt;th align="right"&gt;% Seats&lt;/th&gt;
-&lt;th align="right"&gt;% Diff&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1947&lt;/td&gt;
-&lt;td align="right"&gt;39.81&lt;/td&gt;
-&lt;td align="right"&gt;44.21&lt;/td&gt;
-&lt;td align="right"&gt;4.40&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1952&lt;/td&gt;
-&lt;td align="right"&gt;44.08&lt;/td&gt;
-&lt;td align="right"&gt;56.84&lt;/td&gt;
-&lt;td align="right"&gt;12.76&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1956&lt;/td&gt;
-&lt;td align="right"&gt;27.91&lt;/td&gt;
-&lt;td align="right"&gt;8.42&lt;/td&gt;
-&lt;td align="right"&gt;19.49&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;March 1960&lt;/td&gt;
-&lt;td align="right"&gt;29.89&lt;/td&gt;
-&lt;td align="right"&gt;33.11&lt;/td&gt;
-&lt;td align="right"&gt;3.22&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;July 1960&lt;/td&gt;
-&lt;td align="right"&gt;37.19&lt;/td&gt;
-&lt;td align="right"&gt;19.87&lt;/td&gt;
-&lt;td align="right"&gt;17.32&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1965&lt;/td&gt;
-&lt;td align="right"&gt;39.31&lt;/td&gt;
-&lt;td align="right"&gt;43.71&lt;/td&gt;
-&lt;td align="right"&gt;4.39&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1970&lt;/td&gt;
-&lt;td align="right"&gt;37.91&lt;/td&gt;
-&lt;td align="right"&gt;11.26&lt;/td&gt;
-&lt;td align="right"&gt;26.65&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1977&lt;/td&gt;
-&lt;td align="right"&gt;50.92&lt;/td&gt;
-&lt;td align="right"&gt;83.33&lt;/td&gt;
-&lt;td align="right"&gt;32.41&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;After PR:&lt;/strong&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="right"&gt;Election&lt;/th&gt;
-&lt;th align="right"&gt;% Votes&lt;/th&gt;
-&lt;th align="right"&gt;% Seats&lt;/th&gt;
-&lt;th align="right"&gt;% Diff&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1989&lt;/td&gt;
-&lt;td align="right"&gt;50.71&lt;/td&gt;
-&lt;td align="right"&gt;55.56&lt;/td&gt;
-&lt;td align="right"&gt;4.84&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1994&lt;/td&gt;
-&lt;td align="right"&gt;44.04&lt;/td&gt;
-&lt;td align="right"&gt;41.78&lt;/td&gt;
-&lt;td align="right"&gt;2.26&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2000&lt;/td&gt;
-&lt;td align="right"&gt;40.22&lt;/td&gt;
-&lt;td align="right"&gt;39.56&lt;/td&gt;
-&lt;td align="right"&gt;0.66&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2001&lt;/td&gt;
-&lt;td align="right"&gt;45.62&lt;/td&gt;
-&lt;td align="right"&gt;48.44&lt;/td&gt;
-&lt;td align="right"&gt;2.82&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2004&lt;/td&gt;
-&lt;td align="right"&gt;37.83&lt;/td&gt;
-&lt;td align="right"&gt;36.44&lt;/td&gt;
-&lt;td align="right"&gt;1.39&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2010&lt;/td&gt;
-&lt;td align="right"&gt;29.34&lt;/td&gt;
-&lt;td align="right"&gt;26.67&lt;/td&gt;
-&lt;td align="right"&gt;2.67&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2015&lt;/td&gt;
-&lt;td align="right"&gt;45.66&lt;/td&gt;
-&lt;td align="right"&gt;47.11&lt;/td&gt;
-&lt;td align="right"&gt;1.45&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;img alt="Vote/Seat Diff" src="https://janithl.github.io/images/vote-seat-diff.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vote Percentage vs Seat Percentage under different systems" src="https://janithl.github.io/images/votes-vs-seats-vs-system.png"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The number of valid votes increased from just under 2 million in 1947 to 11 million in 2015. 
-The troughs of 1989 and 2010 are also interesting, because these elections took place under
-extraordinary circumstances. In 1989, there was a &lt;a href="https://en.wikipedia.org/wiki/1987%E2%80%9389_JVP_insurrection"&gt;full-blown insurgency ravaging the south&lt;/a&gt;,
-and 2010 was the year after the &lt;a href="https://en.wikipedia.org/wiki/Eelam_War_IV"&gt;Sri Lankan Civil War&lt;/a&gt; was finally concluded. &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Valid Vote Growth" src="https://janithl.github.io/images/valid-votes.png"&gt;&lt;/p&gt;
-&lt;h2&gt;Swings&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="right"&gt;Election&lt;/th&gt;
-&lt;th align="right"&gt;Vote Swing&lt;/th&gt;
-&lt;th align="right"&gt;Seat Swing&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1952&lt;/td&gt;
-&lt;td align="right"&gt;4.27&lt;/td&gt;
-&lt;td align="right"&gt;12.63&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1956&lt;/td&gt;
-&lt;td align="right"&gt;-16.17&lt;/td&gt;
-&lt;td align="right"&gt;-48.42&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;March 1960&lt;/td&gt;
-&lt;td align="right"&gt;1.98&lt;/td&gt;
-&lt;td align="right"&gt;24.69&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;July 1960&lt;/td&gt;
-&lt;td align="right"&gt;7.30&lt;/td&gt;
-&lt;td align="right"&gt;-13.24&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1965&lt;/td&gt;
-&lt;td align="right"&gt;2.12&lt;/td&gt;
-&lt;td align="right"&gt;23.84&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1970&lt;/td&gt;
-&lt;td align="right"&gt;-1.40&lt;/td&gt;
-&lt;td align="right"&gt;-32.45&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1977&lt;/td&gt;
-&lt;td align="right"&gt;13.01&lt;/td&gt;
-&lt;td align="right"&gt;72.07&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1989&lt;/td&gt;
-&lt;td align="right"&gt;-0.21&lt;/td&gt;
-&lt;td align="right"&gt;-27.77&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;1994&lt;/td&gt;
-&lt;td align="right"&gt;-6.67&lt;/td&gt;
-&lt;td align="right"&gt;-13.78&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2000&lt;/td&gt;
-&lt;td align="right"&gt;-3.82&lt;/td&gt;
-&lt;td align="right"&gt;-2.22&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2001&lt;/td&gt;
-&lt;td align="right"&gt;5.40&lt;/td&gt;
-&lt;td align="right"&gt;8.88&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2004&lt;/td&gt;
-&lt;td align="right"&gt;-7.79&lt;/td&gt;
-&lt;td align="right"&gt;-12.00&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2010&lt;/td&gt;
-&lt;td align="right"&gt;-8.49&lt;/td&gt;
-&lt;td align="right"&gt;-9.77&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="right"&gt;2015&lt;/td&gt;
-&lt;td align="right"&gt;16.32&lt;/td&gt;
-&lt;td align="right"&gt;20.44&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;In terms of vote swing (the different in percentage votes between the current and last election), 
-the &lt;em&gt;'revolution'&lt;/em&gt; of 1956 was the UNP's biggest defeat, losing 16.17% of its previous vote share.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;After the poor showing of 2010, 2015 was (surprisingly) the UNP's biggest gain yet, with a 16.32% 
-increase. It edged out the 13.01% increase of 1977.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Vote Swing" src="https://janithl.github.io/images/vote-swing.png"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;In terms of seat swing (the different in percentage seats won between the current and last election), 
-1956 was again the biggest loss (-48.42%). The UNP went from the 54 seats won in 1952 to a mere 8.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;1977 was the biggest gain at 72.07%. The UNP went from having won 17 (of 151) seats in 1970, to 140 
-(of 168) seats - J. R.'s infamous 5/6th majority.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Seat Swing" src="https://janithl.github.io/images/seat-swing.png"&gt;&lt;/p&gt;
-&lt;h2&gt;Data Viz&lt;/h2&gt;
-&lt;p&gt;Making these graphs in &lt;a href="https://stanford.edu/~mwaskom/software/seaborn/"&gt;Seaborn&lt;/a&gt; took a helluva long time, mostly because I am incompetant. 
-See, I even managed to misspell &lt;em&gt;incompetent&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Here's the code for the vote/seat difference graph:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;mpl&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
-
-&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;unp.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;whitegrid&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Georgia&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;plot&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;barplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Election&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Diff&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;forestgreen&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_xticklabels&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-        &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_rotation&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;90&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And for the Vote Percentage graph:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;mpl&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
-
-&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;unp.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;50 Percent&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Valid Votes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Valid Votes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;100 Percent&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Valid Votes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Valid Votes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;whitegrid&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Georgia&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Initialize the matplotlib figure&lt;/span&gt;
-&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;barplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;100 Percent&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Election&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Valid Votes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;grey&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;barplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;50 Percent&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Election&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;50&lt;/span&gt;&lt;span class="si"&gt;% o&lt;/span&gt;&lt;span class="s2"&gt;f Valid Votes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;barplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;% Votes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Election&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Percetage of Votes Won&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;forestgreen&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Add a legend and informative axis label&lt;/span&gt;
-&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;legend&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ncol&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;upper right&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;frameon&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Election&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;UNP Share of Votes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;despine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;left&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bottom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And the vote and seat swing graphs:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;mpl&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
-
-&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;unp.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;whitegrid&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Georgia&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;swingVotes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;% Votes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;swingSeats&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;% Seats&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c1"&gt;# replace swingSeats with swingVotes for vote swing graph&lt;/span&gt;
-&lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;barplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Election&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;swingSeats&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;forestgreen&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The data I used is in &lt;a href="https://gist.github.com/janithl/ea79a2bd330e71f7a6ce6644927e152f"&gt;a publicly shared csv file&lt;/a&gt;. Consider everything MIT Licensed.&lt;/p&gt;
-&lt;script&gt;
-window.onload = function() {
-   $('table').addClass('table table-bordered table-condensed'); 
-}
-&lt;/script&gt;</content><category term="data"></category><category term="politics"></category></entry></feed>
+&lt;p&gt;Shot in the early morning light.&lt;/p&gt;</content><category term="travel"></category><category term="religion"></category></entry></feed>

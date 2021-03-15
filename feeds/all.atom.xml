@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-01-01T10:55:00+05:30</updated><entry><title>Some 2020 Stats</title><link href="https://janithl.github.io/2021/01/some-2020-stats/" rel="alternate"></link><published>2021-01-01T10:55:00+05:30</published><updated>2021-01-01T10:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-01-01:/2021/01/some-2020-stats/</id><summary type="html">&lt;p&gt;There no getting around the fact that 2020 was defined by the pandemic. With that
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-03-15T07:40:00+05:30</updated><entry><title>On the making of "Paramitha"</title><link href="https://janithl.github.io/2021/03/paramitha/" rel="alternate"></link><published>2021-03-15T07:40:00+05:30</published><updated>2021-03-15T07:40:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-03-15:/2021/03/paramitha/</id><summary type="html">&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/mX2w9W4xIc4"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;One week ago, on 7 March, I released my animated short &lt;em&gt;Paramitha&lt;/em&gt;.
+I stared working on it in early February and just as I expected
+it took ~4 weeks of work to finish. I used &lt;a href="https://krita.org/en/"&gt;Krita&lt;/a&gt; for the
+drawing and frame-by-frame animations, and &lt;a href="https://www.synfig.org"&gt;Synfig Studio&lt;/a&gt; for
+things like parallax.&lt;/p&gt;
+&lt;p&gt;The …&lt;/p&gt;</summary><content type="html">&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/mX2w9W4xIc4"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;One week ago, on 7 March, I released my animated short &lt;em&gt;Paramitha&lt;/em&gt;.
+I stared working on it in early February and just as I expected
+it took ~4 weeks of work to finish. I used &lt;a href="https://krita.org/en/"&gt;Krita&lt;/a&gt; for the
+drawing and frame-by-frame animations, and &lt;a href="https://www.synfig.org"&gt;Synfig Studio&lt;/a&gt; for
+things like parallax.&lt;/p&gt;
+&lt;p&gt;The story and setting were inspired by a random piece I did a
+while back (I think I just liked the background!)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Storyboard" src="https://janithl.github.io/images/poya-girl.jpg"&gt;&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;a href="https://www.instagram.com/p/CJZ5yHHhnqW/"&gt;Original Post on Instagram&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Storyboard and Animation&lt;/h3&gt;
+&lt;p&gt;I first started with a storyboard, and then animated it to get an
+idea of the timing and "beats":&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Storyboard" src="https://janithl.github.io/images/storyboard.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Very rough storyboard animation:&lt;/p&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/MI0XSQwvgjM"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I did a lot of rough renders to explore ideas and get a feel for my
+capabilities as an animator. This was my first short and I didn't want
+to bite off more than I could chew.&lt;/p&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/89_ar23BNUw"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The walk cycles were a major part of the animation. I do wish I could've
+spent a little bit more time on them, as they were animated on fours and
+would've looked much better if animated on twos.&lt;/p&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/eRpo2q4h6p0"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I deviated from the storyboard somewhat by adding two additional
+shots that were inspired by seeing how reflections were animated,
+and the idea of a "journey" was used in anime. So, the bus scene
+came into existence:&lt;/p&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/OYJzla1ju5I"
+frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;Sound&lt;/h3&gt;
+&lt;p&gt;Finally, in the final two days of production (a weekend) I worked on
+the sound design and making a theme. &lt;a href="https://www.audacityteam.org"&gt;Audacity&lt;/a&gt; was a great help during
+this. I wanted a female voice for the Buddhist chant (to fit the
+character), but running short of time and people I could ask, I created
+a chorus of voices chanting by recording it myself. For the theme, I
+created a very simple droning, Eastern-inspired guitar and bass piece
+in D major and C major.&lt;/p&gt;
+&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/994887208&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
+&lt;div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"&gt;&lt;a href="https://soundcloud.com/janith-leanage" title="Jan" target="_blank" style="color: #cccccc; text-decoration: none;"&gt;Jan&lt;/a&gt; · &lt;a href="https://soundcloud.com/janith-leanage/paramitha-theme" title="&amp;quot;පාරමිතා&amp;quot; තේමා ගීතය | &amp;quot;Paramitha&amp;quot; Theme" target="_blank" style="color: #cccccc; text-decoration: none;"&gt;&amp;quot;පාරමිතා&amp;quot; තේමා ගීතය | &amp;quot;Paramitha&amp;quot; Theme&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;And that's how it was done. Given how it was my first time making
+something, and the fact that I had to learn so much on the job, I'm
+very happy with how it turned out. The film and music are released
+under a Creative Commons Attribution-ShareAlike 4.0 license
+(CC BY-SA 4.0), so everyone can use and build up on it!&lt;/p&gt;</content><category term="design"></category><category term="films"></category><category term="music"></category></entry><entry><title>Some 2020 Stats</title><link href="https://janithl.github.io/2021/01/some-2020-stats/" rel="alternate"></link><published>2021-01-01T10:55:00+05:30</published><updated>2021-01-01T10:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-01-01:/2021/01/some-2020-stats/</id><summary type="html">&lt;p&gt;There no getting around the fact that 2020 was defined by the pandemic. With that
 in mind, some personal stats:&lt;/p&gt;
 &lt;h3&gt;Transport&lt;/h3&gt;
 &lt;p&gt;In 2018, I took 556 bus rides. &lt;a href="https://janithl.github.io/2020/01/some-2019-stats/"&gt;In 2019, I took 265.&lt;/a&gt;&lt;/p&gt;
@@ -1708,149 +1771,4 @@ that change for different reasons.&lt;/p&gt;
 &lt;p&gt;This series of posts is dedicated to &lt;a href="https://www.linkedin.com/in/mahasenbandara/"&gt;Mr. Mahasen Bandara&lt;/a&gt;, architect extraordinaire,
 from whom I had the priviledge of learning about Robert C. Martin and architectural
 boundaries and a ton of other architectural and programming practicies.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/janithl/react-clean-arch"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category><category term="design"></category><category term="js and ts"></category><category term="react"></category><category term="work"></category></entry><entry><title>My take on doing 'Clean Architecture' in React (Part 1)</title><link href="https://janithl.github.io/2019/10/react-clean-architecture-part-1/" rel="alternate"></link><published>2019-10-06T19:10:00+05:30</published><updated>2019-10-06T19:10:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-10-06:/2019/10/react-clean-architecture-part-1/</id><summary type="html">&lt;p&gt;&lt;img alt="Clean Architecture" src="https://janithl.github.io/images/clean-arch-diagram.png"&gt;&lt;/p&gt;
-&lt;p class="text-center"&gt;Clean Architecture, simplified.&lt;/p&gt;
-
-&lt;p&gt;I'm a huge fan of Robert C. Martin's work in general, and &lt;a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean Architecture&lt;/a&gt; in
-particular. I'm frequently on the lookout for how to apply it to the different system
-architectures and frameworks we work with.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Which modules should be decoupled? I think the rule is similar …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Clean Architecture" src="https://janithl.github.io/images/clean-arch-diagram.png"&gt;&lt;/p&gt;
-&lt;p class="text-center"&gt;Clean Architecture, simplified.&lt;/p&gt;
-
-&lt;p&gt;I'm a huge fan of Robert C. Martin's work in general, and &lt;a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean Architecture&lt;/a&gt; in
-particular. I'm frequently on the lookout for how to apply it to the different system
-architectures and frameworks we work with.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Which modules should be decoupled? I think the rule is similar to the previous
-rule: &lt;em&gt;Any module that changes frequently should be decoupled from the rest of the
-system.&lt;/em&gt; — Uncle Bob&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;It's a damn shame that most of the code we are told to write in guides and documentation
-(often written by people who are heavily invested in the framework that the docs are
-about) are very tightly coupled to the framework, libraries, and persistence implementation
-(as well as the REST APIs that are called—how many of us have had to do system-wide
-changes because the response object from the API changed?)&lt;/p&gt;
-&lt;p&gt;Today, in part 1 of a 2 part series, I'll write a bit about what I think is a good way
-to implement Clean Architecture in React JS and React Native apps&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;h3&gt;Why?&lt;/h3&gt;
-&lt;p&gt;The advantages of switching to Clean Architecture are &lt;a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;listed out in detail on Uncle Bob's
-blog&lt;/a&gt;, but I am going for three main objectives with regards to having this architecture
-on our React app:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Make the Core 100% testable:&lt;/strong&gt; All external dependencies (the UI, local storage,
-   REST APIs etc) can be mocked out.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Portability:&lt;/strong&gt; If we need to port the app to Vue JS tomorrow, the core can still
-   be put there wholesale. We can also explore sharing the core between the frontend and
-   backend (if your backend is written in Node or something).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Prevent 'Change Propagation':&lt;/strong&gt; If the REST API's response object changes, or we
-   change the caching mechanism, or any such change happens upstream of the final consumer
-   (the UI), those changes should not cause changes downstream.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Keep in mind that one of the most important fundamentals of Clean Architecture is to
-recognise where your architectural boundaries are, and to ensure that calls across those
-boundaries are done using well defined interfaces and contracts. The response object
-changing does not change the contract, since the core sets the contract and the code that
-calls the API and parses its responses merely implements it. Your DTO is changing? It's
-up to the API component to massage that into the existing domain entity, sorry.&lt;/p&gt;
-&lt;h3&gt;Standard React async call architecture&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Standard React architecture" src="https://janithl.github.io/images/basic-react-arch.png"&gt;&lt;/p&gt;
-&lt;p&gt;Okay, so this a very standard and common pattern when writing the most common kind of
-interface, i.e. call an API, display some data in a component. You could be using Redux
-for state, or React hooks, or component state, but this diagram barely changes because
-in essence the user performs an action, which results in an API call, which updates the
-state and hence the UI.&lt;/p&gt;
-&lt;p&gt;Your component code would look something like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;const ItemList = ({ items, refreshList }) =&amp;gt; (
-  &amp;lt;div&amp;gt;
-    &amp;lt;button onClick={refreshList}&amp;gt;Refresh&amp;lt;/button&amp;gt;
-    &amp;lt;ul&amp;gt;
-      {items.map(item =&amp;gt; (
-        &amp;lt;li key={item.id}&amp;gt;{item.name}&amp;lt;/li&amp;gt;
-      ))}
-    &amp;lt;/ul&amp;gt;
-  &amp;lt;/div&amp;gt;
-);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;It'll be hooked up to Redux using something like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;mapStateToProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
-  &lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;items&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-
-&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;mapDispatchToProps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
-  &lt;span class="nx"&gt;refreshList&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;refreshList&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-
-&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="nx"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;mapStateToProps&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;mapDispatchToProps&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="nx"&gt;ItemList&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And I'd guess your Thunk (or Saga) would look a bit like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;refreshList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;LIST_LOAD_REQUEST&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-
-  &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;https://your.api/listdata&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;jsonData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;LIST_LOAD_SUCCESS&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;payload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;jsonData&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;dispatch&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;LIST_LOAD_FAILURE&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;error&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Pretty simple and familiar, right?&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Let's break it&lt;/em&gt; 😈&lt;/p&gt;
-&lt;h3&gt;Identifying boundaries&lt;/h3&gt;
-&lt;p&gt;Now, I would like to start off by saying it would be unwise to try to break React
-and whatever state management solution you use using Clean Architecture. Yes, it's
-good to keep them isolated but I'd suggest using React patterns such as presentational
-components and containers to do that—this is because Redux and the ilk are tightly
-tied to React's Context API, and it would be a massive hassle to handle all that
-complexity and coupling in our core. So let's keep it out.&lt;/p&gt;
-&lt;p&gt;I'm thinking of having 3 major components:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;UI:&lt;/strong&gt; This is in Infrastructure, and is basically React + Redux&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Network and Persistence:&lt;/strong&gt; Also in Infrastructure. I am thinking of hiding the
-   API complexity behind a repository interface, and to implement local storage for
-   caching if necessary inside this repo implementation itself.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Application Core:&lt;/strong&gt; This is in the Use Case and Entity layers, and is where the
-   magical business logic et al. happens.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The component diagram, in my head, looks a bit like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="React with Clean Architecture" src="https://janithl.github.io/images/clean-react-arch-1.png"&gt;&lt;/p&gt;
-&lt;p&gt;But wait, where's are we calling the API and getting the data for items? We need to
-include an &lt;code&gt;ItemRepository&lt;/code&gt; interface, and an implementation for it.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="React with Clean Architecture, updated" src="https://janithl.github.io/images/clean-react-arch-2.png"&gt;&lt;/p&gt;
-&lt;p&gt;This is one of the coolest things about &lt;a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle"&gt;Dependency Inversion&lt;/a&gt;, in that all the
-arrows are flowing inwards. In this case, &lt;code&gt;ItemService&lt;/code&gt; depends on the interface
-&lt;code&gt;ItemRepository&lt;/code&gt;—which is in the Entity layer—and not on its concrete implementation
-which is on a lower layer and will only be injected during runtime. This has several
-benefits, &lt;a href="https://janithl.github.io/2019/10/react-clean-architecture-part-2/"&gt;which we'll explore in the next part&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The overriding rule that makes this architecture work is The Dependency Rule. This
-rule says that source code dependencies can only point inwards. Nothing in an inner
-circle can know anything at all about something in an outer circle. In particular,
-the name of something declared in an outer circle must not be mentioned by the code
-in the an inner circle. That includes, functions, classes. variables, or any other
-named software entity.&lt;/p&gt;
-&lt;p&gt;By the same token, data formats used in an outer circle should not be used by an inner
-circle, especially if those formats are generate by a framework in an outer circle. We
-don’t want anything in an outer circle to impact the inner circles.&lt;/p&gt;
-&lt;p&gt;— Uncle Bob&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://github.com/janithl/react-clean-arch/tree/6224ee5f77b1398c41163ffedc78faf786962cc1"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;div class="footnote"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;With or without Redux (or Redux-like) state management&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</content><category term="code"></category><category term="design"></category><category term="js and ts"></category><category term="react"></category><category term="work"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://github.com/janithl/react-clean-arch"&gt;&lt;strong&gt;The full code for this part can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="code"></category><category term="design"></category><category term="js and ts"></category><category term="react"></category><category term="work"></category></entry></feed>
