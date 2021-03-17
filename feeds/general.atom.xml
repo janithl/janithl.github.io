@@ -47,10 +47,17 @@ came into existence:&lt;/p&gt;
 &lt;iframe width="640" height="360" src="https://www.youtube.com/embed/OYJzla1ju5I"
 frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
+&lt;h3&gt;Parallax&lt;/h3&gt;
+&lt;p&gt;For parallax shots, which I employed a lot, the scene would broken
+down into multiple semi-transparent layers in Krita and exported as
+PNGs, which I would then animate in Synfig Studio. This allowed me
+to make the layers closer to the camera move faster, giving the
+illusion of depth in a scene.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Parallax" src="https://janithl.github.io/images/parallax.jpg"&gt;&lt;/p&gt;
 &lt;h3&gt;Sound&lt;/h3&gt;
 &lt;p&gt;Finally, in the final two days of production (a weekend) I worked on
-the sound design and making a theme. &lt;a href="https://www.audacityteam.org"&gt;Audacity&lt;/a&gt; was a great help during
-this. I wanted a female voice for the Buddhist chant (to fit the
+the sound design and making a theme. &lt;a href="https://www.audacityteam.org"&gt;Audacity&lt;/a&gt; was a great help
+during this. I wanted a female voice for the Buddhist chant (to fit the
 character), but running short of time and people I could ask, I created
 a chorus of voices chanting by recording it myself. For the theme, I
 created a very simple droning, Eastern-inspired guitar and bass piece
@@ -58,11 +65,15 @@ in D major and C major.&lt;/p&gt;
 &lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/994887208&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
 &lt;div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"&gt;&lt;a href="https://soundcloud.com/janith-leanage" title="Jan" target="_blank" style="color: #cccccc; text-decoration: none;"&gt;Jan&lt;/a&gt; · &lt;a href="https://soundcloud.com/janith-leanage/paramitha-theme" title="&amp;quot;පාරමිතා&amp;quot; තේමා ගීතය | &amp;quot;Paramitha&amp;quot; Theme" target="_blank" style="color: #cccccc; text-decoration: none;"&gt;&amp;quot;පාරමිතා&amp;quot; තේමා ගීතය | &amp;quot;Paramitha&amp;quot; Theme&lt;/a&gt;&lt;/div&gt;
 
+&lt;p&gt;For the bird sounds, which added a lot of ambiance, I used two recordings:
+&lt;a href="https://en.wikipedia.org/wiki/File:Psittacula_krameri_-_Rose-ringed_Parakeet_XC474519.mp3"&gt;a recording of Rose-ringed Parakeet sounds by Marie-Lan Taÿ Pamart&lt;/a&gt;,
+and &lt;a href="https://en.wikipedia.org/wiki/File:CommonMynaCalls.ogg"&gt;a recording of Common Mynas by L. Shyamal&lt;/a&gt;. Both these birds are
+commonly found in Sri Lanka.&lt;/p&gt;
 &lt;p&gt;And that's how it was done. Given how it was my first time making
 something, and the fact that I had to learn so much on the job, I'm
 very happy with how it turned out. The film and music are released
-under a Creative Commons Attribution-ShareAlike 4.0 license
-(CC BY-SA 4.0), so everyone can use and build up on it!&lt;/p&gt;</content><category term="design"></category><category term="films"></category><category term="music"></category></entry><entry><title>Pizza Dough: What I've Learned</title><link href="https://janithl.github.io/2020/12/pizza-dough-what-ive-learned/" rel="alternate"></link><published>2020-12-31T10:05:00+05:30</published><updated>2020-12-31T10:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-12-31:/2020/12/pizza-dough-what-ive-learned/</id><summary type="html">&lt;p&gt;Watching the &lt;a href="https://www.youtube.com/watch?v=SDpCzJw2xm4"&gt;Adam Ragusea New York-style pizza dough recipe&lt;/a&gt; inspired me to make
+under a &lt;a href="https://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 license
+(CC BY-SA 4.0)&lt;/a&gt;, so everyone can use and build up on it!&lt;/p&gt;</content><category term="design"></category><category term="films"></category><category term="music"></category></entry><entry><title>Pizza Dough: What I've Learned</title><link href="https://janithl.github.io/2020/12/pizza-dough-what-ive-learned/" rel="alternate"></link><published>2020-12-31T10:05:00+05:30</published><updated>2020-12-31T10:05:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-12-31:/2020/12/pizza-dough-what-ive-learned/</id><summary type="html">&lt;p&gt;Watching the &lt;a href="https://www.youtube.com/watch?v=SDpCzJw2xm4"&gt;Adam Ragusea New York-style pizza dough recipe&lt;/a&gt; inspired me to make
 pizza at home, something that I never thought I was capable of. Now, about 3 batches
 of pizza later, I think I’ve got most of the big details sorted out. Credit also to
 &lt;a href="https://www.youtube.com/watch?v=J_3v7DEkjsk"&gt;Andrew Rea for …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Watching the &lt;a href="https://www.youtube.com/watch?v=SDpCzJw2xm4"&gt;Adam Ragusea New York-style pizza dough recipe&lt;/a&gt; inspired me to make
