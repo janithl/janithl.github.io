@@ -3,7 +3,7 @@ Date: 2021-07-16 23:05
 Category: Personal
 Tags: people, biology, religion
 
-I am alive and... _well?_ I don’t know much about quantifying wellness,
+I am alive and... _well?_ I don’t know much about quantifying wellness—
 but in the age of a pandemic—I feel lucky to be healthy. There hasn’t
 been much activity in this blog, not just because I have been busy (work
 really took over life in quarantine), but because I have had a lot to
