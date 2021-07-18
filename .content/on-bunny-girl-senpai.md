@@ -2,6 +2,7 @@ Title: On Bunny Girl Senpai
 Date: 2021-07-18 23:35
 Category: Personal
 Tags: people, biology, films
+Subtitle: This is not a review. *stomps on foot*
 
 This weekend, I did something I had never done before: binge an
 [entire 13-episode anime][1] AND [its movie][2]. I usually like to
