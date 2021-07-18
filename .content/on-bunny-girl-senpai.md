@@ -36,8 +36,7 @@ and rearrangements!
 So, anyway, my point (if there is any) is that in addition to having anxiety
 about your future life and career, you can also have endless fun thinking
 about all the ways the past could’ve been different too. Just get creative
-with it, and I promise you a never-ending supply of nights where you have
-trouble sleeping!
+with it, and I promise you a never-ending supply of sleepless nights!
 
 [1]: https://en.wikipedia.org/wiki/Rascal_Does_Not_Dream_of_Bunny_Girl_Senpai#Anime
 [2]: https://en.wikipedia.org/wiki/Rascal_Does_Not_Dream_of_a_Dreaming_Girl
