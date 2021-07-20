@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-07-18T23:35:00+05:30</updated><entry><title>On Bunny Girl Senpai</title><link href="https://janithl.github.io/2021/07/on-bunny-girl-senpai/" rel="alternate"></link><published>2021-07-18T23:35:00+05:30</published><updated>2021-07-18T23:35:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-18:/2021/07/on-bunny-girl-senpai/</id><summary type="html">&lt;p&gt;This weekend, I did something I had never done before: binge an
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-07-20T08:48:00+05:30</updated><entry><title>useMemo vs useEffect and useState</title><link href="https://janithl.github.io/2021/07/usememo-vs-useeffect-and-usestate/" rel="alternate"></link><published>2021-07-20T08:48:00+05:30</published><updated>2021-07-20T08:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-20:/2021/07/usememo-vs-useeffect-and-usestate/</id><summary type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
+anti-patterns that have popped up. To be fair, these existed before
+hooks as well, but in different forms. The use of derived props is
+one of the most pervasive of these. As the React blog pointed out
+way …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
+anti-patterns that have popped up. To be fair, these existed before
+hooks as well, but in different forms. The use of derived props is
+one of the most pervasive of these. As the React blog pointed out
+way back in 2018, &lt;a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html"&gt;&lt;em&gt;"You Probably Don't Need Derived State"&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In a hooks-based application, it may look something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;MyComponent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;initialValue&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;setValue&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;useState&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;useEffect&lt;/span&gt;&lt;span class="p"&gt;(()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;derivedValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;expensiveTransform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="nx"&gt;setValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;derivedValue&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There are two derivations of this, one where the value is updated by
+the user inside the component, and another where this &lt;code&gt;value&lt;/code&gt; is used
+but not updated.&lt;/p&gt;
+&lt;p&gt;For the first type, consider how any update of &lt;code&gt;initialValue&lt;/code&gt; will
+overwrite the changes made by the user in the state. Do you really
+want this to happen? The blog post I linked to above lays out a few
+alternatives.&lt;/p&gt;
+&lt;p&gt;For the second type, there is &lt;strong&gt;no need&lt;/strong&gt; to put things in state anyway
+if you don't plan on updating it. You can simply assign it to a constant:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;MyComponent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;initialValue&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;derivedValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;expensiveTransform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or, if you're worried about the &lt;code&gt;expensiveTransform()&lt;/code&gt; and wish to avoid
+unnecessarily calling it, you can use memoization:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;MyComponent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;initialValue&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;derivedValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;useMemo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;expensiveTransform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Simple, and saves you the trouble of dealing with unnecessary state.&lt;/p&gt;</content><category term="code"></category><category term="js and ts"></category><category term="react"></category></entry><entry><title>On Bunny Girl Senpai</title><link href="https://janithl.github.io/2021/07/on-bunny-girl-senpai/" rel="alternate"></link><published>2021-07-18T23:35:00+05:30</published><updated>2021-07-18T23:35:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-18:/2021/07/on-bunny-girl-senpai/</id><summary type="html">&lt;p&gt;This weekend, I did something I had never done before: binge an
 &lt;a href="https://en.wikipedia.org/wiki/Rascal_Does_Not_Dream_of_Bunny_Girl_Senpai#Anime"&gt;entire 13-episode anime&lt;/a&gt; AND &lt;a href="https://en.wikipedia.org/wiki/Rascal_Does_Not_Dream_of_a_Dreaming_Girl"&gt;its movie&lt;/a&gt;. I usually like to
 consume media at a much slower pace and sit with what I’ve just
 watched in an episode, but two things colluded in this case to make
@@ -137,7 +184,44 @@ commonly found in Sri Lanka.&lt;/p&gt;
 something, and the fact that I had to learn so much on the job, I'm
 very happy with how it turned out. The film and music are released
 under a &lt;a href="https://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 license
-(CC BY-SA 4.0)&lt;/a&gt;, so everyone can use and build up on it!&lt;/p&gt;</content><category term="design"></category><category term="films"></category><category term="music"></category></entry><entry><title>Some 2020 Stats</title><link href="https://janithl.github.io/2021/01/some-2020-stats/" rel="alternate"></link><published>2021-01-01T10:55:00+05:30</published><updated>2021-01-01T10:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-01-01:/2021/01/some-2020-stats/</id><summary type="html">&lt;p&gt;There no getting around the fact that 2020 was defined by the pandemic. With that
+(CC BY-SA 4.0)&lt;/a&gt;, so everyone can use and build up on it!&lt;/p&gt;</content><category term="design"></category><category term="films"></category><category term="music"></category></entry><entry><title>Better Halved</title><link href="https://janithl.github.io/2021/01/better-halved/" rel="alternate"></link><published>2021-01-28T18:30:00+05:30</published><updated>2021-01-28T18:30:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-01-28:/2021/01/better-halved/</id><summary type="html">&lt;p&gt;Sometimes&lt;/p&gt;
+&lt;p&gt;I wonder if I am&lt;/p&gt;
+&lt;p&gt;A shard of glass&lt;/p&gt;
+&lt;p&gt;Safely disposed&lt;/p&gt;
+&lt;p&gt;Away from any exposed flesh&lt;/p&gt;
+&lt;p&gt;A burning ember separated&lt;/p&gt;
+&lt;p&gt;From dry cotton&lt;/p&gt;
+&lt;p&gt;It wishes it gets to know&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A little too intimately&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For a fleeting second&lt;/p&gt;
+&lt;p&gt;A malignant tumour&lt;/p&gt;
+&lt;p&gt;Discovered early&lt;/p&gt;
+&lt;p&gt;Before it could cut short&lt;/p&gt;
+&lt;p&gt;A mother's …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes&lt;/p&gt;
+&lt;p&gt;I wonder if I am&lt;/p&gt;
+&lt;p&gt;A shard of glass&lt;/p&gt;
+&lt;p&gt;Safely disposed&lt;/p&gt;
+&lt;p&gt;Away from any exposed flesh&lt;/p&gt;
+&lt;p&gt;A burning ember separated&lt;/p&gt;
+&lt;p&gt;From dry cotton&lt;/p&gt;
+&lt;p&gt;It wishes it gets to know&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A little too intimately&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For a fleeting second&lt;/p&gt;
+&lt;p&gt;A malignant tumour&lt;/p&gt;
+&lt;p&gt;Discovered early&lt;/p&gt;
+&lt;p&gt;Before it could cut short&lt;/p&gt;
+&lt;p&gt;A mother's warmth&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Is feeling a little incomplete&lt;/p&gt;
+&lt;p&gt;Really that bad&lt;/p&gt;
+&lt;p&gt;Is it such a tragedy&lt;/p&gt;
+&lt;p&gt;To wander the Earth yearning&lt;/p&gt;
+&lt;p&gt;For your missing half&lt;/p&gt;
+&lt;p&gt;To complete you&lt;/p&gt;
+&lt;p&gt;To complete what?&lt;/p&gt;
+&lt;p&gt;Maybe the little sadnesses&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sometimes&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Are a bit deserved&lt;/p&gt;</content><category term="biology"></category><category term="people"></category></entry><entry><title>Some 2020 Stats</title><link href="https://janithl.github.io/2021/01/some-2020-stats/" rel="alternate"></link><published>2021-01-01T10:55:00+05:30</published><updated>2021-01-01T10:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-01-01:/2021/01/some-2020-stats/</id><summary type="html">&lt;p&gt;There no getting around the fact that 2020 was defined by the pandemic. With that
 in mind, some personal stats:&lt;/p&gt;
 &lt;h3&gt;Transport&lt;/h3&gt;
 &lt;p&gt;In 2018, I took 556 bus rides. &lt;a href="https://janithl.github.io/2020/01/some-2019-stats/"&gt;In 2019, I took 265.&lt;/a&gt;&lt;/p&gt;
@@ -1570,75 +1654,4 @@ attacker know your specific version will open you up to attacks.&amp;#160;&lt;a 
 &lt;p&gt;This piece of info is interesting in a site speed/debugging context.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="code"></category><category term="golang"></category></entry><entry><title>Shouting Into The Void</title><link href="https://janithl.github.io/2019/12/shouting-into-the-void/" rel="alternate"></link><published>2019-12-09T08:30:00+05:30</published><updated>2019-12-09T08:30:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-09:/2019/12/shouting-into-the-void/</id><summary type="html">&lt;p&gt;&lt;img alt="Clouds" src="https://janithl.github.io/images/clouds.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;Nobody reads this blog&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;. RSS readers are dead, &lt;a href="http://my.statcounter.com/project/standard/stats.php?project_id=610934&amp;amp;guest=1"&gt;Kottu's stats page&lt;/a&gt;
-makes me weep, and I don't dare post these things on social media.
-So that leaves me at my most comfortable—a good old conversation
-with myself.&lt;/p&gt;
-&lt;p&gt;There is beauty in solitude. You only truly begin to appreciate …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Clouds" src="https://janithl.github.io/images/clouds.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;Nobody reads this blog&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;. RSS readers are dead, &lt;a href="http://my.statcounter.com/project/standard/stats.php?project_id=610934&amp;amp;guest=1"&gt;Kottu's stats page&lt;/a&gt;
-makes me weep, and I don't dare post these things on social media.
-So that leaves me at my most comfortable—a good old conversation
-with myself.&lt;/p&gt;
-&lt;p&gt;There is beauty in solitude. You only truly begin to appreciate it
-as you get older. At long last you feel validated that the things
-you felt growing up as a shy and introverted only-child have real
-world applications!&lt;/p&gt;
-&lt;p&gt;Society doesn't feel this way about solitude. It sees the uncoupled
-male as some sort of threat that has to be neutralised at all cost.
-The same relatives who threatened to box your ears if you so much
-as looked in the direction of the opposite sex now expect you to bed
-a complete stranger. South Asian families are whack.&lt;/p&gt;
-&lt;p&gt;Anyway, it's just so very amazing to be on your own and really
-appreciate it. Like how you appreciate your head ceasing to spin
-after a really heavy night of drinking. You just sit there being
-thankful for the ordinary, the sober. And that's beautiful, isn't it?&lt;/p&gt;
-&lt;div class="footnote"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;And that's a good thing!&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</content><category term="biology"></category><category term="people"></category></entry><entry><title>Going Digital</title><link href="https://janithl.github.io/2019/11/going-digital/" rel="alternate"></link><published>2019-11-30T20:45:00+05:30</published><updated>2019-11-30T20:45:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-11-30:/2019/11/going-digital/</id><summary type="html">&lt;p&gt;I've been eyeing a graphics tablet for a while now, and on 11.11 there was this gorgeous
-&lt;a href="https://www.youtube.com/watch?v=JKcSVBTD2a4"&gt;Gaomon S620&lt;/a&gt; for just $22 (!!!) on AliExpress, an offer I simply couldn't refuse.
-Well, the tab arrived in the mail today, and I want to share some of my experiments on
-my …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've been eyeing a graphics tablet for a while now, and on 11.11 there was this gorgeous
-&lt;a href="https://www.youtube.com/watch?v=JKcSVBTD2a4"&gt;Gaomon S620&lt;/a&gt; for just $22 (!!!) on AliExpress, an offer I simply couldn't refuse.
-Well, the tab arrived in the mail today, and I want to share some of my experiments on
-my first day of digital art!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="First Drawing" src="https://janithl.github.io/images/sketches/digital-1.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Second Drawing" src="https://janithl.github.io/images/sketches/digital-2.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;The first few attempts (above) were predictably terrible, but I began realising that my
-usual &lt;a href="https://janithl.github.io/2019/11/ive-been-sketching/"&gt;sketching&lt;/a&gt; and watercolouring techniques weren't the best match for the medium,
-because digital was something else entirely! As I told Dili, "it's like working with clay,
-I can mould this shit all day". And that was my lightbulb moment, the fact that I can
-mould the light and shadows to create shapes.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Digital Drawing" src="https://janithl.github.io/images/sketches/digital-3.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Digital Drawing" src="https://janithl.github.io/images/sketches/digital-4.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;It's been a lot of fun, and this next piece took only 45 minutes. Having an undo button,
-an eraser, and all the brushes in the world&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; is definitely expanding the possibilities
-for my limited artistic ability. It's like giving FL Studio to a kid who wants to write
-music but can't play an instrument&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Digital Drawing" src="https://janithl.github.io/images/sketches/digital-5.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; After a few more days (actually 3 days, because of travel) of playing with the
-tablet, I'm happy to share two more #sadppls (as I used to call them). Say hello to
-&lt;em&gt;Orange Guy&lt;/em&gt; and &lt;em&gt;Fail Girl&lt;/em&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Orange Guy" src="https://janithl.github.io/images/sketches/orange-guy.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Fail Girl" src="https://janithl.github.io/images/sketches/fail-girl.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update 2:&lt;/strong&gt; And my proudest moment yet&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt;, our TimTams:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Thimal" src="https://janithl.github.io/images/sketches/timtam.jpg"&gt;&lt;/p&gt;
-&lt;div class="footnote"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;Shout-out to &lt;a href="https://firealpaca.com"&gt;FireAlpaca&lt;/a&gt;, the awesome free editor I've been using to draw these.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn:2"&gt;
-&lt;p&gt;AKA me when I was 14!&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn:3"&gt;
-&lt;p&gt;Because he's so damn difficult to draw correctly, I swear!&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</content><category term="design"></category><category term="people"></category></entry></feed>
+&lt;/div&gt;</content><category term="code"></category><category term="golang"></category></entry></feed>

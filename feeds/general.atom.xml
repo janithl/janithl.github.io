@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-03-15T07:40:00+05:30</updated><entry><title>On the making of "Paramitha"</title><link href="https://janithl.github.io/2021/03/paramitha/" rel="alternate"></link><published>2021-03-15T07:40:00+05:30</published><updated>2021-03-15T07:40:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-03-15:/2021/03/paramitha/</id><summary type="html">&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/mX2w9W4xIc4"
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-07-20T08:48:00+05:30</updated><entry><title>useMemo vs useEffect and useState</title><link href="https://janithl.github.io/2021/07/usememo-vs-useeffect-and-usestate/" rel="alternate"></link><published>2021-07-20T08:48:00+05:30</published><updated>2021-07-20T08:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-20:/2021/07/usememo-vs-useeffect-and-usestate/</id><summary type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
+anti-patterns that have popped up. To be fair, these existed before
+hooks as well, but in different forms. The use of derived props is
+one of the most pervasive of these. As the React blog pointed out
+way …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
+anti-patterns that have popped up. To be fair, these existed before
+hooks as well, but in different forms. The use of derived props is
+one of the most pervasive of these. As the React blog pointed out
+way back in 2018, &lt;a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html"&gt;&lt;em&gt;"You Probably Don't Need Derived State"&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In a hooks-based application, it may look something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;MyComponent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;initialValue&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;setValue&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;useState&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="nx"&gt;useEffect&lt;/span&gt;&lt;span class="p"&gt;(()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;derivedValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;expensiveTransform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="nx"&gt;setValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;derivedValue&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There are two derivations of this, one where the value is updated by
+the user inside the component, and another where this &lt;code&gt;value&lt;/code&gt; is used
+but not updated.&lt;/p&gt;
+&lt;p&gt;For the first type, consider how any update of &lt;code&gt;initialValue&lt;/code&gt; will
+overwrite the changes made by the user in the state. Do you really
+want this to happen? The blog post I linked to above lays out a few
+alternatives.&lt;/p&gt;
+&lt;p&gt;For the second type, there is &lt;strong&gt;no need&lt;/strong&gt; to put things in state anyway
+if you don't plan on updating it. You can simply assign it to a constant:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;MyComponent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;initialValue&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;derivedValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;expensiveTransform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or, if you're worried about the &lt;code&gt;expensiveTransform()&lt;/code&gt; and wish to avoid
+unnecessarily calling it, you can use memoization:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;MyComponent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;initialValue&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;derivedValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;useMemo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;expensiveTransform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Simple, and saves you the trouble of dealing with unnecessary state.&lt;/p&gt;</content><category term="code"></category><category term="js and ts"></category><category term="react"></category></entry><entry><title>On the making of "Paramitha"</title><link href="https://janithl.github.io/2021/03/paramitha/" rel="alternate"></link><published>2021-03-15T07:40:00+05:30</published><updated>2021-03-15T07:40:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-03-15:/2021/03/paramitha/</id><summary type="html">&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/mX2w9W4xIc4"
 frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;One week ago, on 7 March, I released my animated short &lt;em&gt;Paramitha&lt;/em&gt;.
@@ -2260,6 +2307,4 @@ managers and employees. So do yourself a favour and go read!&lt;/p&gt;</content>
 &lt;p&gt;&lt;strong&gt;තව තොරතුරු තියෙනවද?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;මූනියක් සමූහයේ &lt;a href="http://blog.mooniak.com/"&gt;බ්ලොග් අඩවිය&lt;/a&gt; සහ &lt;a href="https://github.com/mooniak/"&gt;ගිට්හබ් පිටුව&lt;/a&gt; කියවල බලන්නකො. ලංකාවෙ
 දැනට අකුරු මුහුණත් ක්‍ෂේත්‍රයේ අළුත් දෙයක් කරන නිර්මාණශීලී යොවුන් පිරිසක් විදිහට මොවුන්ව 
-හඳුන්වන්න පුළුවන්.&lt;/p&gt;</content><category term="sinhala"></category><category term="design"></category></entry><entry><title>Somawathiya, September 2016</title><link href="https://janithl.github.io/2016/09/somawathiya-september-2016/" rel="alternate"></link><published>2016-09-19T12:16:00+05:30</published><updated>2016-09-19T12:16:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2016-09-19:/2016/09/somawathiya-september-2016/</id><summary type="html">&lt;p&gt;&lt;img alt="Somawathiya" src="https://janithl.github.io/images/somawathiya.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;Shot in the early morning light.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Somawathiya" src="https://janithl.github.io/images/somawathiya.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;Shot in the early morning light.&lt;/p&gt;</content><category term="travel"></category><category term="religion"></category></entry></feed>
+හඳුන්වන්න පුළුවන්.&lt;/p&gt;</content><category term="sinhala"></category><category term="design"></category></entry></feed>
