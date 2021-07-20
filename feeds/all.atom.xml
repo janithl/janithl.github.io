@@ -20,17 +20,17 @@ way back in 2018, &lt;a href="https://reactjs.org/blog/2018/06/07/you-probably-d
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;There are two varieties of this: one where the value is updated by
-the user inside the component, and another where this &lt;code&gt;value&lt;/code&gt; is used
-but not updated.&lt;/p&gt;
+&lt;p&gt;There are two varieties of this: one where &lt;code&gt;value&lt;/code&gt; is updated by the
+user inside the component, and another where &lt;code&gt;value&lt;/code&gt; is used but not
+updated.&lt;/p&gt;
 &lt;p&gt;For the first type, consider how any update of &lt;code&gt;initialValue&lt;/code&gt; will
 overwrite the changes made by the user in the state. Do you really
-want this to happen? The blog post I linked to above lays out a few
+want this to happen? &lt;a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html"&gt;The blog post I linked above&lt;/a&gt; lays out a few
 alternatives.&lt;/p&gt;
 &lt;p&gt;For the second type, there is &lt;strong&gt;no need&lt;/strong&gt; to put things in state anyway
 if you don't plan on updating it. You can simply assign it to a constant:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;MyComponent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;initialValue&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;derivedValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;expensiveTransform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;expensiveTransform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="p"&gt;...&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -38,7 +38,7 @@ if you don't plan on updating it. You can simply assign it to a constant:&lt;/p&
 &lt;p&gt;Or, if you're worried about the &lt;code&gt;expensiveTransform()&lt;/code&gt; and wish to avoid
 unnecessarily calling it, you can use memoization:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;MyComponent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;initialValue&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;derivedValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;useMemo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;useMemo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
         &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;expensiveTransform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
         &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;initialValue&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
     &lt;span class="p"&gt;);&lt;/span&gt;

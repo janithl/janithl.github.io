@@ -23,13 +23,13 @@ const MyComponent = ({ initialValue }) => {
 }
 ```
 
-There are two varieties of this: one where the value is updated by
-the user inside the component, and another where this `value` is used
-but not updated.
+There are two varieties of this: one where `value` is updated by the
+user inside the component, and another where `value` is used but not
+updated.
 
 For the first type, consider how any update of `initialValue` will
 overwrite the changes made by the user in the state. Do you really
-want this to happen? The blog post I linked to above lays out a few
+want this to happen? [The blog post I linked above][1] lays out a few
 alternatives.
 
 For the second type, there is **no need** to put things in state anyway
@@ -37,7 +37,7 @@ if you don't plan on updating it. You can simply assign it to a constant:
 
 ```js
 const MyComponent = ({ initialValue }) => {
-    const derivedValue = expensiveTransform(initialValue);
+    const value = expensiveTransform(initialValue);
     ...
 }
 ```
@@ -47,7 +47,7 @@ unnecessarily calling it, you can use memoization:
 
 ```js
 const MyComponent = ({ initialValue }) => {
-    const derivedValue = useMemo(
+    const value = useMemo(
         () => expensiveTransform(initialValue),
         [initialValue]
     );
