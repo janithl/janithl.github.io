@@ -20,7 +20,7 @@ way back in 2018, &lt;a href="https://reactjs.org/blog/2018/06/07/you-probably-d
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;There are two derivations of this, one where the value is updated by
+&lt;p&gt;There are two varieties of this: one where the value is updated by
 the user inside the component, and another where this &lt;code&gt;value&lt;/code&gt; is used
 but not updated.&lt;/p&gt;
 &lt;p&gt;For the first type, consider how any update of &lt;code&gt;initialValue&lt;/code&gt; will

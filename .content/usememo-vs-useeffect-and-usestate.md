@@ -23,7 +23,7 @@ const MyComponent = ({ initialValue }) => {
 }
 ```
 
-There are two derivations of this, one where the value is updated by
+There are two varieties of this: one where the value is updated by
 the user inside the component, and another where this `value` is used
 but not updated.
 
