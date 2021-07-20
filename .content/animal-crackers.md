@@ -1,7 +1,7 @@
 Title: Animal Crackers
 Date: 2017-03-19 21:52
 Category: Personal
-Tags: conflict, politics
+Tags: conflict, poetry, politics
 
 ![Animal Crackers by Richard de Zoysa]({filename}/images/animal-crackers.png)
 

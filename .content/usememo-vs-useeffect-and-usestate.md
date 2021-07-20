@@ -5,7 +5,7 @@ Tags: code, js and ts, react
 
 Since the advent of React Hooks, there have been a few hook-related
 anti-patterns that have popped up. To be fair, these existed before
-hooks as well, but in different forms. The use of derived props is
+hooks as well, but in different forms. The use of derived state is
 one of the most pervasive of these. As the React blog pointed out
 way back in 2018, [_"You Probably Don't Need Derived State"_][1].
 

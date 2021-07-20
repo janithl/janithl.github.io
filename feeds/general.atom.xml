@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog - General</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/general.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-07-20T08:48:00+05:30</updated><entry><title>useMemo vs useEffect and useState</title><link href="https://janithl.github.io/2021/07/usememo-vs-useeffect-and-usestate/" rel="alternate"></link><published>2021-07-20T08:48:00+05:30</published><updated>2021-07-20T08:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-20:/2021/07/usememo-vs-useeffect-and-usestate/</id><summary type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
 anti-patterns that have popped up. To be fair, these existed before
-hooks as well, but in different forms. The use of derived props is
+hooks as well, but in different forms. The use of derived state is
 one of the most pervasive of these. As the React blog pointed out
 way …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
 anti-patterns that have popped up. To be fair, these existed before
-hooks as well, but in different forms. The use of derived props is
+hooks as well, but in different forms. The use of derived state is
 one of the most pervasive of these. As the React blog pointed out
 way back in 2018, &lt;a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html"&gt;&lt;em&gt;"You Probably Don't Need Derived State"&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In a hooks-based application, it may look something like this:&lt;/p&gt;

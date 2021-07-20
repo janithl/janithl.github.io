@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-07-20T08:48:00+05:30</updated><entry><title>useMemo vs useEffect and useState</title><link href="https://janithl.github.io/2021/07/usememo-vs-useeffect-and-usestate/" rel="alternate"></link><published>2021-07-20T08:48:00+05:30</published><updated>2021-07-20T08:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-20:/2021/07/usememo-vs-useeffect-and-usestate/</id><summary type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
 anti-patterns that have popped up. To be fair, these existed before
-hooks as well, but in different forms. The use of derived props is
+hooks as well, but in different forms. The use of derived state is
 one of the most pervasive of these. As the React blog pointed out
 way …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
 anti-patterns that have popped up. To be fair, these existed before
-hooks as well, but in different forms. The use of derived props is
+hooks as well, but in different forms. The use of derived state is
 one of the most pervasive of these. As the React blog pointed out
 way back in 2018, &lt;a href="https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html"&gt;&lt;em&gt;"You Probably Don't Need Derived State"&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In a hooks-based application, it may look something like this:&lt;/p&gt;
@@ -221,7 +221,7 @@ under a &lt;a href="https://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative
 &lt;p&gt;To complete what?&lt;/p&gt;
 &lt;p&gt;Maybe the little sadnesses&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Sometimes&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Are a bit deserved&lt;/p&gt;</content><category term="biology"></category><category term="people"></category></entry><entry><title>Some 2020 Stats</title><link href="https://janithl.github.io/2021/01/some-2020-stats/" rel="alternate"></link><published>2021-01-01T10:55:00+05:30</published><updated>2021-01-01T10:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-01-01:/2021/01/some-2020-stats/</id><summary type="html">&lt;p&gt;There no getting around the fact that 2020 was defined by the pandemic. With that
+&lt;p&gt;Are a bit deserved&lt;/p&gt;</content><category term="biology"></category><category term="people"></category><category term="poetry"></category></entry><entry><title>Some 2020 Stats</title><link href="https://janithl.github.io/2021/01/some-2020-stats/" rel="alternate"></link><published>2021-01-01T10:55:00+05:30</published><updated>2021-01-01T10:55:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-01-01:/2021/01/some-2020-stats/</id><summary type="html">&lt;p&gt;There no getting around the fact that 2020 was defined by the pandemic. With that
 in mind, some personal stats:&lt;/p&gt;
 &lt;h3&gt;Transport&lt;/h3&gt;
 &lt;p&gt;In 2018, I took 556 bus rides. &lt;a href="https://janithl.github.io/2020/01/some-2019-stats/"&gt;In 2019, I took 265.&lt;/a&gt;&lt;/p&gt;
@@ -583,7 +583,7 @@ meant to be. Talk about a bad &lt;em&gt;nekatha&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;and not because someone asked you to&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;is one really any better than the other?&lt;/p&gt;
-&lt;p&gt;can the first even exist in a void?&lt;/p&gt;</content><category term="biology"></category><category term="people"></category></entry><entry><title>Tagged Template Literals are Awesome!</title><link href="https://janithl.github.io/2020/07/js-template-literals/" rel="alternate"></link><published>2020-07-05T07:20:00+05:30</published><updated>2020-07-05T07:20:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-07-05:/2020/07/js-template-literals/</id><summary type="html">&lt;p&gt;You will often need to implement text that looks like this:&lt;/p&gt;
+&lt;p&gt;can the first even exist in a void?&lt;/p&gt;</content><category term="biology"></category><category term="people"></category><category term="poetry"></category></entry><entry><title>Tagged Template Literals are Awesome!</title><link href="https://janithl.github.io/2020/07/js-template-literals/" rel="alternate"></link><published>2020-07-05T07:20:00+05:30</published><updated>2020-07-05T07:20:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-07-05:/2020/07/js-template-literals/</id><summary type="html">&lt;p&gt;You will often need to implement text that looks like this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Highlighted Text" src="https://janithl.github.io/images/highlighted-text.png"&gt;&lt;/p&gt;
 &lt;p&gt;Now, it's fairly simple enough to do in HTML, but when you do it in React Native
 it looks a bit gnarly:&lt;/p&gt;
@@ -772,7 +772,7 @@ hesitation. Or even food for Yun Tianming. 🤷🏽‍♀️&lt;/p&gt;</content>
 &lt;p&gt;Have imaginary conversations with&lt;/p&gt;
 &lt;p&gt;Late into the night&lt;/p&gt;
 &lt;p&gt;Am I doomed&lt;/p&gt;
-&lt;p&gt;To &lt;em&gt;exist&lt;/em&gt;?&lt;/p&gt;</content><category term="biology"></category><category term="people"></category></entry><entry><title>Chats with the Dead</title><link href="https://janithl.github.io/2020/02/chats-with-the-dead/" rel="alternate"></link><published>2020-02-23T01:00:00+05:30</published><updated>2020-02-23T01:00:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-02-23:/2020/02/chats-with-the-dead/</id><summary type="html">&lt;p&gt;&lt;img alt="Jaki, Maali, and DD" src="https://janithl.github.io/images/chats-with-the-dead.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;To &lt;em&gt;exist&lt;/em&gt;?&lt;/p&gt;</content><category term="biology"></category><category term="people"></category><category term="poetry"></category></entry><entry><title>Chats with the Dead</title><link href="https://janithl.github.io/2020/02/chats-with-the-dead/" rel="alternate"></link><published>2020-02-23T01:00:00+05:30</published><updated>2020-02-23T01:00:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2020-02-23:/2020/02/chats-with-the-dead/</id><summary type="html">&lt;p&gt;&lt;img alt="Jaki, Maali, and DD" src="https://janithl.github.io/images/chats-with-the-dead.jpg"&gt;&lt;/p&gt;
 &lt;p class="text-center"&gt;Jaki, Maali, and DD on one of their vacations Down South circa late 1980s.&lt;/p&gt;
 
 &lt;p&gt;I finished Shehan Karunatilaka's &lt;a href="https://www.goodreads.com/book/show/51122892-chats-with-the-dead"&gt;Chats with the Dead&lt;/a&gt; last week, and it was

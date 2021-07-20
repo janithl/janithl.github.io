@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://janithl.github.io/theme/css/pygments.css">
 
-    <title>Janith's Blog &ndash; Building Flagitect</title>
+    <title>Janith's Blog &ndash; Tag: poetry</title>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -30,7 +30,6 @@
 
     <link href="https://janithl.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Janith's Blog Atom" />
 
-<meta name="keywords" content="code, design, js and ts, react">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -57,7 +56,7 @@
 
                     <li><a href="https://janithl.github.io/pages/about.html">About</a></li>
 
-                    <li class="active"><a href="https://janithl.github.io/category/general/">General</a></li>
+                    <li><a href="https://janithl.github.io/category/general/">General</a></li>
                     <li><a href="https://janithl.github.io/category/links/">Links</a></li>
                     <li><a href="https://janithl.github.io/category/personal/">Personal</a></li>
 
@@ -108,68 +107,102 @@
     </nav>
     <div class="container">
 <article>
+  <div class="timestamps text-muted">28 Jan 2021</div>
   <div class="article_title">
-    <h3><a href="https://janithl.github.io/2020/06/building-flagitect/">Building Flagitect</a></h3>
-    <p class="lead">just like a wavin flag</p><hr>
+    <a href="https://janithl.github.io/2021/01/better-halved/">
+        <h3>
+            Better Halved <br>
+        </h3>
+    </a>
   </div>
   <div class="article_text">
-    <p><a href="https://play.google.com/store/apps/details?id=com.flagitect">Flagitect just hit version 1.2.0</a>, and so this is a brief introduction
-into the technical aspects of how the app is structured.</p>
-<p><img alt="Flagitect v1.2.0" src="https://janithl.github.io/images/flagitect-1.2.0.jpg"></p>
-<h3>Stack</h3>
-<p>The app is written in React Native (currently version 0.62). There is no navigation
-library in use, as the app only needs some modals in the UI at the moment. The editor
-uses <a href="https://github.com/react-native-community/react-native-svg">react-native-svg</a> to render the flags. <a href="https://github.com/joltup/rn-fetch-blob">rn-fetch-blob</a> is used to save
-the various output files (as a PNG raster or SVG vector inside an HTML) to device storage.</p>
-<h3>State Management</h3>
-<p>State is managed using a <a href="https://reactjs.org/docs/hooks-reference.html#usereducer">single <code>useReducer</code> hook</a> near the root of the component
-tree. The store is currently divided into 3 parts with their own reducer functions:
-flag, ui, and charges. I found this approach had most of the advantages of Redux (since
-the component tree was shallow and I didn't need to use the Context API) when it came to
-composing the state and reducers. I use two <code>useEffect</code> hooks to store the state in
-device storage<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> whenever it changes, and load it from storage at app start.</p>
-<h3>Components</h3>
-<p>There is your standard <code>Header</code>, <code>Footer</code>, <code>Menu</code> etc. components, and a bunch
-of <code>renderSomething</code> components that render either charges or divisions. Most of the
-action happens inside the <code>Editor</code> component, and we're using SVG—a fantastic language
-that really should get more love—for the design and layout of shapes and designs. I
-used a bunch of SVG features such as <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Patterns">patterns</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform">transform</a> to enable various
-rendering needs.</p>
-<h3>Finally</h3>
-<p><a href="https://github.com/janithl/Flagitect">Flagitect is completely free and open source (MIT licensed)</a>, and I'd love for
-people using it to submit issues and PRs, or even fork it and make things better. I
-found that Google Play was lacking when it came to flag design apps, and so I created
-Flagitect in the hope that amateur vexillologists like myself would find it useful. ☺️</p>
-<div class="footnote">
-<hr>
-<ol>
-<li id="fn:1">
-<p>For this, I'm using <a href="https://github.com/react-native-community/async-storage">React Native Async Storage</a> as this functionality has been spun off from the React Native core.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+    <p>Sometimes</p>
+<p>I wonder if I am</p>
+<p>A shard of glass</p>
+<p>Safely disposed</p>
+<p>Away from any exposed flesh</p>
+<p>A burning ember separated</p>
+<p>From dry cotton</p>
+<p>It wishes it gets to know</p>
+<p><em>A little too intimately</em></p>
+<p>For a fleeting second</p>
+<p>A malignant tumour</p>
+<p>Discovered early</p>
+<p>Before it could cut short</p>
+<p>A mother's …</p>
   </div>
-  <div class="article_meta">
-    <p>Posted on: Sun 28 June 2020</p>
-    <p>Category: <a href="https://janithl.github.io/category/general/">General</a>
- &ndash; Tags:
-      <a href="https://janithl.github.io/tag/code/">code</a>,      <a href="https://janithl.github.io/tag/design/">design</a>,      <a href="https://janithl.github.io/tag/js-and-ts/">js and ts</a>,      <a href="https://janithl.github.io/tag/react/">react</a>    </p>
+</article>
+<article>
+  <div class="timestamps text-muted">25 Jul 2020</div>
+  <div class="article_title">
+    <a href="https://janithl.github.io/2020/07/falling-in-love/">
+        <h3>
+            Falling in Love <br>
+        </h3>
+    </a>
   </div>
-
-  <div id="article_comments">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_identifier = "2020/06/building-flagitect/";
-        (function() {
-             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = '//janithl.disqus.com/embed.js';
-             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-         })();
-    </script>
+  <div class="article_text">
+    <p>you fall in love</p>
+<p>over a phone call</p>
+<p>in the backseat of the cinema</p>
+<p>reading whatsapps at 1 am</p>
+<p>at a candle lit dinner</p>
+<p>or when you're the first to hear about their day</p>
+<p>&nbsp;</p>
+<p>you fall in love</p>
+<p>every time you work out</p>
+<p>or take a good shower</p>
+<p>sit down …</p>
   </div>
-
+</article>
+<article>
+  <div class="timestamps text-muted">03 Mar 2020</div>
+  <div class="article_title">
+    <a href="https://janithl.github.io/2020/03/to-exist/">
+        <h3>
+            To Exist <br>
+        </h3>
+    </a>
+  </div>
+  <div class="article_text">
+    <p>Am I doomed</p>
+<p>To an existence</p>
+<p>Where you</p>
+<p>You, you, <em>and you</em></p>
+<p>(Yes, I know you're all the same—</p>
+<p>though it took me a while to catch on)</p>
+<p>Will be near enough to see</p>
+<p>But never to hold?</p>
+<p>Always tantalisingly close</p>
+<p>But no cigar?</p>
+<p>To check up on</p>
+<p>After a …</p>
+  </div>
+</article>
+<article>
+  <div class="timestamps text-muted">19 Mar 2017</div>
+  <div class="article_title">
+    <a href="https://janithl.github.io/2017/03/animal-crackers/">
+        <h3>
+            Animal Crackers <br>
+        </h3>
+    </a>
+  </div>
+  <div class="article_text">
+    <p><img alt="Animal Crackers by Richard de Zoysa" src="https://janithl.github.io/images/animal-crackers.png"></p>
+<p>Thimal is making me read <a href="https://en.wikipedia.org/wiki/Richard_de_Zoysa">Richard de Zoysa</a>'s work.</p>
+<p>Back when the dictator in chief cared about what was written in English about the
+government, and dissent was treated with abduction, torture and a gunshot to the back of
+the head (if you were lucky), de Zoysa stood for …</p>
+  </div>
 </article>
 
+<footer>
+<nav id="paginator">
+    <ul class="pager">
+    
+</nav>
+</footer>
     </div>
 
     <div id="ending_message">

@@ -1,7 +1,7 @@
 Title: Better Halved
 Date: 2021-01-28 18:30
 Category: Personal
-Tags: biology, people
+Tags: biology, people, poetry
 
 Sometimes
 
