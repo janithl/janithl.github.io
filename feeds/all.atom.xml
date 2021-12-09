@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-07-20T08:48:00+05:30</updated><entry><title>useMemo vs useEffect and useState</title><link href="https://janithl.github.io/2021/07/usememo-vs-useeffect-and-usestate/" rel="alternate"></link><published>2021-07-20T08:48:00+05:30</published><updated>2021-07-20T08:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-20:/2021/07/usememo-vs-useeffect-and-usestate/</id><summary type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Janith's Blog</title><link href="https://janithl.github.io/" rel="alternate"></link><link href="https://janithl.github.io/feeds/all.atom.xml" rel="self"></link><id>https://janithl.github.io/</id><updated>2021-12-09T19:15:00+05:30</updated><entry><title>Remove shadows and uneven lighting from photographs of writing on paper</title><link href="https://janithl.github.io/2021/12/remove-shadows-and-uneven-lighting/" rel="alternate"></link><published>2021-12-09T19:15:00+05:30</published><updated>2021-12-09T19:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-12-09:/2021/12/remove-shadows-and-uneven-lighting/</id><summary type="html">&lt;p&gt;This is mostly a note to self. You know how you often have photographs
+of notes or forms that you need to print out, and there's a shadow or
+uneven lighting across the image which makes the print look bad?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Initial image" src="https://janithl.github.io/images/shadow-removal/photo-1.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;These are the steps I take to make something like …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is mostly a note to self. You know how you often have photographs
+of notes or forms that you need to print out, and there's a shadow or
+uneven lighting across the image which makes the print look bad?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Initial image" src="https://janithl.github.io/images/shadow-removal/photo-1.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;These are the steps I take to make something like this friendlier for a
+black-and-white printer. I am using the amazing online editor
+&lt;a href="https://www.photopea.com/"&gt;Photopea&lt;/a&gt;, but most image editors can handle this.&lt;/p&gt;
+&lt;h3&gt;Initial image adjustments&lt;/h3&gt;
+&lt;p&gt;First, desaturate the image. Since we're going to print it out in b&amp;amp;w anyway,
+it doesn't matter. Bump up the contrast and brightness a bit too.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Desaturated image" src="https://janithl.github.io/images/shadow-removal/photo-2.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;If the editor has a way to warp transformation or something similar, you can
+use it to straighten out the image a little bit.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Warped image" src="https://janithl.github.io/images/shadow-removal/photo-3.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;Duplicating the layer&lt;/h3&gt;
+&lt;p&gt;Now, duplicate the image layer. Invert the colours and apply a Gaussian
+blur (I used about 7 pixels as the blur value)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Blurred image" src="https://janithl.github.io/images/shadow-removal/photo-4.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;We can then change the layer mode from "normal" to "colour dodge"&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Layer mode screen shot" src="https://janithl.github.io/images/shadow-removal/screenshot-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Colour Dodge applied" src="https://janithl.github.io/images/shadow-removal/photo-5.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;Final adjustments&lt;/h3&gt;
+&lt;p&gt;Then with some level adjustment, we can get the final output to look evenly
+lit and appropriate for printing.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Level adjustment screen shot" src="https://janithl.github.io/images/shadow-removal/screenshot-2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Level adjusted image" src="https://janithl.github.io/images/shadow-removal/photo-6.jpg"&gt;&lt;/p&gt;</content><category term="design"></category></entry><entry><title>useMemo vs useEffect and useState</title><link href="https://janithl.github.io/2021/07/usememo-vs-useeffect-and-usestate/" rel="alternate"></link><published>2021-07-20T08:48:00+05:30</published><updated>2021-07-20T08:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-20:/2021/07/usememo-vs-useeffect-and-usestate/</id><summary type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
 anti-patterns that have popped up. To be fair, these existed before
 hooks as well, but in different forms. The use of derived state is
 one of the most pervasive of these. As the React blog pointed out
@@ -1526,132 +1555,4 @@ social contract, and some individualistic excesses might have to be forgone in t
 &lt;p&gt;සයිට් එකේ response times එහෙම අවුල්ද කියල බලාගන්න මේක උදව් වෙනව.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="code"></category><category term="golang"></category><category term="sinhala"></category></entry><entry><title>A Simple Version Checker In Go</title><link href="https://janithl.github.io/2019/12/a-simple-version-checker-in-go/" rel="alternate"></link><published>2019-12-14T09:15:00+05:30</published><updated>2019-12-14T09:15:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2019-12-14:/2019/12/a-simple-version-checker-in-go/</id><summary type="html">&lt;p&gt;&lt;img alt="Version Check Output" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
-&lt;p&gt;My current work requires keeping track of more than a dozen live websites and
-making sure that their versions are kept up to date. We have employed a small Go
-program to make this possible, which enable us to scrape the generator meta tags
-on the websites and thereby get …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Version Check Output" src="https://janithl.github.io/images/version-output.png"&gt;&lt;/p&gt;
-&lt;p&gt;My current work requires keeping track of more than a dozen live websites and
-making sure that their versions are kept up to date. We have employed a small Go
-program to make this possible, which enable us to scrape the generator meta tags
-on the websites and thereby get the version number&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;The code is simple and uses Goroutines to let us concurrently connect to the sites.
-The code we use in prod is a bit more specialised, but I've reproduced a version
-that captures the essentials below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;
-
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="s"&gt;&amp;quot;encoding/json&amp;quot;&lt;/span&gt;
-    &lt;span class="s"&gt;&amp;quot;io/ioutil&amp;quot;&lt;/span&gt;
-    &lt;span class="s"&gt;&amp;quot;net/http&amp;quot;&lt;/span&gt;
-    &lt;span class="s"&gt;&amp;quot;os&amp;quot;&lt;/span&gt;
-    &lt;span class="s"&gt;&amp;quot;regexp&amp;quot;&lt;/span&gt;
-    &lt;span class="s"&gt;&amp;quot;time&amp;quot;&lt;/span&gt;
-&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c1"&gt;// Site type holds information about sites&lt;/span&gt;
-&lt;span class="kd"&gt;type&lt;/span&gt; &lt;span class="nx"&gt;Site&lt;/span&gt; &lt;span class="kd"&gt;struct&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;Name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;Version&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;TimeTaken&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;sites&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="nx"&gt;Site&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Site A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;https://a.web.site&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;N/A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Site B&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;https://b.web.site&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;N/A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Site C&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;https://c.web.site&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;N/A&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="c1"&gt;// Parser type holds information about the parsing&lt;/span&gt;
-&lt;span class="kd"&gt;type&lt;/span&gt; &lt;span class="nx"&gt;Parser&lt;/span&gt; &lt;span class="kd"&gt;struct&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;setURL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;url&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;url&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;url&lt;/span&gt;
-    &lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;Site&lt;/code&gt; is simply a struct that holds info about the particular site, and fields
-to capture the version and the time taken to do the scrape&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;We've initialised a slice of sites with the URLs we need to scrape.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;Parser&lt;/code&gt; simply encapsulates parsing behaviour, and has two more methods,
-reproduced below. For each scrape, we initialise a new parser.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;getMatches&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;regexString&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;index&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;regex&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;_&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;regexp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;regexString&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-    &lt;span class="nx"&gt;matches&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;regex&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;FindStringSubmatch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;matches&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;matches&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;N/A&amp;quot;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nx"&gt;getVersion&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;err&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;err&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Fetch Error&amp;quot;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;err&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;ioutil&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ReadAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;err&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Parse Error&amp;quot;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;string&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getMatches&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;(&amp;lt;meta name=\&amp;quot;generator\&amp;quot; content=\&amp;quot;)([^\&amp;quot;]+)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;getVersion()&lt;/code&gt; simply gets and reads the page body, and &lt;code&gt;getMatches()&lt;/code&gt; is a method
-to try and match the generator tag regex and return the value of the tag.&lt;/p&gt;
-&lt;p&gt;Now, we get to the main function and the &lt;code&gt;getSiteVersion()&lt;/code&gt; goroutine:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nx"&gt;getSiteVersion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;done&lt;/span&gt; &lt;span class="kd"&gt;chan&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;start&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;// to check the time taken&lt;/span&gt;
-
-    &lt;span class="nx"&gt;site&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;{}&lt;/span&gt;
-    &lt;span class="nx"&gt;site&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setURL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;Version&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;site&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getVersion&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;TimeTaken&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Since&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;String&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-
-    &lt;span class="nx"&gt;done&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;done&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nb"&gt;make&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;chan&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;index&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="k"&gt;range&lt;/span&gt; &lt;span class="nx"&gt;sites&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;go&lt;/span&gt; &lt;span class="nx"&gt;getSiteVersion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="nx"&gt;enc&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;NewEncoder&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;os&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Stdout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="nx"&gt;enc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;sites&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;getSiteVersion()&lt;/code&gt; gets called in a loop, initialises the Parser, does the scrape,
-and does simple time keeping of how long a scrape takes. We don't use a &lt;a href="https://gobyexample.com/mutexes"&gt;mutex&lt;/a&gt;
-when accessing the &lt;code&gt;sites&lt;/code&gt; slice here because each element is only accessed by one
-Goroutine, but if this was not the case a mutex would be essential here.&lt;/p&gt;
-&lt;p&gt;In &lt;code&gt;main()&lt;/code&gt;, we're simply using a channel called &lt;code&gt;done&lt;/code&gt; to make sure all the
-Goroutines are done executing before we quit the application, and as a final step
-we output the &lt;code&gt;sites&lt;/code&gt; slice as JSON. As an alternative, a &lt;a href="https://gobyexample.com/waitgroups"&gt;WaitGroup&lt;/a&gt; can be used.&lt;/p&gt;
-&lt;p&gt;This is sadly the only piece of Go code I have written &lt;s&gt;at&lt;/s&gt; for work, but it does
-its job admirably, and I would highly recommend Go for tasks like these.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://gist.github.com/janithl/a7c7369785c0b7b26c17f7a2673f8bea"&gt;&lt;strong&gt;The full code can be found on Github.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;div class="footnote"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;Might not be a good idea for software with a known CVE list where letting an
-attacker know your specific version will open you up to attacks.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn:2"&gt;
-&lt;p&gt;This piece of info is interesting in a site speed/debugging context.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</content><category term="code"></category><category term="golang"></category></entry></feed>
+&lt;/div&gt;</content><category term="code"></category><category term="golang"></category><category term="sinhala"></category></entry></feed>
