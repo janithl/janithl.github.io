@@ -12,7 +12,7 @@ uneven lighting across the image which makes the print look bad?
 
 These are the steps I take to make something like this friendlier for a
 black-and-white printer. I am using the amazing online editor
-[Photopea](https://www.photopea.com/), but most image editors can handle this.
+[Photopea][1], but most image editors can handle this.
 
 ### Initial image adjustments
 
@@ -47,3 +47,12 @@ lit and appropriate for printing.
 ![Level adjustment screen shot]({filename}/images/shadow-removal/screenshot-2.png)
 
 ![Level adjusted image]({filename}/images/shadow-removal/photo-6.jpg)
+
+---
+
+This is simply what worked for me, but there must be tons of other, _better_ ways
+of doing this. Play around with the level adjustment, drop the bumping of
+brightness and contrast at the start, and you might get something that works
+best for the photographs of notes that you have.
+
+[1]: https://www.photopea.com/

@@ -28,7 +28,12 @@ blur (I used about 7 pixels as the blur value)&lt;/p&gt;
 &lt;p&gt;Then with some level adjustment, we can get the final output to look evenly
 lit and appropriate for printing.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Level adjustment screen shot" src="https://janithl.github.io/images/shadow-removal/screenshot-2.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Level adjusted image" src="https://janithl.github.io/images/shadow-removal/photo-6.jpg"&gt;&lt;/p&gt;</content><category term="design"></category></entry><entry><title>useMemo vs useEffect and useState</title><link href="https://janithl.github.io/2021/07/usememo-vs-useeffect-and-usestate/" rel="alternate"></link><published>2021-07-20T08:48:00+05:30</published><updated>2021-07-20T08:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-20:/2021/07/usememo-vs-useeffect-and-usestate/</id><summary type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
+&lt;p&gt;&lt;img alt="Level adjusted image" src="https://janithl.github.io/images/shadow-removal/photo-6.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This is simply what worked for me, but there must be tons of other, &lt;em&gt;better&lt;/em&gt; ways
+of doing this. Play around with the level adjustment, drop the bumping of
+brightness and contrast at the start, and you might get something that works
+best for the photographs of notes that you have.&lt;/p&gt;</content><category term="design"></category></entry><entry><title>useMemo vs useEffect and useState</title><link href="https://janithl.github.io/2021/07/usememo-vs-useeffect-and-usestate/" rel="alternate"></link><published>2021-07-20T08:48:00+05:30</published><updated>2021-07-20T08:48:00+05:30</updated><author><name>Janith</name></author><id>tag:janithl.github.io,2021-07-20:/2021/07/usememo-vs-useeffect-and-usestate/</id><summary type="html">&lt;p&gt;Since the advent of React Hooks, there have been a few hook-related
 anti-patterns that have popped up. To be fair, these existed before
 hooks as well, but in different forms. The use of derived state is
 one of the most pervasive of these. As the React blog pointed out
