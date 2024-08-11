@@ -1,7 +1,7 @@
 Janith's Blog
 =============
 
-A personal blog powered by Pelican.
+A personal blog powered by Pelican. 
 
 Setting Up
 ----------
